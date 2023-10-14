@@ -1,0 +1,44 @@
+\usepackage{calc}
+
+\newcommand{\allbold}{%
+  \ifthenelse{%
+    \boolean{colourif}}{%
+    \bfseries}{%
+    \mdseries}}
+\newcommand{\stdbasicstyle}{\allbold\normalsize\ttfamily\upshape}
+
+\newlength{\syhlLineHeight}
+\newlength{\syhlLineDepth}
+\newsavebox{\syhlLineBox}
+
+\newlength{\spHeight}
+\settoheight{\spHeight}{\stdbasicstyle ()}
+\newlength{\spDepth}
+\settodepth{\spDepth}{\stdbasicstyle ()}
+
+\newcommand{\syhlInline}{}
+
+\newenvironment{syhlListInline}{\vspace*{-5mm}\par}{\par}
+
+\newenvironment{syhlListExtern}{}{}
+\newenvironment{syhlListExternLatin}{\XeTeXinputencoding latin1 }{}
+%\newenvironment{syhlListExternLatin}{}{}
+
+\newcommand{\syhlList}[2]{%
+  %%\ttfamily\bfseries\href{\Sources/#1}{\SHInline!#1!} \\
+  \par
+  %%{\hfill\ttfamily\bfseries\href{\Sources/#1}{#1}\hfill}\vspace*{0mm}\\[-9mm]%
+  \input{\Sources/#1.#2}
+  \par
+  }
+
+\newcounter{SyhlLineNo}
+
+  
+\newcommand{\cmtmath}[1]{#1}
+\newcommand{\strmath}[1]{\textcolor{lststringcol}{#1}}
+
+\newcommand{\AnyLink}[1]{{\ttfamily\bfseries\href{\Sources/#1}{#1}}}
+\newcommand{\AnyLinkSmall}[1]{{\ttfamily\bfseries\small\href{\Sources/#1}{#1}}}
+\newcommand{\HTMLLink}[1]{\AnyLink{#1}}
+\newcommand{\DirLink}[1]{{\ttfamily\bfseries\href{\Sources/#1/.}{#1}}}

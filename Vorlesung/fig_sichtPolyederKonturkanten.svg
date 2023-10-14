@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Oct 21 10:36:50 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="6.6in"
+   height="3.2in"
+   viewBox="2079 2552 7951 3871"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_sichtPolyederKonturkanten.svg">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs24" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview22"
+     showgrid="false"
+     inkscape:zoom="0.76599328"
+     inkscape:cx="297"
+     inkscape:cy="144"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text6"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="3307"
+     x="6850"
+     xml:space="preserve">Außenseiten</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text8"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="4015"
+     x="6850"
+     xml:space="preserve">Innenseiten</text>
+  <polygon
+     id="polygon10"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="4960,6377 2125,6377 2125,3543 2125,3543 4960,3543 " />
+  <polygon
+     id="polygon12"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="6377,2598 4960,3543 2125,3543 2125,3543 3543,2598 " />
+  <polygon
+     id="polygon14"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="6377,5433 4960,6377 4960,3543 4960,3543 6377,2598 " />
+  <polygon
+     id="polygon16"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="6330,5433 4960,6330 2173,6330 2173,6330 3543,5433 " />
+  <polygon
+     id="polygon18"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="6330,5433 3543,5433 3543,2645 3543,2645 6330,2645 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="2173,6330 2173,3543 3543,2645 " />
+</svg>

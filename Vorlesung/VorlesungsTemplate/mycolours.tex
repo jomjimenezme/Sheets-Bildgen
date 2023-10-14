@@ -1,0 +1,94 @@
+\newcommand{\definecolorif}[3]{%
+  \ifthenelse{%
+    \boolean{colourif}}{%
+    \definecolor{#1}{#2}{#3}}{%
+    \definecolor{#1}{rgb}{0,0,0}}}
+
+
+\definecolorif{linkcol}{rgb}{0.00,0.00,0.50}
+\definecolorif{filecol}{rgb}{0.00,0.00,0.75}
+\definecolorif{citecol}{rgb}{0.50,0.00,0.00}
+\definecolorif{urlcol}{rgb}{0.00,0.00,0.75}
+\definecolorif{menucol}{rgb}{0.00,0.00,0.00}
+\ifthenelse{
+  \boolean{blanksif}}{%
+  \definecolor{totalpagecol}{rgb}{1.00,1.00,1.00}}{%
+  \definecolorif{totalpagecol}{rgb}{0.00,0.00,0.20}}
+
+\definecolorif{hidecol}{rgb}{0.40,0.10,0.50}
+\definecolor{hiddenwhite}{rgb}{1.00,1.00,1.00}
+\definecolorif{minitoccol}{rgb}{0.00,0.00,0.50}
+\definecolorif{reachedcol}{rgb}{0.59,0.00,0.66}
+
+%%\definecolorif{seccol}{rgb}{0.99,0.40,0.40}
+\definecolorif{seccol}{rgb}{0.93,0.19,0.44}
+\definecolorif{emcol}{rgb}{0.95,0.50,0.00} % orange
+%%\definecolorif{emcol}{rgb}{0.95,0.20,0.00} % lachs
+%%\definecolorif{emcol}{rgb}{0.80,0.20,0.00} % braun
+\definecolorif{excol}{rgb}{0.00,0.00,0.80}
+%\definecolorif{cmtcol}{rgb}{0.60,0.00,0.00}
+\definecolorif{cmtcol}{rgb}{0.60,0.30,0.30}
+\definecolorif{mathcol}{rgb}{0.00,0.56,0.00}
+
+\definecolorif{mygreen}{rgb}{0.00,0.70,0.00}
+\definecolorif{myred}{rgb}{0.80,0.00,0.00}
+\definecolorif{myblue}{rgb}{0.00,0.0,1.00}
+\definecolorif{mymagenta}{rgb}{0.75,0.0,0.75}
+\definecolorif{mycyan}{rgb}{0.00,1.00,1.00}
+\ifthenelse{%
+  \boolean{colourif}}{%
+  \definecolor{myyellow}{rgb}{1.00,1.00,0.00}}{%
+  \definecolor{myyellow}{rgb}{0.80,0.80,0.80}}
+\ifthenelse{%
+  \boolean{colourif}}{%
+  \definecolor{mylightblue}{rgb}{0.85,0.90,1.00}}{%
+  \definecolor{mylightblue}{rgb}{0.90,0.90,0.90}}
+%\definecolorif{mdefcol}{rgb}{0.00,0.75,0.16}
+\definecolorif{mdefcol}{rgb}{0.95,0.50,0.00}
+
+\definecolorif{lstblack}{rgb}{0.00,0.00,0.00}
+\definecolorif{lstkeywordcol}{rgb}{0.00,0.00,1.00}
+\definecolorif{lstndkeywordcol}{rgb}{0.00,0.00,0.55}
+%%\definecolorif{lstextrakeywordcol}{rgb}{.70,0.00,0.70}
+\definecolorif{lstextrakeywordcol}{rgb}{.50,0.00,0.50}
+\definecolorif{lstidentifiercol}{rgb}{0.00,0.00,0.00}
+\definecolorif{lstcommentcol}{rgb}{1.00,0.00,0.00}
+\definecolorif{lstjavadoccol}{rgb}{1.00,0.30,0.00}
+\definecolorif{lstdockeywordcol}{rgb}{1.00,0.30,0.00}
+%%\definecolorif{lstdockeywordcol}{rgb}{1.00,0.45,0.15}
+\definecolorif{lststringcol}{rgb}{0.70,0.40,0.00}
+\definecolorif{lstdirectivecol}{rgb}{0.78,0.08,0.52}
+\definecolorif{lstnumbercol}{rgb}{0.00,0.20,0.00}
+\definecolorif{lstprocnamecol}{rgb}{0.00,0.40,0.00}
+\definecolorif{lstmanualemphcol}{rgb}{0.95,0.50,0.00} %% should be = emcol
+\definecolorif{lstinteractcol}{rgb}{0.00,0.50,1.00}
+
+\definecolorif{xfigBlue}{rgb}{0.00,0.00,1.00}
+\definecolorif{xfigBlueIII}{rgb}{0.00,0.00,0.69}
+\definecolorif{xfigBrownII}{rgb}{0.75,0.38,0.00}
+\definecolorif{xfigBrownIII}{rgb}{0.63,0.25,0.00}
+\definecolorif{xfigCyanIII}{rgb}{0.00,0.69,0.69}
+\definecolorif{xfigGreen}{rgb}{0.00,1.00,0.00}
+\definecolorif{xfigGreenIII}{rgb}{0.00,0.69,0.00}
+\definecolorif{xfigGreenIV}{rgb}{0.00,0.56,0.00}
+\definecolorif{xfigMagentaII}{rgb}{0.82,0.00,0.82}
+\definecolorif{xfigMagentaIII}{rgb}{0.69,0.00,0.69}
+\definecolorif{xfigMagentaIV}{rgb}{0.56,0.00,0.56}
+\definecolorif{xfigRed}{rgb}{1.00,0.00,0.00}
+\definecolorif{xfigRedII}{rgb}{0.82,0.00,0.00}
+
+\definecolorif{haacolTITLE}{rgb}{0.00,0.50,0.60}
+\definecolorif{haacolLECTNOTE}{rgb}{0.00,0.00,0.80}
+
+\newcommand{\inkscapecolor}[4][rgb]{%
+  %\renewcommand{\mathcol}{}%
+  \ifthenelse{%
+    \boolean{colourif}}{%
+    \color[#1]{#2,#3,#4}}{%
+    \MULTIPLY{0.3}{#2}{\tmpr}
+    \MULTIPLY{0.59}{#3}{\tmpg}
+    \MULTIPLY{0.11}{#4}{\tmpb}
+    \ADD{\tmpr}{\tmpg}{\tmprg}
+    \ADD{\tmprg}{\tmpb}{\grayv}
+    \color[gray]{\grayv}}}
+% .11 mul exch .59 mul add exch .3 mul

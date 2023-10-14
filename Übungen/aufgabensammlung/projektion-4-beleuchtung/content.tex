@@ -1,0 +1,55 @@
+\bivtask{Färbung – Beleuchtungsmodell nach Phong}{4}\label{aufgabe:proj4}
+%
+Das Rahmenprogramm \texttt{proj4.cc} im Verzeichnis 
+\bivfolder{/home/bildgen/Aufgaben/projektion-4} implementiert die 
+perspektivische Projektion samt Füllung der Dreiecksflächen. Ergänzen 
+Sie das Programm um eine pro Gitterpunkt berechnete Beleuchtung.
+Implementieren Sie hierzu in der Funktion
+\begin{alltt}
+   VecRGB berechneBeleuchtung(const Vec3D& ecke, const Vec3D& normale,
+                              const Vec3D& auge, const Vec3D& licht,
+                              const DrawColour& farbe)
+\end{alltt}
+das Beleuchtungsmodell nach Phong für \emph{eine} Lichtquelle. Die 
+Funktion wird für jeden der drei Eckpunkte einer Dreiecksfläche
+aufgerufen und soll die Farbe an diesem Punkt berechnen. Die 
+Interpolation der Farbe über die Fläche (Gouraud-Shading) übernimmt das 
+Rahmenprogramm für Sie.
+
+Die folgenden Größen sind vorgegeben:
+\begin{center}
+  \begin{tabular}{ll}
+    \texttt{Vec3D ecke} & Position der Ecke in Weltkoordinaten \\
+    \texttt{Vec3D normale} & Normale zur Fläche in dieser Ecke (in Weltkoordinaten) \\
+    \texttt{Vec3D auge} & Koordinaten des Auges in Weltkoordinaten \\
+    \texttt{Vec3D licht} & Koordinaten der Lichtquelle in Weltkoordinaten \\
+    \texttt{VecRGB lightAmbient} & ambiente Lichtintensität \\
+    \texttt{VecRGB lightDiffuse} & diffuse Lichtintensität \\
+    \texttt{VecRGB lightSpecular} & Lichtintensität für winkelabhängige Reflexion \\
+    \texttt{VecRGB materialAmbient} & ambienter Reflexionskoeffizient des Materials \\
+    \texttt{VecRGB materialDiffuse} & diffuser Reflexionskoeffizient des Materials \\
+    \texttt{VecRGB materialSpecular} & winkelabhängiger
+            Reflexionskoeffizient des Materials \\
+    \texttt{double materialSpecularity} & Exponent für winkelabhängige Reflexion \\
+    \texttt{double c0, c1, c2} & Konstanten für entfernungsabhängige Dämpfung
+  \end{tabular}
+\end{center}
+
+Die Rechnung mit Farbwerten innerhalb der Funktion erfolgt über
+dreidimensionale Vektoren, deren Einträge die drei Kanäle des
+RGB-Farbmodells darstellen. Die RGB-Intensitäten sind auf $[0, 1]$ 
+normiert. Für Lichter stellen diese Werte die Lichtintensität des 
+jeweiligen Farbkanals dar, für Materialien bzw. Objektoberflächen deren
+Reflexionskoeffizienten für den jeweiligen Farbkanal.
+
+Um nicht jeden Farbkanal einzeln berechnen zu müssen sind neben
+\texttt{+} und \texttt{-} geeignete Operatoren vorgegeben,
+z.\,B.\ \texttt{VecRGB v1 * VecRGB v2} für elementweise Multiplikation.
+
+Beachten Sie, dass negative Skalarprodukte auf dem Auge bzw. der
+Lichtquelle abgewandte Flächen hindeuten. Im Falle eines negativen 
+Skalarproduktes ist der entsprechende Lichtanteil auf Null zu setzen, 
+um keine negativen Lichtintensitäten zu erzeugen. Hierzu können sie die 
+\texttt{max()}-Funktion benutzen.
+
+Testen Sie Ihr Programm mit den \texttt{*.in}-Dateien.

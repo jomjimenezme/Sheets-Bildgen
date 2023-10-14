@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Oct 28 11:34:32 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10.8in"
+   height="9.3in"
+   viewBox="354 888 12930 11174"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeRaytracingZellen.svg">
+  <metadata
+     id="metadata124">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs122" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview120"
+     showgrid="false"
+     inkscape:zoom="0.79750154"
+     inkscape:cx="623.4592"
+     inkscape:cy="495.43337"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polygon
+     id="polygon6"
+     style="fill:#fffae5;stroke:#ffd600;stroke-width:63;stroke-linecap:round;stroke-linejoin:round"
+     points="7559,9685 3307,8976 3307,8976 4488,10393 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378.00696394px;font-family:sans-serif;text-anchor:start;fill:#b000b0;stroke-width:0.025in;-inkscape-font-specification:'sans-serif, Normal';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;line-height:125%;"
+     id="text8"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="1417"
+     x="9448"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">Strahl</text>
+  <polygon
+     id="polygon10"
+     style="fill:#ffe5e5;stroke:#ff0000;stroke-width:63;stroke-linecap:round;stroke-linejoin:round"
+     points="4960,7086 1889,9921 1889,9921 2598,6614 " />
+  <polygon
+     id="polygon12"
+     style="fill:#e5f7e5;stroke:#00b000;stroke-width:63;stroke-linecap:round;stroke-linejoin:round"
+     points="9921,7322 8740,4488 8740,4488 6850,6850 " />
+  <polygon
+     id="polygon14"
+     style="fill:#f5ebe5;stroke:#a14000;stroke-width:63;stroke-linecap:round;stroke-linejoin:round"
+     points="13228,5196 7417,3779 7417,3779 11574,1889 " />
+  <polygon
+     id="polygon16"
+     style="fill:#e5e5ff;stroke:#0000ff;stroke-width:63;stroke-linecap:round;stroke-linejoin:round"
+     points="5385,5858 3968,2551 3968,2551 8740,2078 " />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="1889,1889 13228,1889 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="1889,1889 1889,10393 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="13228,1889 13228,10393 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="3307,1889 3307,10393 " />
+  <polyline
+     id="polyline26"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="4724,1889 4724,10393 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="6141,1889 6141,10393 " />
+  <polyline
+     id="polyline30"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="7559,1889 7559,10393 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="8976,1889 8976,10393 " />
+  <polyline
+     id="polyline34"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="10393,1889 10393,10393 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="11811,1889 11811,10393 " />
+  <polyline
+     id="polyline38"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="1889,3307 13228,3307 " />
+  <polyline
+     id="polyline40"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="1889,4724 13228,4724 " />
+  <polyline
+     id="polyline42"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="1889,6141 13228,6141 " />
+  <polyline
+     id="polyline44"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="1889,7559 13228,7559 " />
+  <polyline
+     id="polyline46"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="1889,8976 13228,8976 " />
+  <polyline
+     id="polyline48"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="1889,10393 13228,10393 " />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text50"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="2834"
+     x="1417"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$5$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text52"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="4251"
+     x="1417"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$4$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text54"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="5669"
+     x="1417"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$3$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text56"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="7086"
+     x="1417"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$2$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text58"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="8503"
+     x="1417"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$1$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text60"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="9921"
+     x="1417"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$0$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text62"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="6236"
+     x="661"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$y$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text64"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="12047"
+     x="7653"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$x$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text66"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="11338"
+     x="2740"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$0$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text68"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="11338"
+     x="4157"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$1$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text70"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="11338"
+     x="5574"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$2$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text72"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="11338"
+     x="6992"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$3$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text74"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="11338"
+     x="8409"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$4$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text76"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="11338"
+     x="9826"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$5$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text78"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="11338"
+     x="11244"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$6$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text80"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="11338"
+     x="12661"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$7$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#b000b0;stroke-width:0.025in"
+     id="text82"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="2916.1992"
+     x="8992.1025"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$S₂$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#b000b0;stroke-width:0.025in"
+     id="text86"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="4440"
+     x="8217.9014"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$S₄$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#a14000;stroke-width:0.025in"
+     id="text90"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="3874"
+     x="11244"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₄$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#00b000;stroke-width:0.025in"
+     id="text94"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="6661"
+     x="8551"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₃$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text98"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="3826"
+     x="5558.002"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₂$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ff0000;stroke-width:0.025in"
+     id="text102"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="8409"
+     x="3207.8027"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₁$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:378.00695801px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#ffd600;stroke-width:0.025in"
+     id="text106"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="9874"
+     x="5433"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₅$</text>
+  <circle
+     id="circle110"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="2409"
+     cx="8456" />
+  <circle
+     id="circle112"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="3874"
+     cx="7700" />
+  <circle
+     id="circle114"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="8740"
+     cx="5196" />
+  <polyline
+     id="polyline116"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5196,8740 9097,1167 " />
+  <polygon
+     id="polygon118"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="9053,1078 9095,1170 9193,1150 9193,1150 9210,946 " />
+</svg>

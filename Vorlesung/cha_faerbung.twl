@@ -1,0 +1,1895 @@
+\chapter{Färbung}
+\label{cha:faerbung}
+
+\begin{description}
+\item[Problem:] Bei Pixel $(i, j)$ sei Objekt $Oₖ$ sichtbar.
+
+  Wie ist Pixel $(i, j)$ einzufärben?
+\end{description}
+
+Die Farbe des Pixels hängt ab von:
+\begin{itemize}
+\item den (Material-)Eigenschaften des Objekts $Oₖ$
+
+  (Farbe, Rückstrahlkraft, Transparenz, …)
+
+\item den Eigenschaften der Lichtquellen
+
+  (Farbe, Leuchtkraft, Ausdehnung, …)
+
+\item der Geometrie der Szene
+
+  (Einfallswinkel des Lichts, Verdeckungen, Schatten, …)
+\end{itemize}
+
+Zur Bestimmung der Pixelfarbe gibt es verschiedene Verfahren.
+
+Diese unterscheiden sich in
+\begin{itemize}
+\item der Beschreibung der obigen Eigenschaften,
+\item der Umsetzung der Eigenschaften in die Pixelfarbe.
+\end{itemize}
+
+\emph{Die Wahl des Verfahrens ist bestimmt durch den zulässigen Aufwand.}
+
+
+\section{Lichtmodelle}
+\label{sec:faerbungLichtmodelle}
+
+\begin{description}
+\item[Zweck:] \emph{quantitative} Beschreibung des Lichts, das auf ein Objekt
+  trifft \bzw vom Objekt ausgeht
+\end{description}
+
+
+\subsection{Das physikalische Modell}
+
+\begin{description}
+\item[Motivation:] Licht ist eine Überlagerung von Wellen unterschiedlicher
+  Wellenlängen.
+
+\item[Beschreibung:] \emph{kontinuierliche Intensitätsverteilung}%
+  \index{kontinuierliche Intensitätsverteilung}%
+  \index{Intensitätsverteilung!kontinuierliche} $\mdef{I = I(λ)}$
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeModellKontinuierlich}}%λν
+  \end{center}
+\end{description}
+
+\begin{itemize}
+\item[⇒] Alle physikalischen Effekte werden ebenfalls durch
+  kontinuierliche Funktionen beschrieben.
+
+  \begin{description}
+  \item[Beispiel:] Reflexion
+    \[ \mymagenta{\underbrace{\black{I_{\mathrm{aus}}(λ)}}_{\text{reflektiertes Licht}}}
+    = \mymagenta{\underbrace{\black{ρ(λ)}}_{\text{Reflexionskoeffizient}}}
+    · \mymagenta{\underbrace{\black{I_{\mathrm{ein}}(λ)}}_{\text{einfallendes Licht}}} \]
+  \end{description}
+\end{itemize}
+
+\begin{itemize}
+\item[\Good] sehr mächtiges Modell
+
+\item[\Bad] auf dem Rechner kaum zu realisieren (kontinuierliche Funktionen!)
+
+\item[\Bad] nicht auf Bildschirm/Papier darstellbar
+\end{itemize}
+
+\pagebreak
+
+
+\vspace*{-29mm}
+\subsection{Das Sampling-Modell}
+\label{sec:faerbungSampling}
+
+\begin{description}
+\item[Idee:]
+  Der grobe Verlauf der $I(λ)$-Kurve kann oft bereits durch
+  wenige Werte $Iⱼ = I\fk{λⱼ}$ an \emph{fest vorgegebenen} Stellen $λⱼ$, $j = 1, …, m$,
+  beschrieben werden.
+
+  \begin{center} 
+    \scalebox{0.5}{\huge\input{fig_farbeModellSampling}}%λ₁₂₃
+  \end{center}
+
+\item[Beschreibung:]
+  \emph{Tupel}  $\mdef{I = \rk{I₁, …, Iₘ}}$
+
+  \begin{itemize}
+  \item[⇒] Physikalische Effekte werden entsprechend
+    modelliert, \zB
+    \[ I_{\mathrm{aus}, j} = ρⱼ · I_{\mathrm{ein}, j}\,\text, \quad j = 1, …, m \,\text. \]
+  \end{itemize}
+\end{description}
+
+\begin{bemerkung}
+  Die $λⱼ$ müssen \emph{nicht äquidistant} gewählt werden
+  (\iA weniger dicht im Blau-Bereich).
+\end{bemerkung}
+
+\pagebreak
+
+\begin{bemerkung}
+  Wenn einfarbiges Licht vorkommt (\zB Laser), dann muss dieses durch
+  eine entsprechende $λⱼ$-Komponente berücksichtigt werden.
+
+  sonst:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeModellSamplingProblem}}%λ₁ₘ
+
+    $≙ \xfigMagentaIII{I = \rk{0, …, 0}}$ \qquad \emph{falsch!}
+  \end{center}
+\end{bemerkung}
+
+\begin{itemize}
+\item[\Good] bei geeigneter Wahl der $λⱼ$ praktisch
+  dieselbe Qualität wie beim physikalischen Modell, falls $m$
+  „nicht zu klein“
+
+\item[\Good] relativ einfach und (für kleine $m$) effizient auf dem
+  Rechner zu realisieren
+
+\item[\Bad] Umsetzung in Bildschirm-/Druckerfarben notwendig
+\end{itemize}
+
+
+\subsection{Das Faltungs-Modell}
+
+\begin{description}
+\item[Idee:]
+  Berücksichtige bei $Iⱼ$ nicht nur die Wellenlänge
+  $λⱼ$, sondern einen ganzen \emph{Wellenlängenbereich} um
+  $λⱼ$:
+  \[ Iⱼ = ∫₀^{∞} I(λ) · Gⱼ(λ) \,dλ \]
+  mit einer
+  \emph{Gewichtsfunktion}\index{Gewichtsfunktion!bei Intensitätskomponente} $\mdef{Gⱼ}$
+\end{description}
+
+\begin{beispiele} \mbox{}
+
+  gleichmäßige Gewichtung:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeModellFaltungGleich}}%λ₁₂₃₄₅
+  \end{center}
+
+  \pagebreak
+
+  \vspace*{-19mm}
+  ungleichmäßige Gewichtung:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeModellFaltungUngleich}}%λ₁₂₃₄₅
+  \end{center}
+\end{beispiele}
+
+\begin{bemerkung}
+  Die Gewichtsfunktionen sollten so gewählt werden, dass
+  \[ ∫₀^{∞} Gⱼ(λ) \,dλ = 1 \quad \text{ für $j = 1, …, m$} \]
+  sowie
+  \[ ∑ⱼ₌₁ᵐ Gⱼ(λ) ≥ \mathrm{const} > 0 \quad \text{ „im interessanten $λ$-Bereich“} \]
+  (\dH alle Wellenlängen werden „ungefähr gleich stark“
+  berücksichtigt; dann kann einfarbiges Licht nicht mehr
+  „übersehen“ werden).
+\end{bemerkung}
+
+\pagebreak
+
+\begin{itemize}
+\item[\Good] Gerechnet wird wie in \ref{sec:faerbungSampling}, also \zB
+  \[ I_{\mathrm{aus}, j} = ρⱼ · I_{\mathrm{ein}, j}\,\text, \quad j = 1, …, m \,\text. \]
+  Die Faltung wird nur berücksichtigt
+  \begin{itemize}
+  \item bei der Ermittlung der Intensitäten $Iⱼ$ jeder
+    Lichtquelle,
+  \item \evtl bei den Reflexionskoeffizienten $ρⱼ$,
+  \end{itemize}
+  also in einer einmaligen \emph{Vorverarbeitung}.
+\end{itemize}
+
+\pagebreak
+
+
+\subsection{Das RGB-Modell}
+\index{RGB-Modell}
+
+Spezialfall des Faltungsmodells mit $m = 3$
+
+\begin{center}
+  % \scalebox{0.5}{\huge\input{fig_farbeModellRGBGewichte}}%λ
+  \scalebox{0.9}{\normalsize\input{ink_farbeRezeptoren}}\\
+  \small Absorptionskurven der menschlichen Fotorezeptoren: Zapfen (blau,
+  grün, rot) und Stäbchen (scharz gestrichelt) \\
+  \grflic{Cone-response.svg: w:User:DrBob and w:User:Zeimusu derivative work: Sgbeer}%
+  {\urllic{https://commons.wikimedia.org/wiki/File:Cone-response-de.svg}}%
+  {„Cone-response-de“}%
+  {\ccbysa~3.0, \urllic{https://creativecommons.org/licenses/by-sa/3.0/legalcode}}
+\end{center}
+
+\begin{description}
+\item[Motivation:] In der Netzhaut gibt es drei Typen von Rezeptoren, deren
+  Empfindlichkeiten etwa durch die obigen Gewichtungen gegeben sind;
+  sie sprechen vorwiegend auf \xfigRed{\textbf{R}}otes,
+  \xfigGreen{\textbf{G}}rünes \bzw \xfigBlue{\textbf{B}}laues Licht an.
+\end{description}
+\Reached{WS17/18}{06}{2017/11/16}
+\Reached{WS19/20}{06}{2019/11/14}
+
+\pagebreak
+
+\vspace*{-23mm}
+\begin{bemerkung}
+  Die R-, G-, B-Intensitäten werden oft auf das Intervall $[0; 1]$
+  normiert:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeModellRGBWuerfel}}
+  \end{center}
+\end{bemerkung}
+
+\begin{itemize}
+\item[\Bad] weniger mächtig als das physikalische Modell
+  \begin{itemize}
+  \item nicht alle Farben darstellbar
+  \item Bei sehr komplexen Beleuchtungsmodellen kann es zu
+    Farbverfremdungen kommen.
+  \end{itemize}
+  aber meist ausreichend
+
+\item[\Good] sehr einfach und effizient
+
+\item[\Good] wird von praktisch allen Farb-Raster-Displays direkt
+  unterstützt
+
+\item[⇒] eindeutig dominierend
+\end{itemize}
+
+\pagebreak
+
+
+\vspace*{-31mm}
+\subsection{Das HSV/HLS-Modell}
+\index{HSV-Modell}\index{HLS-Modell}
+
+\begin{description}
+\item[Motivation:]
+  Das HSV- \bzw HLS-Modell wird häufig im künstlerischen und
+  Design-Bereich verwendet.
+  Es imitiert das Zusammenstellen der Farben beim Malen:
+
+  \begin{itemize}
+  \item Wähle einen \emph{dominanten Farbton} (hier: dominante
+    Wellenlänge, \emph{H}ue\index{hue}).
+
+  \item Mische zu dieser Wellenlänge weißes Licht, \dH bestimme
+    die \emph{Sättigung} (\emph{S}aturation\index{saturation}) der
+    Farbe.
+
+    \vspace*{-3mm}
+    \begin{center}
+      \scalebox{0.5}{\huge\input{fig_farbeModellHSVSaettigung}}
+    \end{center}
+    \vspace*{-3mm}
+
+  \item Lege die \emph{Gesamthelligkeit}
+    (\emph{L}ightness\index{lightness}/\emph{V}alue\index{value}) der Farbe
+    durch Mischen mit Schwarz fest.
+  \end{itemize}
+
+\item[\emph{HSV-Kegel:}\index{HSV-Kegel}]
+  $H ∈ [0°; 360°]$, $S ∈ [0; 1]$, $V ∈ [0; 1]$
+
+  \begin{center}
+    \scalebox{0.45}{\huge\input{fig_farbeModellHSVKegel}}
+  \end{center}
+
+  schwarz ≙ $\rk{\underbrace{?}_H, \underbrace{?}_S, \underbrace{0}_V}$,
+  weiß ≙ $\rk{\underbrace{?}_{\text{undefiniert}}, 0, 1}$
+
+\item[\emph{HLS-Doppelkegel:}\index{HLS-Doppelkegel}]
+  $H ∈ [0°; 360°]$, $L ∈ [0; 1]$, $S ∈ [0; 1]$
+
+  \begin{center}
+    \scalebox{0.45}{\huge\input{fig_farbeModellHLSKegel}}
+  \end{center}
+
+  schwarz ≙ $\rk{\underbrace{?}_H, \underbrace{0}_L, \underbrace{?}_S}$,
+  weiß ≙ $\rk{\underbrace{?}_{\text{undefiniert}}, 1, ?}$
+\end{description}
+
+\pagebreak
+
+\begin{itemize}
+\item HSV/HLS ist äquivalent zum RGB-Modell;
+
+  es gibt Algorithmen zur Umrechnung der Modelle.
+
+\item[\Good] gut zum Festlegen von Farben geeignet
+
+\item[\Bad] für Rechnung weniger geeignet
+
+  (Welches $H$, $S$, $V$ hat Licht, das sich aus der Überlagerung
+  von grünem und magentafarbenem Licht ergibt?)
+
+\item[⇒] In den meisten Grafik-Paketen wird HSV/HLS nur für die
+  Ein-/Ausgabe der Materialeigenschaften bereitgestellt,
+  \emph{gerechnet wird in RGB}.
+\end{itemize}
+\Reached{WS14/15}{07}{2014/11/20}
+
+\pagebreak
+
+
+\section{Modellierung optischer Effekte (I)}
+
+\begin{description}
+\item[Problem:]
+  Bei Pixel $(i, j)$ ist ein Punkt \bzw ein kleines
+  Flächenstück von Objekt $Oₖ$ sichtbar.
+
+  Wie viel Licht fällt auf dieses Flächenstück, und wie viel davon
+  wird in Richtung des Pixels weitergegeben?
+\end{description}
+
+\begin{bemerkung}
+  Die folgenden Gleichungen sind jeweils für alle im Lichtmodell
+  vorkommenden Wellenlängen(bereiche) zu betrachten, also \zB für
+  R, G, B.
+
+  Die vorkommenden Koeffizienten (für Reflexion \usw) sind \iA
+  abhängig von der betrachteten Wellenlänge.
+\end{bemerkung}
+
+\begin{bemerkung}
+  Die folgenden Modelle sind alle mehr oder weniger reine
+  \emph{Heuristik}; für viele Anwendungen sind sie jedoch völlig
+  ausreichend.
+
+  Ziel ist es, bestimmte Effekte mit möglichst
+  \emph{geringem Rechenaufwand} nachzuahmen. 
+\end{bemerkung}
+
+\pagebreak
+
+
+\vspace*{-31mm}
+\subsection{Ambientes Licht}
+\label{subsec:faerbungAmbient}
+\index{ambientes Licht}
+
+\begin{description}
+\item[Motivation:] Eine Szene wird meist auch durch Licht erhellt, dem kein Ursprung
+  und keine Richtung mehr zugeordnet werden kann, \zB
+  \begin{itemize}
+  \item Tageslicht durch die Atmosphäre (aber nicht direktes
+    Sonnenlicht),
+  \item Licht einer Lampe, das bereits mehrmals an matten Wänden
+    reflektiert wurde.
+  \end{itemize}
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeEffekteAmbient}}
+  \end{center}
+
+\item[Modell:] Die Rückstrahlung hängt nur von der Gesamtintensität des
+  einfallenden ambienten Lichts und von den Materialeigenschaften
+  des Objekts ab, nicht von der Orientierung des Objekts (\zB
+  bezüglich des \emph{„Augenpunktes“}\index{Augenpunkt}).
+
+  \vspace*{-8mm}
+  \[ \underbrace{\mdef{Iₐ(\point{P})}}_{\parbox[t]{5cm}{\small
+        Intensität des bei \\ Punkt $\point{P}$ reflektierten \\ ambienten Lichts}}
+    = \underbrace{Iₐ}_{\parbox[t]{5cm}{\small
+        Intensität des ambienten \\ Lichts in der Szene}}
+    · \underbrace{R_{k,a}}_{\parbox[t]{5cm}{\small
+        Reflexionskoeffizient von \\ Objekt $k$ für ambientes \\ Licht}} \]
+\end{description}
+
+\begin{itemize}
+\item[⇒] Die Intensität des reflektierten ambienten Lichts ist für alle
+  zu einem Objekt gehörigen Pixel gleich.
+
+\item[\Bad] In der Realität ist ambientes Licht \iA abhängig vom
+  Ort $\point{P}$ und besitzt oft (abhängig von $\point{P}$)
+  bevorzugte Richtungen.
+\end{itemize}
+
+\pagebreak
+
+\pngpage{Bilder/glai/flat-sphere-ambient}
+
+
+\subsection{Diffuse Reflexion}
+\label{subsec:faerbungDiffus}
+\index{diffuse Reflexion}\index{Reflexion!diffuse}
+
+\begin{description}
+\item[Motivation:] Die Oberfläche der Objekte ist \iA nicht völlig eben.
+  Kleinste Unebenheiten führen zur Streuung des einfallenden Lichts.
+
+  \begin{center}
+    \includegraphics[scale=0.5]{fig_farbeEffekteDiffus1}
+  \end{center}
+
+\item[Modell:] Ein Teil des (von einer Lichtquelle) beim Punkt $\point{P}$
+  eintreffenden Lichts wird in alle Richtungen gleichmäßig reflektiert.
+  Die Rückstrahlung hängt nur von der Menge des einfallenden
+  Lichts und den Materialeigenschaften ab, nicht von der
+  Orientierung des Objekts \bzgl des Augenpunktes.
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeEffekteDiffus2}}%φₗ
+  \end{center}
+
+  \begin{center}
+    \begin{tabular}{ll}
+      $\vektor{n}_{\point{P}}$: & Einheitsnormale zu Objekt $k$ im Punkt $\point{P}$ \\
+      $\vektor{r}ₗ$: & Einheitsvektor in Richtung zu Lichtquelle $Lₗ$ \\
+      $\dd A$: & kleines Flächenstück von Objekt $k$
+    \end{tabular}
+  \end{center}
+
+  \pagebreak
+
+\item[Beobachtung:] \mbox{}
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeEffekteDiffus3}}%φₗ
+  \end{center}
+
+  Der Lichteinfall auf die Fläche ist proportional zu
+  \[ \cos φ = \vektor{n}_{\point{P}}ᵀ · \vektor{r}ₗ \,\text. \]
+  \emph{(Lambertsches [Kosinus-]Gesetz)}
+  \person{-10mm}{Johann Heinrich Lambert}%
+  {1728, Mülhausen (damals zur Schweiz, heute Elsass, Frankreich)}%
+  {1777, Berlin}%
+  {Mathematiker, Physiker, Philosoph}%
+  {person_Lambert}{?, Lithographie:Godefroy Engelmann}%
+  {\urlpers{https://commons.wikimedia.org/wiki/File:JHLambert.jpg}}{}%pd
+\end{description}
+
+Insgesamt folgt:
+\[ \underbrace{\mdef{I_d(\point{P})}}_{\parbox[t]{4cm}{\small
+      bei Punkt $\point{P}$ diffus \\ reflektiertes Licht}}
+  = \underbrace{∑ₗ}_{\parbox[t]{2.5cm}{\small
+      über alle \\ Lichtquellen}}
+  \rk{\vektor{n}_{\point{P}}ᵀ · \vektor{r}ₗ}
+  · \underbrace{Iₗ}_{\parbox[t]{4cm}{\small
+      Intensität des von \\ Lichtquelle $l$ \\ ausgehenden Lichts}}
+  · \underbrace{R_{k,d}}_{\parbox[t]{4cm}{\small
+      Reflexionskoeffizient \\ von Objekt $k$ für \\ diffuse Reflexion}} \]
+
+\begin{itemize}
+\item[\Bad] Diffuse Reflexion ist in der Realität meist nicht
+  völlig unabhängig vom „Ausfallswinkel“.
+\end{itemize}
+
+\pagebreak
+
+\pngpage{Bilder/glai/flat-sphere-diffuse}
+
+\vspace*{-30mm}
+\mbox{}
+\Reached{WS21/22}{06}{2021/11/18}
+
+
+\subsection{Winkelabhängige Reflexion}
+\label{subsec:faerbungWinkelabhaengig}
+
+\begin{description}
+\item[Motivation:] Bei glatten, stark spiegelnden Oberflächen ist die Reflexion in
+  die durch das „Spiegelgesetz“
+
+  \begin{center}
+    \emph{Einfallswinkel = Ausfallswinkel}
+  \end{center}
+
+  gegebene Richtung $\vektor{s}$ am stärksten, in andere Richtungen
+  nimmt sie rasch ab.
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeEffekteWinkelabhaengig1}}%αψₗ
+  \end{center}
+
+  \begin{center}
+    \begin{tabular}{ll}
+      $\vektor{v}$: & Einheitsvektor in Richtung des Augenpunktes \\
+      $\vektor{n}_{\point{P}}$: & Einheitsnormale zu Objekt $k$ im Punkt $\point{P}$ \\
+      $\vektor{r}ₗ$: & Einheitsvektor in Richtung der Lichtquelle $Lₗ$ \\
+      $\vektor{s}ₗ$: & Einheitsvektor in der durch das Spiegelgesetz gegebenen Richtung \\
+      & $= 2 \rk{\vektor{n}_{\point{P}}ᵀ · \vektor{r}ₗ} · \vektor{n}_{\point{P}} - \vektor{r}ₗ$
+    \end{tabular}
+  \end{center}
+
+  \pagebreak
+
+\item[typische Abhängigkeit:] \mbox{}
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeEffekteWinkelabhaengig2}}%ψ
+  \end{center}
+
+\item[Modell:] Der Ansatz
+  \[ I \underbrace{∼}_{\parbox[t]{2.5cm}{\small proportional}}
+    \underbrace{(\cos \psi)^{νₖ}}_{\parbox[t]{3.5cm}{\small
+        Exponent vom \\ Objekt abhängig}}
+    = \rk{\vektor{v}ᵀ · \vektor{s}ₗ}^{νₖ} \]
+  liefert bei verhältnismäßig geringem Aufwand brauchbare
+  Ergebnisse.
+  \begin{itemize}
+  \item $νₖ$ „klein“ (\zB $νₖ = 5$):
+    Die hellen Flecken \emph{(Glanzlichter)}\index{Glanzlicht} werden
+    relativ groß und nicht sehr scharf.
+
+  \item $νₖ$ „groß“ (\zB $νₖ = 40$):
+    Glanzlichter werden kleiner und schärfer.
+  \end{itemize}
+\end{description}
+
+Insgesamt folgt:
+\[ \underbrace{\mdef{I_w(\point{P})}}_{\parbox[t]{4cm}{\small
+      bei Punkt $\point{P}$ \\ winkelabhängig \\ reflektiertes Licht}}
+  = \underbrace{∑ₗ}_{\parbox[t]{2.5cm}{\small
+      über alle \\ Lichtquellen}} \rk{\vektor{v}ᵀ · \vektor{s}ₗ}^{νₖ}
+  · \underbrace{Iₗ}_{\parbox[t]{4cm}{\small
+      Intensität des von \\ Lichtquelle $l$ \\ ausgehenden Lichts}}
+  · \underbrace{R_{k,w}}_{\parbox[t]{4cm}{\small
+      Reflexionskoeffizient \\ von Objekt $k$ für \\ winkelabhängige \\ Reflexion}} \]
+
+\pagebreak
+
+\pngpage{Bilder/glai/flat-sphere-specular}
+
+\vspace*{-30mm}
+\mbox{}
+\Reached{WS18/19}{06}{2018/11/22}
+\ReachedZoom{WS20/21}{06}{2020/12/03}
+
+
+\subsection{Entfernungsabhängige Dämpfung}
+\label{subsec:faerbungDaempfung}
+
+\begin{description}
+\item[Motivation:] Punkt $\point{P}$ (\bzw Flächenstück $\dd A$) auf Objekt $Oₖ$
+  erhält umso mehr Licht von Lichtquelle $Lₗ$, je geringer
+  der Abstand ist:
+  \begin{equation}
+    \label{eq:entfernungsabhaengigeIntensitaet}
+    Iₗ ∼ \frac{1}{dₗ²} \qquad \text{mit} \qquad dₗ = \norm[2]{\point{P} - Lₗ}
+  \end{equation}
+  (Aus der unterschiedlichen Beleuchtung gewinnt das menschliche
+  Sehsystem Information über die Lage der Objekte.)
+\end{description}
+
+\begin{bemerkung}
+  Der Ansatz \eqref{eq:entfernungsabhaengigeIntensitaet} wäre für
+  \emph{Punktlichtquellen}\index{Punktlichtquelle} korrekt.
+  Solche kommen aber in der Praxis nicht vor.
+  \begin{itemize}
+  \item[⇒] Für Objekte, die sehr nahe bei der Lichtquelle
+    liegen, wird der Helligkeitsunterschied unrealistisch groß.
+  \end{itemize}
+  (Für Objekte, die weit entfernt sind, ist der Helligkeitsunterschied
+  kaum noch wahrnehmbar.)
+\end{bemerkung}
+
+\pagebreak
+
+\begin{description}
+\item[Heuristik:] Verwende einen
+  \emph{„Dämpfungsfaktor“}\index{Dämpfungsfaktor} der Form
+  \[ \mdef{fₗ(\point{P})} = \min \fk{\frac{1}{c_{l,0} + c_{l,1} · dₗ + c_{l,2} · dₗ^2}, 1} \,\text, \]
+  wobei die $c_{l,i}$ nur von der Lichtquelle abhängen.
+  \begin{itemize}
+  \item $c_{l,2}$ liefert die Gesetzmäßigkeit
+    \eqref{eq:entfernungsabhaengigeIntensitaet},
+
+  \item $c_{l,0}$ verhindert, dass $I$ in der Nähe der
+    Lichtquelle zu stark variiert,
+
+  \item $c_{l,1}$ erhöht die Variation von $I$ in größerer Entfernung.
+  \end{itemize}
+\end{description}
+
+\begin{itemize}
+\item[\Good] Bei geschickter Wahl der $c_{l,i}$ kann der
+  räumliche Eindruck deutlich verbessert werden.
+
+\item[\Bad] Die Wahl der $c_{l,i}$ erfolgt völlig heuristisch.
+\end{itemize}
+
+\begin{description}
+\item[Bemerkung:] OpenGL verzichtet auf das Minimum mit $1$; soll
+  Verstärkung verhindert werden, kann
+  $c_{l,0} ≥ 1$ gewählt werden.
+\end{description}
+
+\pagebreak
+
+
+\subsection{Farbverschiebung (Depth Cueing)}
+
+\begin{description}
+\item[Motivation:] Auf dem Weg vom Objekt zum Augenpunkt werden die verschiedenen
+  Wellenlängen des Lichts durch die \emph{Atmosphäre}
+  unterschiedlich stark gedämpft.
+  \begin{itemize}
+  \item[⇒] Weiter entfernte Gegenstände erscheinen blauer.
+  \end{itemize}
+
+\item[Modellierung:] Mische die „eigentliche“ Farbe des Objekts mit einer
+  „weit weg“-Farbe $\mdef{I_w}$, wobei das
+  Mischverhältnis von der Entfernung Objekt – Augenpunkt abhängt:
+  \[ I = σ · I_{\text{Objekt}} + (1 - σ) · I_w \]
+  mit
+  \[ σ = σ\fk{\underbrace{\point{P}}_{\text{Punkt auf dem Objekt}},
+      \underbrace{\point{A}} _{\text{Augenpunkt}}} \]
+
+\item[Wahl von $\mathbf{I_w}$ und $\mathbf{σ}$:] \mbox{}
+  \begin{itemize}
+  \item $I_w = \text{„Blauton“}$, $σ = e^{-α · \norm[2]{\point{P} - \point{A}}}$
+    ($α > 0$)
+
+    \begin{itemize}
+    \item[⇒] Rotes Licht wird auf dem Weg ins Auge
+      exponentiell gedämpft (Simulation der Atmosphäre).
+    \end{itemize}
+
+    \pagebreak
+
+  \item $I_w = \text{„irgendeine Farbe“ (\zB schwarz)}$
+
+    \begin{center}
+      \scalebox{0.5}{\huge\input{fig_farbeDepthCueing}}%σ₁₂
+    \end{center}
+
+    \begin{alignat*}{2}
+      &σ(\point{P}, \point{A}) ≡ σ₁ & \text{ für } & n ≤ n₁ \\
+      &σ \text{ linear in } n & \text{ für } & n₁ ≤ n ≤ n₂ \\
+      &σ(\point{P}, \point{A}) ≡ σ₂ & \text{ für } & n ≥ n₂
+    \end{alignat*}
+    mit $0 ≤ σ₁ ≤ σ₂ ≤ 1$
+  \end{itemize}
+\end{description}
+\Reached{WS16/17}{07}{2016/12/01}
+
+\pagebreak
+
+\pngpage{Bilder/glai/depthcue}
+
+\pagebreak
+
+
+\vspace*{-30mm}
+\subsection{Gerichtete Lichtquellen nach Warn}
+
+\begin{description}
+\item[Motivation:] Punktförmige Lichtquellen strahlen in alle Richtungen
+  gleichmäßig ab.
+
+  Die in der Realität vorkommenden Lichtquellen besitzen aber \iA
+  eine bevorzugte Richtung \\
+  (\zB Auto-/Fahrradscheinwerfer: Licht in einem Kegel gebündelt).
+
+\item[Idee:] Bei den Objekten ergab die winkelabhängige Reflexion eine
+  bevorzugte Richtung.
+  Verwende diesen Ansatz auch hier.
+
+\item[Modell:] Ersetze die Punktlichtquelle durch einen (unendlich kleinen)
+  perfekten Spiegel, der von einer unendlich fernen Lichtquelle
+  $Lₗ'$ beleuchtet wird.
+
+  \begin{center}
+    \scalebox{0.55}{\LARGE\input{fig_farbeWarnSpiegel}}%γₗ
+  \end{center}
+  \vspace*{-5mm}
+  \personHidden{20mm}{David R.~Warn}{}{}{}{person_nopic}{}{}{}%
+
+  \begin{itemize}
+  \item[⇒] $Lₗ$ reflektiert am stärksten in die durch
+    das Spiegelgesetz vorgegebene Richtung $\vektor{r}ₗ'$.
+  \end{itemize}
+
+  Liegt $Lₗ$ von Punkt $\point{P}$ aus in Richtung
+  $\vektor{r}ₗ$, so wird $\point{P}$ von $Lₗ$ mit der
+  Intensität
+  \[ Iₗ = \underbrace{\widehat{I}ₗ}_{\parbox[t]{5cm}{\small
+        maximale Intensität in \\ der von $Lₗ$ bevorzugten \\ Richtung}}
+    · \underbrace{(\cos γ)^{μₗ}}_{\parbox[t]{5cm}{\small
+        Exponent kontrolliert \\ die „Richtcharakteristik“ \\ (Bündelung) von $Lₗ$}}
+    = \widehat{I}ₗ · \rk{-\vektor{r}ₗᵀ · \vektor{r}ₗ'}^{μₗ} \]
+  beleuchtet.
+
+  \begin{itemize}
+  \item $μₗ = 0$:
+    gleichmäßige Abstrahlung in alle Richtungen
+
+  \item $μₗ$ „groß“:
+    Mit zunehmendem Winkel $γ$ fällt die Intensität
+    schnell ab (≙ starke Bündelung).
+  \end{itemize}
+\end{description}
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item $Lₗ'$ dient nur der Veranschaulichung.
+    Die Lichtquelle wird definiert durch
+    \begin{center}
+      \begin{tabular}{Ll}
+        Lₗ & (Ort), \\
+        \widehat{I} & (maximale Intensität), \\
+        \vektor{r}ₗ' & (bevorzugte Richtung) und \\
+        μₗ & (Bündelung).
+      \end{tabular}
+    \end{center}
+
+  \item Für $-\vektor{r}ₗᵀ · \vektor{r}ₗ' < 0$
+    (\dH $γ > 90°$) setzt man im Fall $μₗ > 0$
+    die Intensität $Iₗ := 0$.
+  \end{enumerate}
+\end{bemerkungen}
+
+Die Lichtabstrahlung kann leicht noch weiter eingeschränkt werden, \zB durch:
+
+\begin{description}
+\item[Kegel:] Setze $Iₗ := 0$, falls $γ ≥ γ₀$ (fest).
+
+  Damit kann \zB Licht von Hängelampen simuliert werden.
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeWarnKegel}}%γ₀ₗ
+  \end{center}
+
+  \pagebreak
+
+\item[Klappen:] Setze $Iₗ := 0$, falls
+  $\point{P} ∉ \ek{\underline{x}; \overline{x}} ×
+  \ek{\underline{y}; \overline{y}} ×
+  \ek{\underline{z}; \overline{z}}$
+  mit $-∞ ≤ \underline{x} ≤ \overline{x} ≤ +∞$
+  ($y$, $z$ analog).
+
+  Damit kann \zB Licht simuliert werden, das durch eine Tür in
+  einen Raum fällt.
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeWarnKlappe}}%ₗ
+  \end{center}
+\end{description}
+
+\begin{itemize}
+\item[\Good] bei sehr geringem Aufwand oft relativ gute Ergebnisse
+
+\item[\Good] Die Berücksichtigung gerichteter Abstrahlung kann sehr
+  einfach auch noch \emph{nachträglich} in ein Programm eingebaut
+  werden.
+
+\item[\Bad] stark heuristisch
+\end{itemize}
+
+\pagebreak
+
+\pngpage{Bilder/glai/warn-exp0-angle21}
+
+\pngpage{Bilder/glai/warn-exp12-angle90}
+
+
+\section{Lokale Beleuchtungsmodelle}
+
+Durch \emph{Beleuchtungsmodelle}\index{Beleuchtungsmodell} werden die
+Lichtverhältnisse für \emph{einzelne Punkte} der Objekte festgelegt:
+
+\begin{itemize}
+\item Ursprung des Lichts:
+  Anzahl und Art der Lichtquellen
+
+  (ambient, punktförmig ungerichtet/gerichtet, ausgedehnt),
+
+  Intensität, Position, …
+
+\item Interaktion des Lichts mit den Objekten:
+  Welche physikalischen Effekte werden modelliert, und wie?
+
+  (Reflexion,  Brechung, Schatten, …)
+\end{itemize}
+
+Bei einem
+\emph{lokalen Beleuchtungsmodell}\index{lokales Beleuchtungsmodell}%
+\index{Beleuchtungsmodell!lokales}
+\emph{(Modell der Ordnung 0)}\index{Modell der Ordnung 0} werden zur
+Berechnung der „Farbe“ 
+von Punkt $\point{P}$ auf Objekt $Oₖ$ nur
+\begin{itemize}
+\item die (Material-)Eigenschaften von $Oₖ$ und
+\item die Lichtquelle(n) $Lₗ$
+\end{itemize}
+herangezogen.
+
+\begin{itemize}
+\item[\Good] geringer Rechenaufwand (für Real-Time-Anwendungen)
+\item[\Bad] \emph{keine} Schatten, keine Lichtbrechung,
+  keine Spiegelung an Objekten, …
+\end{itemize}
+
+
+\subsection{Das „triviale“ Modell}
+\label{subsec:faerbungTrivial}
+
+\begin{description}
+\item[Lichtquellen:] Objekte
+
+\item[modellierte Effekte:] —
+
+\item[Ansatz:] \mbox{}
+
+  \[ \underbrace{I(\point{P})}_{\parbox[t]{6cm}{\small
+        vom Punkt $\point{P}$ aus in Richtung \\ des Augenpunkts \\ ausgehende Intensität}}
+    = \underbrace{Iₖ}_{\parbox[t]{6cm}{\small
+        konstanter Wert für Objekt $Oₖ$}}
+    \qquad
+    (λ = \text{R, G, B}) \]
+\end{description}
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item extrem einfach (und schnell) zu berechnen
+
+  \item Die Intensität ist für alle zu einem Objekt gehörenden
+    Punkte/Pixel gleich.
+  \end{enumerate}
+\end{bemerkungen}
+
+
+\subsection{Das Modell von Bouknight}
+\label{subsec:faerbungBouknight}
+
+\begin{description}
+\item[Lichtquellen:]
+  \parbox[t]{13cm}{ambientes Licht \par
+    1 punktförmige Lichtquelle in beliebiger Position}
+  
+\item[modellierte Effekte:] diffuse Reflexion
+
+\item[Ansatz:] \mbox{}
+
+  \[ I(\point{P}) = \underbrace{Iₐ · R_{k,a}}_{\text{siehe \ref{subsec:faerbungAmbient}}}
+    + \underbrace{\rk{\vektor{n}_{\point{P}}ᵀ · \vektor{r}₁} · I₁ ·
+      R_{k,d}}_{\text{siehe \ref{subsec:faerbungDiffus}}} \quad (λ = \text{R, G, B}) \]
+\end{description}
+\personHidden{0mm}{W.~Jack~Bouknight}{}{}{}{person_nopic}{}{}{}%
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item einfach und schnell zu berechnen
+
+  \item Wenn man annimmt, dass das Objekt nicht gekrümmt (Polygon)
+    und die Lichtquelle „weit genug“ entfernt ist, dann
+    variiert die Intensität für die zum Objekt gehörenden
+    Punkte/Pixel nicht wesentlich.
+  \end{enumerate}
+\end{bemerkungen}
+
+
+\subsection{Das Modell von Phong}
+\label{subsec:faerbungPhong}
+
+\begin{description}
+\item[Lichtquellen:]
+  \parbox[t]{13cm}{ambientes Licht \par
+    mehrere punktförmige Lichtquellen}
+
+\item[modellierte Effekte:]
+  \parbox[t]{9cm}{diffuse Reflexion \par
+    winkelabhängige Reflexion \par
+    (entfernungsabhängige Dämpfung)}
+  \personHidden{0mm}{Bùi Tường Phong}{1942, Hanoi (Hà Nội)}{1975, USA}%
+  {Informatiker}%
+  {person_Phong}{}%
+  {\urlpers{https://www.pinterest.com/Termolux/names-with-last-names/}}%
+  {}%Lizenz unklar
+
+\item[Ansatz:] \mbox{}
+
+  \[ I(\point{P}) = \underbrace{Iₐ · R_{k,a}}_{\text{\ref{subsec:faerbungAmbient}}}
+    + ∑ₗ \underbrace{fₗ(\point{P})}_{\text{\ref{subsec:faerbungDaempfung}}}
+    · Iₗ · \rk{\underbrace{\rk{\vektor{n}_{\point{P}}ᵀ · \vektor{r}ₗ} ·
+        R_{k,d}}_{\text{\ref{subsec:faerbungDiffus}}}
+      + \underbrace{\rk{\vektor{v}ᵀ · \vektor{s}ₗ}^{νₖ} ·
+        R_{k,w}}_{\text{\ref{subsec:faerbungWinkelabhaengig}}}}
+    \quad (λ = λ₁, …, λₘ) \]
+\end{description}
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Bei Bedarf können Farbverschiebung und gerichtete
+    Lichtquellen leicht hinzugenommen werden.
+
+  \item weitaus mächtiger als das Modell von Bouknight, aber auch
+    wesentlich aufwändiger
+  \end{enumerate}
+\end{bemerkungen}
+\Reached{WS15/16}{07}{2015/12/03}
+
+
+\section{Färbungsstrategien für Polygone}
+
+Die \emph{Färbungsstrategie}\index{Färbungsstrategie} legt fest,
+\begin{itemize}
+\item welches (lokale) Beleuchtungsmodell verwendet wird,
+\item für welche zu einem Objekt gehörenden Punkte/Pixel das
+  Beleuchtungsmodell angewandt wird und
+\item wie die Farbe der übrigen Pixel des Objekts bestimmt wird.
+\end{itemize}
+
+\begin{description}
+\item[Problem:] Polygone (insbesondere Drei- und Vierecke) werden oft benutzt,
+  um \emph{gekrümmte Flächen} zu approximieren.
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeStrategieKrumm1}}
+  \end{center}
+
+  Im Bild sollte wieder der Eindruck einer glatten (gekrümmten)
+  Fläche entstehen.
+
+  \pagebreak
+
+\item[Ansatz:] Ordne jedem Knoten des Polygonnetzes eine Normale zu:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeStrategieKrumm2}}
+  \end{center}
+
+  Stimmen diese Normalen mit den Normalen der Fläche in den Knoten
+  überein und verwendet man sie zur Bestimmung der Farbe, so kann
+  \uU der Eindruck einer glatten Fläche entstehen.
+\end{description}
+
+\begin{bemerkung}
+  Die Farbe innerhalb eines Polygons (≙ Stück der
+  Fläche) kann – je nach Krümmung – relativ stark variieren.
+\end{bemerkung}
+
+
+\subsection{Konstante Färbung}
+
+\begin{description}
+\item[Auswertung:] an irgendeinem Punkt $\point{P}$ des Polygons
+
+\item[Farbwerte der Pixel:] gleich dem einmal für $\point{P}$ berechneten Wert
+\end{description}
+
+\textbf{Beleuchtungsmodelle:}
+
+\begin{enumerate}
+\item „trivial“ (\ref{subsec:faerbungTrivial})
+
+  \begin{itemize}
+  \item[\Bad] Aus der Farbe kann kein Rückschluss auf die
+    räumliche Orientierung des Polygons gezogen werden.
+
+  \item[\Bad] Werden alle Polygone mit derselben Farbe
+    gezeichnet, so ist nur noch der Umriss ihrer
+    Vereinigung erkennbar.
+
+    \begin{center}
+      \includegraphics[scale=0.6]{fig_farbeStrategieKonstant1}
+    \end{center}
+
+    \begin{itemize}
+    \item[⇒] Die Ränder der Polygone sollten mit
+      einer anderen Farbe gezeichnet werden.
+    \end{itemize}
+  \end{itemize}
+  \newcounter{tmpcounter}
+  \setcounter{tmpcounter}{\value{enumi}}
+\end{enumerate}
+
+\pagebreak
+
+\begin{bemerkung}
+  Diese Technik wird oft in Verbindung mit Painter's Algorithm oder
+  dem $z$-Puffer-Algorithmus verwendet, wenn das Entfernen unsichtbarer
+  Strecken(teile) wichtiger ist als „informative“ Färbung.
+
+  \begin{tabular}{rl}
+    \textbf{Beispiel:} & Füllfarbe = Hintergrundfarbe \\
+    & Randfarbe = eigentliche Zeichenfarbe \\[2ex]
+    ⇝ & Drahtmodelldarstellung ohne verdeckte Linien
+  \end{tabular}
+\end{bemerkung}
+
+\pagebreak
+
+\begin{enumerate}
+  \setcounter{enumi}{\value{tmpcounter}}
+\item Bouknight-Modell (\ref{subsec:faerbungBouknight})
+
+  \begin{itemize}
+  \item[\Good] Die Helligkeit vermittelt einen groben Eindruck
+    von der räumlichen Orientierung der Polygone.
+
+  \item[\Bad] Wenn die Polygone eine gekrümmte Fläche
+    approximieren, dann wirken die
+    \emph{unstetigen Farbübergänge} an den Polygongrenzen störend, besonders
+    durch den
+
+    \begin{description}
+    \item[\emph{Mach-Band-Effekt:}\index{Mach-Band-Effekt}]
+      physiologischer Effekt („optische Täuschung“):
+
+      Wird ein (Licht-)Rezeptor im Auge angeregt, so
+      inhibiert er gleichzeitig die übrigen Rezeptoren in
+      seiner Nachbarschaft (umso stärker, je näher sie bei
+      ihm liegen).
+
+      \begin{center}
+        \scalebox{0.5}{\huge\input{fig_farbeStrategieBouknightMach1}}%₁₂₃₄
+      \end{center}
+
+      $R₁$ und $R₂$ empfangen gleiche
+      Lichtintensität, aber $R₁$ wird stärker inhibiert.
+
+      \begin{itemize}
+      \item[⇒] $R₂$ meldet mehr Licht als $R₁$,
+        \person{-15mm}{Ernst Waldfried Josef Wenzel Mach}%
+        {1838, Chirlitz (Chrlice, Kaisertum Österreich, heute zu Brünn [Brno], Tschechien)}%
+        {1916, Vaterstetten (nahe München)}%
+        {Physiker}%
+        {person_Mach}{H.~F.~Jütte}%
+        {\urlpers{https://commons.wikimedia.org/wiki/File:Ernst_Mach_01.jpg}}{}%pd
+
+        $R₃$ meldet weniger Licht als $R₄$
+        \quad (analog)
+      \end{itemize}
+
+      \begin{center}
+        \scalebox{0.475}{\huge\input{fig_farbeStrategieBouknightMach2}}
+      \end{center}
+
+      Dieser Effekt tritt auch bei stetigen, nicht
+      differenzierbaren Intensitätsverläufen auf:
+
+      \begin{center}
+        \scalebox{0.475}{\huge\input{fig_farbeStrategieBouknightMach3}}
+      \end{center}
+
+      Beispiel:
+
+      \begin{center}
+        \includegraphics[scale=0.4]{fig_farbeStrategieBouknightMach4}
+      \end{center}
+    \end{description}
+  \end{itemize}
+\end{enumerate}
+
+\pagebreak
+
+\begin{bemerkung}
+  Diese Technik liefert eine adäquate Darstellung, wenn
+  \begin{itemize}
+  \item die Polygone selbst die darzustellenden Objekte sind (und
+    nicht eine Fläche approximieren) und
+  \item die Lichtquelle „weit genug“ entfernt ist.
+  \end{itemize}
+\end{bemerkung}
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Konstante Färbung ist sehr schnell durchführbar, da
+
+    \begin{itemize}
+    \item das Lichtmodell nur einmal angewandt wird und
+
+    \item alle Pixel des Objekts gleich gefärbt werden, \dH ein
+      effizienter Füllalgorithmus einsetzbar ist.
+    \end{itemize}
+
+  \item \Evtl vorhandene „Eckennormalen“ werden \iA
+    ignoriert; im Beleuchtungsmodell wird die Normale zur
+    Polygonebene verwendet.
+  \end{enumerate}
+\end{bemerkungen}
+
+
+\subsection{Farbwertinterpolation (Gouraud-Shading)}
+
+\personHidden{0mm}{Henri Gouraud}{1944, Frankreich}{}%
+{Informatiker}%
+{person_Gouraud}{}%
+{\urlpers{http://www.ranker.com/review/henri-gouraud/1149356},
+  \urlpers{http://img1.rnkr-static.com/node_img/58/1149356/C250/henri-gouraud-all-people-photo-1.jpg}}%
+{}%Lizenz unklar
+\begin{description}
+\item[Beleuchtungsmodell:] vorwiegend Phong-Modell (\ref{subsec:faerbungPhong})
+
+\item[Auswertung:] an den Ecken des Polygons mit den vorgegebenen Eckennormalen
+
+\item[Farbwerte der Pixel:] Interpolation der Farbwerte der Ecken
+\end{description}
+
+\begin{bemerkung}
+  Gouraud- und Phong-Shading werden in der Praxis meist auf Dreiecke
+  angewandt; Polygone mit mehr Ecken werden vorher \emph{trianguliert}
+  (in Dreiecke zerlegt).
+
+  Gouraud- und Phong-Shading werden bei der Scan Conversion
+  \emph{inkrementell} durchgeführt:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeGouraud1}}%α
+  \end{center}
+
+  \pagebreak
+
+  \vspace*{-22mm}
+  \begin{itemize}
+  \item $I(\point{L})$ ergibt sich durch lineare Interpolation von
+    $I(\point{C})$ und $I(\point{A})$, $I(\point{R})$ aus
+    $I(\point{C})$ und $I(\point{B})$.
+
+    \begin{itemize}
+    \item[⇒] $I(\point{L})$ und $I(\point{R})$ ändern
+      sich beim Übergang zur nächsten Scan Line um feste
+      Beträge $Δ I(\point{L})$ \bzw $Δ I(\point{R})$.
+    \end{itemize}
+
+  \item $I(\point{P})$ ergibt sich durch lineare Interpolation von
+    $I(\point{L})$ und $I(\point{R})$.
+
+    \begin{itemize}
+    \item[⇒] $I(\point{P})$ ändert sich beim Übergang
+      zum Nachbarpixel um einen festen (von der Scan Line
+      abhängigen) Betrag $Δ I(\point{P})$.
+    \end{itemize}
+  \end{itemize}
+\end{bemerkung}
+
+\begin{bemerkung}
+  Jeder Punkt $\point{P}$ im Dreieck besitzt eine eindeutige
+  Darstellung
+  \begin{align*}
+    \point{P} &= \point{A} + α_{\point{B}} · (\point{B} - \point{A})
+    + α_{\point{C}} · (\point{C} - \point{A}) \\
+    &= \underbrace{\rk{1 - α_{\point{B}} - α_{\point{C}}}}_{\textstyle =: α_{\point{A}}}
+    · \point{A} + α_{\point{B}} · \point{B} + α_{\point{C}} · \point{C}
+  \end{align*}
+  mit
+  $α_{\point{A}}, α_{\point{B}}, α_{\point{C}} ∈ [0; 1]$
+  \quad und \quad
+  $α_{\point{A}} + α_{\point{B}} + α_{\point{C}} = 1$ \quad
+  (\emph{baryzentrische Koordinaten}\index{baryzentrische Koordinaten}%
+  \index{Koordinaten!baryzentrische} von $\point{P}$).
+
+  Bei Gouraud-Shading setzt man dann
+  \[ I(\point{P}) = α_{\point{A}} · I(\point{A}) + α_{\point{B}} · I(\point{B})
+    + α_{\point{C}} · I(\point{C}) \,\text. \]
+\end{bemerkung}
+
+\pagebreak
+
+\begin{itemize}
+\item[\Good] relativ geringer Aufwand (drei Auswertungen des
+  Beleuchtungsmodells und inkrementelle Interpolation)
+
+\item[\Bad] Die Farbübergänge an den Dreiecksgrenzen werden zwar
+  stetig, aber nicht differenzierbar.
+
+  \begin{itemize}
+  \item[⇒] Mach-Band-Effekt
+
+    (aber schwächer als bei konstanter Färbung)
+  \end{itemize}
+
+\item[\Bad] Glanzlichter (\emph{Highlights}\index{Highlight}, hervorgerufen
+  durch die winkelabhängige Reflexion) werden nicht korrekt
+  wiedergegeben:
+
+  \begin{itemize}
+  \item Scharfe Highlights \cmt{$νₖ$ groß, \ref{subsec:faerbungWinkelabhaengig}}
+    in den Dreiecksecken werden „verschmiert“.
+
+    \begin{center}
+      \scalebox{0.5}{\huge\input{fig_farbeGouraudHighlight1}}
+    \end{center}
+
+  \item Highlights, die keine Dreiecksecke treffen, werden gar
+    nicht dargestellt.
+
+    \begin{center}
+      \includegraphics[scale=0.5]{fig_farbeGouraudHighlight2}
+    \end{center}
+  \end{itemize}
+\end{itemize}
+
+\pagebreak
+
+\vspace*{-25mm}
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Sind keine \emph{Ecken}normalen vorgegeben, so kann man
+    meist durch Mitteln der \emph{Ebenen}normalen aller an eine
+    Ecke grenzenden Polygone „vernünftige“ Vektoren
+    erhalten:
+
+    \begin{center}
+      \scalebox{0.5}{\huge\input{fig_farbeGouraudNormale1}}%₁₂₃₄
+    \end{center}
+
+    \[ \vektor{n}_{\point{P}}
+      = \frac{\widetilde{\vektor{n}}_{\point{P}}}{\norm[2]{\widetilde{\vektor{n}}_{\point{P}}}}
+      \quad \text{mit} \quad
+      \widetilde{\vektor{n}}_{\point{P}}
+      = \frac14 · \rk{\vektor{n}₁ + \vektor{n}₂ + \vektor{n}₃ + \vektor{n}₄} \]
+
+    Das klappt aber nicht immer:
+
+    \vspace*{-2mm}
+    \begin{center}
+      \includegraphics[scale=0.5]{fig_farbeGouraudNormale2}
+    \end{center}
+
+    Alle gemittelten Eckennormalen sind parallel!
+
+    \pagebreak
+
+    \pngpage{Bilder/glai/flat2}
+    
+    \pagebreak
+
+  \item Gouraud-Shading wird \iA Hardware-unterstützt.
+
+    \begin{itemize}
+    \item[⇒] sehr schnell (viele Millionen Dreiecke/s)
+    \end{itemize}
+  \end{enumerate}
+\end{bemerkungen}
+
+
+\subsection{Normaleninterpolation (Phong-Shading)}
+
+\begin{description}
+\item[Beleuchtungsmodell:] Phong-Modell
+
+\item[Auswertung:] bei jedem zum Polygon (\iA Dreieck) gehörenden Pixel $\point{P}$,
+  wobei die Normale $\vektor{n}_{\point{P}}$ linear aus den
+  Eckennormalen interpoliert wird
+
+\item[Farbwerte der Pixel:] gemäß Beleuchtungsmodell
+\end{description}
+
+\begin{center}
+  \includegraphics[scale=0.5]{fig_farbePhongNormalen}
+\end{center}
+
+Die interpolierten Normalen sind meist gute Näherungen für die
+Normalen der approximierten Fläche.
+
+\begin{bemerkung}
+  Die Normalenrichtung wird (wie die Farbe beim Gouraud-Shading)
+  inkrementell interpoliert; die so bestimmten Vektoren müssen noch
+  \emph{normiert} werden.
+\end{bemerkung}
+
+  \begin{itemize}
+  \item[\Good] Der Farbverlauf ist auch über die Dreiecksgrenzen
+    hinweg glatt.
+
+  \item[\Good] verhältnismäßig gute Wiedergabe der Krümmung der
+    Fläche, auch wenn die Dreiecke nicht allzu klein sind
+
+  \item[\Good] Highlights werden (nahezu) korrekt dargestellt.
+
+  \item[\Bad] Der Umriss der Fläche ist ein Polygonzug mit meist
+    deutlich sichtbaren Knicken.
+
+    einzige Abhilfe: Polygone kleiner machen
+
+    \begin{itemize}
+    \item[⇒] Anzahl der Polygone steigt
+    \end{itemize}
+
+  \item[\Bad] ziemlich aufwändig: Auswertung des Beleuchtungsmodells
+    für jedes Pixel des Polygons
+
+    (Dies ist \iA nicht inkrementell möglich.)
+
+    dennoch Hardware-Unterstützung
+  \end{itemize}
+  \Reached{WS17/18}{07}{2017/11/23}
+  \Reached{WS19/20}{07}{2019/11/21}
+
+
+  \section{Modellierung optischer Effekte (II)}
+
+  \begin{description}
+  \item[Ziel:] Simulation von Effekten, die in den bisherigen \emph{lokalen}
+    Beleuchtungsmodellen noch nicht berücksichtigt sind, \emph{ohne}
+    die Beleuchtungsmodelle „wesentlich“ zu ändern
+  \end{description}
+
+  \begin{beispiele} \mbox{}
+    \begin{enumerate}
+    \item \emph{Schattenwurf:}
+      Bevor das Licht der Lichtquelle auf das betrachtete Objekt
+      $Oₖ$ fällt, hat es bereits mit einem anderen Objekt
+      $O_{k'}$ Kontakt.
+
+      \begin{itemize}
+      \item[⇒] Entweder muss ein globales Beleuchtungsmodell
+        verwendet werden, oder der Einfluss der anderen Objekte
+        muss \emph{außerhalb des Beleuchtungsmodells}
+        berücksichtigt werden.
+      \end{itemize}
+
+    \item \emph{Oberflächenstruktur:}
+      Die meisten realen Oberflächen von Körpern sind nicht
+      völlig gleichmäßig gefärbt (Marmorierung, Stoffmuster,
+      Holzmaserung, …).
+    \end{enumerate}
+  \end{beispiele}
+
+  \pagebreak
+
+
+  \subsection{Schatten}
+
+  \begin{description}
+  \item[Beobachtung:] \mbox{}
+
+    \begin{center}
+      \scalebox{0.6}{\LARGE\input{fig_farbeSchattenSituation}}%ₖₗ
+    \end{center}
+
+    Genau die Punkte $\point{P}$ eines Objekts $Oₖ$ erhalten von
+    der Lichtquelle $Lₗ$ Licht, die von $Lₗ$ aus
+    \emph{sichtbar}, \dH nicht durch andere Objekte verdeckt, sind.
+
+    \begin{itemize}
+    \item[⇒] Die Bestimmung der durch $Lₗ$ beleuchteten
+      Teile von $Oₖ$ entspricht einer
+      \emph{Sichtbarkeitsanalyse von \boldmath$Lₗ$ aus}
+
+      (\vgl Kapitel~\ref{cha:sichtbarkeit}).
+    \end{itemize}
+  \end{description}
+
+  \minisec{Der analytische Ansatz}
+
+  Bestimme die (\bzgl der gewählten Projektion) später im Bild
+  sichtbaren Teile $Oᵢ⁽⁰⁾$ der Objekte $Oₖ$:
+  \[ \mk{Oₖ} ↦ \mk{Oᵢ⁽⁰⁾} \qquad \text{mit} \qquad
+    \mdef{\underbrace{\black{⋃ᵢ Oᵢ⁽⁰⁾}}_{\textstyle =: O⁽⁰⁾}}
+    ⊆ \mdef{\underbrace{\black{⋃ₖ Oₖ}}_{\textstyle =: O}} \]
+
+  \begin{AlgListInline}
+  für $l = 1, 2, …, l_{\max}$°°°°°// alle Lichtquellen
+  °°°bestimme für jedes $Oᵢ⁽ˡ⁻¹⁾$ die von $Lₗ$ aus entweder vollständig sichtbaren oder vollständig
+  °°°°°°°°unsichtbaren Teile $Oⱼ⁽ˡ⁾$:
+  °°°°°°°°$\mk{Oᵢ⁽ˡ⁻¹⁾} ↦ \mk{Oⱼ⁽ˡ⁾}$ mit $\mdef{\underbrace{\black{⋃ⱼ Oⱼ⁽ˡ⁾}}_{\displaystyle =: O⁽ˡ⁾}} = \underbrace{⋃ᵢ Oᵢ⁽ˡ⁻¹⁾}_{\textstyle = O⁽ˡ⁻¹⁾}$
+  färbe die $Oᵢ^{\rk{l_{\max}}}$ entsprechend einer geeigneten Strategie
+\end{AlgListInline}
+
+\pagebreak
+
+\vspace*{-22mm}
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Die Beschreibung der jeweils sichtbaren/unsichtbaren Teile
+    muss in Form von Polygonen geliefert werden, nicht als
+    einzelne Strecken(teile) wie in
+    Abschnitt~\ref{sec:sichtbarkeitAnalytisch}.
+
+  \item Berücksichtigung der „richtigen“ Lichtquellen bei der
+    Färbung von $Oᵢ^{\rk{l_{\max}}}$:
+
+    \begin{itemize}
+    \item Während der Schattenanalyse wird in einem Bitvektor
+      der Länge $l_{\max}$ für jede Lichtquelle $Lₗ$
+      festgehalten, ob $Oᵢ^{(·)}$ von $Lₗ$ Licht
+      erhält
+    \end{itemize}
+
+    oder
+
+    \begin{itemize}
+    \item Färbung und Schattenanalyse „verzahnen“:
+
+      \begin{AlgListInline}
+        zuerst nur die $Oᵢ⁽⁰⁾$ bestimmen und mit der ambienten Komponente vorbelegen
+        für $l = 1, 2, …, l_{\max}$
+        °°°die von $Lₗ$ beleuchteten Teile von $Oᵢ^{\mdef{(0)}}$ bestimmen und die Intensität der
+        °°°°°°°°entsprechenden Pixel um den zu $Lₗ$ gehörenden diffusen und
+        °°°°°°°°winkelabhängigen Beitrag erhöhen
+      \end{AlgListInline}
+
+      \begin{itemize}
+      \item[\Good] wesentlich geringerer Verwaltungsaufwand
+        und geringerer Speicherbedarf (weniger Objekte)
+      \item[\Bad] Objekte werden \uU mehrmals Scan-converted und gefärbt.
+      \end{itemize}
+    \end{itemize}
+  \end{enumerate}
+\end{bemerkungen}
+
+\pagebreak
+
+\minisec{Der $\mathbf{z}$-Puffer-Ansatz}
+
+\begin{description}
+\item[Idee:] Die Sichtbarkeitsinformation \bzgl $Lₗ$ kann genauso in
+  einem Tiefenpuffer gespeichert werden wie die Sichtbarkeit vom
+  Auge aus.
+\end{description}
+
+\begin{AlgListInline}
+  für $l = 1, 2, …, l_{\max}$
+  °°°führe für alle Objekte $Oₖ$ Scan Conversion bzgl. $Lₗ$ durch und speichere die zu jedem º„ºPixelº“º
+  °°°°°°°°gehörige Entfernung in einem º„º$z$-Pufferº“º $Zₗ$
+  für alle Objekte $Oₖ$
+  °°°führe ºfürº $Oₖ$ Scan Conversion bzgl. der eigentlichen Projektion durch (mit $z$-Puffer)
+  °°°für alle sichtbaren Pixel des Objekts
+  °°°°°°bestimme einen zum Pixel gehörenden Punkt $\point{P}$ auf dem Objekt
+  °°°°°°für $l = 1, 2, …, l_{\max}$
+  °°°°°°°°°bestimme, in welche Zelle $Zₗ(i, j)$ von $Zₗ$ der Punkt $\point{P}$ fällt
+  °°°°°°°°°wenn $\norm[2]{P - Lₗ} ≤ Zₗ(i, j)$°°°°°// kein Objekt zwischen $\point{P}$ und $Lₗ$
+  °°°°°°°°°°°°berücksichtige $Lₗ$ bei der Färbung des Pixels
+\end{AlgListInline}
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Die „Auf\/lösung“ (Anzahl der Zellen, Anzahl der Bits
+    pro Zelle) kann für jeden $z$-Puffer $Zₗ$ frei
+    vorgegeben werden.
+    
+    \pagebreak
+
+  \item Der für das Pixel gewählte Punkt $\point{P}$ auf dem
+    Objekt stimmt \iA nicht mit dem „Referenzpunkt“ der
+    Zelle $Zₗ(i, j)$ überein.
+
+    \begin{center}
+      \scalebox{0.55}{\LARGE\input{fig_farbeZPufferProblem1}}%₁₂ₖₗ
+    \end{center}
+
+    \begin{Hide}
+      $\norm[2]{\point{P}₁ - Lₗ} < Zₗ(i, j) = \norm[2]{\point{P}ₗ - Lₗ}$
+      \begin{itemize}
+      \item[⇒] „$\point{P}₁$ erhält Licht von $Lₗ$“
+      \end{itemize}
+
+      \bigskip
+
+      $\norm[2]{\point{P}₂ - Lₗ} > Zₗ(i, j)$
+      \begin{itemize}
+      \item[⇒] „$\point{P}₂$ liegt \bzgl $Lₗ$ im Schatten“ \quad \myred{falsch!}
+      \end{itemize}
+    \end{Hide}
+
+    \begin{description}
+    \item[Folge:] Teile eines Objekts liegen im Schatten \emph{desselben} Objekts.
+
+    \item[Gegenmaßnahme:] Verschiebe den Punkt $\point{P}$ etwas in Richtung der
+      Lichtquelle \\
+      (\dH „korrigiere“
+      $\norm[2]{\point{P} - Lₗ}$ nach unten):
+      \quad $\point{P} ⇝ \point{P}⁽ˡ⁾$
+
+      \begin{center}
+        \scalebox{0.55}{\LARGE\input{fig_farbeZPufferProblem2}}%Δ₁₂ₖₗ
+      \end{center}
+
+      Verschiebt man alle Punkte gleichmäßig um
+      $Δₗ$ zu $Lₗ$ hin, so können einige
+      davon (hier: $\point{P}₂$) irrtümlich aus dem
+      Schatten eines anderen Objekts $O_{k'}$ fallen.
+
+    \item[\mdseries{⇒}] Diese Technik liefert manchmal falsche
+      Ergebnisse.
+    \end{description}
+  \end{enumerate}
+\end{bemerkungen}
+\Reached{WS14/15}{08}{2014/11/27}
+
+\pagebreak
+
+\pngpage{Bilder/glai/shadowmap}
+
+
+\subsection{Oberflächenstruktur (Textur)}
+
+\begin{description}
+\item[Annahme:] Das betrachtete Objekt besitzt eine
+  \emph{Parametrisierung}\index{Parametrisierung eines Objekts}
+  \[ O = \set{\point{P} = \point{P}(s, t)
+      = \pmat{x(s, t) \\ y(s, t) \\ z(s, t)}}{(s, t) ∈ D} \]
+  mit einem geeigneten Parameterbereich $D$.
+\end{description}
+
+\minisec{Flat Mapping}
+\index{Flat Mapping}
+
+\begin{description}
+\item[Ansatz:] Die Textur wird durch ein
+  Muster \emph{(Texture Map)}\index{Texture Map} definiert, 
+  das dann (\ggf zyklisch) auf das Objekt abgebildet wird.
+
+  Die einzelnen Elemente des Musters (Texture Elements,
+  \emph{Texels}\index{Texel}) enthalten Angaben über die Eigenschaften
+  des Objekts an der entsprechenden Stelle, \zB
+  \begin{itemize}
+  \item Reflexionskoeffizienten für ambientes und diffuses
+    Licht bei den betrachteten Wellenlängen.
+  \end{itemize}
+
+  \pagebreak
+
+  \vspace*{-22mm}
+\item[einfachste Realisierung:] \mbox{}
+
+  \vspace*{-4mm}
+  \begin{center}
+    \scalebox{0.42}{\huge\input{fig_farbeTexturFlat1}}%ₐ
+  \end{center}
+\end{description}
+
+\begin{itemize}
+\item Bestimme den zum Pixel gehörigen Punkt $\point{P}$ auf
+  dem Objekt.
+
+\item Bestimme die zugehörigen Parameterwerte $s$ und $t$.
+
+\item Bestimme mit einer (zum Objekt gehörenden) geeigneten
+  Abbildung das zu $(s, t)$ gehörige Texel in einer
+  Texture Map.
+
+\item Verwende die dort gespeicherten Koeffizienten zur
+  Färbung des Pixels.
+\end{itemize}
+
+\pagebreak
+
+\vspace*{-25mm}
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Texture Maps können beispieleweise generiert werden
+    \begin{itemize}
+    \item „von Hand“,
+      \begin{itemize}
+      \item[\Bad] \emph{Aufwand, (Speicherplatz)}
+      \end{itemize}
+
+    \item aus vorhandenen (\zB gescannten) Bildern,
+      \begin{itemize}
+      \item[\Bad] \emph{Speicherplatz}
+      \end{itemize}
+
+    \item prozedural (Vorschrift zur Berechnung der Einträge
+      der Texture Map), \zB fraktal.
+      \begin{itemize}
+      \item[\Bad] \emph{Rechenzeit beim Färben}
+      \end{itemize}
+    \end{itemize}
+
+  \item Bessere Ergebnisse erhält man durch folgendes Vorgehen:
+    \begin{itemize}
+    \item Bilde die vier \emph{Ecken des Pixels} (wie oben) in
+      die Texture Map ab.
+      Dadurch wird ein Viereck in der Texture Map definiert.
+
+    \item Verwende zum Färben des Pixels ein gewichtetes Mittel
+      aller zu diesem Viereck gehörigen Texel.
+
+      \begin{center}
+        \scalebox{0.5}{\huge\input{fig_farbeTexturFlat2}}
+      \end{center}
+    \end{itemize}
+  \end{enumerate}
+\end{bemerkungen}
+
+\pagebreak
+
+\pngpage[\imglic{}{Holger Arndt, Software: Martin Galgon, Textur:
+  NASA's Earth Observatory, \urllic{https://earthobservatory.nasa.gov/Features/BlueMarble/}}%
+{}{}]{Bilder/glai/tex-marble}
+
+\pagebreak
+
+\vspace*{-15mm}
+\mbox{}
+\Reached{WS18/19}{07}{2018/11/29}
+\Reached{WS21/22}{07}{2021/11/25}
+
+\minisec{Bump Mapping}
+\index{Bump Mapping}
+
+\begin{description}
+\item[Motivation:] mit Flat Mapping erzeugte Textur wirkt oft „aufgemalt“,
+  plastische Wirkung kann nicht erzeugt werden
+  
+  \begin{description}
+  \item[Grund:] Die Texture Map kann ein Relief nur bei einer
+    bestimmten \emph{(vorab festgelegten)} Stellung der
+    Lichtquelle zur Fläche wiedergeben.
+
+    In der später dargestellten Szene wird das Objekt aber \iA
+    aus einer anderen Richtung beleuchtet.
+
+    \begin{itemize}
+    \item[⇒] Relief-Struktur wirkt „unecht“
+
+      (besonders deutlich, wenn dieselbe Textur auf
+      unterschiedlich orientierte Polygone abgebildet wird,
+      und bei gekrümmten Flächen)
+    \end{itemize}
+  \end{description}
+
+\item[Folgerung:] Um Relief-Wirkung zu erzielen, muss die \emph{Normale} des Objekts
+  beeinflusst werden.
+  
+  \pagebreak
+
+\item[Ansatz:] Verwende (an Stelle der oder zusätzlich zur Texture Map) eine
+  \emph{Bump Map}\index{Bump Map}.
+  Jeder Eintrag der Bump Map gibt an, wie weit der entsprechende
+  Punkt des Reliefs von der (glatten) Fläche des Objekts entfernt
+  ist.
+  
+  \begin{center}
+    \scalebox{0.4}{\huge\input{fig_farbeTexturBump1}}%β≙
+  \end{center}
+  
+  Der Punkt $\point{P}$ der Fläche wird also in den Punkt
+  
+  \[ \mdef{\widetilde{\point{P}}} = \point{P}
+    + \underbrace{β(\point{P})}_{\parbox[t]{6cm}{\small
+        der zu $\point{P}$ gehörige Wert der \\ (stetig \bzw glatt \\ fortgesetzten) Bump Map}}
+    · \underbrace{\widetilde{\vektor{n}}_{\point{P}}}_{\parbox[t]{6cm}{\small
+        Normalenvektor der Länge $1$ \\ an die Fläche im Punkt $\point{P}$}} \]
+  
+  verschoben.
+
+\item[Problem:] In die Beleuchtungsformel geht die \emph{Normale} der durch die
+  Bump Map „gestörten“ Fläche ein.
+  
+  Wie kann diese berechnet werden?
+\end{description}
+
+\begin{center}
+  \scalebox{0.5}{\huge\input{fig_farbeTexturBump2}}%≡ₛₜ
+\end{center}
+
+Die beiden Vektoren
+\[ \mdef{\vektor{P}ₛ} := \frac{∂{\point{P}}}{∂s}(s, t)
+  \qquad \text{und} \qquad
+  \mdef{\vektor{P}ₜ} := \frac{∂{\point{P}}}{∂ t}(s, t) \]
+spannen die Tangentialebene im Punkt $\point{P}$ an die Fläche auf.
+Also ist
+\[ \mdef{\vektor{n}_{\point{P}}} := \vektor{P}ₛ × \vektor{P}ₜ \]
+ein (nicht normierter) Normalenvektor an die ursprüngliche Fläche im
+Punkt $\point{P}$.
+
+$\widehat{\vektor{n}}_{\point{P}}$ erhält man durch Normieren von
+$\vektor{n}_{\point{P}}$.
+
+Analog ergibt sich eine Normale an die gestörte Fläche durch
+\begin{align*}
+  \mdef{\vektor{n}_{\widetilde{\point{P}}}} &=
+  \frac{∂\widetilde{\point{P}}}{∂s}(s, t)
+  × \frac{∂\widetilde{\point{P}}}{∂t}(s, t) \\
+  &= \frac{∂}{∂s} \fk{\point{P} + β(\point{P})
+    · \widehat{\vektor{n}}_{\point{P}}}
+  × \frac{∂}{∂t} \fk{\point{P} + β(\point{P})
+    · \widehat{\vektor{n}}_{\point{P}}} \\
+  &\quad \text{\cmt{Vereinfachung: $\widehat{\vektor{n}}_{\point{P}} =
+      \widehat{\vektor{n}}_{\point{P}}(s, t)$ wird in der Nähe von
+      $\point{P}$ als konstant betrachtet}} \\
+  &≈ \rk{\point{P}ₛ + \frac{∂β}{∂s}(\point{P})
+    · \widehat{\vektor{n}}_{\point{P}}}
+  × \rk{\point{P}ₜ + \frac{∂β}{∂t}(\point{P})
+    · \widehat{\vektor{n}}_{\point{P}}} \\
+  &= \point{P}ₛ × \point{P}ₜ + \point{P}ₛ
+  × \rk{βₜ · \widehat{\vektor{n}}_{\point{P}}}
+  + \rk{βₛ · \widehat{\vektor{n}}_{\point{P}}} × \point{P}ₜ
+  + \rk{βₛ · \widehat{\vektor{n}}_{\point{P}}}
+  × \rk{βₜ · \widehat{\vektor{n}}_{\point{P}}} \\
+  &\quad \text{mit} \qquad \mdef{βₛ} := \frac{∂β}{∂s}(\point{P})
+  \qquad \text{und} \qquad \mdef{βₜ} := \frac{∂β}{∂t}(\point{P}) \\
+  &= \vektor{n}_{\point{P}}
+  + βₜ ·\rk{\point{P}ₛ × \widehat{\vektor{n}}_{\point{P}}}
+  + βₛ · \rk{\widehat{\vektor{n}}_{\point{P}} × \point{P}ₜ}
+  + βₛ βₜ
+  · \underbrace{\rk{\widehat{\vektor{n}}_{\point{P}} ×
+      \widehat{\vektor{n}}_{\point{P}}}}_{\textstyle = \vektor{0}} \\
+  &= \vektor{n}_{\point{P}}
+  + βₜ · \rk{\point{P}ₛ × \widehat{\vektor{n}}_{\point{P}}}
+  + βₛ · \rk{\widehat{\vektor{n}}_{\point{P}} × \point{P}ₜ} \,\text.
+\end{align*}
+(Dieser Vektor muss noch normiert werden.)
+
+\pagebreak
+
+\begin{bemerkung}
+  Die Bump Map ist \iA in einem anderen Parameterbereich
+  $(u, v) ∈ \widetilde{D}$ definiert als die Fläche.
+
+  Die „Projektion“ des Reliefs auf die Fläche wird duch eine Zuordnung
+  \begin{align*}
+    φ : D &→ \widetilde{D} \\
+    (s, t) &↦  (u, v)
+  \end{align*}
+  definiert.
+  Es ist also
+  \[ β(\point{P}) = β(u, v) = β(φ(s, t)) \]
+  und damit
+  \[ βₛ = β'(u, v) · \frac{∂φ}{∂s}(s, t) \qquad \text{($βₜ$ analog)} \,\text. \]
+\end{bemerkung}
+
+\pagebreak
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Zur \emph{Schnittpunktberechnung} wird weiterhin
+    \emph{die ursprüngliche (nicht gestörte) Fläche} $\point{P}(s, t)$
+    verwendet; die verschobenen Punkte $\widetilde{P}$ gehen nur in
+    die Normalen ein.
+
+    \begin{itemize}
+    \item[⇒] \emph{Die Silhouette der Fläche bleibt glatt!}
+    \end{itemize}
+
+  \item Berechnung der Ableitungen:
+    \begin{itemize}
+    \item $\point{P}ₛ$ und $\point{P}ₜ$ können entweder
+      für jeden Punkt $\point{P}$ (\zB mittels
+      Differenzenquotienten) berechnet oder aus einigen
+      gegebenen Werten (\zB in den Ecken der Polygone)
+      interpoliert werden.
+
+    \item $β$ wird \iA nur an diskreten Stellen
+      $\rk{uᵢ, vⱼ} ∈ \widetilde{D}$ vorgegeben;
+      Zwischenwerte werden interpoliert,
+      Ableitungen durch Differenzenquotienten.
+
+    \item $φ$ ist meist eine affine Abbildung.
+      \begin{itemize}
+      \item[⇒] $φ'$ ist eine konstante Matrix.
+      \end{itemize}
+    \end{itemize}
+
+  \item Bump Mapping kann sehr realistische Bilder liefern.
+
+  \item Durch \emph{Normal Mapping (Dot3 bump mapping)} können
+    Normalenvektoren im Tangentenraum direkt in die Textur integriert werden.
+  \end{enumerate}
+  \Reached{WS16/17}{08}{2016/12/08}
+\end{bemerkungen}
+
+\pagebreak
+
+\pngpage{Bilder/glai/normal-tex}
+
+\pagebreak
+
+\minisec{Volume Mapping}
+\index{Volume Mapping}
+
+\begin{description}
+\item[Motivation:] Viele reale Texturen sind dreidimensional, also von der Position
+  und Orientierung der Oberfläche abhängig, \zB Holzmaserung auf
+  einem „Mühle“-Stein:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeTexturVolume}}
+  \end{center}
+
+\item[Ansatz:] Verwende dreidimensionale Texture Map und/oder Bump Map, \zB
+  \[ β = β(u, v, w) \qquad \text{mit} \quad (u, v, w) ∈ \widetilde{D} ⊆ ℝ³ \]
+  und verwende für den Zugriff auf diese Map nicht die Parameter
+  $(s, t)$ des Punktes $\point{P}$, sondern seine
+  dreidimensionalen Koordinaten (relativ zu einem
+  „Referenzpunkt“).
+\end{description}
+
+\begin{bemerkung}
+  Dreidimensionale Maps können \iA nicht mehr explizit gespeichert
+  werden.
+  \begin{itemize}
+  \item[⇒] prozedurale Definition
+  \end{itemize}
+\end{bemerkung}
+\ReachedZoom{WS20/21}{07}{2020/12/10}
+
+
+\subsection{Transparenz}
+
+\begin{description}
+\item[Ziel:] Darstellung von Objekten, die (teilweise) lichtdurchlässig sind
+
+\item[Ansatz:] \mbox{}
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeTransparenzSituation}}%ₖₘ
+  \end{center}
+
+  Trifft der Sehstrahl zuerst auf ein transparentes Objekt $Oₖ$,
+  so verfolge ihn weiter bis zum ersten undurchsichtigen Objekt
+  $Oₘ$.
+  Kombiniere dann die Intensitäten von beiden Objekten gemäß
+  \[ I = \rk{1 - \underbrace{R_{k,t}}_{\parbox{5.5cm}{\small
+          Transparenzkoeffizient von Objekt $k$ (abhängig von $λ$)}}}
+    · I\fk{\point{P}ₖ} + R_{k,t} · I\fk{\point{P}ₘ}
+    \quad \text{\cmt{Interpolation}} \]
+  oder
+  \[ I = I\fk{\point{P}ₖ} + R_{k,t} · I\fk{\point{P}ₘ}
+    \qquad \text{\cmt{Filterung}} \,\text. \]
+\end{description}
+
+\begin{bemerkung}
+  Liegen mehrere transparente Objekte vor dem ersten undurchsichtigen
+  Objekt, so muss die Interpolation/Filterung mehrmals durchgeführt
+  werden.
+\end{bemerkung}
+
+\begin{description}
+\item[anderer Ansatz:] Ist ein Objekt $Oₖ$ zu $90\,\%$ transparent, so zeichne nur
+  $10\,\%$ der zu $Oₖ$ gehörenden Pixel mit der Farbe des Objekts.
+  Die Auswahl der gezeichneten Pixel erfolgt mittels einer Maske:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_farbeTransparenzMaske}}%₂
+  \end{center}
+
+  \begin{description}
+  \item[Problem:] Liegen mehrere Objekte mit gleicher
+    Transparenzmaske hintereinander, so ist \iA nur das
+    vorderste davon sichtbar.
+
+    \begin{itemize}
+    \item[⇒] Verwende statt der „absoluten“
+      Koordinaten der Pixel die relative Position \bzgl
+      eines (vom Objekt abhängigen)
+      „Referenzpixels“.
+    \end{itemize}
+  \end{description}
+\end{description}
+
+\pagebreak
+
+Anwendung dieser \emph{Masken-Transparenz\index{Masken-Transparenz}
+  (Screen-Door Transparency\index{Screen-Door Transparency})} \zB bei Molekülmodellen:
+
+\begin{center}
+  \scalebox{0.35}{\Huge\input{fig_farbeTransparenzMolekuel}}
+\end{center}
+
+\begin{itemize}
+\item[\Good] Masken-Transparenz erfordert kein Weiterverfolgen des
+  Sehstrahls (Aufwand!).
+
+\item[\Good] Masken-Transparenz kann sehr leicht in den
+  $z$-Puffer-Algorithmus eingebaut werden.
+\end{itemize}
+
+\begin{bemerkung}
+  Analytische Berücksichtigung der Transparenz
+  (Interpolation/Filterung) ist nicht problemlos mit dem
+  $z$-Puffer-Algorithmus kombinierbar; sie wird meist bei
+  analytischer Sichtbarkeitsbestimmung oder Visible Surface Raytracing
+  eingesetzt.
+\end{bemerkung}
+
+\begin{itemize}
+\item[\Bad] Beide Ansätze vernachlässigen dreidimensionale Effekte:
+
+  \begin{itemize}
+  \item Lichtbrechung
+
+  \item Dämpfung des Lichts in Abhängigkeit der im
+    transparenten Medium zurückgelegten Strecke
+  \end{itemize}
+\end{itemize}
+\Reached{WS15/16}{08}{2015/12/09}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Sep 30 10:23:44 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8.7in"
+   height="2.0in"
+   viewBox="1382 3981 10462 2397"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_clipPolygonSutherlandProblem2.svg">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="0.63601534"
+     inkscape:cx="391.49999"
+     inkscape:cy="90"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <rect
+     id="rect6"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="2362"
+     width="4015"
+     y="4015"
+     x="1653" />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#ffffff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1417,4015 6141,4015 " />
+  <polygon
+     id="polygon10"
+     style="fill:none;stroke:#00b000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="10393,4015 9921,4015 9921,4015 10393,5905 " />
+  <polygon
+     id="polygon12"
+     style="fill:none;stroke:#00b000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="11811,4015 10866,4015 10866,4015 11574,4724 " />
+</svg>

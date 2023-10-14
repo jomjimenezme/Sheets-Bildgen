@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Nov 18 15:16:25 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14.2in"
+   height="15.2in"
+   viewBox="-3795 1011 17070 18280"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="fig_farbeRadiosityAblauf.svg">
+  <metadata
+     id="metadata104">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs102" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2432"
+     inkscape:window-height="1273"
+     id="namedview100"
+     showgrid="false"
+     inkscape:zoom="0.69005849"
+     inkscape:cx="876.67725"
+     inkscape:cy="742.18811"
+     inkscape:window-x="128"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,6850 4488,7559 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,8503 4488,9448 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4629,14173 12519,14173 12519,8976 4817,8976 " />
+  <polygon
+     id="polygon12"
+     style="fill:#000000;stroke:#000000;stroke-width:48;stroke-miterlimit:8"
+     points="4783,9023 4830,8976 4783,8929 4783,8929 4641,8976 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,4960 4488,5716 " />
+  <polygon
+     id="polygon16"
+     style="fill:#000000;stroke:#000000;stroke-width:48;stroke-miterlimit:8"
+     points="4535,5752 4488,5704 4440,5752 4440,5752 4488,5893 " />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,10393 4488,10913 " />
+  <polygon
+     id="polygon20"
+     style="fill:#000000;stroke:#000000;stroke-width:48;stroke-miterlimit:8"
+     points="4535,10949 4488,10901 4440,10949 4440,10949 4488,11090 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,12047 4488,12755 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,13700 4488,14929 " />
+  <polygon
+     id="polygon26"
+     style="fill:#000000;stroke:#000000;stroke-width:48;stroke-miterlimit:8"
+     points="4535,14964 4488,14917 4440,14964 4440,14964 4488,15106 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:104, 104"
+     points="12519,8834 12519,5433 4817,5433 " />
+  <polygon
+     id="polygon30"
+     style="fill:#000000;stroke:#000000;stroke-width:48;stroke-miterlimit:8"
+     points="4783,5480 4830,5433 4783,5385 4783,5385 4641,5433 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:104, 104"
+     points="4251,14173 -1653,14173 -550,16599 " />
+  <polygon
+     id="polygon34"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:48;stroke-miterlimit:8"
+     points="-490,16611 -553,16587 -576,16649 -576,16649 -475,16760 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,3307 4488,4015 " />
+  <polyline
+     id="polyline38"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,1653 4488,2173 " />
+  <polygon
+     id="polygon40"
+     style="fill:#000000;stroke:#000000;stroke-width:48;stroke-miterlimit:8"
+     points="4535,2208 4488,2161 4440,2208 4440,2208 4488,2350 " />
+  <polyline
+     id="polyline42"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,16062 4488,16582 " />
+  <polygon
+     id="polygon44"
+     style="fill:#000000;stroke:#000000;stroke-width:48;stroke-miterlimit:8"
+     points="4535,16618 4488,16571 4440,16618 4440,16618 4488,16760 " />
+  <polyline
+     id="polyline46"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,17716 4488,18236 " />
+  <polygon
+     id="polygon48"
+     style="fill:#000000;stroke:#000000;stroke-width:48;stroke-miterlimit:8"
+     points="4535,18271 4488,18224 4440,18271 4440,18271 4488,18413 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text50"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6614"
+     x="4488"
+     xml:space="preserve">Patches</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text52"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="11811"
+     x="4488"
+     xml:space="preserve">Zeile der Radiosity-Matrix</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text54"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6141"
+     x="12047"
+     xml:space="preserve">Unterteilung, wo nötig</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text56"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="15826"
+     x="4488"
+     xml:space="preserve">Radiosity-Werte aller Patches/Elemente</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text58"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="14881"
+     x="5669"
+     xml:space="preserve">wenn noch nicht genau genug</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text60"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="4724"
+     x="4488"
+     xml:space="preserve">Diskretisierung</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text62"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="3070"
+     x="4488"
+     xml:space="preserve">Objekte</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text64"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="1417"
+     x="4488"
+     xml:space="preserve">Geometrie der Szene festlegen</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text66"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="17480"
+     x="4488"
+     xml:space="preserve">Ansicht-spezifische Parameter festlegen</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text68"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="19133"
+     x="4488"
+     xml:space="preserve">spezielle Ansicht der Szene</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.9937439px;line-height:0%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text72"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="8267"
+     x="4496.5049"
+     xml:space="preserve">$λ$-abhängige Größen $ρᵢ$, $Eᵢ$ festlegen</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text84"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="10157"
+     x="4499.1509"
+     xml:space="preserve">für geeignetes $i$ alle $Fᵢⱼ$ bestimmen</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text92"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="13464"
+     x="4488"
+     xml:space="preserve">für alle relevanten $λ$ einen Shoot-Schritt durchführen</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text96"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="15826"
+     x="-3779"
+     xml:space="preserve">wenn</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;line-height:0%;font-family:Helvetica;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text98"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="16440"
+     x="-3779"
+     xml:space="preserve">gewünscht</text>
+</svg>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Tue Oct 27 16:08:23 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="11.6in"
+   height="4.9in"
+   viewBox="2327 437 13896 5851"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeEffekteWinkelabhaengig1.svg">
+  <metadata
+     id="metadata88">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs86" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview84"
+     showgrid="false"
+     inkscape:zoom="0.87164748"
+     inkscape:cx="630.99664"
+     inkscape:cy="236.24658"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="5196,4251 8913,2062 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="5212,4251 4031,5826 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path10"
+     d="m 5055,3212 a 945,945 0 0 0 -851,614"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt" />
+  <polygon
+     id="polygon12"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="4335,3679 4316,3615 4251,3634 4251,3634 4227,3782 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path14"
+     d="M 6047,3590 A 1102,1102 0 0 0 5338,3212"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt" />
+  <polygon
+     id="polygon16"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="5513,3301 5570,3267 5534,3210 5534,3210 5386,3224 " />
+  <circle
+     id="circle18"
+     style="fill:#b000b0;stroke:#d100d1;stroke-width:8"
+     r="94"
+     cy="4251"
+     cx="5196" />
+  <circle
+     id="circle20"
+     style="fill:none;stroke:#ff0000;stroke-width:32"
+     r="236"
+     cy="1889"
+     cx="9212" />
+  <polygon
+     id="polygon22"
+     style="fill:none;stroke:#d100d1;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="7086,3779 5669,4724 3307,4724 3307,4724 4724,3779 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#d100d1;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5196,4251 5196,2613 " />
+  <polygon
+     id="polygon26"
+     style="fill:#d100d1;stroke:#d100d1;stroke-width:63;stroke-miterlimit:8"
+     points="5118,2554 5196,2617 5275,2554 5275,2554 5196,2365 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5196,4251 6604,3408 " />
+  <polygon
+     id="polygon30"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="6615,3311 6601,3411 6696,3445 6696,3445 6817,3281 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5196,4251 3876,3811 " />
+  <polygon
+     id="polygon34"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="3794,3867 3878,3812 3843,3717 3843,3717 3639,3733 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5149,4251 4501,5208 " />
+  <polygon
+     id="polygon38"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-miterlimit:8"
+     points="4534,5300 4504,5205 4404,5212 4404,5212 4364,5414 " />
+  <polyline
+     id="polyline40"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="9448,1653 9685,1417 " />
+  <polyline
+     id="polyline42"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="9448,2125 9685,2362 " />
+  <polyline
+     id="polyline44"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="8976,2125 8740,2362 " />
+  <polyline
+     id="polyline46"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="8740,1417 8976,1653 " />
+  <polyline
+     id="polyline48"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="8881,1889 8551,1889 " />
+  <polyline
+     id="polyline50"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="9212,1228 9212,1559 " />
+  <polyline
+     id="polyline52"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="9543,1889 9874,1889 " />
+  <polyline
+     id="polyline54"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="9212,2220 9212,2551 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text56"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5417"
+     x="4661"
+     xml:space="preserve">$\vektor{v}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text58"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5228"
+     x="3748"
+     xml:space="preserve">$ψ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#d100d1;stroke-width:0.025in"
+     id="text60"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4661"
+     x="5322"
+     xml:space="preserve">$\point{P}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text62"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3118"
+     x="6283"
+     xml:space="preserve">$\vektor{r}ₗ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text64"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3165"
+     x="5622"
+     xml:space="preserve">$α$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#d100d1;stroke-width:0.025in"
+     id="text66"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="2409"
+     x="5338"
+     xml:space="preserve">$\vektor{n}_{\point{P}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text68"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3685"
+     x="3133"
+     xml:space="preserve">$\vektor{s}ₗ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text70"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3259"
+     x="4299"
+     xml:space="preserve">$α$</text>
+  <path
+     inkscape:connector-curvature="0"
+     id="path72"
+     d="m 3531,6087 a 444,444 0 0 1 709,0"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path74"
+     d="m 3531,6087 a 442,442 0 0 0 709,0"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt" />
+  <ellipse
+     cy="6087"
+     cx="3886"
+     id="ellipse76"
+     style="fill:none;stroke:#0000ff;stroke-width:32"
+     ry="178"
+     rx="177" />
+  <polygon
+     id="polygon78"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="8031,472 2362,2362 2362,5196 2362,5196 8031,3307 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path80"
+     d="m 4047,4000 a 1013,1013 0 0 0 299,1070"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt" />
+  <polygon
+     id="polygon82"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:32;stroke-miterlimit:8"
+     points="4253,4896 4186,4892 4182,4959 4182,4959 4312,5034 " />
+</svg>

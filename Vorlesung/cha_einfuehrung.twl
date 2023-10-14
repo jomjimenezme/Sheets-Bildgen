@@ -1,0 +1,197 @@
+\chapter{Einführung}
+
+\pagebreak
+
+
+\section{Organisatorisches}
+
+\subsection{Hörerkreis}
+
+\begin{itemize}
+\item \emph{Bachelor Informatik} \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul INF12: Bild- und Audioverarbeitung
+\item \emph{Bachelor Mathematik, PO 2020} mit Nebenfach Informatik \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul INF12: Bild- und Audioverarbeitung
+\item \emph{Bachelor Mathematik, PO 2011 und 2013} mit Nebenfach Informatik \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul NInf.BAV: Bild- und Audioverarbeitung
+\item \emph{Bachelor Wirtschaftsmathematik, PO 2020} \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul INF12: Bild- und Audioverarbeitung
+\item \emph{Bachelor Angewandte Naturwissenschaften, PO 2012} mit
+  Schwerpunktfach Informatik \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul Bild- und Audioverarbeitung
+\item \emph{Bachelor Angewandte Naturwissenschaften, PO 2007} mit
+  Schwerpunktfach Informatik \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul I9c: Bild- und Audioverarbeitung
+\item \emph{Bachelor Informationstechnologie und Medientechnologie} \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul INF12: Bild- und Audioverarbeitung
+\item \emph{Bachelor Informationstechnologie} \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul BAV: Bild- und Audioverarbeitung
+\item \emph{Kombinatorischer Bachelor, Teilstudiengang Informatik} \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul INF12: Bild- und Audioverarbeitung
+\item \emph{Kombinatorischer Bachelor, Optionalbereich, PO 2021} \\
+  Wahlpflichtkomponente im Wahlpflichtmodul INF301: Informatik 1 \\
+  und Wahlpflichtkomponente im Wahlpflichtmodul INF302: Informatik 2
+\item \emph{Master Chemie, PO 2018} \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul NInf.BildV: Einführung
+  in die Bildverarbeitung
+
+  \pagebreak
+
+\item \emph{Master of Education Gym/Ge und BK, Teilstudiengang
+    Informatik, PO 2021 (\bzw PO 2019)} \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul INF12: Bild- und Audioverarbeitung \\
+  (falls \textit{Softwaretechnologie}, \textit{Einführung in die Kryptographie},
+  \textit{Einführung in Datenbanken} und \textit{Einführung in die Didaktik der Informatik}
+  bereits im Bachelor belegt wurde, \textit{Bild- und Audioverarbeitung} aber nicht)
+\item \emph{Master of Education Gym/Ge und BK, Teilstudiengang Informatik, PO 2014, PO 2011} \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul BAV: Bild- und Audioverarbeitung \\
+  (falls \textit{Einführung in die Didaktik der Informatik} bereits im
+  Bachelor belegt wurde, \textit{Bild- und Audioverarbeitung} aber nicht)
+\item \emph{Master of Education HRSGe, Teilstudiengang Informatik} \\
+  Wahlpflichtveranstaltung im Wahlpflichtmodul INF12: Bild- und Audioverarbeitung \\
+  (falls \textit{Internettechnologien}, \textit{Einführung in die Kryptographie}
+  und \textit{Einführung in Datenbanken} bereits im
+  Bachelor belegt wurden, \textit{Bild- und Audioverarbeitung} aber nicht)
+\end{itemize}
+
+\pagebreak
+
+
+\subsection{Ablauf von Vorlesung und Übung}
+
+\minisec{Termine}
+
+\begin{center}
+  \begin{tabular}{lll}
+    Vorlesung: & Do., 16:15–17:45 Uhr & Hörsaal 3 \\[1ex]
+    % Vorlesung: & Do., 16:15–17:45 Uhr & per Zoom-Videomeeting \\[1ex]
+    Beginn: & Do., 14.10. \\[1ex]
+    % Übung: & Mi., 12:30–14:00 Uhr & G.14.11 \\[1ex]
+    Übung: & Mi., 12:15–13:45 Uhr & G.14.11 \\[1ex]
+    % Übung: & Mi., 12:15–13:45 Uhr & per Zoom-Videomeeting \\[1ex]
+    Beginn: & Mi., 20.10.
+  \end{tabular}
+\end{center}
+
+\minisec{Übungsblätter}
+
+\begin{center}
+  \begin{tabular}{ll}
+    Ausgabe: & wöchentlich immer mittwochs auf Moodle-Seite \\[1ex]
+    % Bearbeitung: & in Zweiergruppen \\[1ex]
+    Abgabe:  & in Vorlesung/Übung \bzw per E-Mail
+    % Abgabe:  & per E-Mail
+  \end{tabular}
+\end{center}
+
+\minisec{Weitere Informationen und Material}
+
+% auf der Homepage zur Vorlesung:
+im Moodle-Kurs zur Vorlesung:
+
+\url{https://moodle.uni-wuppertal.de/course/view.php?id=26228}
+
+% \begin{sloppypar}
+%   \url{http://www-ai.math.uni-wuppertal.de/~arndt/de/Lehre/WS_2017--sl2018/02_Bildgenerierung.php}
+% \end{sloppypar}
+
+\subsection{Leistungsnachweis/Credits}
+
+\minisec{Schriftliche oder mündliche Prüfung}
+
+\begin{itemize}
+\item nach dem Wintersemester,
+  
+  Wiederholung nach dem Sommersemester
+  
+\item Dauer: 120~Minuten (schriftlich) \bzw 30~Minuten (mündlich)
+  \Reached{WS14/15}{01 (15\,min)}{2014/10/09}
+\end{itemize}
+
+
+\subsection{Ziele der Vorlesung}
+
+\minisec{Kenntnisse}
+
+\begin{itemize}
+\item wesentliche Schritte bei der Erzeugung von Bildern
+  unterschiedlicher Komplexität
+\item dabei eingesetzte Techniken
+\end{itemize}
+
+\minisec{Fähigkeiten}
+
+\begin{itemize}
+\item Erstellung von Bildern mit Bibliotheken unterschiedlicher
+  Mächtigkeit
+\item bei Bedarf Entwicklung eigener Algorithmen und Datenstrukturen
+\item Umsetzung von Algorithmen und Datenstrukturen in einer
+  Programmiersprache
+\end{itemize}
+
+
+\section{Fragestellung}
+
+\begin{center}
+  \scalebox{0.6}{\LARGE\input{fig_fragestellung}}%∈π
+\end{center}
+
+\minisec{Mögliche Klassifikationen der Grafikanwendungen}
+
+\begin{description}
+\item[Komplexität] der Objekte und des Bildes:
+  \begin{itemize}
+  \item 2D Linienzeichnung
+  \item 2D Graustufen- oder Farbbild
+  \item 3D Linienzeichnung \emph{(wire frame)}\index{wire frame}
+  \item 3D Linienzeichnung ohne verdeckte Kanten/Flächen
+  \item 3D Graustufen- oder Farbbild mit diversen Effekten
+  \end{itemize}
+  
+\item[Interaktion\textmd{smöglichkeiten:}] \mbox{}
+  \begin{itemize}
+  \item \emph{offline}\index{offline} (Objekte festlegen, dann erst zeichnen)
+  \item interaktives Design (immer „aktuellen Zustand“ anzeigen)
+  \end{itemize}
+  
+\item[Rolle] des Bildes:
+  \begin{itemize}
+  \item Endprodukt
+    
+    (Visualisierung von Daten, Kartografie, Computerkunst, …)
+  \item Mittel zum Zweck
+    
+    (\zB CAD: Konstruktionsplan als Ausgangspunkt für Teileliste
+    und Maschinensteuerung, …)
+  \end{itemize}
+\end{description}
+
+\minisec{Schritte bei der Darstellung}
+
+\begin{description}
+\item[Auswahl:] \mbox{}
+  \begin{itemize}
+  \item Welcher Teil der Daten/des Modells soll dargestellt werden?
+  \end{itemize}
+  
+\item[Geometrie festlegen:] \mbox{}
+  \begin{itemize}
+  \item Wie sollen die Daten dargestellt werden?
+    
+    (\zB parallele/perspektivische Projektion)
+  \item Wo auf der Zeichenfläche und wie groß soll die Darstellung
+    erfolgen?
+  \end{itemize}
+
+\item[Zeichnen:] \mbox{}
+  \begin{itemize}
+  \item Umsetzen der (abstrakten) 2D-Beschreibung des Bildes in eine
+    gerätespezifische Darstellung
+  \end{itemize}
+
+\item[(Interaktion:)] \mbox{}
+  \begin{itemize}
+  \item Änderung der Modellparameter – und der Darstellung – gemäß
+    Eingaben des Benutzers
+  \end{itemize}
+\end{description}

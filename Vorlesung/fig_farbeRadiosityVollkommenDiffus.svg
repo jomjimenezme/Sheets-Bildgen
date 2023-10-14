@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Oct 29 15:34:31 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5.0in"
+   height="2.3in"
+   viewBox="2091 3744 6009 2809"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeRadiosityVollkommenDiffus.svg">
+  <metadata
+     id="metadata50">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs48" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview46"
+     showgrid="false"
+     inkscape:zoom="1.0111111"
+     inkscape:cx="225"
+     inkscape:cy="103.5"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <polygon
+     id="polygon6"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="6141,5669 5433,6141 4015,6141 4015,6141 4724,5669 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="3779,5335 3055,4609 " />
+  <polygon
+     id="polygon10"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="2991,4613 3053,4607 3058,4545 3058,4545 2941,4496 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="4113,5001 3388,4276 " />
+  <polygon
+     id="polygon14"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="3324,4279 3386,4274 3392,4212 3392,4212 3275,4162 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="3946,5168 3222,4443 " />
+  <polygon
+     id="polygon18"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="3158,4446 3219,4440 3225,4379 3225,4379 3108,4329 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="4724,4960 4724,3935 " />
+  <polygon
+     id="polygon22"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="4677,3891 4724,3931 4771,3891 4771,3891 4724,3774 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="5196,4960 5196,3935 " />
+  <polygon
+     id="polygon26"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="5149,3891 5196,3931 5244,3891 5244,3891 5196,3774 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="4960,4960 4960,3935 " />
+  <polygon
+     id="polygon30"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="4913,3891 4960,3931 5007,3891 5007,3891 4960,3774 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="3307,6141 2282,6141 " />
+  <polygon
+     id="polygon34"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="2238,6188 2278,6141 2238,6094 2238,6094 2120,6141 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="3307,5669 2282,5669 " />
+  <polygon
+     id="polygon38"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="2238,5716 2278,5669 2238,5622 2238,5622 2120,5669 " />
+  <polyline
+     id="polyline40"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="3307,5905 2282,5905 " />
+  <polygon
+     id="polygon42"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="2238,5952 2278,5905 2238,5858 2238,5858 2120,5905 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:467px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text44"
+     font-size="467"
+     font-weight="normal"
+     font-style="normal"
+     y="6377"
+     x="5905"
+     xml:space="preserve">$\dd A$</text>
+</svg>

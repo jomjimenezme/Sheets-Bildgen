@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Sep 30 11:00:10 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="12.0in"
+   height="6.0in"
+   viewBox="314 3716 14359 7216"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_sichtKonvex3.svg">
+  <metadata
+     id="metadata88">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs86" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview84"
+     showgrid="false"
+     inkscape:zoom="1.2361274"
+     inkscape:cx="389.1184"
+     inkscape:cy="352.47322"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="6141,4724 1417,4724 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="7086,9685 1417,9685 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text10"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4818"
+     x="330"
+     xml:space="preserve">$v_{\textrm{max}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text12"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="9826"
+     x="330"
+     xml:space="preserve">$v_{\textrm{min}}$</text>
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7086,9685 8792,9257 " />
+  <polygon
+     id="polygon16"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="8808,9188 8777,9260 8838,9310 8838,9310 8961,9215 " />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8976,9212 9587,8192 " />
+  <polygon
+     id="polygon20"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="9549,8131 9579,8204 9657,8196 9657,8196 9676,8043 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="9685,8031 9685,6329 " />
+  <polygon
+     id="polygon24"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="9622,6298 9685,6345 9748,6298 9748,6298 9685,6156 " />
+  <polyline
+     id="polyline26"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="9685,6141 9059,4892 " />
+  <polygon
+     id="polygon28"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="8988,4891 9066,4904 9102,4834 9102,4834 8982,4737 " />
+  <polyline
+     id="polyline30"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8976,4724 7983,4724 " />
+  <polygon
+     id="polygon32"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-miterlimit:8"
+     points="7951,4787 7998,4724 7951,4661 7951,4661 7809,4724 " />
+  <polyline
+     id="polyline34"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7795,4724 6329,4724 " />
+  <polygon
+     id="polygon36"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-miterlimit:8"
+     points="6298,4787 6345,4724 6298,4661 6298,4661 6156,4724 " />
+  <polyline
+     id="polyline38"
+     style="fill:none;stroke:#a14000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6141,4724 4892,5349 " />
+  <polygon
+     id="polygon40"
+     style="fill:#a14000;stroke:#a14000;stroke-width:63;stroke-miterlimit:8"
+     points="4891,5418 4906,5340 4834,5306 4834,5306 4737,5425 " />
+  <polyline
+     id="polyline42"
+     style="fill:none;stroke:#a14000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4724,5433 4724,8314 " />
+  <polygon
+     id="polygon44"
+     style="fill:#a14000;stroke:#a14000;stroke-width:63;stroke-miterlimit:8"
+     points="4787,8347 4724,8300 4661,8347 4661,8347 4724,8489 " />
+  <polyline
+     id="polyline46"
+     style="fill:none;stroke:#a14000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4724,8503 6917,9601 " />
+  <polygon
+     id="polygon48"
+     style="fill:#a14000;stroke:#a14000;stroke-width:63;stroke-miterlimit:8"
+     points="6974,9556 6902,9592 6917,9670 6917,9670 7072,9677 " />
+  <polyline
+     id="polyline50"
+     style="fill:#000000;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1417,10393 1417,4014 " />
+  <polygon
+     id="polygon52"
+     style="fill:#000000;stroke:#000000;stroke-width:32;stroke-miterlimit:8"
+     points="1354,3955 1417,4015 1480,3955 1480,3955 1417,3779 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text54"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="10157"
+     x="7322"
+     xml:space="preserve">„unten“</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text56"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="10771"
+     x="7937"
+     xml:space="preserve">(horizontal, leer)</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text58"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="7228"
+     x="10724"
+     xml:space="preserve">(streng</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text60"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="4346"
+     x="6614"
+     xml:space="preserve">„oben“ (horizontal)</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text62"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="7842"
+     x="10866"
+     xml:space="preserve">monoton</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text64"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="8456"
+     x="10866"
+     xml:space="preserve">steigend)</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#a14000;stroke-width:0.025in"
+     id="text66"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="7700"
+     x="2362"
+     xml:space="preserve">monoton</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#a14000;stroke-width:0.025in"
+     id="text68"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="8314"
+     x="2362"
+     xml:space="preserve">fallend)</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#a14000;stroke-width:0.025in"
+     id="text70"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="7133"
+     x="2173"
+     xml:space="preserve">(streng</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#a14000;stroke-width:0.025in"
+     id="text72"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6236"
+     x="2787"
+     xml:space="preserve">„links“</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text74"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6236"
+     x="10110"
+     xml:space="preserve">„rechts“</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378.00480375px;font-family:Helvetica;text-anchor:start;fill:#000000;stroke-width:0.025in;-inkscape-font-specification:'Helvetica, Normal';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;line-height:125%;"
+     id="text76"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="4015"
+     x="1653"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$v$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#a14000;stroke-width:0.025in"
+     id="text78"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7181"
+     x="4818"
+     xml:space="preserve">$L$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text80"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7181"
+     x="9070"
+     xml:space="preserve">$R$</text>
+  <circle
+     id="circle82"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:0"
+     r="94"
+     cy="9685"
+     cx="7086" />
+</svg>

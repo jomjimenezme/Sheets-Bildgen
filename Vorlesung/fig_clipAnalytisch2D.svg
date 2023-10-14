@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Fri Sep 25 11:56:13 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8.2in"
+   height="5.3in"
+   viewBox="2124 1888 9892 6380"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_clipAnalytisch2D.svg">
+  <metadata
+     id="metadata34">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="0.49475889"
+     inkscape:cx="368.99999"
+     inkscape:cy="238.50001"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <circle
+     id="circle6"
+     style="fill:#7f7fff;stroke:#0000ff;stroke-width:48"
+     r="1417"
+     cy="5669"
+     cx="4488" />
+  <circle
+     id="circle8"
+     style="fill:none;stroke:#0000ff;stroke-width:48"
+     r="2598"
+     cy="5433"
+     cx="4960" />
+  <polygon
+     id="polygon10"
+     style="fill:#7f7fff;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="7795,4724 7322,4015 10157,2125 10157,2125 10629,2834 " />
+  <rect
+     id="rect12"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round"
+     rx="0"
+     height="4251"
+     width="1889"
+     y="2834"
+     x="8976" />
+  <rect
+     id="rect14"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round"
+     rx="0"
+     height="1181"
+     width="8740"
+     y="1889"
+     x="2125" />
+  <rect
+     id="rect16"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round"
+     rx="0"
+     height="4251"
+     width="1181"
+     y="2834"
+     x="2125" />
+  <rect
+     id="rect18"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round"
+     rx="0"
+     height="1417"
+     width="8740"
+     y="6850"
+     x="2125" />
+  <circle
+     id="circle20"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-dasharray:83, 83"
+     r="2598"
+     cy="5433"
+     cx="4960" />
+  <circle
+     id="circle22"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-dasharray:83, 83"
+     r="1417"
+     cy="5669"
+     cx="4488" />
+  <polygon
+     id="polygon24"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="10629,2834 7795,4724 7322,4015 7322,4015 10157,2125 " />
+  <rect
+     id="rect26"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     rx="0"
+     height="3779"
+     width="5669"
+     y="3070"
+     x="3307" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text28"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="7559"
+     x="9685"
+     xml:space="preserve">Projektionsfenster</text>
+</svg>

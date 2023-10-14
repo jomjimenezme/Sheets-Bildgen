@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Oct 28 11:31:33 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8.8in"
+   height="4.3in"
+   viewBox="2913 3089 10550 5108"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeRaytracingProblemDiffus.svg">
+  <metadata
+     id="metadata74">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs72" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview70"
+     showgrid="false"
+     inkscape:zoom="0.57449494"
+     inkscape:cx="396.00001"
+     inkscape:cy="193.50001"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:104, 104"
+     points="7322,3826 11497,5152 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:104, 104"
+     points="6916,7364 11497,5152 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:round;stroke-linejoin:miter"
+     points="9544,4525 9456,4498 " />
+  <polygon
+     id="polygon12"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="9376,4557 9459,4500 9421,4407 9421,4407 9218,4428 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:round;stroke-linejoin:miter"
+     points="8039,6854 8121,6812 " />
+  <polygon
+     id="polygon16"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="8139,6714 8118,6813 8209,6855 8209,6855 8344,6701 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text18"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="7422"
+     x="7800"
+     xml:space="preserve">Licht wird nicht</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text20"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="8036"
+     x="7800"
+     xml:space="preserve">berücksichtigt</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text22"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6314"
+     x="2929"
+     xml:space="preserve">Licht wird</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text24"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6929"
+     x="2929"
+     xml:space="preserve">berücksichtigt</text>
+  <path
+     inkscape:connector-curvature="0"
+     id="path26"
+     d="m 5232,5457 a 444,444 0 0 1 709,0"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:round" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path28"
+     d="m 5232,5457 a 442,442 0 0 0 709,0"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:round" />
+  <circle
+     id="circle30"
+     style="fill:none;stroke:#ff0000;stroke-width:63"
+     r="149"
+     cy="7559"
+     cx="6377" />
+  <ellipse
+     cy="5457"
+     cx="5587"
+     id="ellipse32"
+     style="fill:none;stroke:#0000ff;stroke-width:63"
+     ry="178"
+     rx="177" />
+  <polyline
+     id="polyline34"
+     style="fill:none;stroke:#a14000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="3779,3779 8976,3779 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7322,3779 6420,4601 " />
+  <polygon
+     id="polygon38"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-miterlimit:8"
+     points="6430,4699 6424,4598 6324,4582 6324,4582 6238,4768 " />
+  <polyline
+     id="polyline40"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6850,5669 7025,4967 " />
+  <polygon
+     id="polygon42"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="6962,4891 7023,4971 7116,4929 7116,4929 7085,4727 " />
+  <polyline
+     id="polyline44"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="11382,3503 11595,6566 " />
+  <polyline
+     id="polyline46"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7304,3804 6524,7028 " />
+  <polyline
+     id="polyline48"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6377,7086 6377,7322 " />
+  <polyline
+     id="polyline50"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6614,7559 6850,7559 " />
+  <polyline
+     id="polyline52"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5905,7559 6141,7559 " />
+  <polyline
+     id="polyline54"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6377,7795 6377,8031 " />
+  <polyline
+     id="polyline56"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6566,7748 6755,7937 " />
+  <polyline
+     id="polyline58"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6566,7370 6755,7181 " />
+  <polyline
+     id="polyline60"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6188,7370 6000,7181 " />
+  <polyline
+     id="polyline62"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6188,7748 6000,7937 " />
+  <polyline
+     id="polyline64"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7322,3779 5858,5149 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#a14000;stroke-width:0.025in"
+     id="text66"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="3496"
+     x="3023"
+     xml:space="preserve">diffus reflektierendes Objekt</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text68"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="3874"
+     x="11574"
+     xml:space="preserve">Spiegel</text>
+</svg>

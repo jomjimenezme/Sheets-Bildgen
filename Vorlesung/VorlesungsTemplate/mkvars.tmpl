@@ -1,0 +1,123 @@
+# Variable - Programme
+LTXFILT := ltxfilt
+##LTXFILT := cat
+BTXFILT := btxfilt
+##BTXFILT := cat
+TWL2TEX := twl2tex
+LST2TEX := lst2tex
+LST2SRC := lst2src
+LST2XXXC := -lang=c
+LST2XXXCXX := -lang=cxx
+LST2XXXJAVA := -lang=java
+LST2XXXPROLOG :=  -lang=prolog
+LST2XXXLISP := -lang=lisp
+LST2XXXMAKE := -lang=make
+LST2XXXPERL := -lang=perl
+LST2XXXPYTHON := -lang=python
+LST2XXXF77 := -lang=f77
+LST2XXXOCTAVE := -lang=octave
+LST2XXXMATLAB := -lang=matlab
+LST2XXXSH := -lang=sh
+LST2XXXSQL := -lang=sql
+LST2XXXHTML := -lang=html
+LST2XXXXML := -lang=xml
+LST2XXXMATHEMATICA := -lang=mathematica
+LST2XXXNOLANG := -lang=nolang
+LST2XXXAC := -lang=AutoConf
+LST2XXXTEX := -lang=latex
+UNCOLMAKE := uncolourmake
+CPP := cpp
+MAKEDEP := $(CPP) -MM
+CC := gcc
+CCFLAGS := -Wall
+CXX := g++
+CXXFLAGS := -Wall
+JBC := javac
+JBCFLAGS := -deprecation -Xlint
+JBC11FLAGS := -source 1.2 -target 1.1
+JC := gcj
+JCFLAGS := -Wall
+FC := gfortran
+FCFLAGS := -Wall
+F77 := $(FC)
+F77FLAGS := $(FCFLAGS)
+EDITOR := emacs -i -geometry 80x42
+
+# Variable - Dateien
+MAIN := main
+
+STY := halecture.cls collistings.sty halecture.xdy halecbib.sty \
+	commands.tex localcommands.tex mycolours.tex \
+
+TWL := $(MAIN).twl \
+#	cha_einl.twl \
+
+BIB := #Books.bib
+
+PNG :=
+
+GIF :=
+
+JPG :=
+
+TIF :=
+
+EPS := BUW_Logo.eps AI_Logo.eps \
+
+PDF :=
+
+TFIG :=
+
+PFIG :=
+
+TINKSVG :=
+
+PINKSVG :=
+
+GP :=
+
+LY :=
+
+SRCDIR := Quellen
+
+CSRCREL :=
+
+CLMSRCREL :=
+
+CCSRCREL :=
+
+HEADERSRCREL :=
+
+GJAVASRCREL :=
+
+JAVASRCREL :=
+
+JAVA11SRCREL :=
+
+F77SRCREL :=
+
+PERLSRCREL :=
+
+MATLABSRCREL :=
+
+SHSRCREL :=
+
+NOLANGSRCREL :=
+
+OTHERSRCREL :=
+
+SUBMAKESDIRREL :=
+
+MAKEINCSRCREL :=
+
+OTHERFILESREL :=
+
+OTHERCLEANFILESREL :=
+
+# Variable - Notebook
+NOTEBOOK := wmainb5
+NOTEBOOKPATH := /home/holger/$(MAIN)/Vorlesung
+
+# Variable - Pfade zu Bibliotheken etc.
+SOMELIB := /path/to/somelib
+export SOMELIB

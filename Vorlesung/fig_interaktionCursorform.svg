@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Sep 24 15:46:21 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="9.6in"
+   height="1.8in"
+   viewBox="4478 4667 11550 2100"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_interaktionCursorform.svg">
+  <metadata
+     id="metadata34">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="0.57638887"
+     inkscape:cx="432.00002"
+     inkscape:cy="80.999998"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4535,4771 4913,5149 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4535,5149 4913,4771 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7559,5196 7842,4912 " />
+  <polygon
+     id="polygon12"
+     style="fill:#000000;stroke:#000000;stroke-width:63;stroke-miterlimit:8"
+     points="7760,4859 7893,4994 7893,4994 8016,4738 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4535,6472 4913,6472 " />
+  <polygon
+     id="polygon16"
+     style="fill:#000000;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7606,6755 7795,6377 7795,6377 7984,6755 " />
+  <rect
+     id="rect18"
+     style="fill:#000000;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="472"
+     width="377"
+     y="5905"
+     x="10677" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text20"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6377"
+     x="12283"
+     xml:space="preserve">für Text, …</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text22"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5196"
+     x="12283"
+     xml:space="preserve">für Positionen,</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text24"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6377"
+     x="8740"
+     xml:space="preserve">oder</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text26"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6377"
+     x="5669"
+     xml:space="preserve">oder</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text28"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5196"
+     x="5669"
+     xml:space="preserve">oder</text>
+</svg>

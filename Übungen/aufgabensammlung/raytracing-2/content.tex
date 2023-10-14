@@ -1,0 +1,27 @@
+\bivtask{Raytracing nach Whitted - Teil 2}{8}
+%
+Erweitern Sie die Implementierung zum rekursiven Raytracing aus 
+Aufgabe~\ref{aufgabe:raytracing} um Lichtbrechung und die Darstellung
+von Tetraedern.
+
+Im Verzeichnis \bivfolder{/home/bildgen/Aufgaben/raytracing-2} finden Sie 
+ein ein Rahmenprogramm, in dem Sie die 
+Implementierung vornehmen können. Sie müssen nur Änderungen an den 
+markierten Stellen in den Dateien \texttt{raytracer.cc}, 
+\texttt{triangle.cc} und \texttt{tetraeder.cc} vornehmen.
+Orientieren Sie sich für die Implementierung der Klassen 
+\texttt{Tetraeder} und \texttt{Triangle} an den Klassen \texttt{Box} 
+und \texttt{Parallelogram}. In der Datei \texttt{README} wird 
+beschrieben, wie Sie das Rahmenprogramm compilieren können. 
+% Eine Einweisung erfolgt außerdem in der Übung.
+
+Zusätzlich zu den erläuterten Methoden, Objekten und Strukturen aus 
+Aufgabe~\ref{aufgabe:raytracing} benötigen Sie die Methoden
+\begin{itemize}
+  \item \texttt{Object::getRefraction()}, die den Brechungsindex für das 
+        Medium des Objekts als \texttt{double} liefert, und
+  \item \texttt{Object::getPigment()}, die einen \texttt{Vector3d} 
+        zurückgibt und die Durchlässigkeit des Objekts für die drei 
+        Farbkomponenten darstellt.
+\end{itemize}
+  

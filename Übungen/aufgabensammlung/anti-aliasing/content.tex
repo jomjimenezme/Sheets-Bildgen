@@ -1,0 +1,28 @@
+\bivtask{Ein einfaches Antialiasing-Verfahren für Linien}{8}
+%
+Ergänzen Sie in der Datei \texttt{antial.cc} unter
+\bivfolder{/home/bildgen/Aufgaben/anti-aliasing} die Funktion
+\vspace{-\baselineskip}
+\vspace{-.5em}
+\begin{alltt}
+   drawAntialiasedWideLine, 
+\end{alltt}
+\vspace{-.5em}
+die geglättete Linien beliebiger Breite zeichnet.
+
+\begin{center}
+  \includegraphics{antial1} \raisebox{4.5em}{→} \input{antial2} \raisebox{4.5em}{→} \includegraphics{antial3}
+\end{center}
+
+Verwenden Sie hierzu ein in beide Richtungen um einen Faktor $f$
+verfeinertes Raster (in der Abbildung ist also $f = 5$). Fassen Sie die 
+Linie in diesem feineren Raster als Rechteck auf und bestimmen Sie, 
+welche (Sub-)Pixel eingefärbt werden müssen. Die Intensität der Pixel im
+Originalraster wird dann proportional zur Anzahl der eingefärbten 
+Subpixel gewählt.
+
+Verwenden Sie bei der Programmierung \emph{kein} zusätzliches
+zweidimensionales Feld; merken Sie sich statt dessen für jede
+Subpixelzeile Anfangs- und Endpunkt des Rechtecks.
+
+Testen Sie auch mit Linienbreiten $< 1$.

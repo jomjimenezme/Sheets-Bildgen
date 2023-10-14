@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Sep 30 10:30:21 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="12.1in"
+   height="3.1in"
+   viewBox="-1973 2316 14550 3770"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_clip3DBsp.svg">
+  <metadata
+     id="metadata75">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs73" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview71"
+     showgrid="false"
+     inkscape:zoom="0.91460052"
+     inkscape:cx="560.02284"
+     inkscape:cy="132.24884"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polygon
+     id="polygon6"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="3543,4251 1653,5196 1653,3307 1653,3307 3543,2362 " />
+  <polygon
+     id="polygon8"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="10866,4251 8976,5196 8976,3307 8976,3307 10866,2362 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="10866,2362 7559,2362 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="7559,2362 5669,3307 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="5669,3307 8976,3307 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="5669,3307 5669,5196 8976,5196 " />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#b000b0;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="7559,2362 7559,4251 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#b000b0;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="7559,4251 5669,5196 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#b000b0;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="7559,4251 10866,4251 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:middle;fill:#b000b0;stroke-width:0.025in"
+     id="text24"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5905"
+     x="8267"
+     xml:space="preserve">Sichtvolumen</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text26"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5905"
+     x="2598"
+     xml:space="preserve">Projektionsebene</text>
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="2834,3779 5669,3779 " />
+  <polyline
+     id="polyline30"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="10157,3779 12519,3779 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="708,3779 1653,3779 " />
+  <polyline
+     id="polyline34"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="1653,3779 2834,3779 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="5669,3779 10157,3779 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text38"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4393"
+     x="4582"
+     xml:space="preserve">$\point{P}₃$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text40"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4346"
+     x="12094"
+     xml:space="preserve">$\point{P}₁$</text>
+  <circle
+     id="circle42"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="94"
+     cy="3779"
+     cx="2834" />
+  <circle
+     id="circle44"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="94"
+     cy="3779"
+     cx="4251" />
+  <circle
+     id="circle46"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="94"
+     cy="3779"
+     cx="8031" />
+  <circle
+     id="circle48"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="94"
+     cy="3779"
+     cx="11811" />
+  <rect
+     id="rect50"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:20, 20"
+     rx="0"
+     height="661"
+     width="803"
+     y="3968"
+     x="7795" />
+  <g
+     id="g52"
+     style="fill:none;stroke:#ffffff;stroke-width:1">
+    <defs
+       id="defs54">
+      <pattern
+         patternUnits="userSpaceOnUse"
+         height="200"
+         width="200"
+         y="0"
+         x="0"
+         id="tile1">
+        <path
+           id="path57"
+           d="M 0 0 0 50" />
+        <path
+           id="path59"
+           d="M 0 50 200 50" />
+        <path
+           id="path61"
+           d="M 100 50 100 150" />
+        <path
+           id="path63"
+           d="M 0 150 200 150" />
+        <path
+           id="path65"
+           d="M 0 150 0 200" />
+      </pattern>
+    </defs>
+  </g>
+  <rect
+     id="rect67"
+     style="fill:url(#tile1);stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:20, 20"
+     rx="0"
+     height="661"
+     width="803"
+     y="3968"
+     x="7795" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text69"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4393"
+     x="8362"
+     xml:space="preserve">$\point{P}₂$</text>
+</svg>

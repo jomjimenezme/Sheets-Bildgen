@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Oct 28 16:22:01 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="13.2in"
+   height="7.0in"
+   viewBox="-1461 2519 15813 8392"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeRaytracingAdaptiv1.svg">
+  <metadata
+     id="metadata116">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs114" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview112"
+     showgrid="false"
+     inkscape:zoom="0.74920635"
+     inkscape:cx="808.29794"
+     inkscape:cy="374.48087"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path6"
+     d="m 1322,6850 a 383,383 0 0 1 662,0"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:round" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path8"
+     d="m 1322,6850 a 383,383 0 0 0 662,0"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:round" />
+  <circle
+     id="circle10"
+     style="fill:none;stroke:#ff0000;stroke-width:48"
+     r="141"
+     cy="10393"
+     cx="7322" />
+  <circle
+     id="circle12"
+     style="fill:none;stroke:#0000ff;stroke-width:63"
+     r="141"
+     cy="6850"
+     cx="1653" />
+  <polygon
+     id="polygon14"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="9448,6141 8031,7559 5196,4724 5196,4724 6614,3307 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="4488,5905 4017,6061 " />
+  <polygon
+     id="polygon18"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-miterlimit:8"
+     points="3985,6154 4019,6059 3935,6005 3935,6005 3781,6139 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7795,4488 5905,5433 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7795,4488 7075,4848 " />
+  <polygon
+     id="polygon24"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="7056,4943 7077,4845 6985,4803 6985,4803 6852,4958 " />
+  <polyline
+     id="polyline26"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="11338,3307 7795,4488 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="9921,3779 9450,3935 " />
+  <polygon
+     id="polygon30"
+     style="fill:#00b000;stroke:#00b000;stroke-width:63;stroke-miterlimit:8"
+     points="9418,4028 9453,3933 9369,3879 9369,3879 9214,4013 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7795,4488 6850,6377 " />
+  <polyline
+     id="polyline34"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7086,5905 7210,5657 " />
+  <polygon
+     id="polygon36"
+     style="fill:#00b000;stroke:#00b000;stroke-width:63;stroke-miterlimit:8"
+     points="7165,5568 7208,5659 7306,5638 7306,5638 7320,5435 " />
+  <polyline
+     id="polyline38"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="8740,5433 6850,6377 " />
+  <polyline
+     id="polyline40"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5905,5433 4960,8267 " />
+  <polyline
+     id="polyline42"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5196,7559 5353,7088 " />
+  <polygon
+     id="polygon44"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="5296,7006 5351,7090 5445,7056 5445,7056 5430,6852 " />
+  <polyline
+     id="polyline46"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5905,5433 7086,9685 " />
+  <polyline
+     id="polyline48"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7086,9685 6682,8272 " />
+  <polygon
+     id="polygon50"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="6590,8236 6682,8275 6741,8193 6741,8193 6614,8033 " />
+  <polyline
+     id="polyline52"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:round"
+     points="7559,10393 7795,10393 " />
+  <polyline
+     id="polyline54"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:round"
+     points="7322,10157 7322,9921 " />
+  <polyline
+     id="polyline56"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:round"
+     points="7086,10393 6850,10393 " />
+  <polyline
+     id="polyline58"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:round"
+     points="7322,10629 7322,10866 " />
+  <polyline
+     id="polyline60"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:round"
+     points="7511,10582 7700,10771 " />
+  <polyline
+     id="polyline62"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:round"
+     points="7511,10204 7700,10015 " />
+  <polyline
+     id="polyline64"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:round"
+     points="6944,10015 7133,10204 " />
+  <polyline
+     id="polyline66"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:round"
+     points="7133,10582 6944,10771 " />
+  <polyline
+     id="polyline68"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="6850,6377 5905,10157 " />
+  <polyline
+     id="polyline70"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="8267,5669 7547,6029 " />
+  <polygon
+     id="polygon72"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="7528,6124 7549,6026 7458,5984 7458,5984 7324,6139 " />
+  <polyline
+     id="polyline74"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5905,10157 6317,8511 " />
+  <polygon
+     id="polygon76"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="6254,8434 6314,8514 6407,8472 6407,8472 6376,8270 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text78"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3070"
+     x="1181"
+     xml:space="preserve">Intensität aus der</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text80"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3637"
+     x="1181"
+     xml:space="preserve">Brechungsrichtung</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text82"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5007"
+     x="803"
+     xml:space="preserve">wahrgenommene</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text84"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5574"
+     x="803"
+     xml:space="preserve">Intensität</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text86"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="8740"
+     x="708"
+     xml:space="preserve">Spiegelrichtung</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text88"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="8881"
+     x="7795"
+     xml:space="preserve">Intensität von</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text90"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="9496"
+     x="7795"
+     xml:space="preserve">der Lichtquelle</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text92"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6000"
+     x="3637"
+     xml:space="preserve">$I$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text94"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="8031"
+     x="708"
+     xml:space="preserve">Intensität aus der</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#b000b0;stroke-width:0.025in"
+     id="text96"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="9307"
+     x="6000"
+     xml:space="preserve">$I_{BSB}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#ff0000;stroke-width:0.025in"
+     id="text98"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="8362"
+     x="7370"
+     xml:space="preserve">$I_L$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#ff0000;stroke-width:0.025in"
+     id="text100"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4582"
+     x="6992"
+     xml:space="preserve">$I_B$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#00b000;stroke-width:0.025in"
+     id="text102"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3590"
+     x="9637"
+     xml:space="preserve">$I_{BB}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#b000b0;stroke-width:0.025in"
+     id="text104"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6519"
+     x="8692"
+     xml:space="preserve">$I_{BSS}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#00b000;stroke-width:0.025in"
+     id="text106"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5716"
+     x="7133"
+     xml:space="preserve">$I_{BS}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#ff0000;stroke-width:0.025in"
+     id="text108"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7748"
+     x="5858"
+     xml:space="preserve">$I_S$</text>
+  <polyline
+     id="polyline110"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5905,5433 2362,6614 " />
+</svg>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Oct 21 10:43:01 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="11.5in"
+   height="3.3in"
+   viewBox="-2138 2305 13742 3927"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="fig_sichtPaintersKorrekt.svg">
+  <metadata
+     id="metadata32">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs30" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2432"
+     inkscape:window-height="1273"
+     id="namedview28"
+     showgrid="false"
+     inkscape:zoom="1.2434148"
+     inkscape:cx="477.03041"
+     inkscape:cy="185.753"
+     inkscape:window-x="128"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <circle
+     id="circle6"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="106"
+     cy="5669"
+     cx="4251" />
+  <circle
+     id="circle8"
+     style="fill:#00b000;stroke:#00b000;stroke-width:8"
+     r="106"
+     cy="3070"
+     cx="8976" />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4251,5669 6377,3779 " />
+  <polyline
+     id="polyline12"
+     style="fill:#0000ff;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="3543,3543 2376,3543 " />
+  <polygon
+     id="polygon14"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="2306,3637 2369,3543 2306,3448 2306,3448 2117,3543 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#00b000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8976,3070 11338,4724 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text18"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3779"
+     x="6897"
+     xml:space="preserve">$Pᵢ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:end;fill:#00b000;stroke-width:0.025in"
+     id="text20"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4015"
+     x="11149"
+     xml:space="preserve">$Pⱼ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text22"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3307"
+     x="2834"
+     xml:space="preserve">$\widehat{\vektor{n}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:end;fill:#00b000;stroke-width:0.025in"
+     id="text24"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="2787"
+     x="9543"
+     xml:space="preserve">$n_{\max}⁽ʲ⁾$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text26"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6047"
+     x="5338"
+     xml:space="preserve">$n_{\max}⁽ⁱ⁾$</text>
+</svg>

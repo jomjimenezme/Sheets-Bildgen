@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Oct 22 16:01:36 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="18.8in"
+   height="4.7in"
+   viewBox="415 5247 22611 5687"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeEffekteDiffus3.svg">
+  <metadata
+     id="metadata102">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs100" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview98"
+     showgrid="false"
+     inkscape:zoom="0.76059952"
+     inkscape:cx="785.98237"
+     inkscape:cy="205.39642"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path6"
+     d="M 8409,10062 A 688,688 0 0 0 7559,9779"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt" />
+  <polygon
+     id="polygon8"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:32;stroke-miterlimit:8"
+     points="7755,9787 7792,9731 7736,9694 7736,9694 7607,9770 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path10"
+     d="m 12708,6566 a 660,660 0 0 0 -567,756"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt" />
+  <polygon
+     id="polygon12"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:32;stroke-miterlimit:8"
+     points="12196,7132 12150,7084 12101,7129 12101,7129 12143,7273 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4724,8031 1889,10866 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="3307,6614 4545,7853 " />
+  <polygon
+     id="polygon18"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="4643,7839 4543,7850 4532,7950 4532,7950 4722,8029 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="2834,7086 4073,8325 " />
+  <polygon
+     id="polygon22"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="4171,8311 4071,8323 4059,8423 4059,8423 4249,8501 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="2362,7559 3601,8797 " />
+  <polygon
+     id="polygon26"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="3698,8784 3598,8795 3587,8895 3587,8895 3777,8974 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="1889,8031 3128,9270 " />
+  <polygon
+     id="polygon30"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="3226,9256 3126,9268 3114,9367 3114,9367 3304,9446 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="1417,8503 2656,9742 " />
+  <polygon
+     id="polygon34"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="2753,9729 2654,9740 2642,9840 2642,9840 2832,9919 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="944,8976 2183,10215 " />
+  <polygon
+     id="polygon38"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="2281,10201 2181,10213 2170,10312 2170,10312 2360,10391 " />
+  <polyline
+     id="polyline40"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="472,9448 1711,10687 " />
+  <polygon
+     id="polygon42"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="1808,10674 1709,10685 1697,10785 1697,10785 1887,10864 " />
+  <polyline
+     id="polyline44"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5433,7322 4193,6082 " />
+  <polygon
+     id="polygon46"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="4094,6095 4194,6083 4205,5984 4205,5984 4016,5906 " />
+  <polyline
+     id="polyline48"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="12755,8031 9921,10866 " />
+  <polyline
+     id="polyline50"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="13464,7322 12224,6082 " />
+  <polygon
+     id="polygon52"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="12125,6095 12225,6083 12237,5984 12237,5984 12048,5906 " />
+  <polyline
+     id="polyline54"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="13464,7322 11711,7322 " />
+  <polygon
+     id="polygon56"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="11652,7401 11715,7322 11652,7244 11652,7244 11463,7322 " />
+  <polyline
+     id="polyline58"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7086,8031 12523,8031 " />
+  <polygon
+     id="polygon60"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="12583,7952 12520,8031 12583,8110 12583,8110 12772,8031 " />
+  <polyline
+     id="polyline62"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7086,8692 11862,8692 " />
+  <polygon
+     id="polygon64"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="11922,8614 11859,8692 11922,8771 11922,8771 12111,8692 " />
+  <polyline
+     id="polyline66"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7086,10015 10539,10015 " />
+  <polygon
+     id="polygon68"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="10599,9937 10536,10015 10599,10094 10599,10094 10788,10015 " />
+  <polyline
+     id="polyline70"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7086,10677 9878,10677 " />
+  <polygon
+     id="polygon72"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="9938,10598 9875,10677 9938,10755 9938,10755 10127,10677 " />
+  <polyline
+     id="polyline74"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:125, 125"
+     points="10393,8031 7559,10866 " />
+  <polyline
+     id="polyline76"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7086,9354 11201,9354 " />
+  <polygon
+     id="polygon78"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="11260,9275 11197,9354 11260,9433 11260,9433 11449,9354 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#d100d1;stroke-width:0.025in"
+     id="text80"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="9921"
+     x="11338"
+     xml:space="preserve">$\dd A$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text82"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="9732"
+     x="8173"
+     xml:space="preserve">$φ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text84"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7795"
+     x="6850"
+     xml:space="preserve">$\dd A · \cos φ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text86"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6992"
+     x="11527"
+     xml:space="preserve">$\vektor{r}ₗ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text88"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7086"
+     x="12330"
+     xml:space="preserve">$φ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#d100d1;stroke-width:0.025in"
+     id="text90"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5716"
+     x="12141"
+     xml:space="preserve">$\vektor{n}_{\point{P}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#d100d1;stroke-width:0.025in"
+     id="text92"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5716"
+     x="4110"
+     xml:space="preserve">$\vektor{n}_{\point{P}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#d100d1;stroke-width:0.025in"
+     id="text94"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="9921"
+     x="3307"
+     xml:space="preserve">$\dd A$</text>
+  <polyline
+     id="polyline96"
+     style="fill:none;stroke:#0000ff;stroke-width:79;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7559,10866 7559,8031 " />
+</svg>

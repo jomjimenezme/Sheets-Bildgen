@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Fri Sep 25 13:46:27 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="19.4in"
+   height="5.3in"
+   viewBox="-5477 1146 23259 6328"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_clipCohenSituation.svg">
+  <metadata
+     id="metadata56">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs54" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview52"
+     showgrid="false"
+     inkscape:zoom="1.1408935"
+     inkscape:cx="879.89693"
+     inkscape:cy="345.35375"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <rect
+     id="rect6"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     rx="0"
+     height="2834"
+     width="3779"
+     y="2598"
+     x="3543" />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="7322,2598 9212,2598 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="7322,5433 9212,5433 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="3543,2598 2125,2598 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="3543,5433 2125,5433 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="3543,2598 3543,1181 " />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="7322,2598 7322,1181 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="3543,5433 3543,6850 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="7322,5433 7322,6850 " />
+  <circle
+     id="circle24"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:0"
+     r="94"
+     cy="6141"
+     cx="6377" />
+  <circle
+     id="circle26"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:0"
+     r="94"
+     cy="3779"
+     cx="2834" />
+  <circle
+     id="circle28"
+     style="fill:#00b000;stroke:#00b000;stroke-width:0"
+     r="94"
+     cy="2125"
+     cx="2598" />
+  <circle
+     id="circle30"
+     style="fill:#00b000;stroke:#00b000;stroke-width:0"
+     r="94"
+     cy="1653"
+     cx="8503" />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="2598,2125 8503,1653 " />
+  <polyline
+     id="polyline34"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="2834,3779 6377,6141 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:467px;font-family:Times;text-anchor:end;fill:#00b000;stroke-width:0.025in"
+     id="text36"
+     font-size="467"
+     font-weight="normal"
+     font-style="normal"
+     y="1795"
+     x="2645"
+     xml:space="preserve">$\point{q}₁$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:467px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text38"
+     font-size="467"
+     font-weight="normal"
+     font-style="normal"
+     y="2740"
+     x="9401"
+     xml:space="preserve">$v = \overline{v}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:467px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text40"
+     font-size="467"
+     font-weight="normal"
+     font-style="normal"
+     y="5574"
+     x="9401"
+     xml:space="preserve">$v = \underline{v}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:467px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text42"
+     font-size="467"
+     font-weight="normal"
+     font-style="normal"
+     y="7275"
+     x="6708"
+     xml:space="preserve">$u = \overline{u}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:467px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text44"
+     font-size="467"
+     font-weight="normal"
+     font-style="normal"
+     y="7275"
+     x="2929"
+     xml:space="preserve">$u = \underline{u}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:467px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text46"
+     font-size="467"
+     font-weight="normal"
+     font-style="normal"
+     y="3496"
+     x="2787"
+     xml:space="preserve">$\point{t}₁$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:467px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text48"
+     font-size="467"
+     font-weight="normal"
+     font-style="normal"
+     y="6330"
+     x="6661"
+     xml:space="preserve">$\point{t}₂$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:467px;font-family:Times;text-anchor:start;fill:#00b000;stroke-width:0.025in"
+     id="text50"
+     font-size="467"
+     font-weight="normal"
+     font-style="normal"
+     y="1795"
+     x="8834"
+     xml:space="preserve">$\point{q}₂$</text>
+</svg>

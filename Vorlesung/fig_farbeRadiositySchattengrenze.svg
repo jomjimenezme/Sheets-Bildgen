@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Nov 18 15:14:55 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10.1in"
+   height="4.0in"
+   viewBox="2777 2626 12159 4744"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeRadiositySchattengrenze.svg">
+  <metadata
+     id="metadata38">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs36" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview34"
+     showgrid="false"
+     inkscape:zoom="1.4157693"
+     inkscape:cx="630.99228"
+     inkscape:cy="194.858"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2834,6377 8503,6377 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2834,6236 2834,6519 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5669,6236 5669,6519 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8503,6236 8503,6519 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:10, 78"
+     points="4251,6377 4251,3307 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:10, 78"
+     points="7086,6377 7086,5196 " />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:round;stroke-linejoin:miter"
+     points="2834,3070 4251,3307 7086,5196 8503,5669 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:round;stroke-linejoin:bevel"
+     points="2834,3212 2836,3212 2843,3213 2852,3213 2868,3214 2889,3215 2915,3217 2946,3219 2982,3222 3021,3225 3061,3227 3102,3230 3143,3233 3183,3235 3222,3238 3257,3240 3293,3243 3325,3245 3356,3247 3386,3249 3414,3251 3441,3253 3467,3254 3492,3256 3518,3257 3543,3259 3568,3261 3593,3262 3618,3265 3645,3266 3671,3268 3697,3270 3724,3272 3753,3273 3781,3275 3809,3277 3839,3279 3868,3281 3898,3283 3926,3285 3955,3287 3985,3289 4013,3291 4041,3293 4070,3294 4097,3296 4123,3298 4150,3300 4176,3301 4201,3303 4226,3304 4251,3307 4279,3309 4306,3310 4333,3312 4362,3314 4390,3316 4418,3318 4448,3320 4477,3322 4507,3325 4536,3328 4565,3331 4595,3334 4624,3336 4651,3339 4680,3343 4706,3346 4731,3350 4756,3353 4780,3357 4802,3361 4824,3364 4844,3369 4862,3373 4881,3378 4902,3383 4923,3390 4942,3396 4962,3403 4980,3411 4999,3420 5016,3429 5033,3440 5049,3451 5065,3464 5080,3477 5095,3491 5107,3506 5120,3521 5132,3538 5143,3554 5153,3572 5163,3590 5172,3609 5181,3630 5188,3647 5195,3666 5202,3685 5209,3706 5216,3728 5223,3751 5230,3775 5236,3801 5244,3827 5251,3856 5257,3884 5264,3913 5271,3944 5277,3974 5283,4006 5289,4036 5295,4068 5300,4099 5306,4130 5311,4161 5316,4192 5321,4222 5325,4253 5331,4283 5334,4309 5338,4337 5342,4363 5346,4391 5351,4419 5356,4448 5361,4476 5367,4506 5374,4536 5381,4565 5390,4596 5399,4625 5409,4656 5420,4685 5433,4714 5445,4743 5460,4770 5475,4797 5491,4824 5509,4849 5527,4872 5547,4895 5568,4917 5590,4937 5614,4956 5638,4975 5665,4992 5693,5007 5717,5020 5742,5032 5769,5043 5797,5054 5826,5064 5857,5074 5889,5083 5923,5092 5958,5101 5994,5108 6031,5117 6070,5124 6109,5130 6149,5137 6190,5143 6232,5149 6274,5154 6316,5160 6359,5164 6401,5168 6443,5172 6485,5175 6525,5179 6566,5182 6606,5185 6646,5188 6685,5190 6722,5192 6759,5194 6794,5196 6830,5198 6864,5201 6896,5203 6929,5205 6966,5207 7004,5209 7041,5211 7077,5214 7112,5216 7148,5219 7183,5223 7218,5225 7252,5228 7287,5231 7320,5234 7354,5237 7386,5240 7419,5244 7450,5247 7481,5250 7511,5253 7541,5256 7569,5259 7597,5262 7624,5265 7650,5268 7675,5271 7700,5273 7724,5276 7749,5278 7772,5280 7795,5283 7820,5286 7845,5288 7870,5290 7897,5293 7924,5295 7951,5297 7982,5300 8012,5302 8045,5304 8080,5308 8116,5311 8155,5313 8195,5316 8236,5319 8277,5322 8317,5324 8355,5328 8391,5330 8423,5333 8449,5334 8470,5336 8486,5337 8495,5337 8501,5338 8503,5338 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text22"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3070"
+     x="6377"
+     xml:space="preserve">interpolierte Radiosity</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text24"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3779"
+     x="6377"
+     xml:space="preserve">tatsächliche Radiosity</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text26"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6000"
+     x="7653"
+     xml:space="preserve">$Bⱼ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text28"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5055"
+     x="4818"
+     xml:space="preserve">$Bᵢ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text30"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7181"
+     x="4346"
+     xml:space="preserve">$Aᵢ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text32"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7181"
+     x="7181"
+     xml:space="preserve">$Aⱼ$</text>
+</svg>

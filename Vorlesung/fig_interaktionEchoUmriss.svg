@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Sep 24 15:43:22 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10.1in"
+   height="4.2in"
+   viewBox="1406 3205 12112 4987"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_interaktionEchoUmriss.svg">
+  <metadata
+     id="metadata48">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs46" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview44"
+     showgrid="false"
+     inkscape:zoom="0.54785476"
+     inkscape:cx="454.50002"
+     inkscape:cy="188.99999"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path6"
+     d="m 2976,5669 a 248,248 0 1 0 331,331"
+     style="fill:none;stroke:#d100d1;stroke-width:32;stroke-linecap:butt" />
+  <circle
+     id="circle8"
+     style="fill:none;stroke:#b000b0;stroke-width:32"
+     r="188"
+     cy="5196"
+     cx="11574" />
+  <circle
+     id="circle10"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="94"
+     cy="4488"
+     cx="12047" />
+  <circle
+     id="circle12"
+     style="fill:none;stroke:#0000ff;stroke-width:63"
+     r="851"
+     cy="5196"
+     cx="11574" />
+  <circle
+     id="circle14"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:8"
+     r="94"
+     cy="3307"
+     cx="11811" />
+  <circle
+     id="circle16"
+     style="fill:none;stroke:#ff0000;stroke-width:63"
+     r="1904"
+     cy="5196"
+     cx="11574" />
+  <circle
+     id="circle18"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="94"
+     cy="3779"
+     cx="4960" />
+  <circle
+     id="circle20"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:8"
+     r="94"
+     cy="5385"
+     cx="7086" />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#00b000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="12000,4299 11889,3680 " />
+  <polygon
+     id="polygon24"
+     style="fill:#00b000;stroke:#00b000;stroke-width:32;stroke-miterlimit:8"
+     points="11836,3645 11890,3683 11928,3629 11928,3629 11858,3498 " />
+  <polyline
+     id="polyline26"
+     style="fill:none;stroke:#00b000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="5149,3874 6796,5173 " />
+  <polygon
+     id="polygon28"
+     style="fill:#00b000;stroke:#00b000;stroke-width:32;stroke-miterlimit:8"
+     points="6859,5164 6793,5171 6802,5237 6802,5237 6942,5289 " />
+  <rect
+     id="rect30"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="2125"
+     width="1889"
+     y="3779"
+     x="3070" />
+  <rect
+     id="rect32"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="472"
+     width="3968"
+     y="5385"
+     x="3118" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text34"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="8031"
+     x="4960"
+     xml:space="preserve">(achsenparalleles Rechteck)</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text36"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="8031"
+     x="11574"
+     xml:space="preserve">(Kreis)</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#d100d1;stroke-width:0.025in"
+     id="text38"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6614"
+     x="3070"
+     xml:space="preserve">Fixpunkt</text>
+  <circle
+     id="circle40"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="5196"
+     cx="11574" />
+  <circle
+     id="circle42"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="5905"
+     cx="3070" />
+</svg>

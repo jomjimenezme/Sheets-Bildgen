@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Oct 21 10:34:52 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16.6in"
+   height="4.1in"
+   viewBox="2818 2552 19966 4960"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_sichtPolyederNormale.svg">
+  <metadata
+     id="metadata64">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs62" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview60"
+     showgrid="false"
+     inkscape:zoom="0.60910306"
+     inkscape:cx="744.80105"
+     inkscape:cy="216.69705"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polygon
+     id="polygon6"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="7322,7086 4488,6377 4488,3543 4488,3543 7322,4251 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="5433,6141 8023,6789 " />
+  <polygon
+     id="polygon10"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:48;stroke-miterlimit:8"
+     points="8103,6727 8024,6788 8066,6880 8066,6880 8268,6850 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="5433,6141 3558,6141 " />
+  <polygon
+     id="polygon14"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:48;stroke-miterlimit:8"
+     points="3495,6220 3558,6141 3495,6062 3495,6062 3306,6141 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="5433,6141 5433,3321 " />
+  <polygon
+     id="polygon18"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:48;stroke-miterlimit:8"
+     points="5354,3258 5433,3321 5511,3258 5511,3258 5433,3069 " />
+  <polygon
+     id="polygon20"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="15354,7086 11574,5905 12283,3543 12283,3543 14881,4015 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="12283,3543 13700,2598 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="14881,4015 15826,2834 " />
+  <polyline
+     id="polyline26"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="15354,7086 16062,6850 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:104, 104"
+     points="11574,5905 13700,5433 " />
+  <polyline
+     id="polyline30"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:104, 104"
+     points="13700,2598 13700,5433 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:104, 104"
+     points="13700,5433 16062,6850 " />
+  <polyline
+     id="polyline34"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="13700,2598 15826,2834 16062,6850 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="15921,4251 16300,4104 " />
+  <polygon
+     id="polygon38"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:48;stroke-miterlimit:8"
+     points="16331,4008 16301,4104 16388,4155 16388,4155 16536,4014 " />
+  <polyline
+     id="polyline40"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="13464,5196 12001,6450 " />
+  <polygon
+     id="polygon42"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:48;stroke-miterlimit:8"
+     points="12003,6551 12000,6450 11900,6431 11900,6431 11808,6615 " />
+  <polyline
+     id="polyline44"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:52, 52"
+     points="14645,4724 15874,4251 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:441px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text46"
+     font-size="441"
+     font-weight="normal"
+     font-style="normal"
+     y="3307"
+     x="5669"
+     xml:space="preserve">$\widehat{\vektor{v}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:441px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text48"
+     font-size="441"
+     font-weight="normal"
+     font-style="normal"
+     y="3779"
+     x="7559"
+     xml:space="preserve">Projektions-</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:441px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text50"
+     font-size="441"
+     font-weight="normal"
+     font-style="normal"
+     y="4393"
+     x="7559"
+     xml:space="preserve">ebene</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:441px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text52"
+     font-size="441"
+     font-weight="normal"
+     font-style="normal"
+     y="7322"
+     x="8503"
+     xml:space="preserve">$\widehat{\vektor{u}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:441px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text54"
+     font-size="441"
+     font-weight="normal"
+     font-style="normal"
+     y="6377"
+     x="2834"
+     xml:space="preserve">$\widehat{\vektor{n}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:441px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text56"
+     font-size="441"
+     font-weight="normal"
+     font-style="normal"
+     y="4488"
+     x="16535"
+     xml:space="preserve">$\vektor{v}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:441px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text58"
+     font-size="441"
+     font-weight="normal"
+     font-style="normal"
+     y="6850"
+     x="11338"
+     xml:space="preserve">$\vektor{v}$</text>
+</svg>

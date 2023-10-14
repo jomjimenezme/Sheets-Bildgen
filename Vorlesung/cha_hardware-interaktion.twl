@@ -1,0 +1,856 @@
+
+\chapter{Ein-/Ausgabe-Hardware und
+  Interaktion}
+
+\minisec{Motivation}
+
+\begin{itemize}
+\item Die zur Darstellung eingesetzten Techniken hängen \iA
+  vom Ausgabegerät (Linien- oder Ras\-ter-o\-ri\-en\-tiert) ab.
+  
+\item \emph{Interaktion}\index{Interaktion} kann es dem Benutzer ermöglichen,
+  durch Eingabe von
+  \begin{itemize}
+  \item Befehlen
+  \item Parametern (\zB Größenangaben, Platzierung)
+  \end{itemize}
+  die Darstellung des Modells (und \evtl den Ablauf des Programms)
+  zu beeinflussen.
+\end{itemize}
+
+\begin{bemerkung}
+   Die Beschreibungen sind \iA gegenüber den (aktuellen) technischen
+   Realisierungen stark vereinfacht und erfassen nur eine geringe
+   Anzahl möglicher Varianten.
+\end{bemerkung}
+
+
+\section{Linien-orientierte Ausgabegeräte}
+
+\subsection{Vector-Displays}
+
+\minisec{Kathodenstrahl-Röhre (Braunsche Röhre, CRT)}
+\index{Kathodenstrahl-Röhre}\index{Röhre!Kathodenstrahl-}%
+\index{Braunsche Röhre}\index{Röhre!Braunsche}\index{CRT}
+\person{0mm}{Karl Ferdinand Braun}{1850, Fulda}{1918, New York}%
+{Physiker}%
+{person_Braun}{}%
+{\urlpers{https://commons.wikimedia.org/wiki/File:Ferdinand_Braun.jpg}}{}%pd
+
+\begin{center}
+  \scalebox{0.7}{\Large\input{fig_hardwareKathodenstrahlroehre}}
+\end{center}
+
+\begin{description}
+\item[Heizdraht:] erzeugt eine Elektronenwolke
+\item[Anode:] beschleunigt die Elektronen in Richtung Bildschirm
+\item[Fokussierung:] bündelt den Elektronenstrom zu einem feinen
+  Strahl
+\item[Steuergitter:] regelt die Anzahl der Elektronen im Strahl
+  (Intensität)
+\item[Ablenkeinheiten:] verändern die Richtung des Strahls
+  (elektrostatisch/magnetisch)
+\item[Phosphorschicht:] sendet beim Auf\/treffen des Elektronenstrahls
+  Licht aus
+\item[Leitschicht:] ermöglicht Abfließen der Elektronen und
+  verhindert dadurch zu starke negative Auf\/ladung der
+  Phosphorschicht
+\end{description}
+
+\minisec{Einige Bemerkungen zur Lichterzeugung}
+
+\begin{description}
+\item[\emph{Fluoreszenz:}\index{Fluoreszenz}] entsteht durch das „Zurückfallen“
+  angeregter Elektronen aus sehr instabilen Zuständen
+
+  ⇒ sehr kurzzeitiger Effekt
+
+\item[\emph{Phosphoreszenz:}\index{Phosphoreszenz}] entsteht durch das „Zurückfallen“
+  angeregter Elektronen aus etwas stabileren Zuständen
+
+  ⇒ von längerer Dauer (10–60\,μs bis einige s)
+\end{description}
+
+Bei zu niedriger
+\emph{Bildwiederholfrequenz}\index{Bildwiederholfrequenz} nimmt das
+Auge noch das \emph{Flackern} des Bildes wahr.
+
+⇒ Stress, Kopfschmerzen
+
+Bei zu hoher Bildwiederholfrequenz kann der Phosphor beschädigt
+werden.
+
+empfohlene Werte: ≥ 60 Bilder je Sekunde
+
+\minisec{Vector Display}
+\index{Vector Display}
+
+\begin{center}
+  \vspace*{-12mm}
+  \scalebox{0.45}{\LARGE\input{fig_hardwareVectorDisplay}}
+\end{center}
+
+
+\subsection{Plotter}
+
+\minisec{Flachbett-Plotter}
+\index{Flachbett-Plotter}\index{Plotter!Flachbett}
+
+\begin{center}
+  \scalebox{0.6}{\LARGE\input{fig_hardwarePlotterFlach}}
+\end{center}
+
+\minisec{Trommelplotter}
+\index{Trommelplotter}\index{Plotter!Trommel}
+
+\begin{center}
+  \scalebox{0.6}{\LARGE\input{fig_hardwarePlotterTrommel}}
+\end{center}
+
+\pagebreak
+
+\begin{description}
+\item[„idealer Plotter“:]
+  kann beliebige Kurven $φ(t) = (x(t), y(t))$ zeichnen
+  durch geeignete Wahl von $vₓ$ und $v_y$:
+  \[ vₓ = \dot{x}(t) \,, \quad v_{y} = \dot{y}(t) \]
+
+\item[„realer Plotter“:]
+  Aus Genauigkeitsgründen werden \iA
+  \emph{Schrittmotoren}\index{Schrittmotor} verwendet.
+
+  \begin{itemize}
+  \item[⇒] $x$ und $y$ können pro Zeiteinheit nur jeweils um
+    $-Δ$, $0$ oder $+Δ$ geändert werden.
+
+  \item[⇒] nur 8 „Hauptrichtungen“:
+
+    \begin{center}
+      \includegraphics[scale=0.5]{fig_hardwarePlotterHauptrichtungen}
+    \end{center}
+
+  \item[⇒] Kurven und Geraden mit anderen Richtungen werden
+    approximiert:
+
+    \begin{center}
+      \includegraphics[scale=0.6]{fig_hardwarePlotterApproximation}
+    \end{center}
+  \end{itemize}
+\end{description}
+
+
+\section{Raster-orientierte Ausgabegeräte}
+
+\subsection{Kathodenstrahlröhre mit Lochmaske}
+
+\minisec{Raster-Bildschirm}
+\index{Raster-Bildschirm}
+
+\begin{center}
+  \scalebox{0.7}{\Large\input{fig_hardwareRasterbildschirm}}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{l@{\qquad\qquad}l}
+    \emph{„non-interlaced“\index{non-interlaced}:}
+    & \emph{„interlaced“\index{interlaced}:}
+    \\[1em]
+    \includegraphics[scale=0.38]{fig_hardwareRasterNoninterlaced}
+    & \scalebox{0.38}{\Huge\input{fig_hardwareRasterInterlaced}}
+  \end{tabular}
+\end{center}
+
+\minisec{Raster-Display}
+\index{Raster-Display}
+
+\begin{center}
+  \vspace*{-17mm}
+  \scalebox{0.42}{\huge\input{fig_hardwareRasterDisplay}}%
+  \index{Bildwiederholspeicher}\index{refresh buffer}
+\end{center}
+
+\minisec{Farb-Raster-Bildschirm}
+\index{Farb-Raster-Bildschirm}
+
+häufig \emph{RGB}\index{RGB}: „additive Farbmischung“ der „Grundfarben“
+\xfigRed{\textbf{R}}ot, \xfigGreen{\textbf{G}}rün und \xfigBlue{\textbf{B}}lau
+mit geeigneten Intensitäten
+
+(mehr zu Farbmodellen in Abschnitt~\ref{sec:faerbungLichtmodelle})
+
+\begin{description}
+\item[\emph{Delta-Delta-Röhre}\index{Delta-Delta-Röhre}]
+  (Phosphormuster Δ, Kanonenanordnung ∇):
+
+  \begin{center}
+    \scalebox{0.35}{\Huge\input{fig_hardwareRasterDelta}}
+  \end{center}
+
+  \pagebreak
+
+\item[Alternative Anordnung: \emph{Inline-Röhre}\index{Inline-Röhre}:] \mbox{}
+
+  \begin{center}
+    \includegraphics[scale=0.35]{fig_hardwareRasterInline}
+  \end{center}
+\end{description}
+
+\minisec{Farb-Raster-Display}
+\index{Farb-Raster-Display}
+
+\begin{center}
+  \vspace*{-17mm}
+  \scalebox{0.40}{\huge\input{fig_hardwareFarbRasterDisplay}}%
+  \index{Farbtiefe}
+\end{center}
+
+\minisec{Farb-Raster-Display mit Farbtabelle}
+\index{Farb-Raster-Display!mit Farbtabelle}
+
+Stufenlose Farbübergänge erfordern mindestens
+\emph{8 Bit je Grundfarbe}.
+\begin{itemize}
+\item[⇒] 24 Bit Puffertiefe
+  ≙ 2²⁴ ≈ 16,7\,Mio.\ mögliche Farben
+\end{itemize}
+
+\begin{description}
+\item[\emph{aber:}]
+  In einem Bild kommen meist wesentlich weniger Farben
+  \emph{gleichzeitig} vor.
+
+  (typisch: einige Hundert oder Tausend)
+\end{description}
+
+⇝ \emph{Farbtabelle\index{Farbtabelle}
+  (colour lookup table\index{colour lookup table})}
+
+\begin{center}
+  \scalebox{0.6}{\Large\input{fig_hardwareFarbtabelle}}%×
+\end{center}
+
+\begin{itemize}
+\item Eintrag $i$ der Farbtabelle, $0 ≤ i < t$, enthält die
+  RGB-Anteile der $i$-ten Farbe,
+  
+\item Zelle $(x, y)$ des Bildwiederholspeichers enthält die
+  \emph{Nummer} der an dieser Stelle darzustellenden Farbe.
+\end{itemize}
+
+\begin{center}
+  \vspace*{-17mm}
+  \scalebox{0.4}{\huge\input{fig_hardwareDisplayFarbtabelle}}%ᵈ
+  \index{Farbtiefe}
+\end{center}
+
+
+\subsection{Bildschirme ohne CRT}
+
+\minisec{Flüssigkristall-Bildschirm (liquid crystal display, LCD)}
+\index{Flüssigkristall-Bildschirm}\index{liquid crystal display}\index{LCD}
+
+\begin{center}
+  \scalebox{0.5}{\huge\input{fig_hardwareLCD}}
+\end{center}
+
+\pagebreak
+
+\emph{ohne Spannung} zwischen den Elektroden:
+
+\begin{center}
+  \scalebox{0.5}{\huge\input{fig_hardwareLCDDurchsichtig}}
+\end{center}
+
+\begin{itemize}
+\item In der Nähe der Elektrodenplatten werden die Flüssigkristalle
+  durch die Oberflächenstruktur
+  \emph{(alignment layers)}\index{alignment layer} vertikal \bzw
+  horizontal ausgerichtet.
+\item Dazwischen ergibt sich eine „Verdrehung“ der Ausrichtung
+  (Helix-ähnlich).
+\item Dadurch wird auch die (zunächst vertikale) Polarisationsebene 
+  des durchgehenden Lichts um 90° gedreht.
+\item Damit kann das Licht auch den horizontalen Polarisationsfilter
+  passieren.
+\end{itemize}
+
+⇒ Bereich der Elektroden erscheint hell
+
+\pagebreak
+
+\emph{mit Spannung} zwischen den Elektroden:
+
+\begin{center}
+  \scalebox{0.5}{\huge\input{fig_hardwareLCDUndurchsichtig}}
+\end{center}
+
+\begin{itemize}
+\item Flüssigkristalle richten sich gemäß der Spannung aus
+\item Polarisationsebene des durchgehenden Lichts wird nicht gedreht
+\item Licht kann den horizontalen Filter nicht passieren
+\end{itemize}
+
+⇒ Bereich der Elektroden erscheint dunkel
+
+\minisec{Plasma-Bildschirm}
+\index{Plasma-Bildschirm}
+
+\begin{center}
+  \scalebox{0.6}{\LARGE\input{fig_hardwarePlasma}}
+\end{center}
+
+\pagebreak
+
+\begin{bemerkungen}
+  \mbox{}
+  \begin{enumerate}
+  \item Bei LCDs und Plasma-Bildschirmen sind prinzipiell nahezu
+    beliebige Elektroden- \bzw Kammer-Formen möglich
+    (\zB für Skalen in Messgeräten).
+    In den meisten Anwendungen wird allerdings eine
+    Raster-Geometrie verwendet.
+    
+  \item LCDs und Plasma-Bildschirme haben CRT-basierte Bildschirme
+    weitgehend verdrängt.
+  \end{enumerate}
+\end{bemerkungen}
+
+
+\subsection{Drucker}
+
+\begin{center}
+  \scalebox{0.55}{\LARGE\input{fig_hardwareDrucker}}%ₓ
+\end{center}
+
+\begin{description}
+\item[\emph{Nadeldrucker}\index{Druckkopf!Nadeldrucker}%
+  \index{Nadeldrucker!Druckkopf}]
+  (im Privatbereich kaum noch eingesetzt):
+  \begin{center}
+    \scalebox{0.45}{\huge\input{fig_hardwareDruckerNadel}}
+  \end{center}
+
+  \pagebreak
+
+  \vspace*{-22mm}
+\item[\emph{Tintenstrahldrucker:}\index{Druckkopf!Tintenstrahldrucker}%
+  \index{Tintenstrahldrucker!Druckkopf}] \mbox{}
+
+  \vspace*{-5mm}
+  \begin{center}
+    \scalebox{0.45}{\large\input{fig_hardwareDruckerTintenstrahl}}
+  \end{center}
+
+  (Druckimpuls alternativ durch Heizelement: \emph{Bubble Jet}\index{Bubble Jet})
+
+\item[\emph{Laserdrucker:}\index{Laserdrucker}] \mbox{}
+
+  \vspace*{-5mm}
+  \begin{center}
+    \scalebox{0.55}{\LARGE\input{fig_hardwareDruckerLaser}}
+  \end{center}
+
+  \begin{itemize}
+  \item Wo der Laserstrahl auf die Trommel trifft, wird diese
+    leitfähig, und die negative Ladung wird neutralisiert.
+  \item Der negativ geladene Toner bleibt nur an den ungeladenen
+    Stellen der Trommel hängen und wird auf das Papier
+    übertragen (und danach mit Wärme \emph{fixiert}\index{Fixierung}).
+  \end{itemize}
+\end{description}
+
+
+\section{Vergleich}
+
+\begin{center}
+  \begin{tabular}{@{}cp{0.45\linewidth}|cp{0.45\linewidth}@{}}
+    \multicolumn{2}{c|}{\textbf{Linien-orientierte Ausgabegeräte}}
+    & \multicolumn{2}{c}{\textbf{Raster-orientierte Ausgabegeräte}}
+    \\ \hline
+    • & Bild wird aus Linien aufgebaut & \Bad & Linien müssen in Punkte
+    zerlegt („gerastert“) werden \\[1em]
+    \Good & bei Vektor-Display Dynamik relativ einfach realisierbar
+    & • & geringe Änderungen erfordern \iA vollständigen
+    Neuaufbau des Bildes \\[1ex]
+    \multicolumn{4}{c}{(bei Papier-Ausgabe keine Dynamik möglich)} \\[1em]
+    \Bad & Ablenkeinheit/Motor muss sehr präzise sein & \Good & relativ
+    einfache (billige) Ausführung genügt \\[1em]
+    \Bad & Farben nur sehr eingeschränkt möglich & \Good & nahezu
+    uneingeschränkte Farbpalette \\[1em]
+    \Bad & keine Schattierung von Flächen & \Good & diverse Lichteffekte darstellbar \\[2em]
+    \Bad & verdeckte Linien/Flächen müssen vor der Darstellung
+    bestimmt werden & \Good & verdeckte Linien/Flächen können entweder berechnet
+    oder durch einfache Hardware entfernt werden \\ \hline
+    && \multicolumn{2}{c}{\emph{heute eindeutig dominierend}}
+  \end{tabular}
+\end{center}
+
+
+\section{Eingabegeräte}
+
+\minisec{Logische Eingabegeräte}
+\index{logisches Eingabegerät}\index{Eingabegerät!logisches}
+
+abhängig vom \emph{Typ} der Eingabe:
+
+\begin{description}
+\item[\emph{string:}\index{string}] Zeichenketten, Befehle, …
+
+  ⇝ Tastatur
+
+  \begin{center}
+    \scalebox{0.275}{\input{fig_hardwareTastaturMaus}}
+  \end{center}
+
+\item[\emph{choice:}\index{choice}] Auswahl unter einer Anzahl von Möglichkeiten
+  
+  ⇝ Tastenblock, …
+  
+  \pagebreak
+  
+  \vspace*{-21mm}
+\item[\emph{valuator:}\index{valuator}] reelle Zahlen
+
+  ⇝ Schiebe-, Drehregler
+
+  \vspace*{-10mm}
+  \begin{center}
+    \scalebox{0.45}{\huge\input{fig_hardwareRegler}}
+  \end{center}
+
+  \begin{itemize}
+  \item müssen \iA abgefragt werden
+  \item Einsatz \ua bei Spielen und in der Konstruktion
+  \end{itemize}
+
+\item[\emph{locator:}\index{locator}] Position
+
+  ⇝ Maus, Touchscreen, \ldots
+
+  ⇝ Abschnitt~\ref{subsec:hardwarePositionen}
+
+\item[\emph{image:}\index{image}] Farb-/Graustufenbilder
+  
+  ⇝ Scanner
+\end{description}
+
+\begin{bemerkung}
+  Im Prinzip könnte jedes dieser Eingabegeräte alle Eingabetypen
+  übernehmen (string, choice, …).
+  Es gibt aber meist eine „natürliche“ Funktion.
+\end{bemerkung}
+
+
+\subsection{Eingabegeräte für Positionen}
+\label{subsec:hardwarePositionen}
+
+\minisec{Mechanische Maus}
+\index{mechanische Maus}\index{Maus!mechanische}
+
+\begin{center}
+  \scalebox{0.75}{\Large\input{fig_hardwareMausMechanisch}}%Δ
+\end{center}
+
+\begin{itemize}
+\item Bewegung der Rollkugel wird über zwei Räder
+  ($x$-/$y$-Richtung) in optische (und dann in elektrische)
+  Impulse übertragen
+
+\item \emph{nur Positionsänderung bestimmbar, nicht die
+    momentane Position!}
+
+  \begin{itemize}
+  \item[⇒] Der Computer (oder Software auf der Maus)
+    muss die Position der Maus verwalten und bei jeder
+    Positionsänderung aktualisieren.
+  \end{itemize}
+
+\item weitgehend von optischen Mäusen verdrängt
+\end{itemize}
+
+\minisec{Optische Maus}
+\index{optische Maus}\index{Maus!optische}
+
+\vspace*{-17mm}
+\begin{center}
+  \scalebox{0.6}{\LARGE\input{fig_hardwareMausOptisch}}%Δα
+\end{center}
+
+\begin{itemize}
+\item wieder nur Positions\emph{änderungen} messbar
+\end{itemize}
+
+\pagebreak
+
+\vspace*{-21mm}
+\minisec{Touchscreen (resistiv)}
+\index{resistiver Touchscreen}\index{Touchscreen!resistiver}
+
+\begin{center}
+  \scalebox{0.6}{\LARGE\input{fig_hardwareTouchscreen}}
+\end{center}
+
+\begin{itemize}
+\item Flexible Frontschicht und starre Hinterschicht sind
+  leitfähig und durch Abstandshalter getrennt.
+\item In der hinteren Schicht wird ein Potenzialgefälle
+  in $x$-Richtung erzeugt.
+\item Durch Druck (\zB mit dem Finger oder einem Stift)
+  kommen die beiden Schichten in Kontakt, und das Potenzial
+  auf der vorderen Schicht ergibt die $x$-Position des
+  Berührpunktes.
+
+  (hier: 40\,\% vom linken Rand)
+\item Für die $y$-Position wird ein vertikales
+  Potenzialgefälle in der vorderen Schicht erzeugt und
+  am „hinteren“ Berührpunkt gemessen.
+\end{itemize}
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item „natürliche“ Positionierung \bzw Auswahl möglich, wenn
+    beide Schichten vor dem Bildschirm liegen
+
+  \item Bei
+    \emph{kapazitativen}\index{kapazitativer Touchscreen}\index{Touchscreen!kapazitativer}
+    Touchscreens wird die Veränderung eines elektrischen Feldes
+    durch den Finger gemessen.
+
+    ⇒ nicht mit Handschuhen verwendbar
+
+    Die Position des Fingers/Stiftes kann auch akustisch oder
+    optisch ermittelt werden.
+  \end{enumerate}
+\end{bemerkungen}
+
+\pagebreak
+
+
+\vspace*{-33mm}
+\section{Eingabemodi}
+
+\subsection{Sampling}
+
+Beim \emph{Sampling}\index{Sampling}\index{Eingabe!Sampling} wird der Wert des
+Eingabegeräts (\zB die Position der Maus) laufend abgefragt.
+
+\minisec{Modell}
+
+\begin{center}
+  \scalebox{0.5}{\huge\input{fig_interaktionSamplingModell}}
+\end{center}
+
+\vspace*{-3mm}
+\begin{beispiel}
+  Einstellen eines reellen Parameters mit der Maus (mit Anzeige des
+  gerade aktuellen Parameterwertes):
+
+  \begin{minipage}{0.7\linewidth}
+    \begin{AlgListInline}
+      wiederhole
+      °°°lies Position der Maus
+      °°°rechne Mausposition in Temperatur um
+      °°°stelle diese Temperatur dar
+      bis Maustaste gedrückt // Temperatur endgültig akzeptiert
+    \end{AlgListInline}
+  \end{minipage}
+  \begin{minipage}{0.2\linewidth}
+    \scalebox{0.45}{\huge\input{fig_interaktionSamplingTemperatur}}
+  \end{minipage}
+\end{beispiel}
+
+
+\subsection{Ereignisgesteuert}
+
+Bei der ereignisgesteuerten
+\emph{(event driven)}\index{event driven}\index{Eingabe!event driven} Eingabe wird
+das Eingabegerät nur dann abgefragt, wenn das Gerät das Eintreffen
+eines bestimmten Ereignisses \emph{(Event)}\index{Event} gemeldet hat.
+
+\minisec{Beispiele für Ereignisse}
+
+\begin{center}
+  \begin{tabular}{l|p{9cm}|p{8cm}}
+    Gerät & Ereignis & gelieferter Wert \\ \hline
+    Tastatur im „Direktmodus“ & irgendeine Taste gedrückt & Code der Taste \\ \hline
+    Tastatur im „Stringmodus“ & RETURN-Taste gedrückt & die zuvor getippte Zeichenkette
+    \\ \hline
+    Maus & Maustaste gedrückt oder losgelassen & „Zustand“ der Maus: \par
+    • Position \par
+    • welche Taste wurde betätigt? \par
+    • Zustand aller Tasten \\ \hline
+    (Maus) & Position der Maus hat sich seit dem letzten Event um mehr als $Δ$ geändert &
+    „Zustand“ der Maus: \par
+    • Position \par
+    • Zustand aller Tasten \\ \hline
+    Tastenblock (Choice)
+    & \multicolumn{2}{l}{wie Tastatur im Direktmodus} \\ \hline
+    Regler (Valuator)
+    & \multicolumn{2}{l}{wie (Maus)}
+  \end{tabular}
+\end{center}
+
+\minisec{Modell}
+
+\begin{center}
+  \scalebox{0.45}{\huge\input{fig_interaktionEventModell}}%•
+\end{center}
+
+\begin{beispiel}
+  Polygon mit Hilfe der Maus definieren:
+  \begin{itemize}
+  \item neue Ecke wird mit der linken Maustaste gesetzt,
+  \item die letzte Ecke mit der rechten Maustaste,
+  \item die Taste „?“ der Tastatur bringt ein Menü mit
+    Erklärungen
+  \end{itemize}
+
+  \begin{AlgListInline}
+    wiederhole
+    °°°warte auf einen Event
+    °°°auswählen (auslösendes Gerät)
+    °°°°°°Tastatur:
+    °°°°°°°°°wenn Tastencode $=$ „?“
+    °°°°°°°°°°°°zeige Hilfemenü an
+    °°°°°°Maus:
+    °°°°°°°°°wenn eine Maustaste §gedrückt§ wurde
+    °°°°°°°°°°°°lies zugehörige Position der Maus
+    °°°°°°°°°°°°rechne Mausposition in Punkt um
+    °°°°°°°°°°°°füge Punkt in Eckenliste ein
+    °°°°°°°°°°°°verbinde mit dem vorigen Punkt, falls vorhanden
+    bis Event entstand durch Drücken der rechten Maustaste
+    verbinde den letzten mit dem ersten Punkt
+  \end{AlgListInline}
+\end{beispiel}
+
+
+\subsection{Vergleich der Verfahren}
+
+\begin{itemize}
+\item Beim Sampling wird ein großer Teil der Gesamtzeit in der
+  Abfrageschleife verbracht.
+  Die meisten der eingelesenen Werte sind allerdings nutzlos, da sie
+  durch nachfolgende Werte überschrieben werden.
+
+  \begin{itemize}
+  \item[⇒] Prozessorleistung wird blockiert (\zB bei
+    Mehrprozessbetrieb).
+  \end{itemize}
+
+\item Bei ereignisgesteuerter Eingabe wird nur dann Prozessorleistung
+  benötigt, wenn „interessante“ Eingaben vorliegen.
+  Bis zum Eintreffen des Ereignisses kann der Prozessor für andere
+  Aufgaben genutzt werden.
+
+\item Das \emph{Anwendungsprogramm} kann nur dann ereignisgesteuerte
+  Eingaben verwenden, wenn die Verwaltung der Event-Queue und das
+  Bildschirmecho
+  \begin{itemize}
+  \item selbstständig vom Grafikpaket durchgeführt werden oder
+  \item durch Nebenläufigkeit (\zB in der Programmiersprache)
+    realisiert werden können.
+  \end{itemize}
+
+\item Die Tastatur wird meist ereignisgesteuert, die Maus je nach
+  Anwendung ereignisgesteuert oder im \\
+  Sampling-Modus betrieben.
+\end{itemize}
+
+\pagebreak
+
+
+\section{Regeln für den Entwurf von Interaktion}
+
+\begin{enumerate}
+\item Die Interaktionsfolgen sollen \emph{einfach} sein.
+  
+  \begin{description}
+  \item[\emph{nicht:}]
+    \InteractiveInline!§CTRL-c h§! für Hilfestellung
+  \end{description}
+  
+\item Die Interaktionsfolgen sollen \emph{konsistent} sein, \dH:
+
+  \begin{enumerate}
+  \item Gleiche Interaktionsfolgen haben auch die gleiche
+    Wirkung.
+
+    \begin{description}
+    \item[\emph{nicht:}]
+      Im Programmteil „Entwurf“ bewirken die Tasten
+
+      \begin{center}
+        \begin{tabular}{ll}
+          \InteractiveInline!§CTRL-q§! & Programmende mit Abspeichern
+          der neuesten Daten, \\
+          \InteractiveInline!§CTRL-x§! & Programmende ohne Sicherung,
+        \end{tabular}
+      \end{center}
+
+      im Programmteil „Auswertung“ ist es umgekehrt.
+    \end{description}
+
+  \item Die gleiche Wirkung kann mit identischen
+    Interaktionsfolgen erzielt werden.
+
+    \begin{description}
+    \item[\emph{nicht:}]
+      Im Programmteil „Entwurf“ wird beim Verlassen mit
+      \InteractiveInline!§CTRL-x§! nochmals nachgefragt, ob die
+      neuesten Daten wirklich weggeworfen werden sollen,
+      im Programmteil „Auswertung“ nicht.
+    \end{description}
+  \end{enumerate}
+
+  \pagebreak
+
+\item Der Benutzer sollte stets eine \emph{Rückmeldung (Feedback)} für
+  seine Eingaben, deren Wirkung und den
+  aktuellen „Zustand“ des Systems erhalten.
+
+  \begin{enumerate}
+  \item \emph{„Echo“}\index{Echo}:
+    Eingaben von der Tastatur sollten \iA auch auf dem
+    Bildschirm erscheinen, die aktuelle Position der Maus und
+    ähnlicher Eingabegeräte sollte auf dem Bildschirm sichtbar
+    sein.
+
+    \textbf{Beispiele für Echos:}
+    \begin{itemize}
+    \item Cursor (für Text- und Positionseingaben)
+
+      \begin{center}
+        \scalebox{0.5}{\huge\input{fig_interaktionEchoCursor}}
+      \end{center}
+
+    \item Gummiband (Eingabe von Strecken und Polygonzügen)
+
+      \begin{center}
+        \scalebox{0.5}{\huge\input{fig_interaktionEchoBand}}
+      \end{center}
+
+      \pagebreak
+
+    \item Gummiumriss (Eingaben von Flächen bestimmter Form)
+      
+      \begin{center}
+        \scalebox{0.5}{\huge\input{fig_interaktionEchoUmriss}}
+      \end{center}
+    \end{itemize}
+
+  \item nach Möglichkeit immer die neuesten Daten darstellen
+
+    \textbf{Beispiel:} Verschieben eines Objekts:
+
+    \begin{center}
+      \scalebox{0.5}{\huge\input{fig_interaktionEchoVerschieben}}
+    \end{center}
+
+    \pagebreak
+
+  \item Aus dem Echo sollte schon ersichtlich sein, welcher Typ
+    von Eingabe erwartet wird.
+
+    \textbf{Beispiel:} Umschalten der Cursor-Form:
+
+    \begin{center}
+      \scalebox{0.5}{\huge\input{fig_interaktionCursorform}}
+    \end{center}
+
+  \item Bei längeren Wartezeiten sollte angezeigt werden, wie
+    lange es noch dauert.
+
+    \textbf{Beispiel:} 
+
+    \begin{center}
+      \scalebox{0.5}{\huge\input{fig_interaktionWarten}}
+    \end{center}
+  \end{enumerate}
+
+\item Zu jedem Zeitpunkt der Interaktionsfolge sollten die
+  \emph{möglichen Befehle und Optionen angezeigt} werden.
+
+  \begin{description}
+  \item[\emph{nicht:}]
+    Programm, bei dem der Benutzer immer selbst wissen muss, in
+    welchem „Zustand“ das System gerade ist und welche Eingabe
+    erwartet wird (\zB\ \SHInline!vi!)
+  \end{description}
+  
+  \pagebreak
+
+\item Der Benutzer sollte die Möglichkeit haben,
+  \emph{fehlerhafte Eingaben zurückzunehmen}.
+
+  \begin{itemize}
+  \item möglichst aussagekräftige Fehlermeldungen, \evtl mit
+    Vorschlägen für die Beseitigung der Fehler
+
+  \item Möglichkeit zum Zurücknehmen des letzten (oder der
+    letzten $k$) Kommandos: \emph{undo}\index{undo}
+
+    \begin{itemize}
+    \item[⇒] Das Programm muss über Kommandos und
+      Zwischenzustände Buch führen.
+
+    \item[⇒] sehr aufwändig auf „Pixelebene“ (nach der Rasterung);
+      besser auf Objektebene realisierbar
+    \end{itemize}
+  \end{itemize}
+
+\item Der Benutzer sollte \emph{nicht zu viele Optionen} einstellen
+  \emph{müssen}.
+
+  \begin{description}
+  \item[\emph{nicht:}]
+    Texteditor, bei dem man jedes Mal vor dem eigentlichen
+    Arbeiten
+    \begin{itemize}
+    \item Zeichensatz, -höhe, -breite, …
+    \item Farbe für Hintergrund und Text, …
+    \item Tabulatorpositionen, …
+    \item …
+    \end{itemize}
+    einstellen muss
+  \end{description}
+
+  (In der Regel sind einige der angebotenen Optionen für die
+  meisten Anwendungen völlig überflüssig.
+  Für nahezu alle anderen Optionen gibt es \emph{Voreinstellungen},
+  die erst bei Bedarf – oder über ein \emph{Profil}\index{Profil} – geändert
+  werden müssen.)
+\end{enumerate}
+
+\pagebreak
+
+\begin{beispiel}
+  Benutzerführung mittels \emph{Menüs}
+
+  \begin{itemize}
+  \item Anzeige der gerade verfügbaren Befehle und Optionen durch
+    \begin{itemize}
+    \item Menü mit Stichworten und/oder
+    \item Palette mit Symbolen \emph{(Icons)}\index{Icon}
+    \end{itemize}
+
+  \item Auswahl einer Aktion oder Option durch „Anklicken“ mit der
+    Maus (\oae)
+    \begin{itemize}
+    \item[⇒] Interaktionsfolge einfach
+    \end{itemize}
+
+  \item Feedback durch Hervorheben des Menüpunkts, auf den die
+    Maus gerade zeigt
+
+  \item Werden durch eine Aktion weitere Optionen verfügbar,
+    so erscheinen diese in einem zusätzlichen
+    (\emph{Pop-up-})Menü\index{Pop-up-Menü}.
+
+  \item Sind für eine Aktion bestimmte Optionen nicht verfügbar,
+    so können die entsprechenden Menüpunkte/Icons
+    \begin{itemize}
+    \item entfernt werden oder
+    \item ihr Aussehen verändern (\zB farbig ⇝ grau).
+    \end{itemize}
+  \end{itemize}
+\end{beispiel}

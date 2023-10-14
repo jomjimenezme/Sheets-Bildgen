@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Nov 26 11:51:10 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="13.4in"
+   height="3.5in"
+   viewBox="1833 2588 16129 4186"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_objekteFraktalGebirge.svg">
+  <metadata
+     id="metadata48">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs46" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview44"
+     showgrid="false"
+     inkscape:zoom="0.37728028"
+     inkscape:cx="602.99998"
+     inkscape:cy="157.5"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:round;stroke-linejoin:round"
+     points="12755,4960 14157,4960 " />
+  <polygon
+     id="polygon8"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="14217,4881 14154,4960 14217,5039 14217,5039 14406,4960 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:round;stroke-linejoin:round"
+     points="6850,4488 8015,4488 " />
+  <polygon
+     id="polygon12"
+     style="fill:#00b000;stroke:#00b000;stroke-width:63;stroke-miterlimit:8"
+     points="8075,4409 8012,4488 8075,4566 8075,4566 8264,4488 " />
+  <rect
+     id="rect14"
+     style="fill:none;stroke:#00b000;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:62, 62"
+     rx="0"
+     height="1275"
+     width="1417"
+     y="3685"
+     x="5149" />
+  <rect
+     id="rect16"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:62, 62"
+     rx="0"
+     height="519"
+     width="614"
+     y="4724"
+     x="11811" />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="1889,5905 2078,5196 2409,4866 2551,4582 2645,4015 2787,3968 2881,3779 2881,3543 3070,3401 3165,3165 3259,3307 3448,3354 3590,3212 3590,3118 3779,2976 3826,3118 3968,3165 4062,3401 4157,3496 4299,3448 4488,3259 4582,3023 4677,2645 4771,2740 4866,3023 5007,3543 5196,3637 5338,3874 5433,4157 5527,4346 5669,4204 5952,4110 6094,4251 6188,4582 6330,4724 6377,4913 6519,5102 6708,5149 6850,5480 6944,5905 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="4110,3874 4299,4110 4251,4299 4110,4535 3826,4771 3826,4960 3921,5196 4062,5433 4062,5622 3874,5952 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="5244,4582 5007,4818 4960,5102 5149,5291 5669,5480 5811,5905 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="9685,4629 9448,4724 9448,4960 9307,5196 9259,5338 9354,5574 9496,5811 9732,5905 " />
+  <polyline
+     id="polyline26"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="9968,4535 10251,4629 10488,4913 10535,5196 10393,5385 10393,5527 10535,5669 10913,5905 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="11574,4629 11338,4677 11196,4866 11149,5149 11291,5385 11480,5669 11291,5905 " />
+  <polyline
+     id="polyline30"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="8976,2834 9118,3118 9212,3401 9354,3543 9401,3826 9543,4110 9779,4393 9826,4157 9968,3968 10299,3826 10535,3637 10724,3590 11007,3448 11149,3637 11385,3779 11480,3968 11716,4346 11716,4535 11858,4724 11858,4913 12000,5007 12094,4913 12236,4960 12188,5102 12472,5338 12566,5716 12755,5858 12850,5905 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="14598,2834 14929,3023 15165,3259 15354,3543 15401,3874 15401,4157 15448,4440 15590,4677 15874,4866 15637,4535 15685,4251 15874,4110 15968,3874 16204,3685 16393,3685 16677,3637 16913,3496 17291,3590 17574,3826 17716,4110 17574,4299 17527,4629 17811,4724 17905,4960 17716,5102 17574,5149 17291,5338 17338,5669 17716,5905 " />
+  <polyline
+     id="polyline34"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="17385,4582 17007,4582 16677,4724 16677,4960 16582,5102 16346,5102 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="16393,3874 16677,4110 16488,4346 16582,4535 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#0000ff;stroke-width:0.025in"
+     id="text38"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6614"
+     x="4488"
+     xml:space="preserve">Berg</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text40"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6614"
+     x="10629"
+     xml:space="preserve">Bergvorsprung</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text42"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6614"
+     x="16299"
+     xml:space="preserve">Stein</text>
+</svg>

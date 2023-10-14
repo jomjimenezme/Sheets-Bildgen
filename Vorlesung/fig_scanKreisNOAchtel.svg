@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Sep 24 16:07:01 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="19.0in"
+   height="5.5in"
+   viewBox="-4452 1971 22749 6576"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_scanKreisNOAchtel.svg">
+  <metadata
+     id="metadata104">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs102" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview100"
+     showgrid="false"
+     inkscape:zoom="1.1649123"
+     inkscape:cx="692.52525"
+     inkscape:cy="251.39642"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="6850,2125 6850,7795 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="8834,2976 4866,6944 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#b000b0;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="-1417,5196 -1417,8031 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#b000b0;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="566,6047 -1417,8031 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="4866,2976 8834,6944 " />
+  <rect
+     id="rect16"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="566"
+     width="1937"
+     y="5055"
+     x="5858" />
+  <circle
+     id="circle18"
+     style="fill:none;stroke:#0000ff;stroke-width:48"
+     r="2834"
+     cy="4960"
+     cx="6850" />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="4015,4960 9685,4960 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:middle;fill:#0000ff;stroke-width:0.025in"
+     id="text22"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="5433"
+     x="6850"
+     xml:space="preserve">$\rk{xₘ, yₘ}$</text>
+  <path
+     inkscape:connector-curvature="0"
+     id="path24"
+     d="m 8787,3259 a 2736,2736 0 0 1 661,1465"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt" />
+  <polygon
+     id="polygon26"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="8843,3441 8928,3434 8953,3352 8953,3352 8809,3287 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path28"
+     d="M 4913,6661 A 2736,2736 0 0 1 4251,5196"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt" />
+  <polygon
+     id="polygon30"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="4856,6478 4771,6486 4746,6567 4746,6567 4891,6634 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path32"
+     d="M 8787,6661 A 2736,2736 0 0 0 9448,5196"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt" />
+  <polygon
+     id="polygon34"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="8953,6567 8928,6486 8843,6478 8843,6478 8809,6634 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path36"
+     d="M 4913,3259 A 2736,2736 0 0 0 4251,4724"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt" />
+  <polygon
+     id="polygon38"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="4746,3352 4771,3434 4856,3441 4856,3441 4891,3287 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path40"
+     d="M 5149,3023 A 2735,2735 0 0 1 6614,2362"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt" />
+  <polygon
+     id="polygon42"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="5331,2966 5323,2881 5241,2856 5241,2856 5176,3001 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path44"
+     d="M 8551,3023 A 2735,2735 0 0 0 7086,2362"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt" />
+  <polygon
+     id="polygon46"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="8457,2856 8375,2881 8368,2966 8368,2966 8523,3001 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path48"
+     d="m 5149,6897 a 2735,2735 0 0 0 1465,662"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt" />
+  <polygon
+     id="polygon50"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="5241,7063 5323,7038 5331,6953 5331,6953 5176,6919 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path52"
+     d="M 8551,6897 A 2735,2735 0 0 1 7086,7559"
+     style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt" />
+  <polygon
+     id="polygon54"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:32;stroke-miterlimit:8"
+     points="8368,6953 8375,7038 8457,7063 8457,7063 8523,6919 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path56"
+     d="M 283,6094 A 2736,2736 0 0 0 -1181,5433"
+     style="fill:none;stroke:#b000b0;stroke-width:16;stroke-linecap:butt" />
+  <polygon
+     id="polygon58"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:32;stroke-miterlimit:8"
+     points="190,5927 108,5952 100,6037 100,6037 256,6072 " />
+  <path
+     inkscape:connector-curvature="0"
+     id="path60"
+     d="M -1417,5196 A 2641,2641 0 0 1 566,6000"
+     style="fill:none;stroke:#b000b0;stroke-width:48;stroke-linecap:butt" />
+  <circle
+     id="circle62"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:16"
+     r="94"
+     cy="2503"
+     cx="8267" />
+  <circle
+     id="circle64"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:16"
+     r="94"
+     cy="2503"
+     cx="5433" />
+  <circle
+     id="circle66"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:16"
+     r="94"
+     cy="3543"
+     cx="4393" />
+  <circle
+     id="circle68"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:16"
+     r="94"
+     cy="3543"
+     cx="9307" />
+  <circle
+     id="circle70"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:16"
+     r="94"
+     cy="6377"
+     cx="9307" />
+  <circle
+     id="circle72"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:16"
+     r="94"
+     cy="7417"
+     cx="8267" />
+  <circle
+     id="circle74"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:16"
+     r="94"
+     cy="7417"
+     cx="5433" />
+  <circle
+     id="circle76"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:16"
+     r="94"
+     cy="6377"
+     cx="4393" />
+  <circle
+     id="circle78"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:16"
+     r="94"
+     cy="5574"
+     cx="0" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text80"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="8409"
+     x="-2031"
+     xml:space="preserve">$\rk{0, 0}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text82"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="2362"
+     x="8456"
+     xml:space="preserve">$\rk{xₘ + x, yₘ + \widetilde{y}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text84"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="5119.6416"
+     x="94"
+     xml:space="preserve">$\rk{x, \widetilde{y}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text86"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="3590"
+     x="9496"
+     xml:space="preserve">$\rk{xₘ + \widetilde{y}, yₘ + x}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text88"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="7889"
+     x="8456"
+     xml:space="preserve">$\rk{xₘ + x, yₘ - \widetilde{y}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text90"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="6755"
+     x="9543"
+     xml:space="preserve">$\rk{xₘ + \widetilde{y}, yₘ - x}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:end;fill:#ff0000;stroke-width:0.025in"
+     id="text92"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="2314"
+     x="5291"
+     xml:space="preserve">$\rk{xₘ - x, yₘ + \widetilde{y}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:end;fill:#ff0000;stroke-width:0.025in"
+     id="text94"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="7937"
+     x="5338"
+     xml:space="preserve">$\rk{xₘ - x, yₘ - \widetilde{y}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:end;fill:#ff0000;stroke-width:0.025in"
+     id="text96"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="3448"
+     x="4251"
+     xml:space="preserve">$\rk{xₘ - \widetilde{y}, yₘ + x}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:303px;font-family:Times;text-anchor:end;fill:#ff0000;stroke-width:0.025in"
+     id="text98"
+     font-size="303"
+     font-weight="normal"
+     font-style="normal"
+     y="6850"
+     x="4251"
+     xml:space="preserve">$\rk{xₘ - \widetilde{y}, yₘ - x}$</text>
+</svg>

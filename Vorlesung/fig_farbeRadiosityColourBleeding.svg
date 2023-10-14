@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Oct 29 15:33:35 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="7.0in"
+   height="2.8in"
+   viewBox="2346 3542 8387 3342"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeRadiosityColourBleeding.svg">
+  <metadata
+     id="metadata30">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs28" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview26"
+     showgrid="false"
+     inkscape:zoom="0.72222222"
+     inkscape:cx="315"
+     inkscape:cy="126"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <polygon
+     id="polygon6"
+     style="fill:#ff7f7f;stroke:#ff0000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6850,6850 7086,6850 5669,5905 5669,5905 5433,5905 " />
+  <polygon
+     id="polygon8"
+     style="fill:#fff2f2;stroke:#ff0000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5669,6850 6377,6850 4960,5905 4960,5905 4251,5905 " />
+  <polygon
+     id="polygon10"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round"
+     points="7322,4488 7322,6850 5905,5905 5905,5905 5905,3543 " />
+  <polygon
+     id="polygon12"
+     style="fill:#ff5959;stroke:#ff0000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7086,6850 7322,6850 5905,5905 5905,5905 5669,5905 " />
+  <polygon
+     id="polygon14"
+     style="fill:#ffbfbf;stroke:#ff0000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6377,6850 6850,6850 5433,5905 5433,5905 4960,5905 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text16"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="5196"
+     x="7795"
+     xml:space="preserve">beleuchtete</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text18"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="5811"
+     x="7795"
+     xml:space="preserve">rote Fläche</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text20"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="5669"
+     x="2362"
+     xml:space="preserve">weiße Fläche</text>
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5905,5905 3307,5905 4724,6850 7322,6850 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5905,5905 7322,6850 " />
+</svg>

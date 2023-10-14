@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Fri Sep 25 13:36:12 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="7.0in"
+   height="1.7in"
+   viewBox="2069 2305 8381 2003"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_clipStreckenMehrfach.svg">
+  <metadata
+     id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="0.79047619"
+     inkscape:cx="315"
+     inkscape:cy="76.500002"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="2125,2834 4724,2834 4724,4251 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7795,2834 10393,2834 10393,4251 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="3307,3779 5433,2362 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7795,4251 9921,2834 " />
+  <circle
+     id="circle14"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:0"
+     r="94"
+     cy="2834"
+     cx="4724" />
+  <circle
+     id="circle16"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:0"
+     r="94"
+     cy="2834"
+     cx="9921" />
+</svg>

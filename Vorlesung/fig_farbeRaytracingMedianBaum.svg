@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Oct 28 16:12:00 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="13.2in"
+   height="9.0in"
+   viewBox="2162 -8752 15858 10800"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeRaytracingMedianBaum.svg">
+  <metadata
+     id="metadata170">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs168" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview166"
+     showgrid="false"
+     inkscape:zoom="1.1654321"
+     inkscape:cx="663.01127"
+     inkscape:cy="383.2564"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="3779,-3307 2598,-1417 " />
+  <polyline
+     id="polyline8"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="3779,-3307 4960,-1417 " />
+  <polyline
+     id="polyline10"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5433,-5669 7086,-3307 " />
+  <polyline
+     id="polyline12"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5433,-5669 3779,-3307 " />
+  <polyline
+     id="polyline14"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="16514,-3293 17695,-1403 " />
+  <polyline
+     id="polyline16"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="11790,-3293 12971,-1403 " />
+  <polyline
+     id="polyline18"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="11769,-3334 10587,-1444 " />
+  <polyline
+     id="polyline20"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="16514,-3320 15333,-1430 " />
+  <polyline
+     id="polyline22"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="14173,-5669 16535,-3307 " />
+  <polyline
+     id="polyline24"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="14173,-5669 11811,-3307 " />
+  <polyline
+     id="polyline26"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="10629,-1417 11338,472 " />
+  <polyline
+     id="polyline28"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="10629,-1181 9921,472 " />
+  <polyline
+     id="polyline30"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="15354,-1417 14645,472 " />
+  <polyline
+     id="polyline32"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="15354,-1417 16062,472 " />
+  <polyline
+     id="polyline34"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5669,472 4960,-1417 " />
+  <polyline
+     id="polyline36"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4960,-1417 4251,472 " />
+  <polyline
+     id="polyline38"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="9685,-8503 5433,-5669 " />
+  <polyline
+     id="polyline40"
+     style="fill:#ffffff;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="9685,-8503 14173,-5669 " />
+  <circle
+     id="circle42"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="-3307"
+     cx="7086" />
+  <circle
+     id="circle44"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="-1417"
+     cx="2598" />
+  <circle
+     id="circle46"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="472"
+     cx="4251" />
+  <circle
+     id="circle48"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="472"
+     cx="5669" />
+  <circle
+     id="circle50"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="472"
+     cx="9921" />
+  <circle
+     id="circle52"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="472"
+     cx="11338" />
+  <circle
+     id="circle54"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="-1417"
+     cx="12992" />
+  <circle
+     id="circle56"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="-1417"
+     cx="17716" />
+  <circle
+     id="circle58"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="472"
+     cx="16062" />
+  <circle
+     id="circle60"
+     style="fill:#ffffff;stroke:#000000;stroke-width:0"
+     r="236"
+     cy="472"
+     cx="14645" />
+  <circle
+     id="circle62"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="-3307"
+     cx="7086" />
+  <circle
+     id="circle64"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="-1417"
+     cx="2598" />
+  <circle
+     id="circle66"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="472"
+     cx="4251" />
+  <circle
+     id="circle68"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="472"
+     cx="5669" />
+  <circle
+     id="circle70"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="472"
+     cx="9921" />
+  <circle
+     id="circle72"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="472"
+     cx="11338" />
+  <circle
+     id="circle74"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="-1417"
+     cx="12992" />
+  <circle
+     id="circle76"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="-1417"
+     cx="17716" />
+  <circle
+     id="circle78"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="472"
+     cx="16062" />
+  <circle
+     id="circle80"
+     style="fill:#000000;stroke:#000000;stroke-width:8"
+     r="141"
+     cy="472"
+     cx="14645" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;stroke-width:0.025in"
+     id="text82"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="-2598"
+     x="7086"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₂$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text86"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="-708"
+     x="2598"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₁$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffd600;stroke-width:0.025in"
+     id="text90"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="1181"
+     x="4251"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₅$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;stroke-width:0.025in"
+     id="text94"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="1181"
+     x="5669"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₁$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffd600;stroke-width:0.025in"
+     id="text98"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="1181"
+     x="9921"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₅$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text102"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="1181"
+     x="11338"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₃$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#a14000;stroke-width:0.025in"
+     id="text106"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="-708"
+     x="12992"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₄$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#a14000;stroke-width:0.025in"
+     id="text110"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="-708"
+     x="17716"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₄$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;stroke-width:0.025in"
+     id="text114"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="1181"
+     x="16062"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₂$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;stroke-width:0.025in"
+     id="text118"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="1181"
+     x="14645"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₂$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#a14000;stroke-width:0.025in"
+     id="text122"
+     font-size="378"
+     font-weight="bold"
+     font-style="italic"
+     y="1889"
+     x="14645"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$O₄$</text>
+  <rect
+     id="rect126"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="614"
+     width="2834"
+     y="-3543"
+     x="2362" />
+  <rect
+     id="rect128"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="614"
+     width="2834"
+     y="-5905"
+     x="4015" />
+  <rect
+     id="rect130"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="614"
+     width="2834"
+     y="-5905"
+     x="12755" />
+  <rect
+     id="rect132"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="614"
+     width="2834"
+     y="-3543"
+     x="10393" />
+  <rect
+     id="rect134"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="614"
+     width="2834"
+     y="-3543"
+     x="15118" />
+  <rect
+     id="rect136"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="614"
+     width="2834"
+     y="-1653"
+     x="9212" />
+  <rect
+     id="rect138"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="614"
+     width="2834"
+     y="-1653"
+     x="13937" />
+  <rect
+     id="rect140"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="614"
+     width="2834"
+     y="-1653"
+     x="3543" />
+  <rect
+     id="rect142"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="614"
+     width="2834"
+     y="-8740"
+     x="8267" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:377.99571124px;font-family:sans-serif;text-anchor:start;fill:#000000;stroke-width:0.025in;-inkscape-font-specification:'sans-serif, Normal';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;line-height:125%;"
+     id="text144"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6850"
+     x="8031"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">ja</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:377.99571124px;font-family:sans-serif;text-anchor:end;fill:#000000;stroke-width:0.025in;-inkscape-font-specification:'sans-serif, Normal';font-stretch:normal;font-variant:normal;text-align:end;writing-mode:lr;line-height:125%;"
+     id="text146"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6850"
+     x="11574"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">nein</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text148"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3070"
+     x="3779"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$x ≤ -0,5$?</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text150"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5433"
+     x="5433"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$y ≤ 0,5$?</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text152"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3070"
+     x="11811"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$x ≤ 6,75$?</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text154"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3070"
+     x="16535"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$x ≤ 5,5$?</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text156"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5433"
+     x="14173"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$y ≤ 2,25$?</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text158"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-1181"
+     x="10629"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$y ≤ -1,0$?</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text160"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-1181"
+     x="15354"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$y ≤ 3,75$?</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text162"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-1181"
+     x="4960"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$y ≤ -2,5$?</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:377.99569702px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text164"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-8267"
+     x="9685"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$x ≤ 3,0$?</text>
+</svg>

@@ -1,0 +1,35 @@
+\bivtask{Gefüllte Polygone}{12}
+%
+Schreiben Sie eine Funktion
+\begin{alltt}
+   void drawPatternPolygon( Drawing& pic, const vector<IPoint2D>& ecken,
+                            const QImage& muster )
+\end{alltt}
+die mittels Algorithmus 3.22 der Vorlesung ein mit einem Muster 
+gefülltes Polygon zeichnet.
+
+\textbf{Hinweise:}
+\begin{itemize}
+  \item Im Verzeichnis \bivfolder{/home/bildgen/Aufgaben/polygone-3} auf 
+        dem CIP-Cluster finden Sie ein Rahmenprogramm und 
+        Beispiel-Eingabedateien.
+  \item Schreiben Sie zunächst eine Funktion, welche das Polygon mit 
+        einer beliebigen Farbe füllt und modifizieren Sie diese 
+        anschließend, so dass mit einem Muster gefüllt wird.
+  \item Durchlaufen Sie die Zeilen $y_{min}$ bis $y_{max}$, die das 
+        Polygon enthalten, und datieren Sie in jedem Schritt eine 
+        \emph{Tabelle der aktiven Kanten} auf. Es ist hilfreich, dies 
+        als eine Liste zu implementieren, die zu jeder Kante, welche die 
+        aktuelle $y$-Scan-Line schneidet, deren oberen Endpunkt, den
+        aktuellen $x$-Wert sowie die Steigung enthält. Die Kanten werden 
+        nach $x$ und ggf.\ nach Steigung sortiert gespeichert.
+  \item Sorgen Sie dafür, dass die Füllung translationsinvariant, also
+        unabhängig davon ist, an welcher Stelle des Bildes sich das 
+        Polygon befindet.
+  \item Der Befehl \texttt{pic.drawPoint(x, y, QColor(muster.pixel(xmuster,ymuster)))}
+        malt im Bild \texttt{pic} an die Stelle $(\mathtt{x},\mathtt{y})$
+        einen Punkt in der Farbe, die das Muster \texttt{muster} an der
+        Stelle $(\mathtt{xmuster},\mathtt{ymuster})$ enthält. Breite und
+        Höhe des Musters können Sie mit \texttt{muster.width()} und 
+        \texttt{muster.height()} ermitteln.
+\end{itemize} 

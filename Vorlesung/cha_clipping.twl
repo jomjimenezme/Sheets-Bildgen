@@ -1,0 +1,896 @@
+\chapter{Clipping für Strecken und
+  Polygone}
+\label{cha:clipping}
+
+\begin{description}
+\item[Problem:]
+  Alle Strecken- und Polygonteile, die nach der Projektion
+  außerhalb des Projektionsfensters liegen, müssen unterdrückt
+  werden.
+\end{description}
+
+\pagebreak
+
+
+\section{Der Pixel-orientierte Ansatz}
+
+\begin{description}
+\item[Idee:]
+  Entscheide erst beim Eintragen in die Pixmap, welche Pixel
+  tatsächlich geändert werden.
+\end{description}
+
+\begin{algorithmus} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Pixel-basiertes Clipping
+
+    bestimme den Pixelbereich $\ek{\underline{i} … \overline{i}}× \ek{\underline{j} … \overline{j}}$, auf den das Projektionsfenster abgebildet wird
+    für jedes Objekt in 3D
+    °°°bilde die º„ºrelevanten Größenº“º (z.@\,@B. Endpunkte von Strecken) auf Pixelkoordinaten ab
+    °°°führe Scan Conversion ºfürº das Objekt durch
+    °°°für alle hierbei erzeugten Pixel $(i, j)$
+    °°°°°°modifiziere Pixel $(i, j)$, §falls§ $\textcolor{emcol}{\underline{i} ≤ i ≤ \overline{i}}$ §und§ $\textcolor{emcol}{\underline{j} ≤ j ≤ \overline{j}}$
+  \end{AlgListInline}
+\end{algorithmus}
+
+\pagebreak
+
+\begin{itemize}
+\item[\Bad] Unter Umständen wird viel unnötige Scan Conversion
+  durchgeführt (Objekte, die gar nicht oder nur zu einem geringen
+  Bruchteil sichtbar sind).
+
+\item[\Bad] erlaubt kein 3D-Clipping
+
+\item[\Bad] nur für Pixel-orientierte Ausgabegeräte anwendbar
+
+\item[\Good] extrem einfach
+  \begin{itemize}
+  \item[⇒] auch sehr gut in Hardware realisierbar
+  \end{itemize}
+
+\item[\Good] erlaubt Clipping beliebiger Objekte; der Aufwand ist
+  unabhängig von der „Komplexität“ des Objekts (er ist
+  proportional zur Anzahl der aus der Scan Conversion resultierenden
+  Pixel)
+
+\item[\Good] erlaubt Clipping gegenüber beliebigen Flächen, nicht
+  nur gegenüber dem Projektionsfenster:
+
+  \begin{center}
+    \scalebox{0.485}{\huge\input{fig_clipPixel}}%≤
+  \end{center}
+\end{itemize}
+
+
+\section{Der 2D-analytische Ansatz}
+
+\begin{description}
+\item[Methode:] Bestimme in der Projektionsebene die sichtbaren (Teile der) Objekte.
+\end{description}
+
+\begin{algorithmus}  \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Analytisches Clipping, 2D
+
+    für jedes Objekt in 3D
+    °°°projiziere das Objekt auf die Projektionsebene
+    °°°§schneide das Bild des Objekts mit dem Projektionsfenster§
+    °°°für alle sichtbaren Teilobjekte
+    °°°°°°bilde das Teilobjekt auf Pixelkoordinaten ab
+    °°°°°°führe Scan Conversion durch
+    °°°°°°modifiziere die hierbei erzeugten Pixel in der Pixmap
+  \end{AlgListInline}
+\end{algorithmus}
+
+\begin{itemize}
+\item[\Good] Scan Conversion wird nur für die tatsächlich
+  sichtbaren Teile durchgeführt.
+
+\item[\Good] Clipping ist nur einmal durchzuführen, auch wenn die
+  Ausgabe auf mehreren Geräten erfolgt (\zB zuerst auf dem
+  Bildschirm, dann auf dem Drucker).
+
+\item[\Good] auch für Vektor-orientierte Ausgabegeräte geeignet
+
+\item[\Bad] erlaubt kein 3D-Clipping
+
+\item[\Bad] Auch die nicht sichtbaren Teile müssen projiziert
+  werden.
+
+\item[\Bad] deutlich komplexer als der Pixel-orientierte Ansatz:
+  \begin{itemize}
+  \item reelle Berechnungen
+
+  \item Die in die Scan Conversion eingehenden Objekte werden
+    komplizierter.
+    \begin{itemize}
+    \item[⇒] aufwändigere Algorithmen für die Scan Conversion.
+    \end{itemize}
+
+    \begin{center}
+      \scalebox{0.6}{\LARGE\input{fig_clipAnalytisch2D}}
+    \end{center}
+  \end{itemize}
+\end{itemize}
+
+
+\subsection{Strecken-Clipping naiv}
+
+\begin{description}
+\item[Ansatz:]
+  Bestimme die Schnittpunkte der Strecke mit den Seiten des
+  Projektionsfensters; dies liefert den sichtbaren Teil der Strecke.
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clipStreckenNaiv}}%₁₂
+  \end{center}
+\end{description}
+
+\pagebreak
+
+\begin{algorithmus} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Strecken-Clipping naiv
+
+    // seien $\point{q}₁ = \rk{u₁, v₁}$ und $\point{q}₂ = \rk{u₂, v₂}$ die Endpunkte der Strecke $s$
+    $E$ := $∅$°°°°°// Endpunkte des sichtbaren Teils von $s$
+    für $i = 1, 2$°°°°°// liegen die Endpunkte von $s$ im Fenster?
+    °°°wenn $\underline{u} ≤ uᵢ ≤ \overline{u}$ und $\underline{v} ≤ vᵢ ≤ \overline{v}$
+    °°°°°°$E$ := $E ∪ \mk{\point{q}ᵢ}$
+    für º„Ost“-, „Nord“-, „West“- und „Süd“-Seiteº des Fensters
+    °°°wenn $s$ die Seite in einem Punkt $\point{q}$ §schneidet§
+    °°°°°°$E$ := $E ∪ \mk{\point{q}}$
+    wenn $E ≠ ∅$°°°°°// dann enthält $E$ i.@\,@Allg. genau zwei Punkte $\point{q}'$, $\point{q}''$
+    °°°§die Strecke§ $\textcolor{emcol}{s' = \overline{\point{q}'\point{q}''}}$ §ist sichtbar§
+  \end{AlgListInline}
+\end{algorithmus}
+
+\pagebreak
+
+\begin{description}
+\item[Berechnung der Schnittpunkte] (etwa mit „West“: $u = \underline{u}$):
+
+  \begin{itemize}
+  \item Parameterdarstellung der zu $s$ gehörenden
+    \emph{Geraden}:
+    \begin{alignat*}{2}
+      && \point{q} &= \point{q}₁ + λ · \rk{\point{q}₂ - \point{q}₁} \,, \quad λ ∈ ℝ \\
+      &⇔& \pmat{u \\ v} &= \pmat{u₁ \\ v₁} + λ · \pmat{u₂ - u₁ \\ v₂ - v₁} \\
+      &⇒& \underline{u} &= u₁ + λ · \rk{u₂ - u₁} \\
+      &⇔& λ &= \frac{\underline{u} - u₁}{u₂ - u₁}
+    \end{alignat*}
+
+  \item Der Schnittpunkt liegt auf der \emph{Strecke} $s$, falls
+    \[ 0 ≤ λ ≤ 1 \,\text. \]
+
+  \item Der Schnittpunkt liegt auf der \emph{Westseite} des
+    Fensters, falls
+    \[ \underline{v} ≤ v = v₁ + λ · \rk{v₂ - v₁} ≤ \overline{v} \,\text. \]
+  \end{itemize}
+
+  \pagebreak
+  
+\item[Sonderfälle:] \mbox{}
+
+  \begin{itemize}
+  \item Strecke parallel zu einer Seite des Projektionsfensters
+
+  \item Ein (Schnitt-)Punkt wird mehrfach berechnet:
+    \raisebox{-2em}{\includegraphics[scale=0.5]{fig_clipStreckenMehrfach}}
+
+  \item $E$ enthält am Ende nur einen Punkt:
+    \raisebox{-2em}{\includegraphics[scale=0.5]{fig_clipStreckenEinPunkt}}
+  \end{itemize}
+
+\item[numerisches Problem:]
+  Ein bei exakter Rechnung mehrfach auf\/tretender Schnittpunkt kann
+  durch \emph{Rundungsfehler} in mehrere Punkte „zerfallen“.
+  \begin{itemize}
+  \item[⇒] $E$ kann am Ende mehr als zwei verschiedene Punkte
+    enthalten!
+  \end{itemize}
+
+\item[Fazit:] \mbox{}
+
+  \begin{itemize}
+  \item relativ viel Rechnung: für die vier Seiten jeweils
+    \begin{center}
+      4 Additionen + 1 Multiplikation + 1 Division + 4 Vergleiche
+    \end{center}
+  \item Von den vier Schnitttests sind mindestens zwei überflüssig!
+
+  \item viele Sonderfälle
+  \end{itemize}
+\end{description}
+
+
+\subsection{Strecken-Clipping nach Cohen und Sutherland}
+
+\begin{description}
+\item[Idee:]
+  Manchmal ist sehr leicht feststellbar, dass die Strecke eine
+  bestimmte Fensterseite gar nicht schneiden kann oder sogar völlig
+  innerhalb \bzw außerhalb des Fensters liegt.
+\end{description}
+
+\begin{center}
+  \scalebox{0.45}{\Huge\input{fig_clipCohenSituation}}%₁₂
+\end{center}
+
+\begin{itemize}
+\item $\overline{\point{q}₁\point{q}₂}$ ist unsichtbar,
+  denn beide Endpunkte liegen oberhalb der \emph{Geraden}
+  $v = \overline{v}$.
+
+\item $\overline{\point{t}₁\point{t}₂}$ kann die Nordseite
+  des Fensters nicht schneiden, da beide Endpunkte auf derselben
+  Seite der Geraden $v = \overline{v}$ liegen.
+
+  (analog: kein Schnitt mit „Ost“)
+\end{itemize}
+
+\begin{description}
+\item[klar:]
+  Eine Strecke $s$ liefert höchstens dann einen Schnittpunkt mit
+  der Nord- (West-, …) Seite des Fensters, wenn die Endpunkte
+  von $s$ auf verschiedenen Seiten der entsprechenden Geraden
+  liegen.
+
+\item[Ziel:]
+  diese Tests möglich effizient durchführen
+
+\item[Ansatz:]
+  Ordne jedem Endpunkt der Strecke einen
+  \emph{4-stelligen Binärcode} zu, der die Lage des Punktes \bzgl der vier
+  „Fenstergeraden“ angibt:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clipCohenCode}}%₁≙
+  \end{center}
+\end{description}
+
+\pagebreak
+
+\begin{beispiele} \mbox{}
+  \begin{enumerate}
+  \item \mbox{}
+
+    \begin{tabular}{ll}
+      \raisebox{-6em}{\scalebox{0.475}{\huge\input{fig_clipCohenBsp1}}} &
+      \begin{tabular}{lp{12cm}}
+        & $\text{code}₁ = 0000$ \\
+        & $\text{code}₂ = 0000$ \\
+        \mymagenta{⇒} & \mymagenta{vollständig sichtbar}
+      \end{tabular}
+    \end{tabular}%₁₂
+
+    \pagebreak
+
+  \item \mbox{}
+
+    \begin{tabular}{ll}
+      \raisebox{-5em}{\scalebox{0.475}{\huge\input{fig_clipCohenBsp2}}} &
+      \begin{tabular}{lp{12cm}}
+        & $\text{code}₁ = 0010$ (ONWS) \\
+        & $\text{code}₂ = 0001$ \\
+        \mymagenta{⇒} & \mymagenta{Strecke schneidet die West- und die Süd-Gerade}
+      \end{tabular}
+      \\[6em]
+      \multicolumn{2}{l}{\mymagenta{\qquad\qquad ⇓ \quad Clipping an der West-Geraden}}
+      \\[1.5em]
+      \raisebox{-4em}{\scalebox{0.475}{\huge\input{fig_clipCohenBsp3}}} &
+      \begin{tabular}{lp{12cm}}
+        & $\text{code}₁' = 0001$ (ONWS) \\
+        & $\text{code}₂ = 0001$ \\
+        \mymagenta{⇒} & \mymagenta{Strecke liegt ganz unterhalb der Süd-Geraden} \\
+        \mymagenta{⇒} & \mymagenta{ unsichtbar}
+      \end{tabular}
+    \end{tabular}%₁₂
+  \end{enumerate}
+\end{beispiele}
+
+\pagebreak
+
+\begin{algorithmus} %\mbox{}
+  \person{-10mm}{Danny Cohen (\mbox{כהן} \mbox{דני})}{?, Israel}{}%
+  {Mathematiker, Informatiker}%
+  {person_Cohen}{Kvgd, Titel: „2009.DannyCohen“}%
+  {\urlpers{https://commons.wikimedia.org/wiki/File:2009.DannyCohen.jpg}}%
+  {\ccby~3.0, \urlpers{https://creativecommons.org/licenses/by/3.0/legalcode}}%
+  % anderes Bild:
+  % http://www.internethalloffame.org/inductees/danny-cohen, Lizenz unklar
+  
+  \person{-25mm}{Ivan Edward Sutherland}{1938, Hastings, Nebraska}{}%
+  {Elektroingenieur, Informatiker}%
+  {person_Sutherland}{Dick Lyon, Titel: „Ivan Sutherland at CHM“}%
+  {\urlpers{https://commons.wikimedia.org/wiki/File:Ivan_Sutherland_at_CHM.jpg}}%
+  {\ccbysa~3.0, \urlpers{https://creativecommons.org/licenses/by-sa/3.0/legalcode}}%
+  \vspace*{-8mm}
+  \begin{AlgListInline}
+    Algorithmus Cohen/Sutherland
+
+    wiederhole
+    °°°$\text{code}₁$ := $\rk{u₁ > \overline{u}, v₁ > \overline{v}, u₁ < \underline{u}, v₁ < \underline{v}}$
+    °°°$\text{code}₂$ := $\rk{u₂ > \overline{u}, v₂ > \overline{v}, u₂ < \underline{u}, v₂ < \underline{v}}$
+    °°°wenn $\rk{\text{code}₁ \text{ \emph{and} } \text{code}₂} ≠ 0000$
+    °°°°°°§fertig: Strecke unsichtbar§°°°°°°// beide Endpunkte liegen „außerhalb“ derselben Geraden
+    °°°sonst
+    °°°°°°wenn ($\text{code}$ := $\rk{\text{code}₁ \text{ \emph{ or }} \text{code}₂}$) $= 0000$
+    °°°°°°°°°§fertig: Strecke sichtbar§°°°°°°°°°// beide Endpunkte liegen im Fenster
+    °°°°°°sonst
+    °°°°°°°°°sei $i$ das erste $1$-Bit in $\text{code}$
+    °°°°°°°°°bestimme den Schnittpunkt $\point{q}$ der Strecke $\overline{\point{q}₁\point{q}₂}$ mit der Fenstergeraden zu Bit $i$
+    °°°°°°°°°wenn Bit $i$ in $\text{code}₁$ gesetzt ist
+    °°°°°°°°°°°°ersetze $\point{q}₁$ durch $\point{q}$
+    °°°°°°°°°sonst
+    °°°°°°°°°°°°ersetze $\point{q}₂$ durch $\point{q}$
+    bis fertig
+  \end{AlgListInline}
+\end{algorithmus}
+
+\begin{description}
+\item[Berechnung der Schnittpunkte] \zB mit der Steigungsform
+  \[ v = v₁ + \underbrace{\frac{v₂ - v₁}{u₂ - u₁}}_{\textstyle\mdef{=: mᵥ}} · \rk{u - u₁} \]
+  \bzw
+  \[ u = u₁ + \underbrace{\frac{u₂ - u₁}{v₂ - v₁}}_{\textstyle\mdef{=: mᵤ}} · \rk{v - v₁} \]
+
+  durch Einsetzen von $u = \underline{u}$, \usw
+
+  ⇒ \begin{tabular}[t]{ll}
+    4 Additionen + 1 Multiplikation + 1 Division, & wenn die Steigung berechnet werden muss \\
+    2 Additionen + 1 Multiplikation, & sonst
+  \end{tabular}
+
+  ($mᵤ$ und $mᵥ$ werden höchstens einmal berechnet.)
+\end{description}
+
+\begin{itemize}
+\item[\Good] sehr schnell, wenn die meisten Strecken bereits beim
+  ersten Test akzeptiert oder abgelehnt werden können
+
+\item[\Bad] relativ viele Operationen, wenn mehrere Schnittpunkte
+  bestimmt werden müssen
+
+\item[\Bad] nicht effizient, wenn nicht gegenüber einem
+  achsenparallelen Rechteck geclippt wird
+\end{itemize}
+\Reached{WS15/16}{04}{2015/11/12}
+
+
+\subsection{Strecken-Clipping nach Cyrus, Beck, Liang und Barsky}
+
+\begin{description}
+\item[Idee:] die Strecke sukzessive durch Schneiden mit den Fenstergeraden
+  verkürzen, wie bei Cohen/Sutherland
+
+  \begin{description}
+  \item[aber:] Schnittpunkte aus der Parameterdarstellung der
+    Strecke gewinnen,
+
+  \item[denn:] \emph{Wenn der Parameterwert des Schnittpunkts
+      bekannt ist, muss der Schnittpunkt selbst oft gar nicht
+      mehr explizit berechnet werden!}
+  \end{description}
+\end{description}
+
+\begin{center}
+  \scalebox{0.5}{\huge\input{fig_clipCyrus}}%₁₂μ
+\end{center}
+
+Seien
+\begin{center}
+  \begin{tabular}{Ll}
+    \mdef{\point{p}} & ein beliebiger (aber fester) Punkt auf der Fenstergeraden, \\
+    \mdef{\vektor{n}} & ein \emph{nach außen} weisender Normalenvektor zur
+    Fenstergeraden.
+  \end{tabular}
+\end{center}
+
+Ein Punkt
+$\point{q} = \point{q}₁ + μ \rk{\point{q}₂ - \point{q}₁}$
+der Geraden $\point{q}₁ \point{q}₂$ liegt
+genau dann auf der Fenstergeraden, wenn
+\begin{align*}
+  & \point{q} - \point{p} \mathrel{}⊥\mathrel{} \vektor{n} \\
+  ⇔\: & \vektor{n}ᵀ · \rk{\point{q}₁ + μ \rk{\point{q}₂ - \point{q}₁} - \point{p}} = 0 \\
+  ⇔\: & \vektor{n}ᵀ · \rk{\point{q}₁ - \point{p}} + μ · \vektor{n}ᵀ · \rk{\point{q}₂ - \point{q}₁}
+  = 0 \\
+  ⇔\: & μ = \frac{\vektor{n}ᵀ · \rk{\point{q}₁ -
+      \point{p}}}{-\vektor{n}ᵀ · \rk{\point{q}₂ - \point{q}₁}} \,\text.
+\end{align*}
+
+Der Schnittpunkt wird klassifiziert als:
+\begin{description}
+\item[\emph{In}\index{In-Schnittpunkt},] falls \quad
+  $-\vektor{n}ᵀ · \rk{\point{q}₂ - \point{q}₁} > 0$
+
+  (\dH wenn man von $\point{q}₁$ nach $\point{q}₂$ läuft,
+  geht man über die Fenstergerade in die Halbebene, in der auch das
+  Projektionsfenster liegt)
+
+\item[\emph{Out}\index{Out-Schnittpunkt},] falls \quad
+  $-\vektor{n}ᵀ · \rk{\point{q}₂ - \point{q}₁} < 0$
+\end{description}
+
+\begin{itemize}
+\item[⇒] Ist $\point{q}$ ein In-Schnittpunkt, so kann der
+  Abschnitt $\overline{\point{q}₁\point{q}}$ der Strecke
+  weggeworfen werden, bei einem Out-Schnittpunkt der Abschnitt
+  $\overline{\point{q}\point{q}₂}$.
+\end{itemize}
+\Reached{WS16/17}{04}{2016/11/10}
+
+\minisec{Geeignete Wahlen für $\point{p}$ und $\vektor{n}$}
+
+\begin{center}
+  \begin{tabular}{c|C|C|C|C}
+    Fenstergerade & \multicolumn{1}{c|}{Normale $\vektor{n}$} &
+    \multicolumn{1}{c|}{Punkt $\point{p}$} & \point{q}₁ - \point{p} &
+    \displaystyle μ = \frac{\vektor{n}ᵀ \rk{\point{q}₁ -
+        \point{p}}}{-\vektor{n}ᵀ \rk{\point{q}₂ - \point{q}₁}}
+    \\ \hline
+    O: $u = \overline{u}$ & \pmat{1 \\ 0} & \pmat{\overline{u} \\ \widetilde{v}} &
+    \pmat{u₁ - \overline{u} \\ v₁ - \widetilde{v}} &
+    \displaystyle \frac{u₁ - \overline{u}}{u₁ - u₂} \\
+    N: $v = \overline{v}$ & \pmat{0 \\ 1} & \pmat{\widetilde{u} \\ \overline{v}} &
+    \pmat{u₁ - \widetilde{u} \\ v₁ - \overline{v}} &
+    \displaystyle \frac{v₁ - \overline{v}}{v₁ - v₂} \\
+    W: $u = \underline{u}$ & \pmat{-1 \\ 0} & \pmat{\underline{u} \\ \widetilde{v}} &
+    \pmat{u₁ - \underline{u} \\ v₁ - \widetilde{v}} &
+    \displaystyle \frac{\underline{u} - u₁}{u₂ - u₁} \\
+    S: $v = \underline{v}$ & \pmat{0 \\ -1} & \pmat{\widetilde{u} \\ \underline{v}} &
+    \pmat{u₁ - \widetilde{u} \\ v₁ - \underline{v}} &
+    \displaystyle \frac{\underline{v} - v₁}{v₂ - v₁}
+  \end{tabular}
+\end{center}
+
+($\widetilde{u}$ und $\widetilde{v}$ sind beliebig wählbar.)
+
+\pagebreak
+
+\begin{beispiel} \mbox{}
+  \begin{center}
+    \scalebox{0.6}{\huge\input{fig_clipCyrusBsp}}%₁₂μ
+  \end{center}
+\end{beispiel}
+
+\pagebreak
+
+\vspace*{-27mm}
+\begin{algorithmus} \mbox{}
+  \personHidden{-100mm}{Mike Cyrus}{}{}{}{person_nopic}{}{}{}%
+  
+  \personHidden{-105mm}{Jay Beck}{}{}{}{person_nopic}{}{}{}%
+
+  \personHidden{-110mm}{You-Dong Liang ({梁友栋} [Liáng Yǒudòng])}%
+  {1935, Fuzhou ({福州}) (Fujian [{福建}], CN)}{}%
+  {Mathematiker}%
+  {person_nopic}{}{}{}%
+
+  \personHidden{-120mm}{Brian A.~Barsky}{}{}%
+  {Informatiker}%
+  {person_Barsky}{}%
+  {\urlpers{https://people.eecs.berkeley.edu/~barsky}}%
+  {}%permission needed
+
+  \vspace*{-26mm}
+  \enlargethispage{7mm}
+  \begin{AlgListInline}
+    Algorithmus Cyrus, Beck, Liang, Barsky
+
+    $\ek{μ_{\mathrm{In}}; μ_{\mathrm{Out}}}$ := $\ek{0; 1}$°°°°°°°°°°°// $μ_{\mathrm{In}}$ und $μ_{\mathrm{Out}}$ begrenzen den übrig gebliebenen Teil der Strecke
+    $Δ u$ := $u₂ - u₁$
+    $Δ v$ := $v₂ - v₁$
+    // der Reihe nach an den „O“-, „N“-, „W“- und „S“-Seiten des Projektionsfensters abschneiden
+    wenn noch_etwas_übrig($u₁ - \overline{u}$, $-Δ u$, $μ_{\mathrm{In}}$, $μ_{\mathrm{Out}}$)
+    °°°wenn noch_etwas_übrig($v₁ - \overline{v}$, $-Δ v$, $μ_{\mathrm{In}}$, $μ_{\mathrm{Out}}$)
+    °°°°°°wenn noch_etwas_übrig($\underline{u} - u₁$, $Δ u$, $μ_{\mathrm{In}}$, $μ_{\mathrm{Out}}$)
+    °°°°°°°°°wenn noch_etwas_übrig($\underline{v} - v₁$, $Δ v$, $μ_{\mathrm{In}}$, $μ_{\mathrm{Out}}$)
+    °°°°°°°°°°°°/* die Strecke ist – zumindest teilweise – sichtbar;
+    °°°°°°°°°°°°° berechne die Endpunkte des sichtbaren Teils       */
+    °°°°°°°°°°°°wenn $μ_{\mathrm{Out}} < 1$
+    °°°°°°°°°°°°°°°$\point{q}₂$ := $\point{q}₁ + μ_{\mathrm{Out}} · \underbrace{\pmat{Δ u \\ Δ v}}_{\mymagenta{= \point{q}₂ - \point{q}₁}}$
+    °°°°°°°°°°°°wenn $μ_{\mathrm{In}} > 0$
+    °°°°°°°°°°°°°°°$\point{q}₁$ := $\point{q}₁ + μ_{\mathrm{In}} · \pmat{Δ u \\ Δ v}$
+  \end{AlgListInline}
+\end{algorithmus}
+
+\pagebreak
+
+\vspace*{-21mm}
+\begin{algorithmus} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus noch_etwas_übrig($Z$, $N$, $μ_{\mathrm{In}}$, $μ_{\mathrm{Out}}$)
+
+    /* führt das durch Zähler $Z$ und Nenner $N$ gegebene Clipping an einer Fenstergeraden durch und
+    °°°modifiziert $μ_{\mathrm{In}}$ oder $μ_{\mathrm{Out}}$ entsprechend.
+    °°°Zurückgegeben wird, ob jetzt noch ein Teil der Strecke sichtbar ist.                     */
+    wenn $N > 0$°°°°°°°// In-Schnittpunkt
+    °°°$μ_{\mathrm{In}}$ := $\max \mk{μ_{\mathrm{In}}, \underbrace{\frac{Z}{N}}_{\mymagenta{μ}}}$
+    °°°noch_etwas_übrig := ($μ_{\mathrm{In}} ≤ μ_{\mathrm{Out}}$)
+    sonst wenn $N < 0$°°°°°°°// Out-Schnittpunkt
+    °°°$μ_{\mathrm{Out}}$ := $\min \mk{μ_{\mathrm{Out}}, \frac{Z}{N}}$
+    °°°noch_etwas_übrig := ($μ_{\mathrm{In}} ≤ μ_{\mathrm{Out}}$)
+    sonst°°°°°°°// Nenner $N = 0$: Strecke parallel zur Fenstergeraden
+    °°°noch_etwas_übrig := ($Z ≤ 0$)
+    °°°°°°°°// Strecke liegt innerhalb/außerhalb der Halbebene, in der auch das Fenster liegt
+  \end{AlgListInline}
+\end{algorithmus}
+
+
+\subsection{Polygon-Clipping nach Sutherland/Hodgman}
+
+\begin{description}
+\item[Vorbemerkung:]
+  Polygon-Clipping ist wesentlich komplizierter als Clipping für einzelne Strecken!
+
+  \begin{Hide}
+    \begin{center}
+      \includegraphicsHide{scale=0.5}{fig_clipPolygonBsp}
+    \end{center}
+  \end{Hide}
+\end{description}
+\personHidden{0mm}{Gary W.~Hodgman}{}{}{}{person_nopic}{}{}{}%
+
+
+\pagebreak
+
+\begin{description}
+\item[Ansatz:] Clippe das Polygon der Reihe nach gegenüber den vier Halbebenen,
+  die durch die Fensterseiten gegeben sind:
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clipPolygonSutherland}}%₁₂₃₄₅₆
+  \end{center}
+\end{description}
+
+\begin{description}
+\item[Ziel:]
+  Folge von Ecken für das „Eingabepolygon“ \\
+  \mbox{}\qquad\qquad\qquad\qquad\quad ⇓\\
+  \emph{Algorithmus für Clipping \bzgl einer Halbebene} \\
+  \mbox{}\qquad\qquad\qquad\qquad\quad ⇓\\
+  Folge von Ecken für das „Ausgabepolygon“
+
+\item[Methode:]
+  Durchlaufe die Ecken \bzw Kanten des Eingabepolygons.
+
+  Gib dabei die entsprechenden Ecken des Ausgabepolygons aus.
+\end{description}
+\Reached{WS14/15}{05}{2014/11/06}
+
+\pagebreak
+
+\vspace*{-25mm}
+\begin{beispiel} (obiges Beispiel, Clipping \bzgl „O“-Halbebene)
+  \begin{itemize}
+  \item starte in Ecke $\point{V}₁$
+
+    $\point{V}₁$ liegt in der Halbebene
+    ⇒ Ausgabe $\mymagenta{\point{V}₁}$
+
+  \item Kante $\overline{\point{V}₁\point{V}₂}$ liegt
+    ganz in der Halbebene:
+
+    \begin{Hide}
+      \begin{center}
+        \resizebox{!}{40mm}{\huge\selectinput{fig_clipPolygonSutherlandFall1}{leer}}%ᵢ₋₁
+      \end{center}
+
+      also: Ausgabe $\mymagenta{\point{V}₂}$
+    \end{Hide}
+
+  \item Kante $\overline{\point{V}₂\point{V}₃}$ verlässt
+    die Halbebene im Punkt $\point{S}₁$:
+
+    \begin{Hide}
+      \begin{center}
+        \resizebox{!}{40mm}{\huge\selectinput{fig_clipPolygonSutherlandFall2}{leer}}
+      \end{center}
+
+      also: Ausgabe $\mymagenta{\point{S}₁}$
+    \end{Hide}
+
+    \pagebreak
+
+    \vspace*{-20mm}
+  \item Kante $\overline{\point{V}₃\point{V}₄}$ liegt
+    ganz außerhalb der Halbebene:
+
+    \begin{Hide}
+      \begin{center}
+        \resizebox{!}{40mm}{\huge\selectinput{fig_clipPolygonSutherlandFall3}{leer}}
+      \end{center}
+    \end{Hide}
+
+  \item Kante $\overline{\point{V}₄\point{V}₅}$ betritt
+    wieder die Halbebene in $\point{S}₂$:
+
+    \begin{Hide}
+      \begin{center}
+        \resizebox{!}{40mm}{\huge\selectinput{fig_clipPolygonSutherlandFall4}{leer}}
+      \end{center}
+
+      also: Ausgabe $\mymagenta{\point{S}₂}$, $\mymagenta{\point{V}₅}$
+    \end{Hide}
+
+  \item Kante $\overline{\point{V}₅\point{V}₆}$ liegt
+    wieder ganz in der („O“-)Halbebene:
+
+    Fall 1 ⇒ Ausgabe $\mymagenta{\point{V}₆}$
+
+  \item auch Kante $\overline{\point{V}₆\point{V}₁}$
+    liegt ganz in der Halbebene:
+
+    Fall 1 ⇒ Ausgabe $\mymagenta{\point{V}₁}$
+  \end{itemize}
+  \Reached{WS17/18}{04}{2017/11/02}
+
+  \pagebreak
+
+  geclipptes Polygon: $\point{V}₁$, $\point{V}₂$,
+  $\point{S}₁$, $\point{S}₂$,
+  $\point{V}₅$, $\point{V}₆$,
+  $\point{V}₁$
+
+  danach Clipping \bzgl der „N“-, „W“- und „S“-Halbebenen
+\end{beispiel}
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Es treten nur die angegebenen vier Fälle auf.
+    \Reached{WS19/20}{04}{2019/10/31}
+
+  \item gut geeignet, wenn viele Strecken tatsächlich geclippt
+    werden müssen
+
+  \item leicht verallgemeinerbar auf
+    \begin{itemize}
+    \item nicht achsenparallele Clip-Fenster
+    \item konvexe Polygone als Clip-Fenster
+    \item 3D-Clipping
+    \end{itemize}
+  \end{enumerate}
+\end{bemerkungen}
+
+\pagebreak
+
+\begin{description}
+\item[Problemfälle:] \mbox{}
+
+  \begin{center}
+    \includegraphics[scale=0.5]{fig_clipPolygonSutherlandProblem1}
+  \end{center}
+
+  Ist diese (zusammenhängende) Lösung „korrekt“, oder müssen
+  in diesem Fall zwei disjunkte Dreiecke geliefert werden?
+
+  \begin{center}
+    \includegraphics[scale=0.5]{fig_clipPolygonSutherlandProblem2}
+  \end{center}
+
+  \begin{description}
+  \item[Antwort:]
+    Das ist abhängig von der weiteren Verwendung der Polygone,
+    \zB
+    \begin{itemize}
+    \item gelieferte Lösung ist okay, wenn nur das
+      \emph{Innere} der Polygone gezeichnet wird,
+
+    \item nicht okay, wenn auch (oder nur) der \emph{Rand}
+      gezeichnet wird.
+    \end{itemize}
+  \end{description}
+\end{description}
+
+
+\subsection{Hardware-Realisierung}
+
+\begin{description}
+\item[Ziel:] möglichst hoher „Durchsatz“ (Anzahl geclippter Strecken pro Sekunde)
+
+  \pagebreak
+
+  \vspace*{-20mm}
+\item[„konventionelle Lösung“:] \mbox{}
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clipHardwareKonventionell}}
+  \end{center}
+
+  Durchsatz: 1 Strecke pro 4 Zeittakte
+
+  \pagebreak
+
+\item[„Pipeline-Lösung“\index{Pipelining!beim Clipping}\index{Clipping!Pipelining}:] \mbox{}
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clipHardwarePipeline}}
+  \end{center}
+
+  Durchsatz: $n$ Strecken in $n + 3$ Zeittakten
+  \begin{center}
+    ≙ 1 Strecke in $1 + \frac{3}{n}$ Zeittakten
+  \end{center}
+  (rund 4-mal schneller für große $n$!)
+\end{description}
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Wie bei der konventionellen Lösung liefern die ersten
+    drei Zeittakte noch kein Endergebnis \\
+    \emph{(„Startup-Zeit“)}\index{Startup-Zeit}.
+
+  \item Die einzelnen Stufen der Pipeline sind noch einfacher
+    (⇒ billiger, schneller) als der „4-Rich\-tungs“-Bau\-stein
+    in der konventionellen Lösung.
+
+  \item Es ist nicht mehr möglich, das Clipping vorzeitig
+    abzubrechen, wenn das Ergebnis schon feststeht:
+
+    \begin{center}
+      \scalebox{0.5}{\huge\input{fig_clipHardwarePipelineProblem}}%∅
+    \end{center}
+  \end{enumerate}
+\end{bemerkungen}
+\ReachedZoom{WS20/21}{04}{2020/11/19}
+
+
+\section{Der 3D-analytische Ansatz}
+
+\begin{description}
+\item[Ziel:] Entferne alle Teile, die nicht in einem vorgegebenen
+  \emph{Sichtvolumen}\index{Sichtvolumen} liegen.
+\end{description}
+
+\begin{bemerkung}
+  Bei der Projektion verliert man die räumliche Tiefeninformation.
+  Clipping gegenüber einem Volumen kann also \emph{nicht} mit
+  den projizierten Punkten erfolgen.
+
+  ⇒ 3D-Clipping meist analytisch (nicht auf Pixelebene)
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clip3DBsp}}%₁₂₃
+  \end{center}
+
+  $\point{P}₁$, $\point{P}₂$ und $\point{P}₃$ werden auf
+  denselben Punkt in der Projektionsebene abgebildet, aber nur
+  $\point{P}₂$ ist sichtbar.
+\end{bemerkung}
+
+\pagebreak
+
+\begin{description}
+\item[Definition des Sichtvolumens] durch
+  \begin{itemize}
+  \item Angabe des \emph{Projektionsfensters}
+
+    (und der Lage von Projektionsebene und Projektionsrichtung \bzw\ -zentrum)
+
+  \item Abstand der \emph{vorderen} und \emph{hinteren Begrenzungsebene} vom Ursprung:
+    $\mdef{nᵥ}$ \bzw $\mdef{nₕ}$
+  \end{itemize}
+
+  In OpenGL ist die Projektionsebene die vordere
+  Begrenzungsebene, \dH $nᵥ = -zₚ$.
+
+\item[Parallelprojektion:] \mbox{}
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clip3DParallel}}%ₕᵥ
+  \end{center}
+
+  \pagebreak
+
+\item[perspektivische Projektion:] \mbox{}
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clip3DPerspektivisch}}%ₕᵥ
+  \end{center}
+\end{description}
+
+\begin{bemerkung}
+  $nᵥ$ und $nₕ$ werden senkrecht zur Projektionsebene gemessen.
+
+  Damit das Sichtvolumen nicht leer ist, muss $nᵥ < nₕ$ sein.
+\end{bemerkung}
+
+\pagebreak
+
+\minisec{Anwendungen für 3D-Clipping}
+
+\begin{itemize}
+\item Ein Objekt nahe der Projektionsebene verdeckt viele andere, die
+  eigentlich interessanter sind.
+
+  ⇒ störendes Objekt \emph{„ausblenden“}
+
+  \begin{center}
+    \scalebox{0.4}{\Huge\input{fig_clip3DFuerStoerend}}
+  \end{center}
+
+\item Sehr weit entfernte (und nicht allzu große) Objekte werden
+  ohnehin zu nicht identifizierbaren kleinen Flecken projiziert.
+
+  ⇒ ausblenden (Projektion und Scan Conversion entfällt!)
+
+  \begin{center}
+    \scalebox{0.4}{\Huge\input{fig_clip3DFuerEntfernt}}
+  \end{center}
+
+  \pagebreak
+
+\item Gegenstände „vor“ der Projektionsebene sollen nicht
+  gezeigt werden.
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clip3DFuerVorne}}
+  \end{center}
+
+\item „schichtweise Betrachtung“
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_clip3DFuerSchichten}}%ᵥ
+  \end{center}
+\end{itemize}
+
+\begin{description}
+\item[Techniken für 3D-Clipping:]
+  Übertrage die 2D-analytischen Ansätze (soweit möglich) auf 3D:
+  \begin{itemize}
+  \item 4 Fenstergeraden ⇝ 6 Ebenen
+  \item 4-stelliger Code bei Cohen/Sutherland ⇝ 6-stellig
+  \item Schnittpunkte mit den Ebenen am einfachsten aus der
+    Normalenform
+  \end{itemize}
+\end{description}
+
+\pagebreak
+
+Oft werden die Endpunkte der Strecken auch vorher in
+\emph{normalisierte Sichtkoordinaten}\index{normalisierte Sichtkoordinaten}%
+\index{Sichtkoordinaten!normalisierte}
+umgerechnet; bezüglich dieser Koordinaten sind Sichtvolumen und
+Projektion besonders einfach zu beschreiben:
+
+\begin{description}
+\item[Parallelprojektion:] \mbox{}
+
+  \begin{tabular}{m{10cm}@{\qquad\qquad}m{3cm}}
+    \parbox{10cm}{%
+      Clipping-Ebenen (\zB): \\[1em]
+      \mbox{}\quad
+      $ξ = ±1$, $η = ±1$ \hfill \cmt{≙ Fenster} \\[1ex]
+      \mbox{}\quad
+      $ν = 0$ \hfill \cmt{vordere Begrenzung} \\[1ex]
+      \mbox{}\quad
+      $ν = -1$ \hfill \cmt{hintere Begrenzung}} &
+    \scalebox{0.5}{\huge\input{fig_clip3DNormalisiertParallel}}%ηξν
+  \end{tabular}
+
+\item[perspektivische Projektion:] \mbox{}
+
+  \begin{tabular}{m{10cm}@{\qquad\qquad}m{3cm}}
+    \parbox{10cm}{%
+      Clipping-Ebenen (\zB): \\[1em]
+      \mbox{}\quad
+      $ξ = ±ν$, $η = ±ν$ \hfill \cmt{≙ Fenster} \\[1ex]
+      \mbox{}\quad
+      $ν = νᵥ$ \hfill \cmt{vordere Begrenzung} \\[1ex]
+      \mbox{}\quad
+      $ν = -1$ \hfill \cmt{hintere Begrenzung}} &
+    \scalebox{0.5}{\huge\input{fig_clip3DNormalisiertPerspektiv}}%ηξνᵥ
+  \end{tabular}
+\end{description}
+
+\minisec{Mögliche Realisierung im Rahmen der (3D → 2D)-Transformation}
+
+\bigskip
+
+\begin{center}
+  \scalebox{0.5}{\huge\input{fig_clip3DRealisierung}}%×
+\end{center}
+\Reached{WS18/19}{04 (Nils Kintscher)}{2018/11/08}
+\Reached{WS21/22}{04}{2021/11/04}

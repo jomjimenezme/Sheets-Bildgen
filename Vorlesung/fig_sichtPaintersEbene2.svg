@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Oct 21 10:58:23 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14.6in"
+   height="4.2in"
+   viewBox="-6070 2102 17575 5006"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_sichtPaintersEbene2.svg">
+  <metadata
+     id="metadata40">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs38" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview36"
+     showgrid="false"
+     inkscape:zoom="0.97940206"
+     inkscape:cx="643.78923"
+     inkscape:cy="238.52912"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#b000b0;stroke-width:79;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2834,6141 3543,4724 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#b000b0;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="2362,7086 4724,2362 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#00b000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="2834,2125 4960,6377 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#00b000;stroke-width:79;stroke-linecap:butt;stroke-linejoin:miter"
+     points="3070,2598 3543,3543 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:62, 62"
+     points="2125,6850 5669,5669 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#0000ff;stroke-width:79;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2834,6614 4251,6141 " />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1653,4488 424,4488 " />
+  <polygon
+     id="polygon20"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:48;stroke-miterlimit:8"
+     points="372,4551 419,4488 372,4425 372,4425 230,4488 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:353px;font-family:Times;text-anchor:end;fill:#ff0000;stroke-width:0.025in"
+     id="text22"
+     font-size="353"
+     font-weight="normal"
+     font-style="normal"
+     y="4251"
+     x="1181"
+     xml:space="preserve">$\widehat{\vektor{n}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:353px;font-family:Times;text-anchor:end;fill:#00b000;stroke-width:0.025in"
+     id="text24"
+     font-size="353"
+     font-weight="normal"
+     font-style="normal"
+     y="3401"
+     x="2976"
+     xml:space="preserve">$P₂$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:353px;font-family:Times;text-anchor:end;fill:#b000b0;stroke-width:0.025in"
+     id="text26"
+     font-size="353"
+     font-weight="normal"
+     font-style="normal"
+     y="5480"
+     x="2692"
+     xml:space="preserve">$P₃$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:353px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text28"
+     font-size="353"
+     font-weight="normal"
+     font-style="normal"
+     y="6944"
+     x="3685"
+     xml:space="preserve">$P₁$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:353px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text30"
+     font-size="353"
+     font-weight="normal"
+     font-style="normal"
+     y="5669"
+     x="7937"
+     xml:space="preserve">$P₃$ vor $P₁$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:353px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text32"
+     font-size="353"
+     font-weight="normal"
+     font-style="normal"
+     y="4724"
+     x="7937"
+     xml:space="preserve">$P₂$ vor $P₃$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:353px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text34"
+     font-size="353"
+     font-weight="normal"
+     font-style="normal"
+     y="3779"
+     x="7937"
+     xml:space="preserve">$P₁$ vor $P₂$</text>
+</svg>

@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Sep 24 12:24:33 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="12.3in"
+   height="16.2in"
+   viewBox="6296 -12329 14726 19450"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_hardwareRasterDisplay.svg">
+  <metadata
+     id="metadata378">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs376" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview374"
+     showgrid="false"
+     inkscape:zoom="0.16186556"
+     inkscape:cx="553.50001"
+     inkscape:cy="729.00003"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <rect
+     id="rect6"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="566"
+     width="708"
+     y="4346"
+     x="10393" />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="9921,4866 9921,5669 " />
+  <polygon
+     id="polygon10"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="12236,4393 11952,4629 11291,4629 11291,4629 11574,4393 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#00b000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8267,3779 8267,5669 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="9921,3779 9921,4582 " />
+  <polygon
+     id="polygon16"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="12188,4818 11905,5055 11244,5055 11244,5055 11527,4818 " />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="15118,2362 12519,3779 7086,3779 6850,4015 6850,5433 7086,5669 12519,5669 15118,7086 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="10535,1653 10535,4346 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="11669,1653 11669,4393 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#00b000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8267,1653 8267,3779 " />
+  <polyline
+     id="polyline26"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6708,-8482 13795,-8482 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6708,-7713 13795,-7713 " />
+  <polyline
+     id="polyline30"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6708,-6943 13795,-6943 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6708,-6172 13795,-6172 " />
+  <polyline
+     id="polyline34"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6708,-5402 13795,-5402 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6708,-4630 13795,-4630 " />
+  <polyline
+     id="polyline38"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6708,-3861 13795,-3861 " />
+  <polyline
+     id="polyline40"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6708,-3091 13795,-3091 " />
+  <polyline
+     id="polyline42"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6708,-8482 6708,-3091 " />
+  <polyline
+     id="polyline44"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7417,-8482 7417,-3091 " />
+  <polyline
+     id="polyline46"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8125,-8482 8125,-3091 " />
+  <polyline
+     id="polyline48"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8834,-8482 8834,-3091 " />
+  <polyline
+     id="polyline50"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="9543,-8482 9543,-3091 " />
+  <polyline
+     id="polyline52"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="10251,-8482 10251,-3091 " />
+  <polyline
+     id="polyline54"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="10960,-8482 10960,-3091 " />
+  <polyline
+     id="polyline56"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="11669,-8482 11669,-3091 " />
+  <polyline
+     id="polyline58"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="12377,-8482 12377,-3091 " />
+  <polyline
+     id="polyline60"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="13086,-8482 13086,-3091 " />
+  <polyline
+     id="polyline62"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="13795,-8482 13795,-3091 " />
+  <polyline
+     id="polyline64"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:round"
+     points="9732,1241 9874,580 9874,1241 10015,580 10015,1241 10157,580 10157,1241 10299,580 10299,1241 10440,580 10440,1241 10582,580 10582,1241 10724,580 10724,1241 10818,816 " />
+  <polyline
+     id="polyline66"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="11385,944 11669,614 11669,1275 12283,614 12283,1275 12472,1086 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text68"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="7086"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text70"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="7795"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text72"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="8503"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text74"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="9212"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text76"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="9921"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text78"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="10629"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text80"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="11338"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text82"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="12047"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text84"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="12755"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text86"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7919"
+     x="13464"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text88"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="7086"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text90"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="7795"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text92"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="8503"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text94"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="9212"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text96"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="9921"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text98"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="10629"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text100"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="11338"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text102"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="12047"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text104"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="12755"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text106"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-7147"
+     x="13464"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text108"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="7086"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text110"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="7795"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text112"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="8503"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text114"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="9212"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text116"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="9921"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text118"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="10629"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text120"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="11338"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text122"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="12047"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text124"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="12755"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text126"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-6377"
+     x="13464"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text128"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="7086"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text130"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="7795"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text132"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="8503"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text134"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="9212"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text136"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="9921"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text138"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="10629"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text140"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="11338"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text142"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="12047"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text144"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="12755"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text146"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5608"
+     x="13464"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text148"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="7086"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text150"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="7795"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text152"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="8503"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text154"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="9212"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text156"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="9921"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text158"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="10629"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text160"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="11338"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text162"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="12047"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text164"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="12755"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text166"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4836"
+     x="13464"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text168"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="7086"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text170"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="7795"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text172"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="8503"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text174"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="9212"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text176"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="9921"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text178"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="10629"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text180"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="11338"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text182"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="12047"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text184"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="12755"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text186"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-4067"
+     x="13464"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text188"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="7086"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text190"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="7795"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text192"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="8503"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text194"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="9212"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text196"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="9921"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text198"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="10629"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text200"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="11338"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text202"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="12047"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text204"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="12755"
+     xml:space="preserve">0</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text206"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-3297"
+     x="13464"
+     xml:space="preserve">0</text>
+  <circle
+     id="circle208"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="3779"
+     cx="19370" />
+  <circle
+     id="circle210"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4015"
+     cx="19133" />
+  <circle
+     id="circle212"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4251"
+     cx="18897" />
+  <circle
+     id="circle214"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4488"
+     cx="18897" />
+  <circle
+     id="circle216"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4724"
+     cx="18897" />
+  <circle
+     id="circle218"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4724"
+     cx="19133" />
+  <circle
+     id="circle220"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4724"
+     cx="19370" />
+  <circle
+     id="circle222"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4724"
+     cx="19606" />
+  <circle
+     id="circle224"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4724"
+     cx="19842" />
+  <circle
+     id="circle226"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4488"
+     cx="19842" />
+  <circle
+     id="circle228"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4251"
+     cx="19842" />
+  <circle
+     id="circle230"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4015"
+     cx="19606" />
+  <circle
+     id="circle232"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4488"
+     cx="20551" />
+  <circle
+     id="circle234"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4251"
+     cx="20551" />
+  <circle
+     id="circle236"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4251"
+     cx="20314" />
+  <circle
+     id="circle238"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4251"
+     cx="20787" />
+  <circle
+     id="circle240"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4724"
+     cx="20551" />
+  <circle
+     id="circle242"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4015"
+     cx="20314" />
+  <circle
+     id="circle244"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4015"
+     cx="20551" />
+  <circle
+     id="circle246"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="4015"
+     cx="20787" />
+  <circle
+     id="circle248"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:8"
+     r="94"
+     cy="3779"
+     cx="20551" />
+  <polyline
+     id="polyline250"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6330,4299 7275,4299 7417,4346 7417,4440 7275,4535 7039,4535 6944,4488 6944,4440 7039,4393 7275,4393 7417,4535 7417,4677 7275,4771 7039,4771 6944,4724 6944,4677 7039,4629 7275,4629 7417,4771 7417,4913 7275,5007 7039,5007 6944,4960 6944,4913 7039,4866 7275,4866 7417,5007 7417,5055 7275,5102 6330,5102 " />
+  <polyline
+     id="polyline252"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7606,4724 10346,4724 11716,4866 13700,4251 " />
+  <polygon
+     id="polygon254"
+     style="fill:#ffffff;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="15118,2834 15118,4960 12755,6141 12755,6141 12755,4015 " />
+  <polyline
+     id="polyline256"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8503,-3070 8503,-960 " />
+  <polygon
+     id="polygon258"
+     style="fill:#00b000;stroke:#00b000;stroke-width:63;stroke-miterlimit:8"
+     points="8582,-899 8503,-962 8425,-899 8425,-899 8503,-710 " />
+  <polyline
+     id="polyline260"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="10629,-708 10629,-2882 " />
+  <polygon
+     id="polygon262"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:48;stroke-miterlimit:8"
+     points="10566,-2933 10629,-2886 10692,-2933 10692,-2933 10629,-3075 " />
+  <polyline
+     id="polyline264"
+     style="fill:none;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="11574,-708 11574,-2882 " />
+  <polygon
+     id="polygon266"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:48;stroke-miterlimit:8"
+     points="11511,-2933 11574,-2886 11637,-2933 11637,-2933 11574,-3075 " />
+  <polyline
+     id="polyline268"
+     style="fill:none;stroke:#000000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="9212,-10614 9212,-8755 " />
+  <polygon
+     id="polygon270"
+     style="fill:#000000;stroke:#000000;stroke-width:63;stroke-miterlimit:8"
+     points="9291,-8695 9212,-8758 9133,-8695 9133,-8695 9212,-8506 " />
+  <polygon
+     id="polygon272"
+     style="fill:#000000;stroke:#000000;stroke-width:63;stroke-miterlimit:8"
+     points="9133,-10672 9212,-10609 9291,-10672 9291,-10672 9212,-10861 " />
+  <rect
+     id="rect274"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="1417"
+     width="3543"
+     y="-12283"
+     x="7322" />
+  <rect
+     id="rect276"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="708"
+     width="5196"
+     y="-2173"
+     x="8787" />
+  <polyline
+     id="polyline278"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7086,-8124 13464,-8124 " />
+  <polyline
+     id="polyline280"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7086,-7353 13464,-7353 " />
+  <polyline
+     id="polyline282"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7086,-6583 13464,-6583 " />
+  <polyline
+     id="polyline284"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7086,-5812 13464,-5812 " />
+  <polyline
+     id="polyline286"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7086,-5042 13464,-5042 " />
+  <polyline
+     id="polyline288"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7086,-4272 13464,-4272 " />
+  <polyline
+     id="polyline290"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7086,-3501 13464,-3501 " />
+  <polyline
+     id="polyline292"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="13464,-8124 7086,-7353 " />
+  <polyline
+     id="polyline294"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="13464,-7353 7086,-6583 " />
+  <polyline
+     id="polyline296"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="13464,-6583 7086,-5812 " />
+  <polyline
+     id="polyline298"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="13464,-5812 7086,-5042 " />
+  <polyline
+     id="polyline300"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="13464,-5042 7086,-4272 " />
+  <polyline
+     id="polyline302"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="13464,-4272 7086,-3501 " />
+  <polyline
+     id="polyline304"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="13464,-3501 7086,-8124 " />
+  <rect
+     id="rect306"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="5196"
+     y="-708"
+     x="7559" />
+  <rect
+     id="rect308"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="1417"
+     width="1653"
+     y="236"
+     x="9448" />
+  <rect
+     id="rect310"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="1417"
+     width="1653"
+     y="236"
+     x="11102" />
+  <rect
+     id="rect312"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="1417"
+     width="1889"
+     y="236"
+     x="7559" />
+  <rect
+     id="rect314"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="1795"
+     width="2267"
+     y="3354"
+     x="18708" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text316"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-11338"
+     x="7795"
+     xml:space="preserve">Computer</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text318"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-9448"
+     x="9685"
+     xml:space="preserve">lesen, modifizieren</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#00b000;stroke-width:0.025in"
+     id="text320"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5914"
+     x="14409"
+     xml:space="preserve">Bildwiederholspeicher</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#00b000;stroke-width:0.025in"
+     id="text322"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-5145"
+     x="14409"
+     xml:space="preserve">(refresh buffer)</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text324"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="0"
+     x="10157"
+     xml:space="preserve">Video Controller</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#00b000;stroke-width:0.025in"
+     id="text326"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="1181"
+     x="8503"
+     xml:space="preserve">D / A</text>
+  <circle
+     id="circle328"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="3779"
+     cx="13937" />
+  <circle
+     id="circle330"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4251"
+     cx="13937" />
+  <circle
+     id="circle332"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4724"
+     cx="13937" />
+  <circle
+     id="circle334"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="5196"
+     cx="13937" />
+  <circle
+     id="circle336"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4346"
+     cx="12992" />
+  <circle
+     id="circle338"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4062"
+     cx="13464" />
+  <circle
+     id="circle340"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="3496"
+     cx="14409" />
+  <circle
+     id="circle342"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="3212"
+     cx="14881" />
+  <circle
+     id="circle344"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4818"
+     cx="12992" />
+  <circle
+     id="circle346"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4535"
+     cx="13464" />
+  <circle
+     id="circle348"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="3968"
+     cx="14409" />
+  <circle
+     id="circle350"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="5291"
+     cx="12992" />
+  <circle
+     id="circle352"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="5763"
+     cx="12992" />
+  <circle
+     id="circle354"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="5007"
+     cx="13464" />
+  <circle
+     id="circle356"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="5480"
+     cx="13464" />
+  <circle
+     id="circle358"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4440"
+     cx="14409" />
+  <circle
+     id="circle360"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4913"
+     cx="14409" />
+  <circle
+     id="circle362"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4157"
+     cx="14881" />
+  <circle
+     id="circle364"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="3685"
+     cx="14881" />
+  <circle
+     id="circle366"
+     style="fill:none;stroke:#000000;stroke-width:16"
+     r="94"
+     cy="4629"
+     cx="14881" />
+  <rect
+     id="rect368"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="566"
+     width="708"
+     y="4535"
+     x="10157" />
+  <polyline
+     id="polyline370"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="14317,3975 15588,3631 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text372"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="-1653"
+     x="8976"
+     xml:space="preserve">auslesen (zyklisch)</text>
+</svg>

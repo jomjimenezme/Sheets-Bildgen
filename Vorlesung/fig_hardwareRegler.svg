@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Sep 24 15:26:16 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="13.3in"
+   height="3.9in"
+   viewBox="1833 3024 16006 4696"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_hardwareRegler.svg">
+  <metadata
+     id="metadata64">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs62" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview60"
+     showgrid="false"
+     inkscape:zoom="0.41604009"
+     inkscape:cx="598.50001"
+     inkscape:cy="175.5"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <polygon
+     id="polygon6"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="17782,3948 15240,6659 10327,6659 10327,6659 13038,3948 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#0000ff;stroke-width:0.025in"
+     id="text8"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="7559"
+     x="4724"
+     xml:space="preserve">Schieberegler</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#0000ff;stroke-width:0.025in"
+     id="text10"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="7559"
+     x="14173"
+     xml:space="preserve">Drehregler</text>
+  <ellipse
+     cy="5303"
+     cx="14224"
+     id="ellipse12"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63"
+     ry="754"
+     rx="1186" />
+  <rect
+     id="rect14"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     rx="0"
+     height="1417"
+     width="5196"
+     y="5196"
+     x="1889" />
+  <rect
+     id="rect16"
+     style="fill:#ffffff;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="661"
+     width="4251"
+     y="5574"
+     x="2362" />
+  <polyline
+     id="polyline18"
+     style="fill:#ffffff;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1889,5905 2362,5905 " />
+  <polyline
+     id="polyline20"
+     style="fill:#ffffff;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6614,5905 7086,5905 7039,5905 " />
+  <polygon
+     id="polygon22"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="8267,5433 7086,6614 7086,5196 7086,5196 8267,4015 " />
+  <polygon
+     id="polygon24"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="8267,4015 3070,4015 1889,5196 1889,5196 7086,5196 " />
+  <polygon
+     id="polygon26"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="7559,4488 2834,4488 2598,4724 2598,4724 7322,4724 " />
+  <ellipse
+     cy="5195"
+     cx="14213"
+     id="ellipse28"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63"
+     ry="754"
+     rx="1186" />
+  <polygon
+     id="polygon30"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="6141,3070 4960,4251 5433,5196 5433,5196 6614,4015 " />
+  <polygon
+     id="polygon32"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="4724,4251 4251,5196 5433,5196 5433,5196 4960,4251 " />
+  <polygon
+     id="polygon34"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round"
+     points="6141,3070 5905,3070 4724,4251 4724,4251 4960,4251 " />
+  <polyline
+     id="polyline36"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="13038,5195 13038,5303 " />
+  <polyline
+     id="polyline38"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="15411,5195 15411,5303 " />
+  <polyline
+     id="polyline40"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="12530,5303 12869,5303 " />
+  <polyline
+     id="polyline42"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="14224,6382 14224,6165 " />
+  <polyline
+     id="polyline44"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="14224,4226 14224,4441 " />
+  <polyline
+     id="polyline46"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="15919,5303 15580,5303 " />
+  <polyline
+     id="polyline48"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="13208,4657 13038,4550 " />
+  <polyline
+     id="polyline50"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="15240,4657 15411,4550 " />
+  <polyline
+     id="polyline52"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="15240,5843 15411,5950 " />
+  <polyline
+     id="polyline54"
+     style="fill:#ffffff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="13208,5843 13038,5950 " />
+  <polygon
+     id="polygon56"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="14348,5303 14055,5195 14055,5195 14624,4783 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.025in"
+     id="text58"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6094"
+     x="4488"
+     xml:space="preserve">Potentiometer</text>
+</svg>

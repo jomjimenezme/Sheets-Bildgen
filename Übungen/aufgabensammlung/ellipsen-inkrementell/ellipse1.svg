@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Mon Nov  9 10:16:59 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="4.0in"
+   height="2.1in"
+   viewBox="1640 2220 4800 2516"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ellipse1.svg">
+  <metadata
+     id="metadata32">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs30" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview28"
+     showgrid="false"
+     inkscape:zoom="3.5317928"
+     inkscape:cx="170.48296"
+     inkscape:cy="85.014605"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <ellipse
+     cy="3543"
+     cx="4015"
+     id="ellipse6"
+     style="fill:none;stroke:#000000;stroke-width:8"
+     ry="708"
+     rx="1889" />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1653,3543 6360,3543 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#000000;stroke-width:8;stroke-miterlimit:8"
+     points="6249 3574 6375 3543 6249 3511 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4015,4724 4015,2379 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#000000;stroke-width:8;stroke-miterlimit:8"
+     points="4047 2490 4015 2364 3984 2490 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:126px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text16"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="2740"
+     x="4062"
+     xml:space="preserve">$b$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:126px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text18"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="3685"
+     x="1889"
+     xml:space="preserve">$-a$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:126px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text20"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="3685"
+     x="5952"
+     xml:space="preserve">$a$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:126px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text22"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="2362"
+     x="4062"
+     xml:space="preserve">$y$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:126px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text24"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="3685"
+     x="6425"
+     xml:space="preserve">$x$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:126px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text26"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="4440"
+     x="4062"
+     xml:space="preserve">$-b$</text>
+</svg>

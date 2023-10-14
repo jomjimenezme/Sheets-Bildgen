@@ -1,0 +1,34 @@
+#!/bin/bash
+# usage makepack lectnum pagerange
+echo $0 $1 $2 > $1.log
+MAIN=`make -s -C .. printmain`
+make -C .. pdf slbwpdf webpdf webbwpdf
+printf "[0m"
+# 4up
+LANGUAGE=`make -s -C .. printlang`
+[ "$LANGUAGE" = german ] && PACKETSTRING=Paket || PACKETSTRING=packet
+PDFJAMPICOPT="{\newfont{\fnt}{pncb}\put(820,580){\makebox(0,0)[tr]{\scalebox{0.4}[0.4]{\fnt $MAIN, $PACKETSTRING: $1}}}}"
+pdfjam --nup 2x2 --frame true --scale 0.98 --landscape --keepinfo \
+    --picturecommand "$PDFJAMPICOPT" \
+    --outfile ${MAIN}_4up_$1.pdf ../${MAIN}.pdf $2
+pdftops -level2 -paper A4 -noshrink -nocenter -r 1200 \
+    ${MAIN}_4up_$1.pdf ${MAIN}_4up_$1.ps
+pdfjam --nup 2x2 --frame true --scale 0.98 --landscape --keepinfo \
+    --picturecommand "$PDFJAMPICOPT" \
+    --outfile ${MAIN}_print_4up_$1.pdf ../${MAIN}_slides_bw.pdf $2
+pdftops -level2 -paper A4 -noshrink -nocenter -r 1200 \
+    ${MAIN}_print_4up_$1.pdf ${MAIN}_print_4up_$1.ps
+pdfjam --nup 2x2 --frame true --scale 0.98 --landscape --keepinfo \
+    --picturecommand "$PDFJAMPICOPT" \
+    --outfile ${MAIN}_col_4up_$1.pdf ../${MAIN}_web.pdf $2
+pdfjam --nup 2x2 --frame true --scale 0.98 --landscape --keepinfo \
+    --picturecommand "$PDFJAMPICOPT" \
+    --outfile ${MAIN}_bw_4up_$1.pdf ../${MAIN}_web_bw.pdf $2
+# 2up
+PDFJAMPICOPT="{\newfont{\fnt}{pncb}\put(580,820){\makebox(0,0)[tr]{\scalebox{0.4}[0.4]{\fnt $MAIN, $PACKETSTRING: $1}}}}"
+pdfjam --nup 1x2 --frame true --scale 0.98 --keepinfo \
+    --picturecommand "$PDFJAMPICOPT" \
+    --outfile ${MAIN}_col_2up_$1.pdf ../${MAIN}_web.pdf $2
+pdfjam --nup 1x2 --frame true --scale 0.98 --keepinfo \
+    --picturecommand "$PDFJAMPICOPT" \
+    --outfile ${MAIN}_bw_2up_$1.pdf ../${MAIN}_web_bw.pdf $2

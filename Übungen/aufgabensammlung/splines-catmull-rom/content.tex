@@ -1,0 +1,23 @@
+\bivtask{Catmull-Rom-Splines}{8}
+%
+Die Catmull-Rom-Splines können durch die Basismatrix
+\[ M_{CR} = \frac12
+\begin{pmatrix}
+  -1 &  2 & -1 & 0 \\
+   3 & -5 &  0 & 2 \\
+  -3 &  4 &  1 & 0 \\
+   1 & -1 &  0 & 0
+\end{pmatrix} \]
+definiert werden. Hierbei handelt es sich um einen interpolierenden
+Spline, d.\,h.\ zu gegebenen Punkten $p₀, …, p_m$ werden
+$p₁, …, p_{m-1}$ durch eine Kurve verbunden.
+\begin{enumerate}
+  \item Zeigen Sie, dass die Kurve wirklich durch $p₁, …, p_{m-1}$ 
+        verläuft und damit die Stetigkeit.
+  \item Berechnen Sie die Tangenten in den Punkten $pᵢ$,
+        $i = 1, …, m - 1$, und zeigen Sie so, dass die Kurve $C¹$-stetig
+        ist.
+  \item Ist die Kurve $C²$-stetig? (Begründung!)
+  \item Ergänzen Sie in Ihrer Lösung zu Aufgabe~\ref{aufgabe:bezier} die
+        Funktion \texttt{maleCRSpline}.
+\end{enumerate} 

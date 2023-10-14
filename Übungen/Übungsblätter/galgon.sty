@@ -1,0 +1,1099 @@
+\ProvidesPackage{galgon}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareOption{german}{\gPresetGerman}
+
+\DeclareOption{deutsch}{\gPresetGerman}
+
+\DeclareOption{english}{\gPresetEnglish}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Presets
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\gtasklabel{}%
+\newcommand\gpointslabel{}%
+\newcommand\gsheetlabel{}%
+\newcommand\gdeadlinelabel{}%
+\newcommand\gsolutionlabel{}%
+\newcommand\gbackpagetext{}%
+\newcommand\gnextpagetext{}%
+\newcommand\gheadertext{}
+\newcommand\ghintlabel{}%
+\newcommand\ghintslabel{}%
+\newcommand\gsheettitle{}%
+\newcommand\gsheetsemester{}%
+\newcommand\gdeadlinetext{}%
+\newcommand\gheaderauthor{}%
+
+\newcommand\g@change@text{}
+\newcommand\g@CHANGE{\color{red}\g@change@text{} }
+
+\newcommand\gPresetGerman{%
+	\renewcommand\g@change@text{ÄNDERN}%
+	\renewcommand\gtasklabel{Aufgabe~}%
+	\renewcommand\gpointslabel{ Punkte}%
+	\renewcommand\gsheetlabel{Blatt}%
+	\renewcommand\gdeadlinelabel{Abgabe}%
+	\renewcommand\gsolutionlabel{\textbf{Lösung:}}%
+	\renewcommand\gbackpagetext{Fortsetzung auf der Rückseite.}%
+	\renewcommand\gnextpagetext{Fortsetzung auf der nächsten Seite.}%
+	\renewcommand\gheadertext{Bergische Universität Wuppertal\\Fakultät für Mathematik and Naturwissenschaften}%
+	\renewcommand\ghintlabel{Hinweis}%
+	\renewcommand\ghintslabel{Hinweise}%
+	% Change per semester/lecture
+	\renewcommand\gsheettitle{\g@CHANGE Veranstaltung}%
+	\renewcommand\gsheetsemester{\g@CHANGE SoSe/WiSe XXXX}%
+	\renewcommand\gdeadlinetext{\g@CHANGE Abgabeinformationen.}%
+	\renewcommand\gheaderauthor{\g@CHANGE Autoren}%
+}%
+
+\newcommand\gPresetEnglish{%
+	\renewcommand\g@change@text{CHANGE}%
+	\renewcommand\gtasklabel{Exercise~}%
+	\renewcommand\gpointslabel{ Points}%
+	\renewcommand\gsheetlabel{Exercise Sheet}%
+	\renewcommand\gdeadlinelabel{Deadline}%
+	\renewcommand\gsolutionlabel{\textbf{Solution:}}%
+	\renewcommand\gbackpagetext{Continued on the back.}%
+	\renewcommand\gnextpagetext{Continued on the next page.}%
+	\renewcommand\gheadertext{University of Wuppertal\\School of Mathematics and Natural Sciences}%
+	\renewcommand\ghintlabel{Hint}%
+	\renewcommand\ghintslabel{Hints}%
+	% Change per semester/lecture
+	\renewcommand\gsheettitle{\g@CHANGE Lecture}%
+	\renewcommand\gsheetsemester{\g@CHANGE SoSe/WiSe XXXX}%
+	\renewcommand\gdeadlinetext{\g@CHANGE Deadline information.}%
+	\renewcommand\gheaderauthor{\g@CHANGE Authors}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ExecuteOptions{german}
+
+\ProcessOptions\relax
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%=======================================================================
+% Sheets
+%=======================================================================
+
+\newcommand\gsheetintro{%
+	{\Large\textbf{\gsheettitle}} \\[3mm]
+	{\gsheetsemester} \\[5mm]
+	{\large\textbf{\gsheetlabel~\thegctr}}
+}
+
+\newcommand\gsheetheader{\aiheader}
+
+%=======================================================================
+% Tasks
+%=======================================================================
+\newlength{\gtaskindent}
+\newlength{\gtasksep}
+
+\setlength\gtaskindent{1em}
+\setlength\gtasksep{1em}
+
+\newcommand\gtaskdeco{.}
+\newcommand\gtaskstar{\raise-.4ex\hbox{\kern.5pt*}}
+\newcommand\gtaskstyle{\bfseries\sffamily}
+\newcommand\gtaskfiller{\middlerule}
+
+%=======================================================================
+% Subtasks
+%=======================================================================
+\newcommand\gsubstar{\raise-.6ex\hbox{\kern.5pt*}}
+
+% Label width for nested subtasks.
+\newlength{\glabelwidthi} % unused
+\newlength{\glabelwidthii}
+\newlength{\glabelwidthiii}
+
+\setlength{\glabelwidthi}{0em} % unused
+\setlength{\glabelwidthii}{1em}
+\setlength{\glabelwidthiii}{1.5em}
+
+% Item separator for nested subtasks.
+\newlength{\gitemsepi} % unused
+\newlength{\gitemsepii}
+\newlength{\gitemsepiii}
+
+\setlength{\gitemsepi}{0em} % unused
+\setlength{\gitemsepii}{0em}
+\setlength{\gitemsepiii}{0em}
+
+% Margin for nested subtasks.
+\newlength{\gsubmargini} % unused
+\newlength{\gsubmarginii}
+\newlength{\gsubmarginiii}
+
+\setlength{\gsubmargini}{0em} % unused
+\setlength{\gsubmarginii}{0em}
+\setlength{\gsubmarginiii}{0em}
+
+% Visual representation of the counter for each level.
+\newcommand{\glabeli}{\arabic{gctri})} % unused
+\newcommand{\glabelii}{\alph{gctrii})\hfill}
+\newcommand{\glabeliii}{\roman{gctriii})}
+
+% If star.
+\newcommand{\glabelsi}{\arabic{gctri}\gsubstar)} % unused
+\newcommand{\glabelsii}{\alph{gctrii}\gsubstar)\hfill}
+\newcommand{\glabelsiii}{\roman{gctriii}\gsubstar)}
+
+%=======================================================================
+% Solutions
+%=======================================================================
+\newlength{\gsolsep}
+\newlength{\gsolmargin}
+
+\setlength\gsolsep{.5em}
+\setlength\gsolmargin{1ex}
+
+%=======================================================================
+% Hints
+%=======================================================================
+\newlength\ghintsep
+\newlength\ghintspace
+\newlength\ghintmargin
+\newlength\ghintindent
+
+\setlength\ghintsep{2pt}
+\setlength\ghintspace{5pt}
+\setlength\ghintmargin{0pt}
+\setlength\ghintindent{10pt}
+
+\newcommand\ghintdeco{:}
+\newcommand\ghintstyle{\itshape}
+
+%=======================================================================
+% YES/NO-Box
+%=======================================================================
+\def\yesnoright{0.75cm}
+\def\yesnoboxspace{1.1cm}
+\def\yesnoboxwidth{1.5mm}
+\def\yesnoboxheight{1.5mm}
+\def\yesnofill{\dotfill}
+\def\yesnofilloffset{0em}
+\def\yesnoraise{0.5ex}
+\def\yesnoyestext{richtig}
+\def\yesnonotext{falsch}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Shortcuts and environment IDs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Trailing @ for starred version.
+\newcommand\g@id@none{0}
+\newcommand\g@id@sheet{1}
+\newcommand\g@id@sheet@{2} % unused
+\newcommand\g@id@tasks{3}
+\newcommand\g@id@tasks@{4}
+\newcommand\g@id@task{5} % unused
+\newcommand\g@id@task@{6} % unused
+\newcommand\g@id@sub{7}
+\newcommand\g@id@sub@{8}
+\newcommand\g@id@hints{9}
+\newcommand\g@id@hints@{10}
+
+\newcommand\g@env@id{\g@id@none}
+\newcommand\genvid{\g@env@id} % interface
+
+\newcommand\gend{%
+	\ifcase\g@env@id\relax%
+		% Do nothing % 0
+	\or\end{sheet}% 1
+	\or% 2
+	\or\end{tasks}% 3
+	\or\end{tasks*}% 4
+	\or% 5
+	\or% 6
+	\or\end{subtasks}% 7
+	\or\end{subtasks*}% 8
+	\or\end{hints}% 9
+	\or\end{hints*}% 10
+	\fi%
+}%
+
+\newcommand\gsheet{\begin{sheet}}
+\newcommand\gtasks{\@ifstar{\begin{tasks*}}{\begin{tasks}}}
+\newcommand\ghints{\@ifstar{\begin{hints*}}{\begin{hints}}}
+\newcommand\gsub{\@ifstar{\begin{subtasks*}}{\begin{subtasks}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Aufgaben-Kram
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Fills.
+\newcommand{\gsetfill}[1]{%
+	\renewcommand\gtaskfiller{#1}%
+}
+
+% Some nice filling styles.
+\newcommand{\customfill}[1]{\leavevmode\xleaders\hbox{#1}\hfill\kern0pt}
+\newcommand{\raisedrule}[2][0em]{\leavevmode\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill\kern0pt}
+\newcommand{\spacedmiddlerule}{\quad\raisedrule[.65ex]{.5pt}\quad}
+\newcommand{\middlerule}{\raisedrule[.65ex]{.5pt}}
+
+% Error messages.
+\def\g@nest@toodeep{\@latex@error{GALGON.STY: Aufg-env too deeply nested}\@ehd}
+\def\g@nest@notin{\@latex@error{GALGON.STY: Not inside Aufg-env}\@ehd}
+\def\g@nest@inside{\@latex@error{GALGON.STY: Already inside Aufg-env}\@ehd}
+\def\g@nest@notsub{\@latex@error{GALGON.STY: Not inside Aufg-sub-env}\@ehd}
+
+% Nesting counter.
+\newcount\g@task@depth \g@task@depth = 0% Keeps track of nesting depth, base is 0
+\chardef\g@nest@max=2% Maximum nesting depth
+
+% Counter for sheets.
+\newcounter{gctr}%
+\renewcommand{\thegctr}{\arabic{gctr}}%
+
+% Counters for the three levels of (sub-) tasks.
+\newcounter{gctri}% Counter for main tasks
+\newcounter{gctrii}% Counter for subtasks
+\newcounter{gctriii}% Counter for subsubtasks
+
+% Human-readable representation of the counters. Defines the appearance
+% when ref'ed.
+\renewcommand{\thegctri}{\arabic{gctri}}
+\renewcommand{\thegctrii}{\arabic{gctri}\alph{gctrii}}
+\renewcommand{\thegctriii}{\arabic{gctri}\alph{gctrii},\roman{gctriii}}
+
+% Sum points, also global
+\newcounter{gpoints}
+\renewcommand{\thegpoints}{\arabic{gpoints}}
+
+\newcounter{gpointsall}
+\renewcommand{\thegpointsall}{\arabic{gpointsall}}
+
+% Dummy commands to circumvent the \edef limitation for length-commands.
+\newcommand{\g@add@sm@i}[1]{\addtolength\gsubmargini{#1}}
+\newcommand{\g@add@sm@ii}[1]{\addtolength\gsubmarginii{#1}}
+\newcommand{\g@add@sm@iii}[1]{\addtolength\gsubmarginiii{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Hideable solutions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\if@g@sol@
+
+% \@g@sol@true
+\@g@sol@false
+
+\newcommand{\gShowSolutions}{\@g@sol@true}
+
+\newcommand{\gsolution}[1]{%
+	\if@g@sol@{%
+
+		\vspace{\gsolsep}
+		\setlength\fboxsep{\dimexpr\gsolmargin-\fboxrule\relax}%
+		\fbox{%
+			\parbox{\dimexpr\linewidth-\gsolmargin-\gsolmargin\relax}{%
+				\noindent%
+				{\gsolutionlabel}\\
+				#1%
+			}%
+		}%
+
+		\vspace*{\gsolsep}
+	}%
+	\fi%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Sheets environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% newpage: new page, content of previous page is not spread, havong empty space at page bottom
+% clearpage: (behaves like newpage) flush floating environments, adding as many pages as required
+% pagebreak: new page, content of previous page is spread over remaining space
+
+% \ifx\\#1\\...\else...\fi fails, if the argument is \\.
+
+\newenvironment{sheet}[2][]{%
+	\renewcommand\g@env@id{\g@id@sheet}%
+	% Check if deadline parameter was empty.
+	\if\relax\detokenize{#2}\relax\else%
+		\newcommand{\g@deadline}{#2}%
+	\fi%
+	% Set counter
+	\if\relax\detokenize{#1}\relax\else%
+		\setcounter{gctr}{#1}%
+		\addtocounter{gctr}{-1}%
+	\fi%
+	% Increment counter, ref'able.
+	\refstepcounter{gctr}%
+	% Header graphics
+	\gsheetheader%
+	\begin{center}
+		\vspace{1em}
+		\gsheetintro{}
+	\end{center}
+}{%
+	% Check if deadline was defined.
+	\ifx\g@deadline\undefined\else%
+		\vfill%
+		\begin{list}{}{%
+			\leftmargin=\gtaskindent%
+			\listparindent=0em%
+			\itemsep=\gtasksep}%
+		\item\hspace{-\gtaskindent}{\gtaskstyle\gdeadlinelabel:} \g@deadline%
+
+		\gdeadlinetext%
+		\end{list}%
+	\fi%
+	\newpage%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Ai default header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\headercenter{%
+% 	\parbox[b]{8cm}{%
+% 		\noindent%
+	\tikz{%
+		\draw node[align=left, inner sep=0, outer sep=0, text depth=0pt] {%
+			\gheadertext{}\\%
+			\gheaderauthor{}%
+		};%
+	}%
+}
+
+\newdimen\g@hdr@ht%
+\newsavebox{\g@hdr@box}%
+\newsavebox{\g@l@img@box}%
+\newsavebox{\g@r@img@box}%
+
+% Centering everything right may be easier using TikZ, perhaps later...
+\newcommand\aiheader{%
+	\savebox{\g@hdr@box}{\headercenter}%
+	\g@hdr@ht=\ht\g@hdr@box%
+	\savebox{\g@l@img@box}{\includegraphics*[height=\g@hdr@ht]{common/BUW_Logo.pdf}}%
+	\savebox{\g@r@img@box}{\includegraphics*[height=\g@hdr@ht]{common/AI_Logo.pdf}}%
+	\noindent%
+	\usebox\g@l@img@box%
+	\ifdim\wd\g@l@img@box<\wd\g@r@img@box%
+		\hspace*{\dimexpr \wd\g@r@img@box - \wd\g@l@img@box \relax}%
+	\fi%
+	\hfill{\usebox\g@hdr@box}\hfill%
+	\ifdim\wd\g@l@img@box>\wd\g@r@img@box%
+		\hspace*{\dimexpr \wd\g@l@img@box - \wd\g@r@img@box \relax}%
+	\fi%
+	\usebox\g@r@img@box%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Aufgaben-Umgebung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\g@reset@label{%
+	\renewcommand{\makelabel}{\hss\csname glabel\g@lvl@postfix\endcsname}%
+}
+
+\newenvironment{g@tasks@base}{
+	\begin{list}{}{%
+		% Check nesting depth.
+		\ifnum \g@task@depth >0\g@nest@inside\else%
+			% Keep track of nesting depth.
+			\advance\g@task@depth\@ne%
+			% Reset gpoints.
+			\setcounter{gpoints}{0}
+			% Defined in the aufgaben/aufgaben* environments to either use
+			% the counter or do nothing.
+			\g@task@ctr@select%
+			% Formatting.
+			\leftmargin=\gtaskindent%
+			\listparindent=0em%
+			\itemsep=\gtasksep%
+			%--------------------------------------------------------------
+			% Item commands for sub-items.
+			% Since sub environments can be nested, item commands can not
+			% properly be defined inside of them without running into
+			% problems. So we do it here while keeping the original item
+			% command intact for other listing environments.
+			%--------------------------------------------------------------
+			% A new item command.
+			% Snapshot old item definition.
+			\let\g@item\item%
+			% Special \item*, not to be used by other listing environments.
+			\newcommand{\g@item@}{%
+				% Overwrite makelabel to control label layout.
+				\renewcommand{\makelabel}{\hss\csname glabels\g@lvl@postfix\endcsname}%
+				\g@item%
+				% If makelabel is not reset here, it will
+				\g@reset@label%
+			}%
+			% The default item.
+			% To prevent trouble with other environments using the \item command,
+			% we inject a special \item* command but let the non-starred variant
+			% default to the original \item.
+			\renewcommand\item{%
+				\@ifstar\g@item@\g@item%
+			}%
+			% Item without label (cannot be star-ed).
+			\newcommand{\nitem}{%
+				\renewcommand{\makelabel}{}%
+				\g@item%
+				\g@reset@label%
+			}%
+			% Item is not counted (cannot be star-ed).
+			% Should not be the forst item in the list, or the label will 
+			% be empty.
+			\newcommand{\citem}{%
+				\renewcommand{\makelabel}{\hss\csname glabel\g@lvl@postfix\endcsname}%
+				\g@item[]%
+				\g@reset@label%
+			}%
+			% Item is not counted and not labeled (cannot be star-ed).
+			\newcommand{\ncitem}{%
+				\renewcommand{\makelabel}{}%
+				\g@item[]%
+				\g@reset@label%
+			}%
+			\newcommand{\cnitem}{\ncitem}%
+			%--------------------------------------------------------------
+		\fi%
+	}%
+}{%
+	\end{list}%
+}%
+
+%=======================================================================
+% The non-starred version uses usecounter and additionally allows to
+% start the counter at a defined number.
+%=======================================================================
+\newenvironment{tasks}[1][1]{%
+	\renewcommand\g@env@id{\g@id@tasks}%
+	\newcommand\g@task@ctr@select{%
+		\usecounter{gctri} %
+		\setcounter{gctri}{#1} %
+		\addtocounter{gctri}{-1} %
+	}%
+	\newcommand\g@task@ctr@ref{}%
+	\begin{g@tasks@base}%
+}{%
+	\end{g@tasks@base}%
+}%
+
+%=======================================================================
+% The starred version does not invoke usecounter and instead uses 
+% refstepcounter to increment the exercise counter. This allows the 
+% counter to be persistent over multiple aufgaben environments and is 
+% intended for use with the includeonly method or the pdfslices method 
+% to produce consecutive exercise numbers.
+%=======================================================================
+\newenvironment{tasks*}{%
+	\renewcommand\g@env@id{\g@id@tasks@}%
+	\newcommand\g@task@ctr@select{}%
+	\newcommand\g@task@ctr@ref{\refstepcounter{gctri}}%
+	\begin{g@tasks@base}%
+}{%
+	\end{g@tasks@base}%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Aufgaben
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% How does the integer argument check work?
+%
+% \def\check#1{%
+%   \if\relax\detokenize\expandafter{\romannumeral-0#1}\relax%
+%   integer\else not an integer\fi}
+%
+% First, \if\relax<whatever>\relax is true if <whatever> is nothing,
+% effectively comparing \relax to \relax, which is true. Thus, we need
+% <whatever> to be nothing, if #1 is an integer.
+%
+% To achieve that, \romannumeral can be used to identify valid integer
+% input. More preciesely, \romannumeral expands to nothing for valid
+% negative integer input. It stops parsing at the first non-digit token,
+% expanding tokens on the way (so macros expanding to integers can be
+% parsed), however, if no digit could be found, the primitive produces 
+% an error.
+%
+% To supply a negative integer AND a digit, '-0' prepends the expression
+% to be checked. If now #1 expands to an integer expression, 
+% \romannumeral expands to nothing. Otherwise, it expands to whatever
+% #1 is, stripped of potentially leading digits.
+%
+% That alone is enough to check for integer input but fails, e.g., for
+% \\ and \relax, the first simply producing an error, the latter passing
+% the test despite not expanding to an integer.
+%
+% \detokenize decomposes its input to catcode 12 characters, expecting
+% a group to work on and expanding the following token to find it.
+% However \detokenize{\romannumeral-0#1} will simply expand to the 
+% literal string '\romannumeral-0##1'. To actually expand \romannumeral,
+% \expandafter can be used.
+%
+% \expandafter<token1><token2>... delays the expansion of the token 
+% following it (<token1>) and expands <token2> to let its result be
+% considered in the expansion of <token1>. A special case is <token1>
+% being '{', delaying the opening of a group. The group here is actually
+% the argument group for \detokenize. 
+
+% This only works because \detokenize expands the token following it in 
+% search of its argument list. \expandafter delays '{' and expands 
+% \romannumeral, then returning to '{' after which \detokenize now sees 
+% the expansion of \romannumeral.
+%
+% With this literal comparison, if #1 is \relax or \\, the comparison 
+% becomes a comparison between \relax and '\', the literal beginning of 
+% \relax or \\ and thus correctly fails.
+
+\newcommand\g@task@base[2][]{%
+	\g@item
+		\hspace{-\gtaskindent}{\gtaskstyle\gtasklabel\arabic{gctri}\g@task@deco~}%
+	\if\relax\detokenize{#2}\relax\else%
+		\emph{(#2)}~%
+	\fi%
+		\gtaskfiller%
+	\if\relax\detokenize{#1}\relax\else%
+		~(#1\gpointslabel)%
+		% Check for numeric input.
+		\if\relax\detokenize\expandafter{\romannumeral-0#1}\relax%
+			\addtocounter{gpoints}{#1}%
+			\addtocounter{gpointsall}{#1}%
+		\fi%
+	\fi%
+
+}
+
+\newcommand\g@task@deco{}
+
+\newcommand\g@task{%
+	\renewcommand\g@task@deco{\gtaskdeco}%
+	\g@task@base%
+}
+
+\newcommand\g@task@{%
+	\renewcommand\g@task@deco{\gtaskstar}%
+	\g@task@base%
+}
+
+\newcommand{\gtask}{%
+	\g@task@ctr@ref%
+	\@ifstar%
+ 	\g@task@%
+	\g@task%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Nested sub-tasks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\g@sub@ctr@select[1]{}%
+
+% Specify how counter is to be used, delegate parameters.
+\newenvironment{subtasks}{%
+	\renewcommand\g@env@id{\g@id@sub}%
+	\renewcommand\g@sub@ctr@select[1]{%
+		\usecounter{\g@ctr@lvl}%
+		\setcounter{\g@ctr@lvl}{##1}%
+		\addtocounter{\g@ctr@lvl}{-1}%
+	}%
+	\begin{g@sub@base}%
+}{%
+	\end{g@sub@base}%
+}
+
+% Specify how counter is to be used, delegate parameters.
+\newenvironment{subtasks*}{%
+	\renewcommand\g@env@id{\g@id@sub@}%
+	\renewcommand\g@sub@ctr@select[1]{%
+		\edef\g@ctr@sub@old{\arabic{\g@ctr@lvl}}% Store current value
+		\usecounter{\g@ctr@lvl}%
+		\setcounter{\g@ctr@lvl}{\g@ctr@sub@old}%
+	}%
+	\begin{g@sub@base}%
+}{%
+	\end{g@sub@base}%
+}
+
+\newenvironment{g@sub@base}[1][1]{%
+	% Check if \g@task@depth < 1. If yes, we are not inside the Aufgaben-environment
+	\ifnum \g@task@depth <1\g@nest@notin\else%
+	% Check if \g@task@depth > \g@nest@max, i.e. the maximum nesting depth.
+	\ifnum \g@task@depth >\g@nest@max\g@nest@toodeep\else%
+		% \g@task@depth ++
+		\advance\g@task@depth\@ne%
+		\begin{list}{}{%
+			% The \edef has to be made inside a group (i.e. the list 
+			% environment), otherwise the definition would be global and 
+			% still overwrite settings for items AFTER the nested list has 
+			% been left. This means, that the \edef cannot be done 
+			% \begin{list}{*HERE*}{...}.
+			% Get current nesting level postfix (i.e., i, ii, iii).
+			\edef\g@lvl@postfix{\romannumeral\the\g@task@depth}%
+			% Current nesting level counter name by roman representation of
+			% \g@task@depth as string.
+			\def\g@ctr@lvl{gctr\g@lvl@postfix}%
+			% Resetlabel will initially set makelabel for all default item 
+			% commands, that are not preceded by any special item command 
+			% (citem, nitem, ncitem) and thus are without preceeding 
+			% resetlabel. Every listing environment will most likely 
+			% redefine its own makelabel, thus this should not give any 
+			% trouble.
+			\g@reset@label% Redefines makelabel!
+			% Tells the list that this is the counter to use for item 
+			% numbering. Also resets the counter. Automatic labeling does 
+			% not seem to work correctly with only refstepcounter.
+			\g@sub@ctr@select{#1}%
+			% It seems like you can't do \csname and \edef tricks with 
+			% length-commands, e.g. \addtolength. Therefore, we use a 
+			% dummy-command \g@add@sm@??? as wrapper and pass the argument.
+			% Other parameters simply use the \csname trick.
+			\labelwidth=\csname glabelwidth\g@lvl@postfix\endcsname%
+			\csname g@add@sm@\g@lvl@postfix\endcsname{\labelwidth}%
+			\csname g@add@sm@\g@lvl@postfix\endcsname{\labelsep}%
+			\leftmargin=\csname gsubmargin\g@lvl@postfix\endcsname%
+			\itemsep=\csname gitemsep\g@lvl@postfix\endcsname%
+		}%
+	\fi%
+	\fi%
+}{%
+	\end{list}%
+	\advance\g@task@depth\m@ne%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hints
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newsavebox{\g@hint@box}%
+
+\newcommand\ghint[1]{{\gtaskstyle \ghintlabel\ghintdeco} {\ghintstyle #1}}
+
+\newenvironment{hints}{%
+	\renewcommand\g@env@id{\g@id@hints}%
+	{\gtaskstyle \ghintslabel\ghintdeco~}%
+	\begin{g@hints@base}%
+}{%
+	\end{g@hints@base}%
+}%
+
+\newenvironment{hints*}{%
+	\renewcommand\g@env@id{\g@id@hints@}%
+	\begin{g@hints@base}%
+}{%
+	\end{g@hints@base}%
+}%
+
+\newenvironment{g@hints@base}[2][$\circ$]{%
+	{#2}%
+	\newcommand\g@hint@label{#1}%
+	\begin{list}{}{%
+		\setlength\topsep{\ghintmargin}%
+		\setlength\partopsep{0pt}%
+		\setlength\parskip{0pt}%
+% 		\setlength\baselineskip{0pt}%
+		\setlength\itemsep{\ghintsep}%
+		\setlength\parsep{0pt}%
+		\setlength\listparindent{0pt}%
+		\setlength\itemindent{0pt}%
+		\setlength\labelsep{\ghintspace}%
+		\savebox{\g@hint@box}{\g@hint@label}%
+		\setlength\labelwidth{\dimexpr \ghintindent + \wd\g@hint@box \relax}%
+		\setlength\leftmargin{\dimexpr \labelwidth + \labelsep \relax}%
+		\renewcommand\makelabel{\normalfont\hss\g@hint@label}%
+		\ghintstyle%
+	}
+}{%
+	\end{list}%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page breaks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\gbackpage}{
+	\vfill
+	\textbf{\gbackpagetext}
+	\pagebreak
+}
+\newcommand{\gnextpage}{
+	\vfill
+	\textbf{\gnextpagetext}
+	\pagebreak
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Anderer Kram
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\dett}[1]{\det\left(#1\right)}
+
+\newcommand{\ddx}{\frac{d}{dx}}
+\newcommand{\dddx}{\dfrac{d}{dx}}
+
+\newcommand{\lvec}{\left( \begin{array}{c}}
+\newcommand{\rvec}{\end{array} \right)}
+
+\newcommand{\pdd}[2]{\left(\ #1\ \vert\ #2\ \right)}
+\newcommand{\pddd}[3]{\left(\ #1\ \vert\ #2\ \vert\ #3\ \right)}
+\newcommand{\pdddd}[4]{\left(\ #1\ \vert\ #2\ \vert\ #3\ \vert\ #4\ \right)}
+
+\newcommand{\spann}{\textnormal{span}}
+\newcommand{\rott}{\textnormal{rot}}
+\newcommand{\divv}{\textnormal{div}}
+\newcommand{\gradd}{\textnormal{grad}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+% \newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\RR}[1]{\mathbb{R}^{#1}}
+\newcommand{\ZZ}[1]{\mathbb{Z}^{#1}}
+\newcommand{\CC}[1]{\mathbb{C}^{#1}}
+\newcommand{\NN}[1]{\mathbb{N}^{#1}}
+
+\newcommand{\RRR}[2]{\mathbb{R}^{#1 \times #2}}
+\newcommand{\ZZZ}[2]{\mathbb{Z}^{#1 \times #2}}
+\newcommand{\CCC}[2]{\mathbb{C}^{#1 \times #2}}
+\newcommand{\NNN}[2]{\mathbb{N}^{#1 \times #2}}
+
+\newcommand{\fat}[1]{\boldsymbol{#1}}
+
+\newcommand{\rb}{\right)}
+\newcommand{\lb}{\left(}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\dlim}{\displaystyle\lim}
+\providecommand{\dfrac}[2]{{\displaystyle\frac{#1}{#2}}}
+\newcommand{\sdfrac}[2]{\smash{\dfrac{#1}{#2}}}
+\newcommand{\dx}{\,dx}
+\newcommand{\dy}{\,dy}
+% \newcommand{\dz}{\,dz}
+\newcommand{\da}[1]{\,d#1}
+\newcommand{\sgn}{\textnormal{sgn}}
+\newcommand{\grad}{\textnormal{grad}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boxes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\dummy}{
+	\hbox{}
+}
+% \parbox[outer-positioning][height][inner-positioning]{width}{text}
+\newcommand{\emptybox}[3][c]{
+	\fbox{\parbox[#1]{#2}{\rule{0cm}{#3}}}
+}
+\newcommand{\simpleboxf}[4][c]{
+	\framebox{\parbox[#1][#3][c]{#2}{\centering #4}}
+}
+\newcommand{\simpleboxfb}[4][c]{
+	\framebox{\parbox[#1][#3][b]{#2}{\centering #4}}
+}
+\newcommand{\simplebox}[4][c]{
+	\makebox{\parbox[#1][#3][c]{#2}{\centering #4}}
+}
+\newcommand{\simpleboxb}[4][c]{
+	\makebox{\parbox[#1][#3][b]{#2}{\centering #4}}
+}
+
+\newcommand\wrapfbox[1]{%
+	\begingroup%
+	\setlength\fboxrule{.1pt}% 
+	\setlength\fboxsep{-\fboxrule}%
+	\fbox{#1}%
+	\endgroup%
+}%
+
+\newcommand\wrapfparbox[1]{%
+	\begingroup%
+	\setlength\fboxrule{.1pt}% 
+	\setlength\fboxsep{-\fboxrule}%
+	\fbox{\parbox{\linewidth}{%
+		#1%
+	}}%
+	\endgroup%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Yes/No Kram
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\yesnoalign{b}
+
+\newcommand{\yesno}{
+	\simplebox{0em}{0em}{}%
+	\hspace*{\yesnofilloffset}\hfill\hspace*{\yesnofilloffset}%
+	\simpleboxb[\yesnoalign]{\yesnoboxspace}{\yesnoboxheight}{\yesnoyestext}%
+	\simpleboxb[\yesnoalign]{\yesnoboxspace}{\yesnoboxheight}{\yesnonotext}%
+	\hspace*{\yesnoright}
+}
+
+\newcommand{\yesnoboxes}{
+	\hspace*{\yesnofilloffset}\yesnofill\hspace*{\yesnofilloffset}%
+	\raisebox{\yesnoraise}{%
+		\simplebox[\yesnoalign]{\yesnoboxspace}{\yesnoboxheight}{%
+			\emptybox[\yesnoalign]{\yesnoboxwidth}{\yesnoboxheight}%
+		}%
+	}%
+	\raisebox{\yesnoraise}{%
+		\simplebox[\yesnoalign]{\yesnoboxspace}{\yesnoboxheight}{%
+			\emptybox[\yesnoalign]{\yesnoboxwidth}{\yesnoboxheight}%
+		}%
+	}%
+	\hspace*{\yesnoright}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TikZ-Kram
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\tikzkaro}[2]{
+
+\noindent
+\tikz[gray!75,y=1cm,x=1cm,yscale=-1,xscale=1]{
+	\draw[white] (0,0) -- (0,0);
+	\draw[white, shift={(0,0.3)}] (0,#2) -- (0,#2);
+	\draw[step=0.5,shift={(0,0.2)}] (0,0) grid (#1,#2);
+}
+}
+
+\newcommand{\tikzoverlay}[3][0,0]{
+
+\noindent
+\tikz[gray!75,overlay,y=1cm,x=1cm,yscale=-1,xscale=1]{
+	\draw[step=0.5,shift={(#1)}] (0,0) grid (#2,#3);
+}
+}
+
+\newcommand{\tikzwhite}[5][0,0]{
+
+\noindent
+\tikz[overlay,y=1cm,x=1cm,yscale=-1,xscale=1]{
+	\draw[gray!75,step=0.5,shift={(#1)}] (0,0) grid (#2,#3);
+	\fill[white,shift={(#1)}] (-0.1,-0.1) rectangle (#4-0.1,#5-0.1);
+}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Some catcode helpers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%	 0 - Escape character; this signals the start of a control sequence. backslash \ (code 92) is a default escape character.
+%	 1 - Beginning of group; causes TeX to enter a new level of grouping. The open brace { is a beginningof-group character.
+%	 2 - End of group; TeX closes the current level of grouping. TeX has the closing brace } as end-of-group character.
+%	 3 - Math shift; TeX uses the dollar sign $ for this.
+%	 4 - Alignment tab; TeX uses the ampersand &.
+%	 5 - End of line; a character that TeX considers to signal the end of an input line.
+%	 6 - Parameter character; this indicates parameters for macros. In TeX this is the hash sign #.
+%	 7 - Superscript; Default superscript is the circumﬂex ^.
+%	 8 - Subscript; Default superscript is underscore _.
+%	 9 - Ignored; characters of this category are removed from the input.
+%	10 - Space; space characters receive special treatment. ASCII space character, code 32 and tab character (code 9).
+%	11 - Letter; by default only the characters a..z, A..Z are in this category. Often, macro packages make some ‘secret’ character (for instance @) into a letter, see below.
+%	12 - Other; TeX puts everything that is not in the other categories into this category. Thus it includes, for instance, digits, punctuation and @.
+%	13 - Active; active characters function as a TeX command, without being preceded by an escape character. The tie character ~ has such category.
+%	14 - Comment character; Default comment character is %.
+%	15 - Invalid character; TeX causes an error in the case of such chars.
+% 
+
+\newcommand{\getcatcode}[1]{\the\catcode`#1}
+
+\newcommand{\printcatcode}[1]{%
+	\ifcase\catcode`#1\relax
+		escape\or
+		group start\or
+		group end\or
+		math shift\or
+		alignment\or
+		end of line\or
+		parameter\or
+		superscript\or
+		subscript\or
+		ignored\or
+		space\or
+		letter\or
+		other\or
+		active\or
+		comment\or
+		invalid\fi%
+}
+
+%% Info on tokens (from the TeXBook)
+
+% When TeX reads a line of text from a file, or a line of text that you 
+% entered directly on your terminal, it converts that text into a list 
+% of "tokens." A token is either 
+%   (a) a single character with an attached category code, or 
+%   (b) a control sequence. 
+% For example, if the normal conventions of plain TeX are in force, the 
+% text {\hskip 36 pt} is converted into a list of eight tokens:
+% 
+%   Text:    { \hskip 3  6  _  p  t  }   %% _ denotes a space here
+%   catcode: 1        12 12 10 11 11 2
+% 
+% The subscripts here are the category codes, as listed earlier: 1 for 
+% "beginning of group," 12 for "other character," and so on. The \hskip 
+% doesn't get a subscript, because it represents a control sequence 
+% token instead of a character token. Notice that the space after \hskip 
+% does not get into the token list, because it follows a control word.
+% It is important to understand the idea of token lists, if you want to 
+% gain a thorough understanding of TeX, and it is convenient to learn 
+% the concept by thinking of TeX as if it were a living organism. The 
+% individual lines of input in your files are seen only by TeX's "eyes" 
+% and "mouth"; but after that text has been gobbled up, it is sent to 
+% TeX's "stomach" in the form of a token list, and the digestive 
+% processes that do the actual typesetting are based entirely on tokens. 
+% As far as the stomach is concerned, the input flows in as a stream of 
+% tokens, somewhat as if your TeX manuscript had been typed all on one 
+% extremely long line.
+% You should remember two chief things about TeX's tokens: (1) A control 
+% sequence is considered to be a single object that is no longer 
+% composed of a sequence of symbols. Therefore long control sequence 
+% names are no harder for TeX to deal with than short ones, after they 
+% have been replaced by tokens. Furthermore, spaces are not ignored 
+% after control sequences inside a token list; the ignore-space rule 
+% applies only in an input file, during the time that strings of 
+% characters are being tokenized. (2) Once a category code has been 
+% attached to a character token, the attachment is permanent. For 
+% example, if character { were suddenly declared to be of category 12 
+% instead of category 1, the characters {1 already inside token lists of 
+% TeX would still remain of category 1; only newly made lists would 
+% contain {12 tokens. In other words, individual characters receive a 
+% fixed interpretation as soon as they have been read from a file, based 
+% on the category they have at the time of reading. Control sequences 
+% are different, since they can change their interpretation at any time. 
+% TeX's digestive processes always know exactly what a character token 
+% signifies, because the category code appears in the token itself; but 
+% when the digestive processes encounter a control sequence token, they 
+% must look up the current definition of that control sequence in order 
+% to figure out what it means.
+
+%% Some catcode info
+% \catcode`\@ = 11 % \makeatletter does the same
+% \catcode`\@ = 12 % \makeatother does the same
+% \catcode`\\ = 0
+% \catcode`\[ = 1
+% \catcode`\] = 2
+
+%% Math code info
+% In text a character token just has two properties, its character code 
+% and its cat(egory)code. If + is seen in the file it is (normally) 
+% given catcode 12 (punctuation) and character code comes from the file 
+% encoding so is 43 in this case. In math mode lists the math atoms need 
+% more structure, Each symbol comes from a different font and gets 
+% different spacing depending on its class (operator, binary-infix, 
+% relation, etc) In typical 1970's style these properties are packed 
+% compactly into bit fields in a single integer called a mathcode, which 
+% is normally expressed in hex so you can easily pull apart the fields. 
+% The mathcode of + in plain tex is set as
+% 
+% \mathcode`\+="202B
+% 
+% which means that it is of class 2 (binary infix), fam0 (the roman 
+% font), and character hex 2B which is the decimal 43 the character code 
+% of + in the encoding in the roman font. The mathcode is only consulted 
+% for normal character tokens, catcodes 11 and 12 (letters and 
+% punctuation), character tokens with special catcodes like 4 (& 
+% normally) retain their special behaviour and their mathcode is not 
+% consulted. However if you generate a catcode 12 & from a macro or via 
+% \string& then its mathcode will be consulted.
+% 
+% \delcode is similar but packs in a few extra bits as delimiters need 
+% more information the delcode of ( in plain is
+% 
+% \delcode`\(="028300
+% 
+% which says that small ( come from position hex 28 in font \fam0 but 
+% then you need to switch to character hex 0 in \fam3 to get big 
+% brackets. (The font metrics specify chains of glyphs to use to build 
+% larger characters if needed, but they need to know where to start.
+% 
+% \mathcode"8000 is a special code that is not looked up in the usual 
+% way. If a character has that mathcode, the definition of the active 
+% (catcode 13) token is used instead, even though the character itself 
+% is not active. this is used in plain and LaTeX to allow ' to work as a 
+% normal non-active apostrophe in text but in math it has catcode hex 
+% 8000 so the active definition is used, which expands to ^{\prime}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Font sizes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 1ex is weakly related to the hight of one 'x'.
+% \dimen0=\fontdimen5\font
+% \dimen0=1ex
+% Both are equivalent.
+
+% e-TeX
+% \dimen0=\fontcharht\font`B % height
+% \dimen2=\fontchardp\font`q % depth
+% \dimen4=\fontcharwd\font`A % width
+% \dimen6=\fontcharic\font`n % italic correction
+
+% or
+% \setlength{\dimen0}{\fontcharht\font`B}
+
+% \font can be replaced by the symbolic name of any font: 
+% \OT1/cmr/m/n/10 (which must be built with \csname...\endcsname)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Boxed letters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\showboxes#1{%
+	\begingroup\fboxrule=.1pt \fboxsep=-\fboxrule
+	\@showboxes#1\@showboxes\@empty
+	\endgroup%
+}
+\def\@showboxes#1#2{%
+	\ifx#2\@showboxes
+		\fbox{\color{gray}#1}\expandafter\@gobble
+	\else
+		\setbox0=\hbox{{#1}{#2}}\setbox2=\hbox{#1#2}%
+		\dimen0=\wd0 \advance\dimen0 -\wd2 % \dimen0 contains the kern between the two chars
+		\fbox{\color{gray}#1}\kern-\dimen0
+		\expandafter\@showboxes
+	\fi#2%
+}
+
+% use: \showboxes{AVov}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Symbols (non-T1 (e.g. OT1), etc.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\mybs{\symbol{`\\}}
+\newcommand\mybra{\symbol{`\{}}
+\newcommand\myket{\symbol{`\}}}
+
+% lowered tilde
+% \newcommand\mytilde{\raise-.5ex\hbox{\char`\~}}
+\newcommand{\mytilde}{\raise-.65ex\hbox{\char`\~}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Blind text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\gblindcore}{%
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+mollit anim id est laborum.%
+}
+
+\newcommand{\gblindtext}{\gblindcore}

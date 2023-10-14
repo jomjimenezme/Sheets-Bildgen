@@ -1,0 +1,60 @@
+\bivtask{Test des Frameworks}{0}
+%
+Für die Bearbeitung der Übungsblätter existiert auf den Rechnern des
+CIP-Clusters in Raum G.14.11 ein Qt-Framework. Dieses befindet sich im 
+Verzeichnis
+%
+\vspace{-.5em}%
+\begin{alltt}
+   /home/bildgen/cppqt
+\end{alltt}
+\vspace{-.5em}%
+Um damit arbeiten zu können, gehen Sie wie folgt vor:
+%
+\begin{bivsubt}
+	\bivitem Falls in Ihrem Home-Verzeichnis nicht bereits ein
+		Unterverzeichnis mit dem Namen \texttt{bin} existiert, erstellen
+		Sie es mittels
+		\begin{alltt}
+		   cd ~
+		   mkdir bin 
+		\end{alltt}
+		Sie müssen sich danach neu einloggen, damit das Verzeichnis dem
+		Suchpfad hinzugefügt wird.
+	\bivitem Erzeugen Sie einen symbolischen Link auf das Compiler-Script
+		\texttt{g++drawqt} in Ihrem soeben erzeugten Verzeichnis 
+		\texttt{\string~/bin}:
+		\begin{alltt}
+		   ln -s /home/bildgen/cppqt/g++drawqt \string~/bin
+		\end{alltt}
+	\bivitem Ein Beispielprogramm finden Sie unter
+		\begin{alltt}
+		   /home/bildgen/cppqt/bsp1.cc
+		\end{alltt}
+		Kopieren Sie das Beispielprogramm in Ihr Home-Verzeichnis und
+		rufen Sie das Compiler-Script mit der Quelltext-Datei des
+		Beispiels als Parameter auf, um es zu kompilieren:
+		\begin{alltt}
+		   cp /home/bildgen/cppqt/bsp1.cc .
+		   g++drawqt bsp1.cc 
+		\end{alltt}
+		Erlaubte Dateiendungen sind \texttt{c}, \texttt{cc}, \texttt{cpp} 
+		und \texttt{c++}.
+	\bivitem Das erzeugte Programm trägt den Namen der Quelltextdatei 
+		ohne deren Endung. Testen Sie das Beispielprogramm:
+		\begin{alltt}
+		   ./bsp1
+		\end{alltt}
+\end{bivsubt}
+%
+Eine vollständige Auf\/listung der Funktionalität des Qt-Frameworks 
+finden Sie unter:
+%
+\vspace{-.5em}%
+\begin{alltt}
+   /home/bildgen/cppqt/doc/index.html 
+\end{alltt}
+\vspace{-.5em}%
+%
+Es existiert noch ein weiteres Compiler-Script namens 
+\texttt{g++drawqt-g}, welches mit Debug-Symbolen compiliert.

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Tue Oct 27 16:20:42 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="15.4in"
+   height="6.5in"
+   viewBox="1596 1845 18431 7741"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="fig_farbeStrategieKrumm2.svg">
+  <metadata
+     id="metadata78">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs76" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2432"
+     inkscape:window-height="1273"
+     id="namedview74"
+     showgrid="false"
+     inkscape:zoom="0.65656567"
+     inkscape:cx="214.48802"
+     inkscape:cy="216.27758"
+     inkscape:window-x="128"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:round;stroke-linejoin:miter"
+     points="2409,4960 4960,3307 5196,6047 " />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:round;stroke-linejoin:miter"
+     points="2409,4960 5196,6047 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:round;stroke-linejoin:miter"
+     points="5196,6000 6850,8740 7606,4440 5196,6047 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:round;stroke-linejoin:miter"
+     points="4960,3307 7606,4440 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:round;stroke-linejoin:miter"
+     points="7606,4440 8976,7086 6850,8740 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4960,3354 4960,2376 " />
+  <polygon
+     id="polygon18"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="4881,2318 4960,2381 5039,2318 5039,2318 4960,2129 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2362,4960 1824,4387 " />
+  <polygon
+     id="polygon22"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="1725,4397 1826,4390 1840,4289 1840,4289 1654,4206 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="7653,4440 8195,3825 " />
+  <polygon
+     id="polygon26"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="8174,3729 8192,3828 8292,3833 8292,3833 8359,3639 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6850,8740 6795,9058 " />
+  <polygon
+     id="polygon30"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="6864,9128 6796,9054 6708,9103 6708,9103 6755,9302 " />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="8976,7086 9445,7243 " />
+  <polygon
+     id="polygon34"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="9526,7186 9442,7240 9477,7335 9477,7335 9681,7320 " />
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5196,6047 4771,6198 " />
+  <polygon
+     id="polygon38"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="4741,6292 4774,6197 4688,6143 4688,6143 4537,6282 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text40"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="2314"
+     x="5196"
+     xml:space="preserve">$\vektor{n}_{\point{Q}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text42"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3212"
+     x="5102"
+     xml:space="preserve">$\point{Q}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text44"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5480"
+     x="2125"
+     xml:space="preserve">$\point{P}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text46"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6377"
+     x="3874"
+     xml:space="preserve">$\vektor{n}_{\point{R}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text48"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4629"
+     x="7937"
+     xml:space="preserve">$\point{S}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text50"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3779"
+     x="8456"
+     xml:space="preserve">$\vektor{n}_{\point{S}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text52"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6897"
+     x="9023"
+     xml:space="preserve">$\point{U}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text54"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7795"
+     x="9401"
+     xml:space="preserve">$\vektor{n}_{\point{U}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text56"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="9401"
+     x="6992"
+     xml:space="preserve">$\vektor{n}_{\point{T}}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text58"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="8929"
+     x="6283"
+     xml:space="preserve">$\point{T}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text60"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6755"
+     x="4960"
+     xml:space="preserve">$\point{R}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;line-height:0%;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text62"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4110"
+     x="1700"
+     xml:space="preserve">$\vektor{n}_{\point{P}}$</text>
+  <polyline
+     id="polyline64"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:bevel"
+     points="2362,4960 2363,4959 2366,4956 2371,4951 2380,4942 2391,4931 2407,4915 2427,4895 2451,4871 2479,4843 2511,4811 2546,4775 2585,4737 2627,4697 2670,4654 2716,4609 2762,4564 2808,4519 2855,4474 2901,4430 2946,4387 2992,4344 3035,4304 3078,4264 3119,4226 3159,4191 3196,4157 3233,4124 3270,4093 3304,4064 3338,4036 3371,4009 3402,3984 3434,3960 3464,3937 3495,3914 3524,3893 3554,3874 3584,3854 3614,3835 3647,3814 3680,3794 3714,3774 3748,3755 3783,3736 3819,3717 3856,3699 3893,3681 3932,3664 3973,3646 4016,3628 4060,3610 4108,3591 4156,3573 4206,3554 4258,3535 4312,3517 4367,3497 4424,3478 4480,3459 4537,3440 4593,3422 4646,3404 4699,3387 4747,3373 4791,3358 4831,3346 4865,3336 4893,3327 4916,3320 4934,3315 4946,3311 4954,3309 4958,3308 4960,3307 " />
+  <polyline
+     id="polyline66"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:bevel"
+     points="2362,4960 2364,4960 2368,4961 2375,4963 2388,4967 2406,4972 2430,4978 2460,4985 2496,4995 2538,5006 2586,5019 2640,5033 2698,5048 2760,5064 2825,5081 2891,5099 2959,5118 3028,5135 3097,5154 3165,5173 3232,5191 3297,5209 3360,5227 3421,5244 3480,5260 3535,5276 3590,5292 3641,5308 3691,5322 3738,5337 3784,5351 3827,5365 3870,5379 3910,5392 3950,5405 3988,5419 4026,5432 4062,5445 4098,5459 4134,5472 4173,5487 4211,5503 4249,5518 4287,5534 4325,5550 4364,5567 4402,5584 4439,5602 4478,5620 4516,5638 4555,5657 4593,5677 4632,5697 4669,5717 4707,5738 4745,5760 4783,5781 4820,5803 4857,5825 4894,5848 4930,5870 4965,5893 5000,5917 5034,5940 5067,5963 5100,5986 5132,6009 5164,6032 5194,6056 5225,6079 5254,6102 5282,6125 5311,6149 5338,6173 5366,6196 5394,6220 5420,6244 5447,6269 5475,6295 5501,6320 5528,6346 5555,6373 5583,6401 5610,6429 5638,6458 5666,6488 5694,6518 5721,6550 5750,6581 5778,6614 5805,6646 5834,6680 5861,6713 5888,6748 5916,6783 5943,6817 5969,6852 5995,6888 6020,6922 6046,6957 6070,6992 6094,7026 6117,7061 6139,7096 6161,7129 6182,7163 6203,7196 6223,7230 6243,7262 6262,7296 6281,7329 6299,7362 6317,7395 6334,7428 6351,7462 6369,7497 6386,7532 6403,7568 6419,7605 6437,7644 6454,7683 6472,7725 6491,7769 6509,7815 6529,7862 6548,7911 6567,7963 6588,8016 6609,8072 6630,8129 6651,8186 6674,8245 6695,8303 6716,8361 6735,8416 6754,8470 6772,8519 6789,8565 6803,8606 6815,8641 6826,8670 6834,8695 6840,8712 6845,8725 6848,8733 6849,8738 6850,8740 " />
+  <polyline
+     id="polyline68"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:bevel"
+     points="6850,8740 6851,8738 6853,8733 6857,8726 6865,8713 6873,8697 6886,8675 6900,8647 6918,8615 6938,8579 6960,8539 6983,8497 7008,8453 7034,8408 7059,8363 7084,8318 7109,8275 7134,8233 7159,8192 7182,8153 7204,8116 7225,8081 7246,8049 7266,8017 7286,7988 7304,7960 7323,7932 7342,7906 7361,7882 7379,7858 7398,7834 7417,7811 7437,7786 7458,7762 7479,7738 7501,7714 7523,7691 7546,7667 7570,7644 7594,7620 7618,7596 7644,7573 7670,7550 7696,7528 7723,7506 7751,7484 7778,7462 7805,7441 7833,7421 7861,7401 7888,7383 7916,7364 7943,7348 7969,7331 7996,7315 8023,7300 8048,7287 8073,7273 8098,7261 8123,7249 8149,7238 8173,7228 8201,7216 8229,7206 8259,7196 8288,7187 8319,7179 8350,7170 8384,7163 8419,7155 8456,7148 8496,7142 8537,7135 8581,7129 8626,7123 8672,7118 8719,7111 8764,7107 8808,7102 8848,7098 8883,7095 8914,7091 8938,7089 8955,7088 8966,7087 8973,7086 8976,7086 " />
+  <polyline
+     id="polyline70"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:104, 104"
+     points="5196,6047 5197,6045 5201,6040 5207,6032 5215,6018 5228,6000 5244,5976 5262,5948 5285,5914 5310,5877 5338,5837 5366,5795 5397,5751 5427,5707 5459,5664 5488,5622 5519,5581 5547,5542 5575,5504 5603,5468 5629,5436 5654,5403 5679,5374 5703,5345 5728,5318 5752,5293 5776,5268 5800,5244 5825,5219 5850,5196 5874,5174 5899,5153 5924,5132 5949,5111 5975,5089 6003,5068 6031,5047 6059,5026 6090,5005 6120,4983 6151,4962 6182,4942 6215,4921 6247,4900 6280,4880 6313,4860 6346,4841 6380,4823 6413,4804 6447,4786 6479,4769 6512,4752 6543,4737 6576,4721 6606,4706 6637,4692 6667,4679 6697,4666 6726,4655 6754,4643 6783,4632 6811,4622 6843,4611 6874,4600 6906,4590 6937,4580 6970,4571 7003,4561 7037,4553 7072,4544 7110,4536 7149,4529 7190,4520 7233,4512 7277,4504 7323,4496 7370,4489 7416,4481 7462,4474 7506,4468 7548,4461 7586,4456 7618,4452 7646,4448 7667,4445 7682,4443 7692,4441 7698,4440 7700,4440 " />
+  <polyline
+     id="polyline72"
+     style="fill:none;stroke:#ff0000;stroke-width:48;stroke-linecap:round;stroke-linejoin:bevel"
+     points="4962,3291 4964,3291 4969,3292 4977,3293 4990,3296 5007,3299 5032,3303 5061,3309 5096,3315 5137,3322 5183,3332 5232,3341 5286,3351 5341,3361 5399,3373 5457,3384 5516,3396 5573,3407 5630,3419 5686,3430 5739,3442 5791,3454 5840,3464 5887,3476 5933,3486 5976,3497 6018,3507 6058,3518 6097,3528 6134,3539 6170,3549 6205,3560 6240,3571 6274,3583 6307,3594 6341,3606 6373,3618 6406,3631 6439,3644 6472,3657 6506,3671 6539,3686 6573,3700 6607,3716 6642,3732 6677,3749 6711,3766 6746,3784 6782,3803 6817,3822 6853,3842 6889,3862 6923,3882 6959,3903 6995,3925 7029,3946 7064,3968 7098,3990 7132,4013 7165,4035 7198,4058 7230,4081 7261,4104 7293,4128 7323,4151 7353,4174 7382,4197 7411,4220 7439,4243 7466,4267 7495,4290 7522,4314 7548,4339 7575,4364 7603,4389 7629,4414 7656,4440 7683,4468 7711,4495 7738,4523 7766,4553 7794,4583 7822,4614 7849,4645 7878,4678 7906,4710 7933,4744 7962,4779 7989,4813 8016,4848 8044,4883 8071,4919 8097,4956 8123,4992 8149,5028 8174,5064 8198,5101 8222,5137 8245,5173 8267,5209 8289,5246 8310,5281 8331,5317 8351,5353 8371,5388 8390,5424 8409,5460 8427,5496 8444,5530 8460,5565 8477,5600 8493,5636 8510,5673 8525,5711 8541,5750 8558,5791 8575,5833 8591,5876 8608,5922 8625,5970 8643,6019 8661,6072 8680,6125 8699,6182 8719,6241 8739,6301 8759,6364 8779,6427 8800,6490 8819,6554 8839,6617 8858,6679 8877,6738 8894,6794 8910,6847 8924,6894 8937,6935 8949,6972 8957,7001 8964,7025 8970,7043 8974,7056 8976,7064 8977,7068 8978,7070 " />
+</svg>

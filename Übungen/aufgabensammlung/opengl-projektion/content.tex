@@ -1,0 +1,62 @@
+\bivtask{Perspektivische Projektion mit OpenGL}{2}
+%
+Im Verzeichnis \bivfolder{/home/bildgen/Aufgaben/opengl-2} finden Sie eine 
+OpenGL-Implementierung der perspektivischen
+Projektion aus Aufgabe~\ref{aufgabe:proj2}. Compilieren lässt sich das 
+Programm mittels \texttt{make}. Weiterführende Informationen zu OpenGL 
+finden Sie auf der Webseite\\
+\href{http://www.opengl.org/sdk/docs/man/}{\texttt{http://www.opengl.org/sdk/docs/man/}}.
+
+OpenGL nutzt im Wesentlichen zwei Matrizen, um Objekte, welche in 
+Objektkoordinaten gegeben sind, in normalisierte Koordinaten zu 
+transformieren und anschließend zu clippen und zu zeichnen. Zum ersten 
+handelt es sich dabei um die sogenannte ModelView-Matrix, welche die 
+Objektkoordinaten in Augenkoordinaten überführt. Diese Matrix übernimmt 
+also die Transformation des Augenpunktes (gegeben durch \texttt{COP}) in
+den Koordinatenursprung mit Blickrichtung (gegeben durch \texttt{-VPN}) 
+entlang der negativen z-Achse, so wie es auf Seite 4-12 des Skriptes 
+dargestellt ist. Die zweite Matrix ist die Projektionsmatrix, die die 
+Augenkoordinaten im Unterschied zur Vorlesungen in einen Bildraum
+\[B = \left\{(x,y,z)^T | -1\leq x\leq 1,-1\leq y\leq 1,-1\leq z\leq 1\right\}\] 
+transformiert, an dem geclippt werden kann und welcher sich einfach auf 
+den Bildschirm (den sogenannten Viewport) projizieren lässt.
+
+Die Projektionsmatrix ist im Rahmenprogramm bereits mittels 
+\texttt{glFrustum} gegeben und Ihre Aufgabe besteht zunächst darin, die 
+ModelView-Matrix korrekt zu setzen. Verwenden Sie hierfür den Befehl 
+\texttt{gluLookAt} der OpenGL Utility Library, deren Dokumentation Sie 
+auch auf\\
+\href{http://www.opengl.org/sdk/docs/man/}{\texttt{http://www.opengl.org/sdk/docs/man/}}
+
+finden. Sobald dies implementiert ist, sollte Ihr Programm bereits---bis
+auf das Clipping---die gleichen Bilder erzeugen, wie das Programm zu 
+Aufgabe~\ref{aufgabe:proj2}. Das Clipping in z-Richtung funktioniert 
+ebenfalls bereits.
+
+Um nun identische Bilder zur Lösung von Aufgabe~\ref{aufgabe:proj2} zu 
+erhalten, muss ein künstliches Clipping auf die durch 
+\texttt{clip.uminf}, \texttt{clip.umaxf}, \texttt{clip.vminf} und 
+\texttt{clip.vmaxf} gegebene Ausdehnung auf der Projektionsebene 
+erfolgen. 
+
+Ist die Projektionsebene gegeben durch 
+$[\texttt{umin}, \texttt{umax}] \times [\texttt{vmin}, \texttt{vmax}]$, 
+ergibt sich der geclippte Bereich als 
+$[\texttt{umin} \cdot \texttt{clip.uminf}, \texttt{umax} \cdot \texttt{clip.umaxf}] \times [\texttt{vmin} \cdot \texttt{clip.vminf}, \texttt{vmax} \cdot \texttt{clip.vmaxf}]$.
+
+Korrektes Clipping kann auf zwei Arten erzielt werden:
+\begin{enumerate}
+\item Mittels \texttt{glClipPlane} können Sie vier Clipping-Ebenen 
+      definieren, die durch den Koordinatenursprung verlaufen und den 
+      Sichtbereich in $x$- und $y$-Richtung auf der Projektionsebene auf 
+      den oben erwähnten geclippted Bereich einschränken. Hierfür müssen 
+      die Normalenvektoren der Ebenen in Abhängigkeit von \texttt{znear} 
+      und der Größen des geclippten Bereiches ermittelt werden.
+\item Das Sichtfenster (Viewport) kann entsprechend beschränkt werden. 
+      Anschließend muss die Berechnung der Projektionsmatrix 
+      (\texttt{glFrustum}) angepasst werden, so dass die Projektion nun 
+      für den geclippten Bereich stattfindet.
+\end{enumerate}
+
+Testen Sie Ihr Programm mit den gleichen Eingabedateien wie auch 
+Aufgabe~\ref{aufgabe:proj2}.

@@ -1,0 +1,1303 @@
+\chapter{Scan Conversion}
+
+\begin{description}
+\item[Problem:]
+  Gegeben ist eine Menge von „Objekten“.
+  \begin{itemize}
+  \item \xfigGreenIII{Linie} von $(7, 3)$ nach $(16, 5)$
+  \item \xfigBlue{Linie} von $(9, 8)$ nach $(12, 2)$
+  \item \xfigRed{ausgefülltes Polygon} mit den Eckpunkten
+    $(5, 1)$, $(4, 6)$, $(1, 8)$, $(-2, 3)$
+  \item …
+  \end{itemize}
+
+  Gesucht sind die zu jedem Objekt gehörenden Rasterpunkte
+  (picture elements, \emph{„Pixels“}\index{Pixel}).
+
+  \begin{center}
+    \scalebox{0.6}{\LARGE\input{fig_scanconversion}}%
+    \index{logischer Bildwiederholspeicher}\index{Bildwiederholspeicher!logischer}%
+    \index{Pixel Map}\index{Pixmap}
+  \end{center}
+\end{description}
+\Reached{WS19/20}{01}{2019/10/10}
+\ReachedZoom{WS20/21}{01}{2020/10/29}
+
+\pagebreak
+
+\begin{bemerkung}
+  Die Pixmap muss nicht mit dem aktuellen (dem Video Controller
+  zugänglichen) Bildwiederholspeicher übereinstimmen!
+
+  \textbf{Anwendung 1:} \emph{„Doppelpufferung“}\index{Doppelpufferung}
+
+  \begin{description}
+  \item[Problem:]
+    Gleichzeitiges Verändern und Auslesen des
+    Bildwiederholspeichers führt zu unerwünschten Effekten.
+
+    (meist: Verzerrungen, Flackern)
+
+  \item[Beispiel:]
+    Aus einem (relativ komplexen) Bild soll ein Objekt gelöscht
+    werden.
+
+    möglicher Ablauf ohne Doppelpufferung:
+
+    (Painter's Algorithm
+    ⇝ Abschnitt~\ref{subsec:paintersAlgorithm})
+
+    \begin{center}
+      \scalebox{0.7}{\large\input{fig_scanPaintersOhneDoppelpufferung}}
+    \end{center}
+
+    \pagebreak
+
+  \item[Abhilfe:] Verwende zwei Pixmaps.
+    
+    Es wird immer nur die Pixmap modifiziert, die gerade nicht
+    vom Video Controller ausgelesen wird.
+    
+    \begin{center}
+      \scalebox{0.6}{\LARGE\input{fig_scanDoppelpufferung}}%₁₂
+    \end{center}
+  \end{description}
+
+  \textbf{Anwendung 2:} Verwaltung einer Fensteroberfläche
+
+  \begin{center}
+    \scalebox{0.5}{\huge\input{fig_scanFensteroberflaeche}}
+  \end{center}
+  \Reached{WS15/16}{01}{2015/10/22}
+
+  \pagebreak
+
+  \textbf{Anwendung 3:} Rasterung für ein anderes Gerät
+  
+  (\zB Drucker)
+\end{bemerkung}
+
+\begin{bemerkung}
+  Für eine Pixmap der Größe $nₓ × n_y$ wird ein
+  Speicherbereich passender Größe reserviert.
+
+  \begin{itemize}
+  \item[⇒] Pixel außerhalb der Pixmap dürfen nicht
+    modifiziert werden.
+
+  \item[⇒] Die Objekte werden an den Grenzen der Pixmap
+    „abgeschnitten“.
+
+    ⇝ „Clipping“ (Kapitel~\ref{cha:clipping})
+  \end{itemize}
+\end{bemerkung}
+\Reached{WS16/17}{01}{2016/10/20}
+
+\pagebreak
+
+
+\section{Scan Conversion für Strecken}
+
+\begin{description}
+\item[Annahmen:] \mbox{}
+
+  \begin{itemize}
+  \item Die Endpunkte der Strecken haben ganzzahlige Koordinaten:
+    \[ \rk{x₁, y₁} ∈ ℤ² \,\text, \quad \rk{x₂, y₂} ∈ ℤ² \]
+  \item $x₁ < x₂$
+  \item Für die Steigung $m$ der Strecke gilt:
+    \[ \abs{m} ≤ 1 \]
+    (Sonst vertauscht man die Rollen von $x$ und $y$.)
+  \end{itemize}
+  
+\item[Ziel:] Für jeden $x$-Wert soll genau ein Pixel gesetzt
+  werden, das möglichst nahe an der Strecke liegt.
+\end{description}
+
+\pagebreak
+
+\begin{beispiel} \mbox{}
+  \begin{center}
+    \scalebox{0.7}{\large\input{fig_scanStreckePrinzip}}
+  \end{center}
+\end{beispiel}
+\Reached{WS21/22}{01}{2021/10/14}
+
+\pagebreak
+
+
+\subsection{Das naive Verfahren}
+
+\begin{algorithmus} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Scan Conversion ºfürº Strecke, naiv
+
+    $m$ := $\frac{y₂ - y₁}{x₂ - x₁}$
+    $b$ := $y₁ - m · x₁$
+    // $y = m x + b$ ist die Steigungsform der Geraden durch $\rk{x₁, y₁}$ und $\rk{x₂, y₂}$
+    für $x = x₁, x₁ + 1, …, x₂$
+    °°°$y$ := $m x + b$
+    °°°modifiziere Pixel $(x, \round(y))$
+  \end{AlgListInline}
+\end{algorithmus}
+
+\begin{description}
+\item[Problem:]
+  viele Operationen mit reellen Zahlen sowie
+  \begin{center}
+    \emph{Rundung} reell ⇝ ganzzahlig
+  \end{center}
+  \begin{itemize}
+  \item[⇒] relativ langsam,
+  \item[] nicht für Hardware-Realisierung geeignet
+  \end{itemize}
+
+\item[Frage:]
+  Gibt es auch einen Algorithmus ohne reelle Operationen?
+\end{description}
+\Reached{WS17/18}{01}{2017/10/12}
+\Reached{WS18/19}{01}{2018/10/11}
+
+
+\subsection{Inkrementell mit reeller Rechnung}
+
+Für jedes $x ∈ \mk{ x₁, x₁ + 1, …, x₂}$ sei:
+
+\begin{center}
+  \begin{tabular}{ll}
+    $\mdef{y(x)} := mx + b$ & der zu $x$ gehörige $y$-Wert auf der (exakten) Geraden \\
+    $\mdef{\widetilde{y}(x)} := \round(y(x))$ & der $y$-Wert des in Spalte $x$ gewählten Pixels \\
+    $\mdef{d(x)} := y(x) - \widetilde{y}(x)$
+    & „um wie viel liegt die Gerade an der Stelle $x$ oberhalb des Pixels?“
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \scalebox{0.65}{\Large\input{fig_scanStreckeIncrement1}}
+\end{center}
+
+\begin{description}
+\item[Idee:]
+  Berechne $y(x)$ und $\widetilde{y}(x)$ nicht für jeden
+  $x$-Wert gemäß der obigen Formeln, sondern bestimme, um wie viel
+  sie sich beim Übergang von $x$ zu $x + 1$ ändern
+  \emph{(„Inkrement“)}\index{Inkrement}:
+  \begin{align*}
+    y(x + 1) &= y(x) + \mdef{Δ y(x)} \\
+    \widetilde{y}(x + 1) &= \widetilde{y}(x) + \mdef{Δ \widetilde{y}(x)}
+  \end{align*}
+
+\item[Annahme:]
+  Im Folgenden sei $m ≥ 0$ (also $m \in \ek{0; 1}$).
+\end{description}
+
+Es ist
+\begin{align*}
+  Δ y(x) &= y(x + 1) - y(x) \\
+  &= m · (x + 1) + b - (m · x + b) \\
+  &= m \qquad \text{\cmt{unabhängig von $x$}}
+\end{align*}
+und
+\begin{align*}
+  y(x + 1) - \widetilde{y}(x) &= y(x) + m - \widetilde{y}(x) \\
+  &= d(x) + m \\
+  &∈ \ek{-\frac12; \frac32} \qquad \text{\cmt{da $d(x) ∈ \ek{-\frac12; \frac12}$
+      und $m ∈ \ek{0; 1}$}} \,\text.
+\end{align*}
+
+\begin{itemize}
+\item[⇒]
+  $y(x + 1) ∈ \ek{\widetilde{y}(x) - \frac12; \widetilde{y}(x) + \frac32}$
+
+\item[⇒]
+  $\widetilde{y}(x + 1) = \round(y(x + 1)) ∈ \mk{\widetilde{y}(x), \widetilde{y}(x) + 1}$
+
+\item[⇒]
+  In Spalte $x + 1$ wird eines der beiden Pixel
+  \begin{align*}
+    \rk{x + 1, \widetilde{y}(x)} &=: \mdef{\textbf{O} \quad \text{(„östlicher Nachbar“)}} \\
+    \rk{x + 1, \widetilde{y}(x) + 1} &=: \mdef{\textbf{NO} \quad
+      \text{(„nordöstlicher Nachbar“)}}
+  \end{align*}
+  ausgewählt, \dH $Δ \widetilde{y}(x) ∈ \mk{0, 1}$.
+\end{itemize}
+\Reached{WS14/15}{02}{2014/10/16}
+
+\begin{center}
+  \scalebox{0.65}{\Large\input{fig_scanStreckeIncrement2}}
+\end{center}
+
+Entscheidung für „O“
+\begin{itemize}
+\item[⇔]
+  O liegt näher am Geradenpunkt $\rk{x + 1, y(x + 1)}$ als NO
+\item[⇔]
+  $\underbrace{d(x) + m}_{\textstyle\mdef{=: \widetilde{d}(x + 1)}} ≤ \frac12$
+\end{itemize}
+
+\pagebreak
+
+\begin{algorithmus} \mbox{}
+  \label{alg:scanStreckeInkrementellReell}
+  \begin{AlgListInline}
+    Algorithmus Scan Conversion ºfürº Strecke, inkrementell, reelle Rechnung
+    
+    $m$ := $\frac{y₂ - y₁}{x₂ - x₁}$
+    $\rk{x, \widetilde{y}(x)}$ := $\rk{x₁, y₁}$
+    $d(x)$ := $0$°°°°°°°°°°°°°°°°°°°°°// Startpixel liegt auf der Geraden
+    modifiziere Pixel $\rk{x, \widetilde{y}(x)}$
+    für $x = x₁ + 1, …, x₂$
+    °°°$\widetilde{d}(x)$ := $d(x - 1) + m$
+    °°°wenn $\widetilde{d}(x) \le \frac12$
+    °°°°°°$\widetilde{y}(x)$ := $\widetilde{y}(x - 1)$°°°°°°°°°// Entscheidung für „O“
+    °°°°°°$d(x)$ := $\widetilde{d}(x)$
+    °°°sonst
+    °°°°°°$\widetilde{y}(x)$ := $\widetilde{y}(x - 1) + 1$°°°°°// „NO“
+    °°°°°°$d(x)$ := $\widetilde{d}(x) - 1$
+    °°°modifiziere Pixel $\rk{x, \widetilde{y}(x)}$
+  \end{AlgListInline}
+\end{algorithmus}
+
+\pagebreak
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Im Fall $m < 0$ kann auch
+    $\widetilde{d}(x) < - \frac12$ vorkommen.
+    Dann ist $Δ \widetilde{y}(x) = -1$, also
+    \[ \rk{x + 1, \widetilde{y}(x) - 1} =: \mdef{\textbf{SO} \quad
+        \text{(„südöstlicher Nachbar“)}} \]
+    zu wählen.
+
+  \item $y(x)$ tritt nicht mehr explizit auf.
+
+  \item keine reelle Multiplikation und keine Rundung
+    reell ⇝ ganzzahlig mehr, aber noch reelle Addition
+    und reeller Vergleich
+  \end{enumerate}
+\end{bemerkungen}
+
+
+\subsection{Inkrementell mit ganzzahliger Rechnung}
+
+\begin{description}
+\item[Idee:]
+  Die Größen $m$, $\widetilde{d}$, $\frac12$ und $d$ in
+  Algorithmus~\ref{alg:scanStreckeInkrementellReell} sind
+  \emph{rational}; Multiplikation mit dem \emph{Hauptnenner}
+  \[ \mdef{H} := 2 · \rk{x₂ - x₁} \]
+  macht sie ganzzahlig.
+\end{description}
+
+\begin{algorithmus}%
+  \label{alg:scanStreckeInkrementellGanzzahlig} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Scan Conversion ºfürº Strecke, inkrementell, ganzzahlige Rechnung
+    // Erinnerung: $m ∈ [0; 1]$
+    
+    $M$ := $2 · \rk{y₂ - y₁}$°°°°°// $= H · m$
+    $\mathtxtit{Halb}$ := $x₂ - x₁$°°°°°°°// $= H · \frac12$
+    $\mathtxtit{Eins}$ := $2 · \mathtxtit{Halb}$°°°°°°// $= H · 1$
+    $x$ := $x₁$°°°°°°°°°°°°°°// Startpixel $= \rk{x₁, y₁}$
+    $\widetilde{y}$ := $y₁$
+    $D$ := $0$°°°°°°°°°°°°°°// $= H · d(x)$
+    modifiziere Pixel $\rk{x, \widetilde{y}}$
+    für $x = x₁ + 1, …, x₂$
+    °°°$D$ := $D + M$°°°°°// $D$ enthält jetzt $H · \widetilde{d}(x)$
+    °°°wenn $D > \mathtxtit{Halb}$
+    °°°°°°$\widetilde{y}$ := $\widetilde{y} + 1$°°°°°// Entscheidung für „NO“
+    °°°°°°$D$ := $D - \mathtxtit{Eins}$
+    °°°modifiziere Pixel $\rk{x, \widetilde{y}}$
+  \end{AlgListInline}
+\end{algorithmus}
+
+\pagebreak
+
+\begin{bemerkung}
+  keine reellen Operationen mehr, nur noch ganzzahlige Additionen
+  und Vergleiche
+  \begin{itemize}
+  \item[⇒] sehr schnell,
+
+    gut für Hardware-Realisierung geeignet
+  \end{itemize}
+
+  \begin{center}
+    \scalebox{0.6}{\LARGE\input{fig_scanStreckeHardware}}
+  \end{center}
+\end{bemerkung}
+
+\pagebreak
+
+
+\vspace*{-33mm}
+\section{Scan Conversion für Kreislinien}
+
+\begin{description}
+\item[Ziel:]
+  Modifikation der Pixel in der Pixmap, die dem Kreis um
+  $\rk{xₘ, yₘ}$ mit Radius $r$ am nächsten liegen
+\end{description}
+
+\enlargethispage{7mm}
+\begin{bemerkung}
+  Es genügt, die Pixel $\rk{x, \widetilde{y}}$ im
+  \emph{„NNO-Achtel“} eines Kreises mit Radius $r$ um den
+  \emph{Ursprung} zu erzeugen, denn
+
+  \begin{center}
+    \scalebox{0.6}{\LARGE\input{fig_scanKreisNOAchtel}}%ₘ
+  \end{center}
+
+  durchläuft \xfigMagentaIII{$\rk{x, \widetilde{y}}$} die Pixel des
+  NNO-Achtels, so liefern die Pixel
+  \xfigRed{$\rk{xₘ ± x, yₘ ± \widetilde{y}}$} und
+  \xfigRed{$\rk{xₘ ± \widetilde{y}, yₘ ± x}$}
+  die gesuchte Kreislinie.
+\end{bemerkung}
+
+\pagebreak
+
+\vspace*{-19mm}
+\begin{description}
+\item[Frage:]
+  Wie erzeugt man die zum NNO-Achtel gehörigen Pixel?
+\end{description}
+
+
+\subsection{Zwei naive Verfahren}
+
+\begin{algorithmus}%
+  \label{alg:scanNNOachtelParametrisiert} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Scan Conversion ºfürº Kreislinie, naiv via Parametrisierung
+
+    // basiert auf der Parametrisierung $\rk{x(t), y(t)} = \rk{r · \cos t, r · \sin t}$, $t ∈ \ek{\frac{π}{4}; \frac{π}{2}}$, des NNO-Achtels
+    wähle $Δ t$ so klein, dass keine º„ºLückenº“º entstehen
+    für $t = \frac{π}{2}$ mit Schrittweite $-Δ t$ bis $\frac{π}{4}$
+    °°°$\rk{\widetilde{x}(t), \widetilde{y}(t)}$ := $\rk{\round(r · \cos t), \round(r · \sin t)}$
+    °°°modifiziere die acht zu $\rk{\widetilde{x}(t), \widetilde{y}(t)}$ gehörigen Pixel
+  \end{AlgListInline}
+\end{algorithmus}
+
+\vspace*{-11mm}
+\begin{bemerkung}
+  reelle Rechnung, zwei Rundungen reell ⇝ ganzzahlig, \emph{sin}, \emph{cos}
+  \begin{itemize}
+  \item[⇒] langsam,
+
+    nicht für Hardware-Realisierung geeignet
+  \end{itemize}
+\end{bemerkung}
+
+\pagebreak
+
+\vspace*{-24mm}
+\begin{algorithmus} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Scan Conversion ºfürº Kreislinie, naiv via Funktionsdarstellung
+
+    // basiert auf der Darstellung $y = \sqrt{r² - x²}$, $x ∈ \ek{-r; r}$, des oberen Halbkreises
+    $x$ := $0$°°°°°°°°°°°°°°// Startpunkt $(0, r)$
+    $\widetilde{y}$ := $r$
+    solange $\widetilde{y} ≥ x$ ist°°°°°// noch im NNO-Achtel
+    °°°modifiziere die acht zu $\rk{x, \widetilde{y}}$ gehörigen Pixel
+    °°°$x$ := $x + 1$
+    °°°$\widetilde{y}$ := $\round\rk{\sqrt{r² - x²}}$
+  \end{AlgListInline}
+\end{algorithmus}
+
+\begin{bemerkung}
+  reelle Rechnung, Rundung reell ⇝ ganzzahlig, \emph{Wurzel}
+  \begin{itemize}
+  \item[⇒] relativ langsam (aber schneller als
+    Algorithmus~\ref{alg:scanNNOachtelParametrisiert}),
+
+    nicht für Hardware-Realisierung geeignet
+  \end{itemize}
+\end{bemerkung}
+
+\begin{description}
+\item[Frage:]
+  Gibt es auch für Kreislinien einen inkrementellen Ansatz
+  (wenn möglich ganzzahlig)?
+\end{description}
+
+
+\subsection{Ein inkrementeller Ansatz}
+
+Für alle $x$-Werte $x = 0, 1, …$ sei wieder
+
+\begin{center}
+  \begin{tabular}{Ll}
+    \rk{x, \mdef{y(x)}} & der zugehörige Punkt auf der Kreislinie und \\
+    \rk{x, \mdef{\widetilde{y}(x)}} & das entsprechende Pixel.
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \scalebox{0.65}{\Large\input{fig_scanKreisIncrement}}
+\end{center}
+
+Ausgehend von Pixel $\rk{x, \widetilde{y}(x)}$ wird von den
+beiden Pixeln
+\begin{align*}
+  \rk{x + 1, \widetilde{y}(x)} &= \textbf{O} \quad \text{(östlicher Nachbar)} \\
+  \rk{x + 1, \widetilde{y}(x) - 1} &= \textbf{SO} \quad \text{(südöstlicher Nachbar)}
+\end{align*}
+das gewählt, welches näher an dem Punkt
+$\rk{x + 1, y(x + 1)}$ auf der Kreislinie liegt.
+
+\begin{align*}
+  &\rk{x + 1, y(x + 1)} \text{ liegt näher bei SO als bei O} \\
+  &⇔ y(x + 1) < \widetilde{y}(x) - \frac12 \\
+  &⇔ y² (x + 1) < \rk{\widetilde{y}(x) - \frac12}² \qquad
+  \text{\cmt{NNO-Achtel!}} \\
+  &⇔ r² - (x + 1)² < \rk{\widetilde{y}(x) - \frac12}² \\
+  &⇔ \mymagenta{\underbrace{\black{r² - x²}}} - 2x - 1
+  < \widetilde{y}²(x) - \widetilde{y}(x) + \frac14 \\
+  &⇔ \mymagenta{y²(x)} - \widetilde{y}²(x) + \widetilde{y}(x) - 2x - \frac54 < 0
+\end{align*}
+
+\begin{description}
+\item[Also:]
+  Setze
+  \[ \mdef{d(x)} := y²(x) - \widetilde{y}²(x) + \widetilde{y}(x) - 2x - \frac54 \]
+  und wähle als nächstes Pixel
+  \begin{center}
+    \begin{tabular}{ll}
+      O,  & falls $d(x) ≥ 0$ \\
+      SO, & falls $d(x) < 0$.
+    \end{tabular}
+  \end{center}
+
+\item[Frage:]
+  Kann auch $d$ \emph{inkrementell} berechnet werden, also
+  $d(x + 1)$ aus $d(x)$?
+
+  \pagebreak
+
+\item[Fall 1:] Entscheidung für O, \dH
+  $\widetilde{y}(x + 1) = \widetilde{y}(x)$
+  
+  Dann ist
+  \begin{align*}
+    d(x + 1)
+    &= \mymagenta{\underbrace{\black{y²(x + 1)}}}
+    - \mygreen{\underbrace{\black{\widetilde{y}²(x + 1)}}}
+    + \mygreen{\underbrace{\black{\widetilde{y}(x + 1)}}}
+    - 2 (x + 1) - \frac54 \\
+    &= \mymagenta{r² - (x + 1)²} - \mygreen{\widetilde{y}²(x)}
+    + \mygreen{\widetilde{y}(x)} - 2 (x + 1) - \frac54 \\
+    &= \mymagenta{\underbrace{\black{r² - x²}}} - 2x - 1 - \widetilde{y}²(x)
+    + \widetilde{y}(x) - 2x - 2 - \frac54 \\
+    &= \mygreen{\underbrace{\black{\mymagenta{y²(x)} - \widetilde{y}²(x)
+          + \widetilde{y}(x) - 2x - \frac54}}} - 2x - 3 \\
+    &= \mygreen{d(x)} - (2(x + 1) + 1) \,\text.
+  \end{align*}
+
+  \pagebreak
+
+\item[Fall 2:] Entscheidung für SO, \dH
+  $\widetilde{y}(x + 1) = \widetilde{y}(x) - 1$
+
+  Dann ist
+  \begin{align*}
+    d(x + 1) &= \mymagenta{\underbrace{\black{y²(x + 1)}}}
+    - \mygreen{\underbrace{\black{\widetilde{y}²(x + 1)}}}
+    + \mygreen{\underbrace{\black{\widetilde{y}(x + 1)}}}
+    - 2 (x + 1) - \frac54 \\
+    &= \mymagenta{r² - (x + 1)²} - \mygreen{\rk{\widetilde{y}(x) - 1}²}
+    + \mygreen{\widetilde{y}(x) - 1} - 2 (x + 1) - \frac54 \\
+    &= \mymagenta{\underbrace{\black{r² - x²}}} - 2x - 1 - \widetilde{y}²(x)
+    + 2 \widetilde{y}(x) - 1 + \widetilde{y}(x) - 1 - 2x - 2 - \frac54 \\
+    &= \mygreen{\underbrace{\black{\mymagenta{y²(x)} - \widetilde{y}²(x)
+          + \widetilde{y}(x) - 2x - \frac54}}} + 2 \widetilde{y}(x) - 2x - 5 \\
+    &= \mygreen{d(x)} - \rk{2 \rk{(x + 1)
+        - \mymagenta{\underbrace{\black{\rk{\widetilde{y}(x) - 1}}}}} + 1} \\
+    &= d(x) - \rk{2 \rk{(x + 1) - \mymagenta{\widetilde{y}(x + 1)}} + 1} \,\text.
+  \end{align*}
+\end{description}
+
+\pagebreak
+
+\vspace*{-19mm}
+\begin{algorithmus}%
+  \label{alg:scanNNOachtelInkrementellReell} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Scan Conversion ºfürº Kreislinie, inkrementell, reelle Rechnung
+
+    // basiert auf der Kreisgleichung $y² = r² - x²$
+    $x$ := $0$°°°°°°°°°°°°°°°°°°°°°°°°°// Startpunkt $(0, r)$
+    $\widetilde{y}$ := $r$
+    $d$ := $r - \frac54$ °°°°°°°°°°°°°°°°°°°°°// $= d(0)$
+    solange $\widetilde{y} ≥ x$ ist°°°°°°°°°°°°°°°°// noch im NNO-Achtel
+    °°°modifiziere die acht zu $\rk{x, \widetilde{y}}$ gehörigen Pixel
+    °°°$x$ := $x + 1$
+    °°°wenn $d ≥ 0$
+    °°°°°°$d$ := $d - (2x + 1)$°°°°°°°°°// Entscheidung für O
+    °°°sonst
+    °°°°°°$\widetilde{y}$ := $\widetilde{y} - 1$°°°°°°°°°°°°°°°// Entscheidung für SO
+    °°°°°°$d$ := $d - \rk{2 \rk{x - \widetilde{y}} + 1}$
+  \end{AlgListInline}
+\end{algorithmus}
+
+\begin{bemerkung}
+  Algorithmus~\ref{alg:scanNNOachtelInkrementellReell} kann (für
+  ganzzahlige $r$, $xₘ$ und $yₘ$) in einen
+  \emph{inkrementellen ganzzahligen} Algorithmus überführt werden.
+\end{bemerkung}
+
+
+\section{Scan Conversion für Polygone}
+
+\begin{description}
+\item[gegeben:] ein Polygon $P$ in der Ebene
+
+\item[gesucht:] die dem Polygon entsprechenden Pixel
+\end{description}
+
+\begin{center}
+  \includegraphics{fig_scanPolygonPrinzip}
+\end{center}
+
+\pagebreak
+
+
+\subsection{Polygone}
+
+Ein \emph{geschlossener einfacher Polygonzug}\index{Polygonzug!geschlossener einfacher}
+$\mdef{Z} = \rk{s₁, s₂, …, sₗ}$ ist eine Folge von
+\emph{Kanten}\index{Kante} (gerichteten Strecken)
+$sᵢ = \overrightarrow{\point{P}ᵢ₋₁ \point{P}ᵢ}$, so dass
+\begin{itemize}
+\item $\point{P}₀ = \point{P}ₗ$
+\item $sᵢ$ hat mit $sᵢ₊₁$ den Punkt $\point{P}ᵢ$ gemeinsam
+  (sowie $sₗ$ mit $s₁$ den Punkt $\point{P}ₗ$);
+
+  weitere Schnittpunkte der Strecken gibt es nicht.
+\end{itemize}
+
+\begin{center}
+  \scalebox{0.6}{\LARGE\input{fig_scanPolygonzug}}%₁₂₃₄₅
+\end{center}
+
+\pagebreak
+
+Ein \emph{Polygon}\index{Polygon} ist definiert durch $m ≥ 1$ geschlossene einfache
+Polygonzüge $Z₁, …, Zₘ$, die untereinander (als Punktmengen
+in der Ebene) disjunkt sind.
+Wird der Kantenzug $Zⱼ = \rk{s₁⁽ʲ⁾, …, s_{lⱼ}⁽ʲ⁾}$
+in dieser Reihenfolge durchlaufen, so liegt das
+\emph{Innere}\index{Polygon!Inneres}\index{Inneres eines Polygons}
+des Polygons \emph{links} jeder der gerichteten Strecken $sᵢ⁽ʲ⁾$.
+
+Die Punkte $\point{P}ᵢ⁽ʲ⁾$ heißen
+\emph{Ecken}\index{Polygon!Ecke}\index{Ecke eines Polygons}
+des Polygons.
+
+Ein Polygon heißt
+\emph{einfach}\index{Polygon!einfaches}\index{einfaches Polygon},
+wenn es durch einen einzigen Polygonzug definiert wird.
+
+\begin{beispiel} \mbox{}
+  \begin{Hide}
+    \begin{center}
+      \scalebox{0.6}{\LARGE\input{fig_scanPolygone}}
+    \end{center}
+  \end{Hide}
+\end{beispiel}
+
+\pagebreak
+
+
+\vspace*{-25mm}
+\subsection{Der Grundalgorithmus}%
+\label{subsec:scanConversionPolygoneGrundalgorithmus}
+
+\begin{description}
+\item[Beobachtung:]
+  Die Pixel auf jeder horizontalen (oder vertikalen) Linie
+  \emph{(„Scan Line“)}\index{Scan Line} bilden eine oder mehrere Folgen
+  aufeinander folgender Pixel \emph{(„Spans“)}\index{Span}.
+
+  \begin{center}
+    \scalebox{0.6}{\LARGE\input{fig_scanPolygonGrundalgorithmus}}
+  \end{center}
+
+  Jede solche Span wird durch zwei Schnittpunkte der Scan Line
+  mit dem \emph{Rand} des Polygons begrenzt.
+\end{description}
+
+Läuft man auf der Scan Line von links ($x = -∞$) nach rechts
+($x = +∞$), so entspricht jeder Schnittpunkt mit einer
+Polygonkante einem Wechsel vom Äußeren ins Innere des Polygons und
+umgekehrt.
+
+\begin{itemize}
+\item[⇒] Ordnet man die Schnittpunkte $\point{S}ⱼ$ der
+  Polygonkanten mit der Scan Line nach aufsteigenden $x$-Werten an,
+  so folgt:
+  \begin{itemize}
+  \item Span 1 liegt zwischen $\point{S}₁$ und $\point{S}₂$.
+  \item Span 2 liegt zwischen $\point{S}₃$ und $\point{S}₄$.
+  \item …
+  \end{itemize}
+\end{itemize}
+
+\begin{bemerkung}
+  Die Ecken des Polygons und seine horizontalen Kanten müssen
+  gesondert behandelt werden:
+
+  \begin{center}
+    \scalebox{0.6}{\LARGE\input{fig_scanPolygonSonderfaelle}}
+  \end{center}
+
+  \begin{enumerate}
+  \item[I] unterer Endpunkt der einen, oberer Endpunkt der anderen
+    Kante
+    \begin{itemize}
+    \item[⇒] nur einmal zählen
+    \end{itemize}
+
+  \item[II] unterer (oder oberer) Endpunkt beider Kanten
+    \begin{itemize}
+    \item[⇒] zweimal (oder gar nicht) zählen
+    \end{itemize}
+
+  \item[III] gemeinsame Ecke einer horizontalen mit einer nicht
+    horizontalen Kante
+    \begin{itemize}
+    \item[⇒] nur einmal zählen
+    \end{itemize}
+  \end{enumerate}
+\end{bemerkung}
+
+\pagebreak
+
+\vspace*{-23mm}
+\begin{algorithmus} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Scan Conversion ºfürº Polygone, Grundalgorithmus
+
+    // bestimme den Laufbereich für die Scan Line
+    bestimme unter den Ecken von $P$ die minimale und maximale $y$-Koordinate $y_{\min}$ und $y_{\max}$
+    // laufe mit der Scan Line über das Polygon
+    für $y = y_{\min}, …, y_{\max}$
+    °°°für alle Seiten des Polygons
+    °°°°°°prüfe, ob die Scan Line die Seite schneidet und berechne ggf. den Schnittpunkt
+    °°°sortiere die Schnittpunkte mit der Scan Line nach aufsteigenden $x$-Werten
+    °°°entferne einige der doppelten Schnittpunkte gemäß der obigen Bemerkung
+    °°°// nun seien noch $\point{S}₁, …, \point{S}ₖ$ mit $x₁ ≤ … ≤ xₖ$ übrig
+    °°°für $i = 1, …, \frac{k}{2}$
+    °°°°°°modifiziere die Pixel der Span $\rk{\round\fk{x₂ᵢ₋₁}, y}$, …, $\rk{\round\fk{x₂ᵢ}, y}$
+  \end{AlgListInline}
+\end{algorithmus}
+
+\begin{bemerkung}
+  Für die Modifikation der Pixel einer Span gibt es \iA effizientere Methoden als
+  Algorithmus~\ref{alg:scanStreckeInkrementellGanzzahlig}.
+\end{bemerkung}
+
+\pagebreak
+
+\begin{description}
+\item[Aufwand:]
+  Sei
+
+  \begin{center}
+    \begin{tabular}{Ll}
+      \mdef{n} & die Anzahl der Ecken \bzw Kanten von $P$ und \\
+      \mdef{l} = y_{\max} - y_{\min} + 1 & die Anzahl der über das
+      Polygon gelegten Scan Lines.
+    \end{tabular}
+  \end{center}
+
+  Dann beträgt der „Verwaltungsaufwand“ des Algorithmus
+  \emph{(ohne die eigentliche Pixelmodifikation)}:
+
+  \begin{tabular}{ll}
+    & $𝒪(n)$ Operationen zur Bestimmung von $y_{\min}$, $y_{\max}$ \\
+    & $l$-mal: \\
+    & \qquad $n$ Schnitttests \bzw Schnittpunktberechnungen \\
+    & \qquad $𝒪(n \log n)$ Operationen für das Sortieren der $𝒪(n)$ Schnittpunkte \\ \hline
+    $∑$: & \myred{$l · n$ Schnitttests/Schnittpunktberechnungen} \\
+    & \myred{$𝒪(l · n \log n)$ sonstige Operationen}
+  \end{tabular}
+\end{description}
+
+\pagebreak
+
+
+\vspace*{-28mm}
+\subsection{Ein inkrementeller Ansatz}
+
+\begin{description}
+\item[Idee:]
+  nicht die einzelnen Pixel inkrementell berechnen, sondern die
+  Ausdehnung der \emph{Spans}
+
+  \begin{center}
+    \scalebox{0.75}{\Large\input{fig_scanPolygonInkrementell1}}%₁₂
+  \end{center}
+
+\item[Beobachtung:]
+  Beim Übergang von einer Scan Line zur nächsten kann der
+  \emph{Schnittpunkt} mit jeder Polygonseite \emph{inkrementell}
+  berechnet werden: Ist
+
+  \begin{center}
+    \begin{tabular}{Ll}
+      \mdef{m} & die Steigung der Strecke und \\
+      \rk{\mdef{x(y)}, y} & ihr Schnittpunkt mit der Scan Line $y$,
+    \end{tabular}
+  \end{center}
+
+  so ist
+  \[ \rk{x(y + 1), y + 1} = \rk{x(y) + \frac{1}{m}, y + 1} \]
+  ihr Schnittpunkt mit der nächsten Scan Line $y + 1$.
+\end{description}
+
+\enlargethispage{5mm}
+\begin{bemerkung}
+  Dies funktioniert natürlich nur, wenn die Strecke bereits die vorige
+  Scan Line geschnitten hat.
+\end{bemerkung}
+
+\pagebreak
+
+Strecke $s$ heißt \emph{aktiv}\index{aktive Strecke}\index{Strecke!aktive} bei
+Scan Line $y$, wenn sie die Scan Line schneidet.
+
+\begin{center}
+  \scalebox{0.7}{\Large\input{fig_scanPolygonInkrementell2}}%₀₁₂₃₄₅₆₇₈₉
+\end{center}
+
+aktive Strecken bei Scan Line
+\begin{center}
+  \begin{tabular}{lCCCCCCCCC}
+    $y + 5$: & s₁ &&& s₁₀ & s₉& & s₅ & s₆& s₇ \\
+    $y + 4$: & s₁ & s₂ & s₃ & s₁₀ & s₉ && s₅ & s₆ & s₇ \\
+    $y + 3$: & s₁ & s₂ & s₃ & s₁₀ & s₉ && s₅ & s₆ & s₇ \\
+    $y + 2$: & s₁ & s₂ & s₃ &&& s₄ & s₅ & s₆ & s₇ \\
+    $y + 1$: & s₁ & s₂ & s₃ &&& s₄ && s₆ & s₇ \\
+    $y$: & s₁ & s₂ &&&&&& s₆ & s₇ \\
+  \end{tabular}
+\end{center}
+
+\pagebreak
+
+\vspace*{-17mm}
+\begin{description}
+\item[Beobachtungen:] \mbox{}
+  
+  \begin{itemize}
+  \item Eine Strecke wird aktiv, sobald die Scan Line ihren
+    \emph{unteren} Endpunkt trifft;
+    
+    sie wird inaktiv, wenn die Scan Line ihren \emph{oberen} Endpunkt
+    passiert hat.
+    
+  \item \emph{Ordnet} man die aktiven Strecken \bzgl ihres
+    Schnittpunkts mit der Scan Line, so bleibt diese Ordnung beim
+    Übergang zur nächsten Scan Line erhalten.
+  \end{itemize}
+  
+\item[Verwaltung der aktiven Strecken:] \mbox{}
+  
+  \[ \mathtxtit{Aktiv} = \rk{(\underbrace{i₁}_{\myred{\small\makebox(0,0)[tr]{%
+            Nummer der Strecke}}},
+      \underbrace{x₁}_{\myred{\small\makebox(0,0)[tl]{%
+            $x$-Koordinate des Schnittpunkts der Scan Line mit Strecke $i₁$}}}),
+      (i₂, x₂), …, (iₖ, xₖ)} \,\text, \Bigskip \]
+  sortiert nach aufsteigenden $x$-Werten
+\end{description}
+
+\begin{bemerkung}
+  Werden gleichzeitig zwei Strecken mit gleichem unterem Endpunkt
+  aktiv, so müssen sie nach
+  $\mdef{Δ x} := \frac{1}{m}$ sortiert in
+  $\mathtxtit{Aktiv}$ eingefügt werden, da die Strecke mit kleinerem $Δ x$ auf
+  der \emph{nächsten} Scan Line zuerst kommt:
+
+  \begin{center}
+    \scalebox{0.7}{\Large\input{fig_scanPolygonInkrementell3}}
+  \end{center}
+\end{bemerkung}
+
+\pagebreak
+
+\begin{algorithmus} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Scan Conversion ºfürº Polygone, inkrementell
+
+    // Strecke $sᵢ$ habe die Endpunkte $\rk{x_{i,1}, y_{i,1}}$ und $\rk{x_{i,2}, y_{i,2}}$;
+    // dabei sei o.@\,@B.@\,@d.@\,@A. $y_{i,1} ≤ y_{i,2}$
+    // @\raisebox{0.5ex}{\rule{6em}{1pt}}@ Vorverarbeitung @\raisebox{0.5ex}{\rule{6em}{1pt}}@
+    für $i = 1, …, n$
+    °°°berechne $Δ xᵢ$ := $\frac{x_{i,2} - x_{i,1}}{y_{i,2} - y_{i,1}}$ ($= \frac{1}{mᵢ}$)
+    // Laufbereich der Scan Line
+    bestimme unter den Ecken von $P$ die minimale und die maximale $y$-Koordinate $y_{\min}$ bzw. $y_{\max}$
+    // bestimme zu jeder Scan Line $y$ die Mengen
+    // $\mathtxtit{wird\_aktiv}(y)$ bzw. $\mathtxtit{wird\_inaktiv}(y)$ der dort aktiv bzw. inaktiv werdenden Strecken
+    für $y = y_{\min}, …, y_{\max}$
+    °°°$\mathtxtit{wird\_aktiv}(y)$ := $∅$
+    °°°$\mathtxtit{wird\_inaktiv}(y)$ := $∅$
+    für $i = 1, …, n$
+    °°°füge $i$ in $\mathtxtit{wird\_aktiv}\fk{y_{i,1}}$ und $\mathtxtit{wird\_inaktiv}\fk{y_{i,2}}$ ein
+  \end{AlgListInline}
+
+  \begin{AlgListInline}
+    // @\raisebox{0.5ex}{\rule{6em}{1pt}}@ laufe nun mit der Scan Line über $P$ @\raisebox{0.5ex}{\rule{6em}{1pt}}@
+    $\mathtxtit{Aktiv}$ := $∅$
+    für $y$ := $y_{\min}, …, y_{\max}$
+    °°°// zuerst die aktiv gewordenen Strecken einordnen
+    °°°für alle $i ∈ \mathtxtit{wird\_aktiv}(y)$
+    °°°°°°falls es in $\mathtxtit{wird\_inaktiv}(y)$ ein Element $j$ gibt mit $x_{i,1} = x_{j,2}$°°°°°@\makebox(0,0)[l]{\scalebox{0.5}{\LARGE\input{fig_scanPolygonInkrementellAlgo1}}}@
+    °°°°°°°°°ersetze $\rk{j, x_{j,2}}$ in $\mathtxtit{Aktiv}$ durch $\rk{i, x_{i,1}}$
+    °°°°°°°°°entferne $j$ aus $\mathtxtit{wird\_inaktiv}(y)$
+    °°°°°°sonst°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°@\makebox(0,0)[l]{\scalebox{0.5}{\LARGE\input{fig_scanPolygonInkrementellAlgo2}}}@
+    °°°°°°°°°füge $\rk{i, x_{i,1}}$ bzgl. $x$ (und ggf. $Δ x$) sortiert in $\mathtxtit{Aktiv}$ ein
+    °°°// die Spans zwischen den aktiven Strecken zeichnen;
+    °°°// sei $\mathtxtit{Aktiv} = \rk{\rk{i₁, x_{i₁}}, \rk{i₂, x_{i₂}}, …, \rk{iₖ, x_{iₖ}}}$
+    °°°modifiziere die Pixel der Spans $\rk{\round\fk{x_{i₂ⱼ₋₁}}, y}$, …, $\rk{\round\fk{x_{i₂ⱼ}}, y}$, $j = 1, …, \frac{k}{2}$
+    °°°// entferne die inaktiv gewordenen Strecken
+    °°°für alle $j ∈ \mathtxtit{wird\_inaktiv}(y)$
+    °°°°°°entferne $\rk{j, x_{j,2}}$ aus $\mathtxtit{Aktiv}$
+    °°°// berechne für die übrigen inkrementell den Schnittpunkt mit der nächsten Scan Line
+    °°°für alle $\rk{i, xᵢ} ∈ \mathtxtit{Aktiv}$
+    °°°°°°$xᵢ$ := $xᵢ + Δ xᵢ$
+  \end{AlgListInline}
+\end{algorithmus}%ᵢⱼ
+
+\pagebreak
+
+\begin{description}
+\item[Aufwand:]
+  Sei wieder
+
+  \begin{center}
+    \begin{tabular}{Ll}
+      \mdef{n} & die Anzahl der Ecken \bzw Kanten von $P$ und \\
+      \mdef{l} = y_{\max} - y_{\min} + 1 & die Anzahl der Scan Lines.
+    \end{tabular}
+  \end{center}
+
+  \begin{tabular}{ll}
+    $Δ xᵢ$, $y_{\min}$, $y_{\max}$ berechnen: & $𝒪(n)$ \\
+    $\mathtxtit{wird\_aktiv}$, $\mathtxtit{wird\_inaktiv}$ belegen: & $𝒪(n + l)$ \\
+    $l$-mal: \\
+    \qquad $\frac{k}{2}$ Spans zeichnen: & — \\
+    $n$-mal: \\
+    \qquad Eintrag in $\mathtxtit{wird\_inaktiv}$ suchen, \ggf löschen: & je $𝒪(n)$ \\
+    \qquad Eintrag in $\mathtxtit{Aktiv}$ einfügen \bzw einen alten Eintrag ersetzen: &
+    je $𝒪(n)$ \\
+    \qquad Eintrag aus $\mathtxtit{Aktiv}$ löschen: & je $𝒪(n)$ \\
+    $𝒪(n · l)$-mal: \\
+    \qquad $x$-Wert eines $\mathtxtit{Aktiv}$-Eintrags ändern: & je $𝒪(1)$ \\ \hline
+    gesamter Verwaltungsaufwand:
+    \myred{$𝒪(n · (n + l))$}
+  \end{tabular}
+
+  (\emph{keine Schnittpunktberechnungen} mehr!)
+\end{description}
+
+\pagebreak
+
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item Für die Aufwandsanalyse wurde angenommen, dass
+    $\mathtxtit{Aktiv}$, $\mathtxtit{wird\_aktiv}$ und $\mathtxtit{wird\_inaktiv}$
+    mit Feldern implementiert sind.
+
+    Bei Verwendung geeigneter Datenstrukturen kann der
+    Verwaltungsaufwand auf
+    \myred{$𝒪(n · (\log n + l))$} reduziert werden.
+
+  \item Im Algorithmus fehlt die Behandlung horizontaler Kanten.
+    \begin{itemize}
+    \item einfachste Lösung: gar nicht berücksichtigen
+    \item Folge: „Obere“ horizontale Kanten werden nicht gemalt.
+    \end{itemize}
+
+
+  \item Für \emph{konvexe} Polygone wird der Algorithmus wesentlich
+    einfacher.
+  \end{enumerate}
+\end{bemerkungen}
+\Reached{WS15/16}{02}{2015/10/29}
+\Reached{WS16/17}{02}{2016/10/27}
+\Reached{WS19/20}{02}{2019/10/17}
+
+\pagebreak
+
+
+\subsection{Der Flood Fill Algorithmus}
+
+\begin{description}
+\item[Idee:]
+  Zeichne zuerst den Rand des Objekts und fülle dann das Innere
+  aus:
+
+  \begin{center}
+    \scalebox{0.7}{\huge\input{fig_scanPolygonFloodFill1}}
+  \end{center}
+\end{description}
+
+\pagebreak
+
+\begin{algorithmus} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus Flood Fill
+
+    zeichne den Rand des Objekts
+    wähle ein Pixel $(x, y)$ im Innern des Objekts
+    fill($x$, $y$)
+  \end{AlgListInline}
+\end{algorithmus}
+
+\begin{algorithmus} \mbox{}
+  \begin{AlgListInline}
+    Algorithmus fill($x$, $y$)
+    // rekursive Füll-Funktion
+
+    wenn Pixel $(x, y)$ noch nicht den gewünschten Wert hat
+    °°°modifiziere Pixel $(x, y)$
+    °°°fill($x + 1$, $y$)°°°°°°°°°°°°°°°// Nachbarpunkte
+    °°°fill($x$, $y + 1$)
+    °°°fill($x - 1$, $y$)
+    °°°fill($x$, $y - 1$)
+  \end{AlgListInline}
+  \ReachedZoom{WS20/21}{02}{2020/11/05}
+\end{algorithmus}
+
+\pagebreak
+
+\vspace*{-21mm}
+\begin{bemerkungen} \mbox{}
+  \begin{enumerate}
+  \item[\Good] schnell
+
+  \item[\Good] sehr einfach, auch für Hardware-Realisierung geeignet
+
+  \item[\Good] erlaubt das Füllen nahezu beliebiger Konturen
+
+    \begin{center}
+      \includegraphics[scale=0.7]{fig_scanPolygonFloodFill2}
+    \end{center}
+
+  \item[\Bad] Objekte der gleichen Farbe können nicht „übermalt“ werden
+
+  \item[\Bad] Der Rand darf keine Lücken enthalten (\zB nicht „gestrichelt“ gezeichnet).
+
+  \item[\Bad] arbeitet (zumindest in der angegebenen – vereinfachten –
+    Version) nicht immer korrekt:
+
+    \begin{center}
+      \scalebox{0.7}{\Large\input{fig_scanPolygonFloodFill3}}
+    \end{center}
+  \end{enumerate}
+  \Reached{WS17/18}{02}{2017/10/19}
+\end{bemerkungen}
+
+\pagebreak
+
+
+\section{Nochmals: Strecken und Kreise}
+
+\subsection{Linien vorgegebener „Strichbreite“}
+
+\begin{description}
+\item[Problem:]
+  Wie zeichnet man eine Strecke/Kreislinie, die $d$ Pixel breit ist?
+
+\item[Ansatz 1:]
+  Eine $d$ Pixel breite Strecke ist ein Rechteck, also ein Polygon.
+
+  \begin{itemize}
+  \item[⇒] Berechne die vier Eckpunkte des Polygons und
+    führe dann Scan Conversion für das Polygon durch.
+  \end{itemize}
+
+  \begin{center}
+    \includegraphics[scale=0.7]{fig_scanBreiteStrecke1}
+  \end{center}
+
+  \pagebreak
+
+  \vspace*{-20mm}
+\item[Ansatz 2:]
+  Erzeuge inkrementell die der Strecke am nächsten liegenden Pixel.
+
+  Modifiziere aber nicht nur diese, sondern einen ganzen Bereich
+  um sie herum \emph{(„Malen mit einem dickeren Pinsel“)}.
+
+  \begin{itemize}
+  \item quadratische Pinselform:
+
+    \vspace*{-5mm}
+    \begin{center}
+      \scalebox{0.6}{\Large\input{fig_scanBreiteStrecke2}}
+    \end{center}
+
+    \begin{description}
+    \item[Problem:] Die tatsächliche Strichbreite und die Form
+      der Strecken-Enden hängen von der Steigung der Strecke
+      ab:
+
+      \vspace*{-5mm}
+      \begin{center}
+        \scalebox{0.6}{\Large\input{fig_scanBreiteStrecke3}}%≈
+      \end{center}
+
+    \item[Gegenmaßnahme:] Korrektur der Pinselbreite in
+      Abhängigkeit von der Steigung
+
+      oder
+    \end{description}
+
+  \item kreisförmiger Pinsel:
+
+    \begin{center}
+      \scalebox{0.6}{\Large\input{fig_scanBreiteStrecke4}}%≈
+    \end{center}
+
+    Tatsächliche Strichbreite und Form der Strecken-Enden sind
+    (nahezu) \emph{unabhängig von der Steigung}.
+  \end{itemize}
+\end{description}
+
+
+\subsection{Unterbrochene Linien}
+
+\begin{description}
+\item[Problem:]
+  Wie zeichnet man eine „gestrichelte“ oder „gestrichpunktete“ Linie?
+
+  \begin{center}
+    \includegraphics[scale=0.7]{fig_scanStreckeMuster1}
+  \end{center}
+
+\item[Ansatz 1:]
+  Erzeuge eine \emph{Maske}\index{Maske} für die Periode des Musters:
+
+  \begin{center}
+    \scalebox{0.7}{\large\input{fig_scanStreckeMuster2}}
+  \end{center}
+
+  Verwende einen inkrementellen Algorithmus zur Scan Conversion,
+  oder \emph{zähle} die davor generierten Pixel mit (beginnend mit
+  Nummer $i = 0$).
+
+  Modifiziere das $i$-te Pixel nur dann, wenn
+  \[ mask[i \bmod \text{Maskenlänge}] = 1 \,\text. \]
+
+  \pagebreak
+
+  \vspace*{-21mm}
+  \begin{description}
+  \item[Problem:] Die Länge der einzelnen Striche hängt von der
+    Steigung der Strecke ab:
+
+    \begin{center}
+      \scalebox{0.6}{\Large\input{fig_scanStreckeMuster3}}%≈
+    \end{center}
+
+  \item[Abhilfe:] steigungsabhängige Länge der Maske
+  \end{description}
+
+  oder
+
+\item[Ansatz 2:]
+  Berechne die Länge und die Lage der \emph{einzelnen Striche} und
+  führe für jeden einzelnen Strich die Scan Conversion durch.
+\end{description}
+
+\begin{bemerkung}
+  Beide Verfahren können auch für Strichbreite $d > 1$ verwendet
+  werden.
+  \Reached{WS14/15}{03}{2014/10/23}
+  \Reached{WS21/22}{02}{2021/10/21}
+\end{bemerkung}
+
+
+\section{Räumliche und farbliche Auf\/lösung}
+
+\subsection{Räumliche Auf\/lösung statt farblicher Auf\/lösung}
+
+\begin{description}
+\item[Problem:]
+  Wie reduziert man die \emph{„Stufen“} bei (gekrümmten oder
+  geraden) Linien?
+
+  \begin{center}
+    \includegraphics[scale=0.65]{fig_scanRaumStattFarbe1}
+  \end{center}
+
+\item[Idee:]
+  Die Stufen wären sicher weniger auf\/fallend, wenn die Pixmap eine
+  höhere räumliche Auf\/lösung (\dH mehr Pixel pro Flächeninhalt)
+  hätte.
+
+  \begin{itemize}
+  \item[⇒] Unterteile jedes vorhandene Pixel in
+    \mdef{$nₓ × n_y$}
+    \emph{„virtuelle Pixel“}\index{virtuelles Pixel}\index{Pixel!virtuelles}
+    und führe die Scan Conversion mit dieser
+    \emph{virtuellen Pixmap}\index{virtuelle Pixmap}\index{Pixmap!virtuelle}
+    durch.
+  \end{itemize}
+
+  \begin{center}
+    \includegraphics[scale=0.65]{fig_scanRaumStattFarbe2}
+  \end{center}
+
+  Bestimme, welcher Anteil jedes (großen) Pixels von der Linie
+  überdeckt wird:
+
+  \begin{center}
+    \scalebox{0.65}{\Large\input{fig_scanRaumStattFarbe3}}
+  \end{center}
+
+  Belege jedes Pixel mit einer Helligkeitsstufe, die seinem
+  „Überdeckungsanteil“ entspricht.
+\end{description}
+\Reached{WS18/19}{02}{2018/10/18}
+
+\pagebreak
+
+\vspace*{-21mm}
+\begin{bemerkung}
+  Dieses Verfahren gewichtet alle virtuellen Pixel innerhalb eines
+  Pixels gleich.
+  Meist ist eine \emph{abstandsabhängige Gewichtung} noch besser:
+
+  \begin{center}
+    \scalebox{0.5}{\LARGE\input{fig_scanRaumStattFarbe4}}
+  \end{center}
+
+  Manchmal werden auch überlappende Masken verwendet.
+\end{bemerkung}
+
+\pagebreak
+
+\begin{center}
+  \begin{tabular}{c@{\qquad\qquad}c}
+    \includegraphics[scale=0.6]{fig_scanRaumStattFarbe5} &
+    \includegraphics[scale=0.3]{fig_scanRaumStattFarbe6} \\
+    & \includegraphics[scale=0.15]{fig_scanRaumStattFarbe7}
+  \end{tabular}
+\end{center}
+
+
+\subsection{Farbliche Auf\/lösung statt räumlicher Auf\/lösung}
+
+\begin{description}
+\item[Problem:]
+  Wie stellt man auf einem Schwarz/Weiß-Display (\dH jedes Pixel
+  kann nur „an“ oder „aus“ sein) \emph{Graustufen} dar?
+
+  Wie kann man auf einem „$k$-Farben-Display“ (\zB $k = 8$ mit
+  den Farben Rot, Grün, Blau, Gelb, Zyan, Magenta, Weiß, Schwarz)
+  wesentlich mehr als $k$ \emph{Farbtöne} gleichzeitig darstellen?
+
+\item[Idee:]
+  Graustufen lassen sich durch \emph{„Mischen“} von Weiß und
+  Schwarz, Farbtöne durch Mischen der vorhandenen „Grundfarben“
+  erzeugen.
+
+  Fasse jeweils \mdef{$nₓ × n_y$} Pixel zu einem
+  \emph{virtuellen Pixel} zusammen und belege die
+  Pixel jedes virtuellen Pixels – dem Mischverhältnis
+  entsprechend – mit Weiß/Schwarz \bzw mit den vorhandenen
+  Grundfarben.
+\end{description}
+
+\begin{center}
+  \includegraphics[scale=0.13]{fig_scanFarbeStattRaum}
+\end{center}
+
+
+\section{Text}
+
+
+\begin{description}
+\item[Problem:]
+  Welche Pixel gehören zu einem bestimmten Zeichen eines
+  \emph{Zeichensatzes}\index{Zeichensatz}?
+
+\item[„analytischer Ansatz“:]
+  Zerlege die Zeichen in einfachere Objekte, die gezeichnet werden
+  können.
+
+  \begin{center}
+    \scalebox{0.65}{\LARGE\input{fig_scanText1}}
+  \end{center}
+
+  \begin{tabular}{ll}
+    „p“: & Linie der Breite … von … nach … \cmt{relativ zu $R$} \\
+    & Halbkreis der Breite … mit Radius …  um … \\
+    & \quad ⋮
+  \end{tabular}
+
+  Übertragung des Zeichens in die Pixmap durch \emph{Scan Conversion seiner Teilobjekte}.
+
+  \begin{itemize}
+  \item[\Bad] relativ langsam
+
+  \item[\Good] sehr flexibel \bzgl des Schriftbilds:
+    \begin{description}
+    \item[Zeichengröße:] geeignete Wahl von $u$
+
+    \item[Fettdruck:] Linienbreite geeignet wählen
+
+    \item[Schrägschrift:] Wende eine horizontale Scherung
+      auf die Beschreibung des Zeichens an.
+      \[ \pmat{x \\ y} ⇝ \pmat{1 & s \\ 0 & 1} · \pmat{x \\ y} \]
+
+      \begin{center}
+        \includegraphics[scale=0.65]{fig_scanText2}
+      \end{center}
+    \end{description}
+  \end{itemize}
+
+\item[„Pre-converting“:]
+  Führe \emph{vorab} für jedes Zeichen die Scan Conversion in eine
+  eigene Pixmap durch und \emph{kopiere} später deren Inhalt in die
+  „Ziel-Pixmap“.
+
+  \pagebreak
+
+  \vspace*{-22mm}
+  \begin{center}
+    \scalebox{0.6}{\LARGE\input{fig_scanText3}}
+  \end{center}
+
+  \pagebreak
+
+  \begin{itemize}
+  \item[\Good] sehr schnell
+
+  \item[\Bad] benötigt viel Speicherplatz: Für jede
+    Erscheinungsform eines Zeichens
+    \begin{itemize}
+    \item Zeichengröße
+    \item normal/fett
+    \item normal/schräg
+    \end{itemize}
+    muss eine eigene Pixmap gespeichert werden!
+  \end{itemize}
+\end{description}
+
+In der Praxis wird oft eine \emph{gemischte Strategie} verwendet:
+
+\begin{itemize}
+\item Alle Zeichensätze liegen in einer analytischen Beschreibung
+  vor;
+
+\item die am häufigsten verwendeten Zeichensätze werden zusätzlich
+  pre-converted,
+
+\item seltener benutzte Zeichen(sätze) werden erst bei Bedarf in
+  Pixel umgesetzt.
+\end{itemize}

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Tue Oct 27 16:28:17 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.0in"
+   height="4.6in"
+   viewBox="1590 2223 20356 5521"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeGouraud1.svg">
+  <metadata
+     id="metadata46">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs44" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview42"
+     showgrid="false"
+     inkscape:zoom="0.84113356"
+     inkscape:cx="866.0391"
+     inkscape:cy="147.05258"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <circle
+     id="circle6"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="94"
+     cy="4960"
+     cx="6614" />
+  <circle
+     id="circle8"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="94"
+     cy="4960"
+     cx="3070" />
+  <circle
+     id="circle10"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8"
+     r="94"
+     cy="4960"
+     cx="4960" />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="2125,6377 4488,2834 8976,7322 2125,6377 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="1889,4960 8976,4960 " />
+  <polyline
+     id="polyline16"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="3826,6661 4829,5155 " />
+  <polygon
+     id="polygon18"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:48;stroke-miterlimit:8"
+     points="4805,5079 4825,5163 4910,5148 4910,5148 4956,4966 " />
+  <polyline
+     id="polyline20"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:48;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:83, 83"
+     points="2125,6472 3545,6675 " />
+  <polygon
+     id="polygon22"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:48;stroke-miterlimit:8"
+     points="3605,6619 3538,6674 3587,6744 3587,6744 3772,6707 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text24"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7559"
+     x="9118"
+     xml:space="preserve">$\point{B}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text26"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7275"
+     x="2031"
+     xml:space="preserve">$α_{\point{B}} · (\point{B} - \point{A})$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text28"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6283"
+     x="1606"
+     xml:space="preserve">$\point{A}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text30"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4771"
+     x="6661"
+     xml:space="preserve">$\point{R}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text32"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4818"
+     x="4724"
+     xml:space="preserve">$\point{P}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text34"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4818"
+     x="2692"
+     xml:space="preserve">$\point{L}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text36"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="2692"
+     x="4251"
+     xml:space="preserve">$\point{C}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text38"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5196"
+     x="9212"
+     xml:space="preserve">Scan Line</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text40"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6141"
+     x="4440"
+     xml:space="preserve">$α_{\point{C}} · (\point{C} - \point{A})$</text>
+</svg>

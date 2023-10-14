@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Tue Oct 27 16:12:27 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10.8in"
+   height="4.2in"
+   viewBox="1297 2837 12914 5048"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_farbeDepthCueing.svg">
+  <metadata
+     id="metadata42">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs40" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview38"
+     showgrid="false"
+     inkscape:zoom="1.3240065"
+     inkscape:cx="553.45302"
+     inkscape:cy="282.37426"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2598,6614 10204,6614 " />
+  <polygon
+     id="polygon8"
+     style="fill:#000000;stroke:#000000;stroke-width:32;stroke-miterlimit:8"
+     points="10249,6566 10202,6614 10249,6661 10249,6661 10391,6614 " />
+  <polyline
+     id="polyline10"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4488,7322 4488,3258 " />
+  <polygon
+     id="polygon12"
+     style="fill:#000000;stroke:#000000;stroke-width:32;stroke-miterlimit:8"
+     points="4440,3214 4488,3261 4535,3214 4535,3214 4488,3072 " />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2834,5905 3779,5905 8031,4015 9921,4015 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="8031,4015 8031,6614 " />
+  <polyline
+     id="polyline18"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="8031,4015 4488,4015 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="3779,5905 3779,6614 " />
+  <polyline
+     id="polyline22"
+     style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:83, 83"
+     points="3779,5905 4488,5905 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text24"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3307"
+     x="4724"
+     xml:space="preserve">$σ$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text26"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7039"
+     x="3921"
+     xml:space="preserve">$n₁$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text28"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7039"
+     x="8173"
+     xml:space="preserve">$n₂$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text30"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7086"
+     x="9448"
+     xml:space="preserve">$n$-Koordinate im</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text32"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="7700"
+     x="9448"
+     xml:space="preserve">$(u, v, n)$-System</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text34"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="4062"
+     x="4204"
+     xml:space="preserve">$σ₂$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text36"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6000"
+     x="5102"
+     xml:space="preserve">$σ₁$</text>
+</svg>

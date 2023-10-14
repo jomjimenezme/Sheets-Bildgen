@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Sep 30 10:25:17 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10.6in"
+   height="11.5in"
+   viewBox="-479 898 12771 13793"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_clipHardwareKonventionell.svg">
+  <metadata
+     id="metadata106">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs104" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview102"
+     showgrid="false"
+     inkscape:zoom="0.64493604"
+     inkscape:cx="513.00589"
+     inkscape:cy="473.96089"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <rect
+     id="rect6"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="944"
+     y="1417"
+     x="1181" />
+  <polyline
+     id="polyline8"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1322,1889 1732,1889 " />
+  <polygon
+     id="polygon10"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="1792,1811 1729,1889 1792,1968 1792,1968 1981,1889 " />
+  <rect
+     id="rect12"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="944"
+     y="2834"
+     x="1181" />
+  <polyline
+     id="polyline14"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1653,3637 1653,3227 " />
+  <polygon
+     id="polygon16"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="1574,3168 1653,3231 1732,3168 1732,3168 1653,2979 " />
+  <rect
+     id="rect18"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="944"
+     y="4251"
+     x="1181" />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1984,4724 1573,4724 " />
+  <polygon
+     id="polygon22"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="1514,4803 1577,4724 1514,4645 1514,4645 1325,4724 " />
+  <rect
+     id="rect24"
+     style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="944"
+     y="5669"
+     x="1181" />
+  <polyline
+     id="polyline26"
+     style="fill:none;stroke:#ff0000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1653,5811 1653,6220 " />
+  <polygon
+     id="polygon28"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:63;stroke-miterlimit:8"
+     points="1732,6280 1653,6217 1574,6280 1574,6280 1653,6469 " />
+  <rect
+     id="rect30"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="944"
+     y="8503"
+     x="1181" />
+  <polyline
+     id="polyline32"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1653,9307 1653,8896 " />
+  <polygon
+     id="polygon34"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-miterlimit:8"
+     points="1574,8837 1653,8900 1732,8837 1732,8837 1653,8648 " />
+  <rect
+     id="rect36"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="944"
+     y="9921"
+     x="1181" />
+  <polyline
+     id="polyline38"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1984,10393 1573,10393 " />
+  <polygon
+     id="polygon40"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-miterlimit:8"
+     points="1514,10472 1577,10393 1514,10314 1514,10314 1325,10393 " />
+  <rect
+     id="rect42"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="944"
+     y="11338"
+     x="1181" />
+  <polyline
+     id="polyline44"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1653,11480 1653,11889 " />
+  <polygon
+     id="polygon46"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-miterlimit:8"
+     points="1732,11949 1653,11886 1574,11949 1574,11949 1653,12138 " />
+  <polyline
+     id="polyline48"
+     style="fill:none;stroke:#0000ff;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2362,6850 2598,7086 2598,9448 2834,9685 2598,9921 2598,12283 2450,12430 " />
+  <polygon
+     id="polygon50"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8;stroke-miterlimit:8"
+     points="2435,12488 2436,12444 2391,12444 2391,12444 2347,12533 " />
+  <rect
+     id="rect52"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="944"
+     y="7086"
+     x="1181" />
+  <polyline
+     id="polyline54"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1322,7559 1732,7559 " />
+  <polygon
+     id="polygon56"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:63;stroke-miterlimit:8"
+     points="1792,7480 1729,7559 1792,7637 1792,7637 1981,7559 " />
+  <rect
+     id="rect58"
+     style="fill:none;stroke:#00b000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="944"
+     width="944"
+     y="12755"
+     x="1181" />
+  <polyline
+     id="polyline60"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1322,13228 1732,13228 " />
+  <polygon
+     id="polygon62"
+     style="fill:#00b000;stroke:#00b000;stroke-width:63;stroke-miterlimit:8"
+     points="1792,13149 1729,13228 1792,13307 1792,13307 1981,13228 " />
+  <polyline
+     id="polyline64"
+     style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:miter"
+     points="708,944 708,14393 " />
+  <polygon
+     id="polygon66"
+     style="fill:#000000;stroke:#000000;stroke-width:48;stroke-miterlimit:8"
+     points="771,14445 708,14382 645,14445 645,14445 708,14634 " />
+  <polyline
+     id="polyline68"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,1181 944,1181 " />
+  <polyline
+     id="polyline70"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,2598 944,2598 " />
+  <polyline
+     id="polyline72"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,4015 944,4015 " />
+  <polyline
+     id="polyline74"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,5433 944,5433 " />
+  <polyline
+     id="polyline76"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,6850 944,6850 " />
+  <polyline
+     id="polyline78"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,8267 944,8267 " />
+  <polyline
+     id="polyline80"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,9685 944,9685 " />
+  <polyline
+     id="polyline82"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,11102 944,11102 " />
+  <polyline
+     id="polyline84"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,12519 944,12519 " />
+  <polyline
+     id="polyline86"
+     style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter"
+     points="472,13937 944,13937 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text88"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="3543"
+     x="3070"
+     xml:space="preserve">clippe Strecke 1 gegen die Nordseite</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text90"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="4960"
+     x="3070"
+     xml:space="preserve">clippe Strecke 1 gegen die Westseite</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text92"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="6377"
+     x="3070"
+     xml:space="preserve">clippe Strecke 1 gegen die Südseite</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#ff0000;stroke-width:0.025in"
+     id="text94"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="2125"
+     x="3070"
+     xml:space="preserve">clippe Strecke 1 gegen die Ostseite</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text96"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="9921"
+     x="3070"
+     xml:space="preserve">clippe Strecke 2</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:start;fill:#00b000;stroke-width:0.025in"
+     id="text98"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="13464"
+     x="3070"
+     xml:space="preserve">clippe Strecke 3</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:378px;font-family:Helvetica;text-anchor:end;fill:#000000;stroke-width:0.025in"
+     id="text100"
+     font-size="378"
+     font-weight="normal"
+     font-style="normal"
+     y="14645"
+     x="472"
+     xml:space="preserve">Zeit</text>
+</svg>

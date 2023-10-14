@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+
+use Env qw(HOME);
+
+@VorlDir = ( "$HOME/LehreAllgemein/VorlesungsTemplate",
+             "$HOME/Bibl",
+	     "$HOME/InformatikI/VorlesungA",
+	     "$HOME/InformatikI/VorlesungB",
+             "$HOME/Java/Vorlesung",
+             "$HOME/Bildgenerierung/Vorlesung",
+             "$HOME/AlgGeom/Vorlesung",
+	     "$HOME/InfImAll/ModImpl",
+	     "$HOME/WuA/Mathematica",
+	     "$HOME/WuA/Versionsverwaltung",
+	     "$HOME/ModProg/Lecture",
+	     "$HOME/ModProg/CompIntr",
+	     "$HOME/Tools/Lecture",
+	     "$HOME/AlgDS/Lecture" );
+
+@BaseDir = @VorlDir;
+foreach $b (@BaseDir)
+{
+    $b =~ s/$HOME\///;
+}
+
+for ($i = 0; $i <= $#VorlDir; $i++)
+{
+    system("xterm -geometry 80x10 -T $VorlDir[$i] -e " .
+	   "make --no-print-directory -C $VorlDir[$i] @ARGV &");
+}

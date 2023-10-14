@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Wed Sep 30 10:56:01 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.7in"
+   height="5.3in"
+   viewBox="-2795 1681 21294 6406"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_sichtKonvex1.svg">
+  <metadata
+     id="metadata66">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs64" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1261"
+     id="namedview62"
+     showgrid="false"
+     inkscape:zoom="1.2504708"
+     inkscape:cx="462.62537"
+     inkscape:cy="201.06709"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <polyline
+     id="polyline6"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="2598,5669 832,5889 " />
+  <polygon
+     id="polygon8"
+     style="fill:#00b000;stroke:#00b000;stroke-width:8;stroke-miterlimit:8"
+     points="740,5932 767,5898 731,5870 731,5870 642,5913 " />
+  <polygon
+     id="polygon10"
+     style="fill:none;stroke:#0000ff;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="8267,6614 2598,8031 2598,3543 2598,3543 8267,2125 " />
+  <polyline
+     id="polyline12"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="7086,5433 6682,4020 " />
+  <polygon
+     id="polygon14"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8;stroke-miterlimit:8"
+     points="6579,3945 6671,3984 6730,3902 6730,3902 6603,3742 " />
+  <polyline
+     id="polyline16"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="6614,3779 5444,3583 " />
+  <polygon
+     id="polygon18"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8;stroke-miterlimit:8"
+     points="5333,3645 5407,3577 5358,3489 5358,3489 5160,3537 " />
+  <polyline
+     id="polyline20"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="5196,3543 4127,5679 " />
+  <polygon
+     id="polygon22"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8;stroke-miterlimit:8"
+     points="4152,5803 4110,5712 4011,5733 4011,5733 3997,5938 " />
+  <polyline
+     id="polyline24"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="4015,5905 5660,6317 " />
+  <polygon
+     id="polygon26"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8;stroke-miterlimit:8"
+     points="5776,6263 5696,6324 5738,6416 5738,6416 5941,6386 " />
+  <polyline
+     id="polyline28"
+     style="fill:none;stroke:#0000ff;stroke-width:32;stroke-linecap:butt;stroke-linejoin:round"
+     points="5905,6377 6890,5589 " />
+  <polygon
+     id="polygon30"
+     style="fill:#0000ff;stroke:#0000ff;stroke-width:8;stroke-miterlimit:8"
+     points="6917,5464 6917,5566 7016,5588 7016,5588 7114,5408 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#0000ff;stroke-width:0.025in"
+     id="text32"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="2125"
+     x="8503"
+     xml:space="preserve">Polygonebene</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text34"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3637"
+     x="4724"
+     xml:space="preserve">$\point{V}₅$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text36"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6330"
+     x="3874"
+     xml:space="preserve">$\point{V}₁$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text38"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="6897"
+     x="6000"
+     xml:space="preserve">$\point{V}₂$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text40"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3732"
+     x="6944"
+     xml:space="preserve">$\point{V}₄$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:end;fill:#0000ff;stroke-width:0.025in"
+     id="text42"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5811"
+     x="7606"
+     xml:space="preserve">$\point{V}₃$</text>
+  <circle
+     id="circle44"
+     style="fill:#00b000;stroke:#00b000;stroke-width:0;stroke-dasharray:62, 62"
+     r="94"
+     cy="5196"
+     cx="6377" />
+  <polyline
+     id="polyline46"
+     style="fill:none;stroke:#b000b0;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="7795,2834 8744,3024 " />
+  <polygon
+     id="polygon48"
+     style="fill:#b000b0;stroke:#b000b0;stroke-width:63;stroke-miterlimit:8"
+     points="8818,2958 8745,3023 8787,3112 8787,3112 8977,3070 " />
+  <polyline
+     id="polyline50"
+     style="fill:none;stroke:#00b000;stroke-width:63;stroke-linecap:butt;stroke-linejoin:round"
+     points="6377,5196 10393,4724 " />
+  <polyline
+     id="polyline52"
+     style="fill:none;stroke:#00b000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:62, 62"
+     points="6377,5196 2598,5669 " />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text54"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3307"
+     x="9212"
+     xml:space="preserve">Vorwärts-Normale</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#00b000;stroke-width:0.025in"
+     id="text56"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5433"
+     x="9496"
+     xml:space="preserve">Projektionsstrahl</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#00b000;stroke-width:0.025in"
+     id="text58"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="5055"
+     x="5952"
+     xml:space="preserve">$\point{S}$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:429px;font-family:Times;text-anchor:start;fill:#b000b0;stroke-width:0.025in"
+     id="text60"
+     font-size="429"
+     font-weight="normal"
+     font-style="normal"
+     y="3543"
+     x="8503"
+     xml:space="preserve">$\vektor{v}$</text>
+</svg>

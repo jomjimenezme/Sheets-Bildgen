@@ -1,0 +1,891 @@
+\documentclass[a4paper,12pt]{scrartcl}
+\usepackage{etex}
+\usepackage{xltxtra}
+\usepackage[babelshorthands]{polyglossia}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{scrdate}
+\usepackage{scrtime}
+\usepackage{ifthen}
+\usepackage{unicode-math}
+\setmathfont{XITS Math}
+
+\typearea{18}
+ 
+\pagestyle{plain}
+\definecolor{linkcol}{rgb}{0.00,0.00,0.50}
+\definecolor{urlcol}{rgb}{0.00,0.00,0.75}
+\hypersetup{%
+  pdftitle={Bildgenerierung Aufgaben},
+  pdfauthor={Holger Arndt},
+  pdfpagemode=UseThumbs,
+  colorlinks=true,
+  linkcolor=linkcol,
+  urlcolor=urlcol,
+}
+
+\setmainlanguage{german}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont[Scale=1]{XITS}
+\setsansfont[Scale=0.9]{FreeSans}
+\setmonofont[Scale=0.82]{DejaVu Sans Mono}
+
+\newcommand{\WSSS}{WS}
+\newcommand{\pointsname}{Punkte}
+\newcommand{\sheetname}{Blatt}
+\newcommand{\examname}{Klausur}
+\newcommand{\exercisename}{Aufgabe}
+\newcommand{\seetext}{siehe Abschnitt}
+\newboolean{indatelist}
+\newenvironment{topic}{%
+  \setboolean{indatelist}{false}
+  \begin{description}}{%
+  \ifthenelse{\boolean{indatelist}}{\end{itemize}}{}
+  \end{description}}
+\newcommand{\ex}[1]{%
+  \ifthenelse{\boolean{indatelist}}{\end{itemize}}{}
+  \item[#1] \mbox{} \begin{itemize}
+  \setboolean{indatelist}{true}}
+\newcommand{\exe}[2]{%
+  \ifthenelse{\boolean{indatelist}}{\end{itemize}}{}
+  \item[#1:] #2 \begin{itemize}
+  \setboolean{indatelist}{true}}
+\newcommand{\pdfpath}[3]{%
+  \item[\WSSS{} #1:] #2
+  \begin{itemize}
+    \item \texttt{#3}
+  \end{itemize}}
+\newcommand{\pdfpaths}[4]{%
+  \item[\WSSS{} #1:] #2
+  \begin{itemize}
+    \item \texttt{#3}
+    \item \texttt{#4}
+  \end{itemize}}
+\newcommand{\sheet}[4]{\item \WSSS{} #1, \sheetname~#2, \exercisename~#3,
+  #4 \pointsname} 
+\newcommand{\exam}[4]{\item \WSSS{} #1, \examname~#2, \exercisename~#3,
+  #4 \pointsname}
+\newcommand{\examnone}[4]{\item \textit{[\WSSS{} #1, \examname~#2,
+    \exercisename~#3, #4 \pointsname]}} % kein Teilnehmer
+\newcommand{\examsee}[1]{\item \seetext~\ref{#1}}
+  
+\makeatletter
+\begingroup
+  \catcode`\"=\active
+  \AtBeginDocument{\let"=\eu@active@quote}
+\endgroup
+\makeatother
+
+\begin{document}
+  
+\begin{center}
+  {\Large\textsf{\textbf{Bildgenerierung – alte Aufgaben}}}
+  
+  Version: \todaysname, \today, \thistime
+\end{center}
+
+\section*{Pfade}
+
+\begin{topic}
+  \pdfpath{2021/2022}{Arndt, Galgon}{%
+    Bildgenerierung/alt/WS2122/Übungen/Übungsblätter/\\
+    \hspace*{1cm} ueblatt\{01,02,03,04,05,06,07,08,09,10,11,12\}.pdf}
+
+  \pdfpath{2020/2021}{Arndt, Maag}{%
+    Bildgenerierung/alt/WS2021/Übungen/Übungsblätter/\\
+    \hspace*{1cm} ueblatt\{01,02,03,04,05,06,07,08,09,10\}.pdf}
+
+  \pdfpath{2019/2020}{Arndt, Maag}{%
+    Bildgenerierung/alt/WS1920/Übungen/Übungsblätter/\\
+    \hspace*{1cm} ueblatt\{01,02,03,04,05,06,07,08,09,10,11\}.pdf}
+
+  \pdfpath{2018/2019}{Arndt, Kintscher}{%
+    Bildgenerierung/alt/WS1819/Übungen/Übungsblätter/\\
+    \hspace*{1cm} ueblatt\{01,02,03,04,05,06,07,08,09,10,11,12\}.pdf}
+
+  \pdfpath{2017/2018}{Arndt, Kintscher}{%
+    Bildgenerierung/alt/WS1718/Übungen/Übungsblätter/\\
+    \hspace*{1cm} ueblatt\{01,02,03,04,05,06,07,08,09,10,11,12\}.pdf}
+
+  \pdfpath{2016/2017}{Arndt, Galgon, Kintscher}{%
+    Bildgenerierung/alt/WS1617/Übungen/Übungsblätter/\\
+    \hspace*{1cm} ueblatt\{01,02,03,04,05,06,07,08,09,10,11,12\}.pdf}
+
+  \pdfpath{2015/2016}{Arndt}{%
+    Bildgenerierung/alt/WS1516/Übungen/Übungsblätter/\\
+    \hspace*{1cm} UeBlatt\{01,02,03,04,05,06,07,08,09,10,11\}.pdf}
+
+  \pdfpath{2014/2015}{Arndt, Galgon}{%
+    Bildgenerierung/alt/WS1415/Übungen/Übungsblätter/\\
+    \hspace*{1cm} ue\{01,02,03,04,05,06,07,08,09,10,11,12,13\}.pdf}
+
+  \pdfpath{2013/2014}{Lang, Birk}{%
+    Bildgenerierung/alt/Bruno\_WS1314/2013-WS-vorlesung-Bildgenerierung/uebungen/\\
+    \hspace*{1cm} uebungsblaetter/UeBlatt\{01,02,03,04,05,06,07,08,09,10,11,12,13\}.pdf}
+
+  \pdfpath{2012/2013}{Lang, Birk, Galgon}{%
+    Bildgenerierung/alt/Bruno\_WS1213/BildgenerierungWS1213/uebungen/\\
+    \hspace*{1cm} uebungsblaetter/UeBlatt\{01,02,03,04,05,06,07,08,09,10,11\}.pdf}
+
+  \pdfpaths{2010/2011}{Grosche, Birk, Galgon}{%
+    Bildgenerierung/alt/Grosche\_WS1011/BildverBildgenWS1011/Uebungsblaetter/\\
+    \hspace*{1cm} UeBlatt\{01,02,03,04,05,06,07,08,09,10\}.pdf}{%
+    Bildgenerierung/alt/Grosche\_WS1011/BildverBildgenWS1011/Klausur/\\
+    \hspace*{1cm} Klausur[12].pdf}
+
+  \pdfpaths{2008/2009}{Grosche, Birk}{%
+    Bildgenerierung/alt/Grosche\_WS0809/BildverBildgenWS0809/Uebungsblaetter/\\
+    \hspace*{1cm} UeBlatt\{01,02,03,04,05,06,07,08,09,10,11\}.pdf}{%
+    Bildgenerierung/alt/Grosche\_WS0809/BildverBildgenWS1011/Klausur/\\
+    \hspace*{1cm} Klausur1.pdf}
+
+  \pdfpaths{2006/2007}{Grosche, Arndt}{%
+    Bildgenerierung/alt/WS0607/Uebungsblaetter/\\
+    \hspace*{1cm} UeBlatt\{01,02,03,04,05,06,07,08,09,10,11,12,13\}.pdf}{%
+    Bildgenerierung/alt/WS0607/Klausur/Klausur[12].pdf}
+
+  \pdfpaths{2004/2005}{Grosche, Arndt}{%
+    Bildgenerierung/alt/WS0405/Uebungsblaetter/\\
+    \hspace*{1cm} UeBlatt\{01,02,03,04,05,06,07,08,09,10,11\}.pdf}{%
+    Bildgenerierung/alt/WS0405/Klausur/Klausur[123].pdf}
+
+  \pdfpath{2002/2003}{Grosche, Arndt}{%
+    Bildgenerierung/alt/WS0203/Uebungsblaetter/\\
+    \hspace*{1cm} UeBlatt\{01,02,03,04,05,06,07,08,09,10,11,12,Le\}.pdf}
+
+  \pdfpath{SS 1995}{Lang}{%
+    Bildgenerierung/alt/1995\_SS\_vorlesung\_GraphikI/uebungsblaetter/ueb[1234].ps}
+\end{topic}
+ 
+\section{Programmierrahmen}
+
+\begin{topic}
+  \ex{Test des Qt-Frameworks}
+  \sheet{2021/2022}{1}{1}{—}
+  \sheet{2020/2021}{1}{1}{0}
+  \sheet{2019/2020}{1}{1}{0}
+  \sheet{2018/2019}{1}{1}{0}
+  \sheet{2017/2018}{1}{1}{0}
+  \sheet{2016/2017}{1}{1}{0}
+  \sheet{2015/2016}{1}{1}{0}
+  \sheet{2014/2015}{1}{1}{0}
+
+  \exe{einfache Linien}{Algorithmus beliebig}
+  \sheet{2021/2022}{1}{2}{—}
+  \sheet{2020/2021}{1}{2}{3}
+  \sheet{2019/2020}{1}{2}{3}
+  \sheet{2018/2019}{1}{2}{3}
+  \sheet{2017/2018}{1}{2}{3}
+  \sheet{2016/2017}{1}{2}{3}
+  \sheet{2015/2016}{1}{2}{3}
+  \sheet{2014/2015}{1}{2}{2}
+  \sheet{2006/2007}{1}{1}{4}
+  \sheet{2002/2003}{1}{1}{4}
+
+  \exe{gefüllte Kreise}{Algorithmus beliebig}
+  \sheet{2021/2022}{1}{3}{—}
+  \sheet{2020/2021}{1}{3}{3}
+  \sheet{2019/2020}{1}{3}{3}
+  \sheet{2018/2019}{1}{3}{3}
+  \sheet{2017/2018}{1}{3}{3}
+  \sheet{2016/2017}{1}{3}{3}
+  \sheet{2015/2016}{1}{3}{3}
+  \sheet{2014/2015}{2}{3}{2}
+  \sheet{2013/2014}{1}{1}{2}
+  \sheet{2012/2013}{1}{1}{2}
+  \sheet{2010/2011}{1}{1}{4}
+  \sheet{2008/2009}{1}{1}{4}
+  \sheet{2006/2007}{1}{2}{4}
+  \sheet{2004/2005}{1}{1}{5}
+
+  \exe{gefüllte Dreiecke}{Algorithmus beliebig}
+  \sheet{2002/2003}{1}{2}{6}
+
+  \ex{Funktionsplotter}
+  \sheet{2014/2015}{2}{4}{4}
+  \sheet{2013/2014}{1}{2}{4}
+
+  \exe{Tortendiagramm und Balkendiagramm}{SRGP-Bibliothek}
+  \sheet{SS 1995}{2}{3}{4P}
+\end{topic}
+
+\section{Scan Conversion}
+
+\begin{topic}
+  \exe{Scan Conversion für Linien}{Programmierung}
+  \sheet{2021/2022}{2}{4}{—}
+  \sheet{2020/2021}{2}{4}{4}
+  \sheet{2019/2020}{2}{4}{4}
+  \sheet{2018/2019}{2}{4}{4}
+  \sheet{2017/2018}{2}{4}{4}
+  \sheet{2016/2017}{2}{4}{4}
+  \sheet{2015/2016}{2}{4}{4}
+  \sheet{2014/2015}{3}{5}{4}
+  \sheet{2013/2014}{2}{3}{4}
+  \sheet{2012/2013}{1}{2}{4}
+  \sheet{2010/2011}{1}{2}{6}
+  \sheet{2008/2009}{1}{2}{6}
+  \sheet{2006/2007}{2}{3}{6}
+  \sheet{2004/2005}{1}{2}{6}
+  \sheet{2002/2003}{2}{3}{6}
+
+  \exe{Scan Conversion für Kreise}{Programmierung}
+  \sheet{2021/2022}{2}{5}{—}
+  \sheet{2020/2021}{2}{5}{6}
+  \sheet{2019/2020}{2}{5}{6}
+  \sheet{2018/2019}{2}{5}{6}
+  \sheet{2017/2018}{2}{5}{6}
+  \sheet{2016/2017}{2}{5}{6}
+  \sheet{2015/2016}{2}{5}{6}
+  \sheet{2014/2015}{3}{6}{6}
+  \sheet{2013/2014}{2}{4}{6}
+  \sheet{2012/2013}{1}{3}{6}
+  \sheet{2010/2011}{2}{3}{6}
+  \sheet{2008/2009}{2}{3}{6}
+  \sheet{2006/2007}{3}{4}{6}
+  \sheet{2004/2005}{2}{3}{6}
+  \sheet{2002/2003}{2}{4}{6}
+
+  \exe{Scan Conversion für Ellipsen}{Algorithmus und Programmierung}
+  \sheet{2021/2022}{2}{6}{—}
+  \sheet{2020/2021}{2}{6}{10}
+  \sheet{2019/2020}{2}{6}{10}
+  \sheet{2018/2019}{2}{6}{10}
+  \sheet{2017/2018}{2}{6}{10}
+  \sheet{2016/2017}{2}{6}{10}
+  \sheet{2015/2016}{3}{7}{10}
+  \sheet{2014/2015}{3}{7}{10}
+  \sheet{2013/2014}{2}{5}{10}
+  \sheet{2010/2011}{3}{5}{11}
+  \sheet{2008/2009}{3}{5}{11}
+  \sheet{2006/2007}{4}{6}{11}
+  \sheet{2004/2005}{3}{5}{11}
+  \sheet{2002/2003}{4}{6}{11}
+
+  \ex{Differenzen $i$-ter Ordnung, Auswertung von Polynomen}
+  \sheet{SS 1995}{1}{2}{6T}
+
+  \exe{gefüllte Parallelogramme und Kreise}{Programmierung,
+    modifizierter Flood-Fill-Algorithmus}
+  \sheet{2014/2015}{4}{8}{8}
+  \sheet{2013/2014}{3}{6}{8}
+  \sheet{2012/2013}{2}{5}{8}
+
+  \exe{gefüllte Parallelogramme und Kreise}{Flood-Fill, mit Schraffur}
+  \sheet{SS 1995}{1}{1}{12P}
+
+  \exe{gefüllte Polygone}{einfarbig, Programmierung, Scan-Line-Verfahren}
+  \sheet{2015/2016}{2}{6}{10}
+  \sheet{2010/2011}{2}{4}{10}
+  \sheet{2008/2009}{2}{4}{10}
+  \sheet{2006/2007}{3}{5}{10}
+  \sheet{2004/2005}{2}{4}{10}
+  \sheet{2002/2003}{3}{5}{10}
+
+  \exe{gefüllte Polygone}{mit Muster, Programmierung, Scan-Line-Verfahren}
+  \sheet{2021/2022}{3}{7}{—}
+  \sheet{2020/2021}{3}{7}{12}
+  \sheet{2019/2020}{3}{7}{12}
+  \sheet{2018/2019}{3}{7}{12}
+  \sheet{2017/2018}{3}{7}{12}
+  \sheet{2016/2017}{3}{7}{12}
+  \sheet{2014/2015}{4}{9}{12}
+  \sheet{2013/2014}{3}{7}{12}
+  \sheet{2012/2013}{2}{6}{12}
+  \sheet{2010/2011}{3}{6}{4}
+  \sheet{2008/2009}{3}{6}{4}
+  \sheet{2006/2007}{4}{7}{4}
+  \sheet{2004/2005}{3}{6}{4}
+  \sheet{2002/2003}{4}{7}{4}
+
+  \exe{unterbrochene Linien}{Programmierung}
+  \sheet{2013/2014}{4}{8}{6}
+  \sheet{2012/2013}{2}{4}{6}
+
+  \exe{Antialiasing}{Programmierung, Linie als Rechteck in feinerem Raster}
+  \sheet{2021/2022}{3}{8}{—}
+  \sheet{2020/2021}{3}{8}{8}
+  \sheet{2019/2020}{3}{8}{8}
+  \sheet{2018/2019}{3}{8}{8}
+  \sheet{2017/2018}{3}{8}{8}
+  \sheet{2016/2017}{3}{8}{8}
+  \sheet{2015/2016}{3}{8}{8}
+  \sheet{2014/2015}{5}{10}{8}
+  \sheet{2013/2014}{4}{9}{8}
+  \sheet{2012/2013}{3}{7}{8}
+  \sheet{2010/2011}{4}{8}{8}
+  \sheet{2008/2009}{4}{8}{8}
+  \sheet{2006/2007}{5}{9}{8}
+  \sheet{2004/2005}{4}{8}{8}
+  \sheet{2002/2003}{5}{8}{8}
+\end{topic}
+
+\section{Projektionen}
+
+\begin{topic}
+  \exe{Perspektivische Projektion}{Programmierung, Drahtgitterdarstellung}
+  \sheet{2021/2022}{4}{10}{—}
+  \sheet{2020/2021}{4}{10}{10}
+  \sheet{2019/2020}{4}{10}{10}
+  \sheet{2018/2019}{4}{10}{10}
+  \sheet{2017/2018}{4}{10}{10}
+  \sheet{2016/2017}{4}{9}{10}
+  \sheet{2015/2016}{4}{10}{10}
+  \sheet{2014/2015}{5}{11}{10}
+  \sheet{2013/2014}{5}{10}{10}
+  \sheet{2012/2013}{3}{8}{10}
+  \sheet{2010/2011}{6}{12}{10}
+  \sheet{2008/2009}{6}{12}{10}
+  \sheet{2006/2007}{7}{13}{10}
+  \sheet{2004/2005}{7}{12}{12}
+  \sheet{2002/2003}{7}{12}{12}
+
+  \exe{Perspektivische Projektion, animiert}{Rundflug um Eiffelturm}
+  \sheet{2021/2022}{7}{19}{—}
+  \sheet{2020/2021}{7}{19}{2}
+  \sheet{2019/2020}{7}{19}{2}
+  \sheet{2018/2019}{7}{19}{2}
+  \sheet{2017/2018}{7}{19}{2}
+  \sheet{2016/2017}{7}{19}{2}
+  \sheet{2015/2016}{7}{18}{2}
+  \sheet{2004/2005}{8}{13}{4}
+  \sheet{2002/2003}{8}{13}{4}
+
+  \exe{Perspektivische Projektion, animiert}{Rundflug um World Trade Center}
+  \sheet{SS 1995}{2}{4}{6P}
+
+  \exe{Perspektivische Projektion, animiert}{3D-Nikolaushaus}
+  \sheet{2015/2016}{7}{18½}{0}
+  \sheet{2004/2005}{8}{13½}{—}
+  \sheet{2002/2003}{8}{13½}{—}
+
+  \exe{Perspektivische Projektion mit OpenGL}{Programmierung}
+  \sheet{2021/2022}{7}{20}{—}
+  \sheet{2018/2019}{7}{20}{2}
+  \sheet{2017/2018}{7}{20}{2}
+  \sheet{2016/2017}{7}{20}{2}
+  \sheet{2010/2011}{7}{15}{2}
+  \sheet{2008/2009}{7}{15}{2}
+
+  \exe{Parallelprojektion}{Berechnung}
+  \sheet{2010/2011}{6}{13}{6}
+  \sheet{2008/2009}{6}{13}{6}
+  \sheet{2006/2007}{7}{14}{6}
+
+  \exe{Modellierung mit OpenGL}{Programmierung, Schneemänner}
+  \sheet{2021/2022}{5}{14}{—}
+  \sheet{2020/2021}{5}{14}{4}
+  \sheet{2019/2020}{5}{14}{4}
+  \sheet{2018/2019}{5}{14}{4}
+  \sheet{2017/2018}{5}{14}{4}
+  \sheet{2016/2017}{5}{14}{4}
+  \sheet{2015/2016}{7}{19}{4}
+  \sheet{2014/2015}{6}{14}{4}
+  \sheet{2013/2014}{5}{11}{4}
+
+  \exe{2D-Transformation}{Berechnung, homogene Koordinaten, Programmierung}
+  \sheet{2004/2005}{5}{9}{6}
+  \sheet{2002/2003}{5}{9}{5}
+
+  \exe{2D-Transformation}{Berechnung, homogene Koordinaten}
+  \sheet{2010/2011}{5}{9}{4}
+  \sheet{2008/2009}{5}{9}{4}
+  \sheet{2006/2007}{6}{10}{4}
+
+  \exe{Punktspiegelung im Raum}{Berechnung, homogene Koordinaten}
+  \sheet{2021/2022}{3}{9}{—}
+  \sheet{2020/2021}{3}{9}{3}
+  \sheet{2019/2020}{3}{9}{3}
+  \sheet{2018/2019}{3}{9}{3}
+  \sheet{2017/2018}{3}{9}{3}
+  \sheet{2016/2017}{4}{12}{3}
+  \sheet{2015/2016}{3}{9}{3}
+  \sheet{2010/2011}{5}{10}{3}
+  \sheet{2008/2009}{5}{10}{3}
+  \sheet{2006/2007}{6}{11}{3}
+
+  \exe{Spiegelung an Ebene im Raum}{Berechnung, homogene Koordinaten}
+  \sheet{2010/2011}{5}{11}{5}
+  \sheet{2008/2009}{5}{11}{5}
+  \sheet{2006/2007}{6}{12}{5}
+  \sheet{2004/2005}{5}{10}{6}
+  \sheet{2002/2003}{6}{10}{5}
+
+  \exe{Drehung um Gerade durch Nullpunkt im Raum}{Berechnung}
+  \sheet{2004/2005}{6}{11}{10}
+  \sheet{2002/2003}{6}{11}{7}
+
+  \ex{Vektorprodukt}
+  \sheet{SS 1995}{2}{5}{4T}
+\end{topic}
+
+\section{Clipping}
+
+\begin{topic}
+  \exe{Cohen-Sutherland}{Beispiele, Rechnung von Hand}
+  \sheet{2021/2022}{4}{11}{—}
+  \sheet{2020/2021}{4}{11}{4}
+  \sheet{2019/2020}{4}{11}{4}
+  \sheet{2018/2019}{4}{11}{4}
+  \sheet{2017/2018}{4}{11}{4}
+  \sheet{2016/2017}{4}{10}{4}
+  \sheet{2015/2016}{4}{11}{4}
+  \sheet{2014/2015}{6}{12}{4}
+  \sheet{2013/2014}{6}{12}{4}
+  \sheet{2012/2013}{4}{9}{3}
+
+  \exe{Cyrus-Beck-Liang-Barsky}{Beispiele, Rechnung von Hand oder mit Hilfsprogramm}
+  \sheet{2021/2022}{4}{12}{—}
+  \sheet{2020/2021}{4}{12}{4}
+  \sheet{2019/2020}{4}{12}{4}
+  \sheet{2018/2019}{4}{12}{4}
+  \sheet{2017/2018}{4}{12}{4}
+  \sheet{2016/2017}{4}{11}{4}
+  \sheet{2015/2016}{4}{12}{4}
+  \sheet{2014/2015}{6}{13}{4}
+  \sheet{2013/2014}{6}{13}{4}
+  \sheet{2012/2013}{4}{10}{5}
+  \sheet{2010/2011}{4}{7}{5}
+  \sheet{2008/2009}{4}{7}{5}
+  \sheet{2006/2007}{5}{8}{5}
+  \sheet{2004/2005}{4}{7}{5}
+
+  \exe{3D-Clipping für perspektivische Projektion}{Theorie und Programmierung}
+  \sheet{2021/2022}{5}{13}{—}
+  \sheet{2020/2021}{5}{13}{12}
+  \sheet{2019/2020}{5}{13}{12}
+  \sheet{2018/2019}{5}{13}{12}
+  \sheet{2017/2018}{5}{13}{12}
+  \sheet{2016/2017}{5}{13}{12}
+  \sheet{2015/2016}{5}{13}{12}
+  \sheet{2014/2015}{7}{15}{12}
+  \sheet{2013/2014}{7}{14}{12}
+  \sheet{2012/2013}{5}{11}{12}
+  \sheet{2010/2011}{7}{14}{12}
+  \sheet{2008/2009}{7}{14}{12}
+  \sheet{2006/2007}{8}{15}{12}
+  
+  \ex{Fragen zum Clipping}
+  \sheet{SS 1995}{2}{6}{6T}
+\end{topic}
+
+\section{Sichtbarkeit}
+
+\begin{topic}
+  \exe{$z$-Puffer-Verfahren}{Programmierung}
+  \sheet{2021/2022}{6}{17}{—}
+  \sheet{2020/2021}{6}{17}{4}
+  \sheet{2019/2020}{6}{17}{4}
+  \sheet{2018/2019}{6}{17}{4}
+  \sheet{2017/2018}{6}{17}{4}
+  \sheet{2016/2017}{6}{17}{4}
+  \sheet{2015/2016}{5}{14}{4}
+  \sheet{2014/2015}{8}{16}{—}
+  \sheet{2013/2014}{8}{15}{—}
+  \sheet{2012/2013}{6}{12}{—}
+  \sheet{2010/2011}{10}{26}{—}
+  \sheet{2008/2009}{11}{26}{4}
+  \sheet{2006/2007}{13}{23}{4}
+  \sheet{2004/2005}{11}{20}{4}
+  \sheet{2002/2003}{Le}{21}{4}
+
+  \exe{$z$-Puffer-Verfahren mit OpenGL}{Programmierung}
+  \sheet{2021/2022}{7}{21}{—}
+  \sheet{2018/2019}{7}{21}{1}
+  \sheet{2017/2018}{7}{21}{1}
+  \sheet{2016/2017}{7}{21}{1}
+  \sheet{2010/2011}{10}{27}{—}
+  \sheet{2008/2009}{11}{26 (2)}{1 Zusatz-}
+
+  \exe{Painter's Algorithm}{Programmierung}
+  \sheet{2021/2022}{6}{15}{—}
+  \sheet{2020/2021}{6}{15}{10}
+  \sheet{2019/2020}{6}{15}{10}
+  \sheet{2018/2019}{6}{15}{10}
+  \sheet{2017/2018}{6}{15}{10}
+  \sheet{2016/2017}{6}{15}{10}
+  \sheet{2015/2016}{6}{15}{10}
+  \sheet{2014/2015}{8}{17}{—}
+  \sheet{2013/2014}{9}{16}{—}
+  \sheet{2012/2013}{8}{14}{—}
+  \sheet{SS 1995}{4}{8}{12P}
+
+  \exe{Silhouetten-Algorithmus}{Programmierung}
+  \sheet{2021/2022}{6}{16}{—}
+  \sheet{2020/2021}{6}{16}{10}
+  \sheet{2019/2020}{6}{16}{10}
+  \sheet{2018/2019}{6}{16}{10}
+  \sheet{2017/2018}{6}{16}{10}
+  \sheet{2016/2017}{6}{16}{10}
+  \sheet{2015/2016}{6}{16}{10}
+  \sheet{2014/2015}{8}{18}{—}
+  \sheet{2013/2014}{9}{17}{—}
+\end{topic}
+
+\section{Färbung}
+
+\begin{topic}
+  \exe{Beleuchtung nach Phong}{Programmierung}
+  \sheet{2021/2022}{7}{18}{—}
+  \sheet{2020/2021}{7}{18}{4}
+  \sheet{2019/2020}{7}{18}{4}
+  \sheet{2018/2019}{7}{18}{4}
+  \sheet{2017/2018}{7}{18}{4}
+  \sheet{2016/2017}{7}{18}{4}
+  \sheet{2015/2016}{7}{17}{4}
+  \sheet{2014/2015}{9}{19}{—}
+  \sheet{2013/2014}{10}{18}{—}
+  \sheet{2012/2013}{7}{13}{—}
+
+  \exe{Animiertes Mobile}{Drahtmodell oder mit Beleuchtung,
+    Programmierung mit SPHIGS}
+  \sheet{SS 1995}{3}{7 [1]}{12P}
+
+  \exe{Raytracing}{Programmierung, umfangreicher Rahmen gegeben}
+  \sheet{2021/2022}{11}{34}{—}
+  \sheet{2020/2021}{10}{30}{15}
+  \sheet{2019/2020}{11}{30}{15}
+  \sheet{2018/2019}{11}{32}{15}
+  \sheet{2017/2018}{11}{32}{15}
+  \sheet{2016/2017}{11}{34}{15}
+  \sheet{2015/2016}{8}{20}{15}
+  \sheet{2014/2015}{10}{20}{—}
+  \sheet{2013/2014}{12}{21}{—}
+  \sheet{2012/2013}{9}{15}{—}
+
+  \exe{Raytracing, Ergänzungen}{Programmierung, Brechung, Tetraeder}
+  \sheet{2021/2022}{11}{35}{—}
+  \sheet{2018/2019}{11}{33}{8}
+  \sheet{2017/2018}{11}{33}{8}
+  \sheet{2016/2017}{11}{35}{8}
+  \sheet{2014/2015}{12}{23}{—}
+  \sheet{2013/2014}{13}{22}{—}
+  \sheet{2012/2013}{10}{16}{—}
+
+  \exe{Raytracing, Povray}{Logo, Textwürfel, gegebenes Modell ergänzen}
+  \sheet{2021/2022}{12}{36}{—}
+  \sheet{2020/2021}{10}{31}{5}
+  \sheet{2019/2020}{11}{31}{5}
+  \sheet{2018/2019}{12}{34}{5}
+  \sheet{2017/2018}{12}{34}{5}
+  \sheet{2016/2017}{12}{36}{5}
+  \sheet{2015/2016}{9}{21}{5}
+  \sheet{2014/2015}{11}{21}{—}
+  \sheet{2013/2014}{11}{19}{—}
+  \sheet{2012/2013}{11}{17}{—}
+
+  \exe{Raytracing, Povray}{Roller, gegebenes Modell ergänzen}
+  \sheet{2021/2022}{12}{37}{—}
+  \sheet{2020/2021}{10}{32}{5}
+  \sheet{2019/2020}{11}{32}{5}
+  \sheet{2018/2019}{12}{35}{5}
+  \sheet{2017/2018}{12}{35}{5}
+  \sheet{2016/2017}{12}{37}{5}
+  \sheet{2015/2016}{9}{22}{5}
+  \sheet{2014/2015}{11}{22}{—}
+  \sheet{2013/2014}{11}{20}{—}
+  \sheet{2012/2013}{11}{18}{—}
+
+  \ex{Radiosity, Povray}
+  \sheet{2021/2022}{12}{38}{—}
+  \sheet{2020/2021}{10}{33}{2}
+  \sheet{2019/2020}{11}{33}{2}
+  \sheet{2018/2019}{12}{36}{2}
+  \sheet{2017/2018}{12}{36}{2}
+  \sheet{2016/2017}{12}{38}{2}
+  \sheet{2015/2016}{10}{23}{2}
+  \sheet{2013/2014}{13}{23}{—}
+  \sheet{2012/2013}{11}{19}{—}
+\end{topic}
+
+\section{Modellierung}
+
+\begin{topic}
+  \ex{Grammatiken, Blumenwiese}
+  \sheet{2021/2022}{8}{22}{—}
+  \sheet{2020/2021}{7}{20}{5}
+  \sheet{2019/2020}{8}{20}{5}
+  \sheet{2018/2019}{8}{22}{5}
+  \sheet{2017/2018}{8}{22}{5}
+  \sheet{2016/2017}{8}{22}{5}
+  \sheet{2015/2016}{11}{24}{5}
+
+  \ex{Partikelsysteme, Feuer}
+  \sheet{2021/2022}{8}{23}{—}
+  \sheet{2020/2021}{7}{21}{4}
+  \sheet{2019/2020}{8}{21}{4}
+  \sheet{2018/2019}{8}{23}{4}
+  \sheet{2017/2018}{8}{23}{4}
+  \sheet{2016/2017}{8}{23}{4}
+  \sheet{2015/2016}{11}{25}{4}
+\end{topic}
+
+\section{Kurven und Flächen}
+
+\begin{topic}
+  \exe{Hermite-Kurven}{Programmierung}
+  \sheet{2021/2022}{9}{25}{—}
+  \sheet{2020/2021}{8}{23}{5}
+  \sheet{2019/2020}{9}{23}{5}
+  \sheet{2018/2019}{9}{24}{5}
+  \sheet{2017/2018}{8}{24}{5}
+  \sheet{2016/2017}{9}{24}{5}
+  \sheet{2014/2015}{12}{24}{5}
+  \sheet{2010/2011}{8}{16}{5}
+  \sheet{2008/2009}{8}{16}{5}
+  \sheet{2006/2007}{9}{16}{5}
+  \sheet{2004/2005}{9}{14}{5}
+  \sheet{2002/2003}{9}{14}{5}
+
+  \exe{Hermite-Kurven, animiert mit Parameter}{Programmierung}
+  \sheet{2021/2022}{9}{29}{—}
+  \sheet{2020/2021}{8}{26}{4}
+  \sheet{2019/2020}{9}{26}{4}
+  \sheet{2018/2019}{9}{27}{4}
+  \sheet{2017/2018}{9}{28}{4}
+  \sheet{2016/2017}{9}{28}{4}
+  \sheet{2002/2003}{9}{15}{4}
+
+  \exe{Hermite-Kurve mit Parameter}{Kurventypen skizzieren,
+    Parameterwerte für Schleifen finden}
+  \sheet{2021/2022}{9}{24}{—}
+  \sheet{2020/2021}{8}{22}{4}
+  \sheet{2019/2020}{8}{22}{4}
+  \sheet{2018/2019}{9}{28}{2}
+  \sheet{2017/2018}{9}{29}{4}
+  \sheet{2016/2017}{9}{29}{4}
+  \sheet{2015/2016}{11}{26}{4}
+  \sheet{2014/2015}{12}{25}{4}
+  \sheet{2010/2011}{8}{17}{4}
+  \sheet{2008/2009}{8}{17}{4}
+  \sheet{2006/2007}{9}{17}{4}
+  \sheet{2004/2005}{9}{15}{4}
+  \sheet{2002/2003}{9}{16}{4}
+
+  \exe{Bézier-Kurven}{Programmierung}
+  \sheet{2021/2022}{9}{26}{—}
+  \sheet{2020/2021}{8}{24}{3}
+  \sheet{2019/2020}{9}{24}{3}
+  \sheet{2018/2019}{9}{25}{3}
+  \sheet{2017/2018}{9}{25}{3}
+  \sheet{2016/2017}{9}{25}{3}
+  \sheet{2015/2016}{11}{27}{3}
+  \sheet{2014/2015}{13}{26}{3}
+  \sheet{2010/2011}{8}{18}{3}
+  \sheet{2008/2009}{8}{18}{3}
+  \sheet{2006/2007}{9}{18}{3}
+
+  \exe{Bézier-Kurven mit OpenGL}{Programmierung}
+  \sheet{2010/2011}{8}{19}{4 Zusatz-}
+  \sheet{2008/2009}{8}{19}{4 Zusatz-}
+
+  \exe{B-Splines}{Programmierung}
+  \sheet{2021/2022}{9}{27}{—}
+  \sheet{2020/2021}{8}{25}{3}
+  \sheet{2019/2020}{9}{25}{3}
+  \sheet{2018/2019}{9}{26}{3}
+  \sheet{2017/2018}{9}{26}{3}
+  \sheet{2016/2017}{9}{26}{3}
+  \sheet{2015/2016}{11}{28}{3}
+  \sheet{2014/2015}{13}{27}{3}
+  \sheet{2010/2011}{9}{20}{3}
+  \sheet{2008/2009}{9}{20}{3}
+  \sheet{2006/2007}{10}{19}{3}
+
+  \exe{Bézier-Kurven und B-Splines}{Programmierung}
+  \sheet{2004/2005}{9}{16}{6}
+  \sheet{2002/2003}{10}{17}{6}
+
+  \exe{Catmull-Rom-Splines}{Stetigkeit bestimmen, Programmierung}
+  \sheet{2021/2022}{9}{28}{—}
+  \sheet{2020/2021}{9}{27}{8}
+  \sheet{2019/2020}{10}{27}{8}
+  \sheet{2018/2019}{10}{29}{8}
+  \sheet{2017/2018}{9}{27}{8}
+  \sheet{2016/2017}{9}{27}{8}
+  \sheet{2015/2016}{11}{29}{8}
+  \sheet{2014/2015}{13}{28}{8}
+  \sheet{2010/2011}{9}{21}{8}
+  \sheet{2008/2009}{9}{21}{8}
+  \sheet{2006/2007}{10}{20}{8}
+  \sheet{2004/2005}{10}{17}{8}
+  \sheet{2002/2003}{10}{18}{8}
+
+  \exe{Bézier-Flächen}{Programmierung}
+  \sheet{2021/2022}{10}{30}{—}
+  \sheet{2020/2021}{9}{28}{10}
+  \sheet{2019/2020}{10}{28}{10}
+  \sheet{2018/2019}{10}{30}{10}
+  \sheet{2017/2018}{10}{30}{10}
+  \sheet{2016/2017}{10}{30}{10}
+  \sheet{2008/2009}{9}{22}{10}
+  \sheet{2006/2007}{11}{21}{10}
+  \sheet{2004/2005}{10}{18}{10}
+  \sheet{2002/2003}{11}{19}{10}
+
+  \exe{Bézier-Flächen mit OpenGL}{Programmierung}
+  \sheet{2021/2022}{10}{32}{—}
+  \sheet{2016/2017}{10}{32}{2}
+  \sheet{2008/2009}{9}{23}{2 Zusatz-}
+
+  \exe{Rotationskörper}{Programmierung}
+  \sheet{2021/2022}{10}{31}{—}
+  \sheet{2020/2021}{9}{29}{10}
+  \sheet{2019/2020}{10}{29}{10}
+  \sheet{2018/2019}{10}{31}{10}
+  \sheet{2017/2018}{10}{31}{10}
+  \sheet{2016/2017}{10}{31}{10}
+  \sheet{2010/2011}{10}{24}{—}
+  \sheet{2008/2009}{10}{24}{10}
+  \sheet{2006/2007}{12}{22}{10}
+  \sheet{2004/2005}{11}{19}{10}
+  \sheet{2002/2003}{12}{20}{10}
+
+  \exe{Rotationskörper mit OpenGL}{Programmierung}
+  \sheet{2021/2022}{10}{33}{—}
+  \sheet{2016/2017}{10}{33}{4}
+  \sheet{2010/2011}{10}{25}{—}
+  \sheet{2008/2009}{10}{25}{4 Zusatz-}
+\end{topic}
+
+\section{Klausur}
+
+\begin{topic}
+  \ex{Mittelpunktschema für Linien beschreiben}
+  \exam{2010/2011}{1}{1}{8}
+  \exam{2006/2007}{2}{1}{10}
+  \exam{2004/2005}{2}{1}{10}
+  \examnone{2004/2005}{3}{1}{10}
+
+  \ex{Mittelpunktschema für Kreise beschreiben}
+  \exam{2010/2011}{2}{1}{10}
+  \exam{2008/2009}{1}{1}{10}
+  \exam{2006/2007}{1}{1}{10}
+  \exam{2004/2005}{1}{2}{10}
+
+  \ex{Scan-Line-Verfahren zum Füllen von Polygonen erklären}
+  \exam{2010/2011}{1}{2}{10}
+  \exam{2008/2009}{1}{2}{10}
+  \exam{2006/2007}{2}{2}{10}
+  \exam{2004/2005}{2}{2}{10}
+  \examnone{2004/2005}{3}{2}{10}
+
+  \ex{Vefahren, um Inneres eines geschlossenen Polygonzugs zu bestimmen}
+  \exam{2004/2005}{1}{1}{10}
+
+  \ex{Clipping nach Cohen-Sutherland beschreiben}
+  \exam{2010/2011}{2}{2}{10}
+  \exam{2010/2011}{1}{3}{10}
+  \exam{2006/2007}{1}{2}{10}
+  \exam{2004/2005}{1}{3}{10}
+
+  \ex{Clipping nach Cyrus-Beck beschreiben}
+  \exam{2004/2005}{2}{3}{10}
+  \examnone{2004/2005}{3}{3}{10}
+
+  \exe{Antialiasing}{Bedeutung und Verfahren mit kurzer Beschreibung}
+  \exam{2010/2011}{2}{3}{10}
+  \exam{2004/2005}{1}{4}{10}
+
+  \exe{Verhinderung von Treppeneffekten bei Linien}{und Beschreibung
+    des Verfahrens}
+  \exam{2010/2011}{1}{4}{10}
+  \exam{2006/2007}{1}{3}{8}
+  \exam{2004/2005}{2}{6}{10}
+  \examnone{2004/2005}{3}{6}{10}
+
+  \exe{Grund für homogene Koordinaten}{Umrechnung normal ↔ homogen}
+  \exam{2008/2009}{1}{3}{8}
+  \exam{2006/2007}{2}{3}{10}
+  \exam{2004/2005}{2}{4}{10}
+  \examnone{2004/2005}{3}{4}{10}
+
+  \exe{Basistransformationen}{nennen und Matrizen für 2D in homogenen Koordinaten}
+  \exam{2010/2011}{2}{4}{10}
+  \exam{2010/2011}{1}{5}{10}
+  \exam{2008/2009}{1}{4}{10}
+  \exam{2006/2007}{1}{4}{10}
+  \exam{2004/2005}{1}{5}{10}
+
+  \exe{Spiegelungsgerade in 2D bestimmen}{2 Punkte gegeben, homogene Koordinaten}
+  \exam{2010/2011}{2}{5}{12}
+  \exam{2010/2011}{1}{6}{12}
+  \exam{2008/2009}{1}{5}{12}
+
+  \exe{Spiegelung in 2D bestimmen}{Geradengleichung gegeben, homogene Koordinaten}
+  \exam{2006/2007}{1}{5}{12}
+  \exam{2006/2007}{2}{5}{12}
+  \exam{2004/2005}{2}{5}{10}
+  \examnone{2004/2005}{3}{5}{10}
+
+  \exe{kanonische Bildräume}{perspektivisch und parallel, Sinn und Definition}
+  \exam{2010/2011}{2}{6}{8}
+  \exam{2010/2011}{1}{7}{8}
+  \exam{2008/2009}{1}{6}{10}
+
+  \exe{kanonische Bildräume}{perspektivisch und parallel, Definition}
+  \exam{2006/2007}{2}{6}{6}
+  \exam{2004/2005}{1}{6}{10}
+
+  \exe{Sinn von Hidden-Line- und Hidden-Surface-Algorithmen}{und
+    Beschreibung des $z$-Puffer-Verfahrens}
+  \exam{2010/2011}{2}{10}{8}
+  \exam{2008/2009}{1}{10}{8}
+  \exam{2008/2009}{1}{10}{8}
+  \exam{2004/2005}{2}{10}{10}
+  \examnone{2004/2005}{3}{10}{10}
+
+  \exe{$z$-Puffer}{Sinn, Anwendung, Verfahren}
+  \exam{2006/2007}{2}{10}{10}
+  \exam{2004/2005}{1}{10}{10}
+
+  \exe{parametrisierte kubische Kurven}{Typen, Unterschiede}
+  \exam{2010/2011}{2}{7}{10}
+  \exam{2008/2009}{1}{7}{10}
+  \exam{2006/2007}{1}{6}{10}
+  \exam{2004/2005}{1}{7}{10}
+
+  \exe{Bézier-Kurven und B-Splines}{Gemeinsamkeiten und Unterschiede}
+  \exam{2004/2005}{2}{9}{10}
+  \examnone{2004/2005}{3}{9}{10}
+
+  \exe{Hermite-Kurve erklären}{Basispolynome skizzieren}
+  \exam{2006/2007}{2}{4}{10}
+  \exam{2004/2005}{2}{8}{10}
+  \examnone{2004/2005}{3}{8}{10}
+
+  \exe{B-Splines}{Stetigkeitsgrad bei gegebener Basismatrix}
+  \exam{2010/2011}{1}{8}{12}
+  \exam{2006/2007}{2}{8}{12}
+
+  \exe{Bézier-Kurve}{Skizze, Berechung eines Punktes}
+  \exam{2010/2011}{1}{8}{12}
+  \exam{2010/2011}{1}{9}{12}
+  \exam{2008/2009}{1}{8}{12}
+  \exam{2006/2007}{1}{7}{12}
+  \exam{2006/2007}{2}{7}{12}
+  \exam{2004/2005}{2}{7}{10}
+  \examnone{2004/2005}{3}{7}{10}
+
+  \ex{Grundprinzip von parametrisierten bikubischen Flächen}
+  \exam{2006/2007}{1}{8}{10}
+  \exam{2004/2005}{1}{8}{10}
+
+  \exe{Darstellung von Rotationskörpern}{allgemein, speziell Zylinder}
+  \exam{2010/2011}{2}{9}{10}
+  \exam{2010/2011}{1}{10}{8}
+
+  \exe{Darstellung von Rotationskörpern}{allgemein, speziell Torus}
+  \exam{2008/2009}{1}{9}{10}
+
+  \exe{Darstellung von Rotationskörpern}{allgemein, speziell Halbkugel}
+  \exam{2006/2007}{1}{9}{10}
+  \exam{2004/2005}{1}{9}{10}
+
+  \exe{Darstellung von Rotationskörpern}{allgemein, speziell Kegel}
+  \exam{2006/2007}{2}{9}{8}
+\end{topic}
+
+\end{document}

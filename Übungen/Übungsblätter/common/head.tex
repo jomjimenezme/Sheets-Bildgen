@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set these first!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\gdef\AUFGABENPFAD{../aufgabensammlung}
+\newcommand{\bivurl}{http://www-ai.math.uni-wuppertal.de/~arndt/de/Lehre/WS_2016--sl2017/01_Bildgenerierung.php}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{\AUFGABENPFAD/packages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bildgenerierung abstraction layer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\bivitem}{\item}
+% \renewcommand{\bivtask}[2]{\gtask[#2]{#1}}
+\renewcommand{\bivtask}[2]{\gtask{#1}}
+\renewenvironment{bivsubt}{\gsub}{\gend}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{everyshi}
+\usepackage[deutsch]{galgon}
+
+\renewcommand\gtaskdeco{}%
+\renewcommand\gsheettitle{Bildgenerierung}%
+\renewcommand\gsheetsemester{Wintersemester 2022\,/\,2023}%
+\renewcommand\gsheetlabel{Übungsblatt}
+\renewcommand\gdeadlinetext{%
+	Senden Sie Ihre Lösungen der Theorie-Aufgaben und Ihre Programme per E-Mail an \\ %Senden Sie Ihre Programme per E-Mail an
+	\href{mailto:bildgen@studs.math.uni-wuppertal.de}{%
+	\texttt{bildgen@studs.math.uni-wuppertal.de}}
+	.%und geben Sie schriftliche Abgaben ggf. in der Vorlesung ab. %Vorlesung %Übung
+}%
+
+% \renewcommand\gheaderauthor{Dr.~H.~Arndt, M.\,Sc.~M.~Galgon, M.\,Sc.~N.~Kintscher}%
+ 
+\hypersetup{%
+  pdftitle={Bildgenerierung},
+  pdfauthor={Holger Arndt},
+  pdfpagemode=UseThumbs,
+  colorlinks=true,
+  linkcolor=linkcol,
+  urlcolor=urlcol,
+}
+
+\newcommand{\infkopf}%
+{%
+\def\lion{16mm}
+%
+\begin{center}%
+\tikzset{every node/.style={draw=none,inner sep=0}}%
+\tikz{%
+\draw[line width=.33pt] (0, -2) -- (0, 2);
+\draw[line width=.33pt] (-4.25, 0) -- (4.25, 0);
+\draw[fill=none,draw=none,use as bounding box] (0,0) circle [radius=0.075];
+\draw (-.25,.25) node[align=right,anchor=south east] {%
+	\begin{minipage}[c][\lion]{250pt}%
+	\begin{flushright}
+	\small BERGISCHE UNIVERSIT\"AT WUPPERTAL\\
+	\small FAKULT\"AT F\"UR MATHEMATIK \\
+	\small UND NATURWISSENSCHAFTEN%
+	\end{flushright}%
+	\end{minipage}%
+};
+\draw (-.25,-.25) node[anchor=north east] {\includegraphics[height=\lion]{common/AI_Logo.pdf}};
+\draw (.25,.25) node[anchor=south west] {\includegraphics[height=\lion]{common/BUW_Logo.pdf}};
+\draw (.25,-.25) node[align=left,anchor=north west] {%
+	\small Angewandte Informatik \\ [-0.5em]
+	\small \;\raisedrule[.65ex]{.33pt}\; \\[-0.5em]
+%	\small Dr. Holger Arndt \\ [-0.25em]
+% 	\small M. Sc. Martin Galgon \\ [-0.25em]
+% 	\small M. Sc. Nils Kintscher%
+% 	\small M. Sc. Kira Maag
+	\small Dr. Martin Galgon\\
+	\small M.Sc. Jose Jimenez
+};
+}%
+\end{center}%
+}
+
+\renewcommand\gsheetheader{\infkopf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{common/pdfslice}
+
+\pagestyle{empty}
+\definecolor{linkcol}{rgb}{0.00,0.00,0.50}
+\definecolor{urlcol}{rgb}{0.50,0.00,0.00}
+\setmathfont{XITS Math}
+\typearea{18}
+
+\setmainlanguage{german}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont[Scale=1]{XITS}
+%\setsansfont[Scale=0.9]{FreeSans}
+\setmonofont[Scale=0.82]{DejaVu Sans Mono}

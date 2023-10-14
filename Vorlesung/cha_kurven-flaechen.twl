@@ -1,0 +1,654 @@
+\chapter{Kurven und Flächen}
+
+Reale Objekte werden often von \emph{„glatten“} Kurven und Flächen
+begrenzt.
+
+Wie lassen sich diese mit wenigen \emph{„Kontrollpunkten“}\ beschreiben?
+
+\pagebreak
+
+
+\section{Parametrisierte kubische Kurven}
+
+\begin{description}
+\item[Beschreibung] von Kurven (Flächen) auf drei Arten möglich:
+  \begin{enumerate}
+  \item explizit: $y = f(x)$ und $z = g(x)$ (Kurve), $z = f(x, y)$ (Fläche)
+  \item implizit: $f(x, y, z) = 0$ (\zB $x² + y² + z² -1 = 0$ für Kugel)
+  \item parametrisiert: $x = x(t)$, $y = y(t)$, $z = z(t)$, $t ∈ [0; 1]$
+  \end{enumerate}
+\end{description}
+
+Eine \emph{parametrisierte kubische Kurve}\index{parametrisierte kubische Kurve}%
+\index{Kurve!parametrisierte kubische}
+\[ Q(t) = \rk{x(t), y(t), z(t)}ᵀ \,\text, \quad t ∈ [0;1] \]
+wird durch drei kubische Polynome definiert:
+\begin{align*}
+  x(t) &= aₓ t³ + bₓ t^2 + cₓ t + dₓ \\
+  y(t) &= a_y t³ + b_y t^2 + c_y t + d_y \\
+  z(t) &= a_z t³ + b_z t^2 + c_z t + d_z \\
+\end{align*}
+
+\pagebreak
+
+Mit $T = \rk{t³, t², t, 1}ᵀ$ und der Koeffizientenmatrix
+\[ C = \pmat{aₓ & bₓ & cₓ & dₓ \\ a_y & b_y & c_y & d_y \\ a_z & b_z & c_z & d_z} \]
+ergibt sich folgende Matrixschreibweise:
+\[ Q(t) = C · T \]
+
+\emph{Tangentialvektor}\index{Tangentialvektor (Kurve)} an die Kurve:
+
+\[ \frac{d}{dt} Q(t) = Q'(t)
+= \rk{\frac{d}{dt} x(t), \frac{d}{dt} y(t), \frac{d}{dt} z(t)}ᵀ
+= C · \frac{d}{dt} T = C · \rk{3t², 2t, 1, 0}ᵀ
+= \pmat{3aₓ t² + 2bₓ t + cₓ \\ 3a_y t² + 2b_y t + c_y \\ 3a_z t² + 2b_z t + c_z} \]
+\Reached{WS18/19}{08}{2018/12/06}
+
+\pagebreak
+
+\vspace*{-20mm}
+\begin{description}
+\item[\emph{Stetigkeit}] bei der Verbindung zweier Kurvenstücke
+  $Q₁$, $Q₂$:
+
+  \begin{center}
+    \input{gp_kurveZusammengesetzt}
+  \end{center}
+
+  \begin{itemize}
+  \item $C⁰$-/$G⁰$-stetig: $Q₁(1) = Q₂(0)$
+  \item $G¹$ geometrisch stetig: $G⁰$ und gleiche Tangentenrichtung,
+    \dH $Q₁'(1) = k · Q₂'(0)$ mit $k > 0$
+  \item $C¹$ stetig: $C⁰$ und gleiche Tangente (Richtung und Betrag),
+    \dH $Q₁'(1) = Q₂'(0)$
+  \item $G²$ geometrisch stetig: $G¹$ und gleiche Krümmung
+  \item $C²$ stetig: $C¹$ und $Q₁''(1) = Q₂''(0)$      
+  \end{itemize}
+\end{description}
+
+\begin{bemerkung}
+  $G²$ ist \zB wichtig bei Straßenbau.
+
+  Übergang gerade Straße – Kreisbogen wäre $G¹$, aber nicht $G²$
+
+  ⇒ Lenkrad muss ruckartig bewegt werden
+\end{bemerkung}
+
+\pagebreak
+
+im folgenden Zerlegung der Matrix $C$ in $C = G · M$ mit
+4×4-\emph{Basismatrix}\index{Basismatrix} $M$ und
+3×4-\emph{Geometriematrix}\index{Geometriematrix} $G$
+
+\[ Q(t) = \rk{G₁, G₂, G₃, G₄} · \pmat{m₁₁ & ⋯ & m₁₄ \\ ⋮ && ⋮ \\ m₄₁ & ⋯ & m₄₄}
+  · \pmat{t³ \\ t² \\ t \\ 1} \qquad \text{mit} \quad
+  Gᵢ = \pmat{gᵢₓ \\ g_{iy} \\ g_{iz}} \]
+
+\begin{description}
+\item[$M$:] feste Matrix für bestimmten Kurventyp
+\item[$G$:] Lage (\zB End-/Kontrollpunkte) einer konkreten Kurve
+\end{description}
+
+\pagebreak
+
+
+\subsection{Hermite-Kurven}
+
+\person{8mm}{Charles Hermite}{1822, Dieuze, Lothringen, FR}{1901, Paris}%
+{Mathematiker}%
+{person_Hermite}{}%
+{\urlpers{https://commons.wikimedia.org/wiki/File:Charles_Hermite_circa_1901_edit.jpg}}{}%pd
+\begin{description}
+\item[Kurve\index{Hermite-Kurve} bestimmt durch:] Endpunkte $P₁$ und
+  $P₄$ und Tangentialvektoren
+  $R₁$ und $R₄$ in Endpunkten
+  \Reached{WS21/22}{08}{2021/12/02}
+
+\item[Bestimmung der Hermite-Basismatrix] $M_H$ in $Q(t) = G_H · M_H · T$ mit
+  $G_H = \rk{P₁, P₄, R₁, R₄}$:
+
+  \[ x(t) = G_{Hₓ} · M_H · \pmat{t³ \\ t² \\ t \\ 1} \,\text, \qquad
+    x'(t) = G_{Hₓ} · M_H · \pmat{3t² \\ 2t \\ 1 \\ 0} \]
+
+  Einsetzen der Punkte/Vektoren für $t = 0$ \bzw $t = 1$ gibt:
+
+  \pagebreak
+
+  \vspace*{-18mm}
+  \begin{alignat*}{2}
+    x(0) = P_{1ₓ} &= G_{Hₓ} · M_H · \pmat{0 \\ 0 \\ 0 \\ 1} \,\text, \qquad &
+    x(1) = P_{4ₓ} &= G_{Hₓ} · M_H · \pmat{1 \\ 1 \\ 1 \\ 1} \\
+    x'(0) = R_{1ₓ} &= G_{Hₓ} · M_H · \pmat{0 \\ 0 \\ 1 \\ 0} \,\text, \qquad &
+    x'(1) = R_{4ₓ} &= G_{Hₓ} · M_H · \pmat{3 \\ 2 \\ 1 \\ 0}
+  \end{alignat*}
+
+  zusammengesetzt:
+
+  \[ G_{Hₓ} = \rk{P_{1ₓ}, P_{4ₓ}, R_{1ₓ}, R_{4ₓ}} = G_{Hₓ} · M_H
+    · \pmat{0 & 1 & 0 & 3 \\ 0 & 1 & 0 & 2 \\ 0 & 1 & 1 & 1 \\ 1 & 1 & 0 & 0} \]
+
+  Invertierung obiger Matrix liefert $M_H$:
+
+  \[ M_H = \pmat{0 & 1 & 0 & 3 \\ 0 & 1 & 0 & 2 \\ 0 & 1 & 1 & 1 \\ 1 & 1 & 0 & 0}⁻¹
+    = \pmat{2 & -3 & 0 & 1 \\ -2 & 3 & 0 & 0 \\ 1 & -2 & 1 & 0 \\ 1 & -1 & 0 & 0} \]
+  \Reached{WS16/17}{09}{2016/12/15}
+
+  \pagebreak
+
+\item[] Ausmultiplizieren des rechten Produkts in $Q(t) = G_H · M_H · T$ gibt
+  eine Darstellung der Kurve in den
+  \emph{Hermite-Basis-Polynomen}\index{Hermite-Basis-Polynom}\index{Basispolynom}:
+
+  \[ Q(t) = \rk{2t³ - 3t² + 1} · P₁ + \rk{-2t³ + 3t²} · P₄
+    + \rk{t³ - 2t² + t} · R₁ + \rk{t³ - t²} · R₄ \]
+
+\item[] Darstellung der Basis-Polynome:
+
+  \begin{center}
+    \input{gp_kurveHermiteBasisPolynome}
+  \end{center}
+\end{description}
+
+\begin{bemerkung}
+  $G¹$-stetiger Übergang zweier Hermite-Kurven, falls die
+  Geometriematrizen die Form \\
+  $\rk{P₁, P₄, R₁, R₄}$ und $\rk{P₄, P₇, k R₄, R₇}$
+  mit $k > 0$ haben
+\end{bemerkung}
+\ReachedZoom{WS20/21}{08}{2020/12/17}
+
+\pagebreak
+
+
+\vspace*{-29mm}
+\subsection{Bézier-Kurven}
+
+\personHidden{0mm}{Pierre Étienne Bézier}{1910, Paris}{1999, Paris}%
+{Bau- und Elektroingenieur, Mathematiker (Renault)}%
+{person_Bezier}{}%
+{\urlpers{http://luc.devroye.org/fonts-36362.html}}%
+{}%Lizenz unklar
+\begin{description}
+  \item[Kurve\index{Bézier-Kurve} bestimmt durch:] Endpunkte und zwei Kontrollpunkte
+    
+    \begin{center}
+      \input{gp_kurveBezierBeispiele}
+    \end{center}
+
+\item[Geometriematrix:] $G_B = \rk{P₁, P₂, P₃, P₄}$
+
+\item[Zusammenhang] Hermite–Bézier: $R₁ = 3 \rk{P₂ - P₁}$,
+  $R₄ = 3 \rk{P₄ - P₃}$
+
+\item[Übergang] zwischen den Geometriematrizen über Matrix $M_{\mathtxtit{HB}}$:
+
+  \begin{align*}
+    G_H &= G_B · M_{\mathtxtit{HB}} \qquad \text{mit} \\
+    \rk{P₁, P₄, R₁, R₄} &= \rk{P₁, P₂, P₃, P₄}
+    · \pmat{1 & 0 & -3 & 0 \\ 0 & 0 & 3 & 0 \\ 0 & 0 & 0 & -3 \\ 0 & 1 & 0 & 3}
+  \end{align*}
+
+\item[Bézier-Basismatrix] aus Hermite-Form:
+  \[ Q(t) = G_H · M_H · T = G_B · \underbrace{M_{\mathtxtit{HB}} · M_H}_{=: M_B}{} · T \]
+  also:
+  \[ M_B = M_{\mathtxtit{HB}} · M_H
+  = \pmat{1 & 0 & -3 & 0 \\ 0 & 0 & 3 & 0 \\ 0 & 0 & 0 & -3 \\ 0 & 1 & 0 & 3}
+  · \pmat{2 & -3 & 0 & 1 \\ -2 & 3 & 0 & 0 \\ 1 & -2 & 1 & 0 \\ 1 & -1 & 0 & 0}
+  = \pmat{-1 & 3 & -3 & 1 \\ 3 & -6 & 3 & 0 \\ -3 & 3 & 0 & 0 \\ 1 & 0 & 0 & 0} \]
+
+\item[Basispolynome] aus $Q(t) = G_B · M_B · T$ sind die \sog
+  \emph{Bernsteinpolynome}\index{Bernsteinpolynom}:
+
+  \[ Q(t) = (1 - t)³ P₁ + 3t ( 1 - t)² P₂ + 3t² (1 - t) P₃ + t³ P₄ \]
+  \person{-20mm}{Sergej Natanovič Bernštejn [Сергей Натанович Бернштейн]}%
+  {1880, Odessa (Одесса, Russisches Reich, heute Ukraine)}%
+  {1968, Moskau (Москва [Moskva])}%
+  {Mathematiker}%
+  {person_Bernstein}{Konrad Jacobs, Erlangen, Titel: „Sergei Natanowitsch Bernstein“}%
+  {\urlpers{https://commons.wikimedia.org/wiki/File:Sergei_Natanowitsch_Bernstein.jpg}}%
+  {\ccbysa~2.0, \urlpers{https://creativecommons.org/licenses/by-sa/2.0/de/legalcode}}%
+
+  \begin{center}
+    \input{gp_kurveBernsteinPolynome}\hspace*{40mm}
+  \end{center}
+
+  \Reached{WS15/16}{12}{2016/01/28}
+
+\item[Verbindung] zweier Kurvenstücke zu Kontrollpunkten
+  $\rk{P₁, P₂, P₃, P₄}$ \bzw $\rk{P₄, P₅, P₆, P₇}$ über gemeinsamen
+  Punkt $P₄$
+  \begin{description}
+  \item[$G¹$-stetig] falls $P₃ - P₄ = k \rk{P₄ - P₅}$ mit $k > 0$
+  \item[$C¹$-stetig] falls $P₃ - P₄ = P₄ - P₅$
+  \end{description}
+
+\item[Interpolation\index{Interpolation!mit Bézier-Kurven}:] \mbox{}
+  \begin{description}
+  \item[gegeben:] $l$ Punkte $Q₁, …, Qₗ$
+  \item[gesucht:] $C¹$-stetige stückweise kubische Interpolation der $Q_i$
+  \item[Ansatz:] Bézier-Kurven zu Kontrollpunkten
+    $\rk{Qᵢ = P₃ᵢ₋₂, P₃ᵢ₋₁, P₃ᵢ, Qᵢ₊₁ = P₃ᵢ₊₁}$, $i = 1, …, l - 1$
+  \item[Bestimmung] der $P_i$: \label{page:algBezInterpol}
+    \begin{AlgListInline}
+      für $i = 1, …, l$
+      °°°$P₃ᵢ₋₂$ := $Qᵢ$
+      für $i = 2, …, l - 1$
+      °°°$P₃ᵢ₋₁$ := $Qᵢ + \frac16 \rk{Qᵢ₊₁ - Qᵢ₋₁}$
+      °°°$P₃ᵢ₋₃$ := $Qᵢ - \frac16 \rk{Qᵢ₊₁ - Qᵢ₋₁}$
+      $P₂$ := $\frac12 \rk{Q₁ + P₃}$
+      $P₃ₗ₋₃$ := $\frac12 \rk{P₃ₗ₋₄ + Qₗ}$
+    \end{AlgListInline}
+  \end{description}
+
+  \begin{center}
+    \input{gp_kurveBezierStueckweise}
+  \end{center}
+\end{description}
+\Reached{WS14/15}{12}{2015/01/08}
+
+\pagebreak
+
+\minisec{Verallgemeinerung: Bézier-Kurven beliebigen Grades}
+
+\begin{description}
+\item[gegeben:] Punkte $P₁, …, Pₙ₊₁$
+
+\item[Bézier-Kurve\index{Bézier-Kurve}] $n$-ten Grades:
+
+  \[ Q(t) = ∑ᵢ₌₀ⁿ Pᵢ₊₁ B_{i,n}(t) \]
+
+  mit Bernsteinpolynomen\index{Bernsteinpolynom}
+
+  \[ B_{i,n}(t) = \binom{n}{i} tⁱ (1 - t)ⁿ⁻ⁱ \]
+
+\item[Beobachtung:] $B_{i,n}(t) ≥ 0$ für $t ∈ [0; 1]$ und
+  $∑ᵢ₌₀ⁿ B_{i,n}(t) = 1$
+
+\item[\textmd{⇒}] Bézier-Kurve verläuft in konvexer Hülle der
+  Kontrollpunkte
+
+  (nützlich für Clipping-Verfahren)
+
+\item[Rekursive Berechnung] der Bernsteinpolynome:
+  \begin{align*}
+    B₀₁(t) &= 1 - t \,\text, \quad B₁₁(t) = t \\
+    B_{i,n}(t) &= (1 - t) B_{i,n-1}(t) + t B_{i-1,n-1}(t)
+  \end{align*}
+  mit $B_{-1,n-1}(t) = B_{n,n-1}(t) := 0$
+\end{description}
+\Reached{WS19/20}{09}{2019/12/05}
+
+
+\subsection{Kubische Splines}
+
+Ein \emph{kubischer B-Spline}\index{B-Spline}%
+\index{kubischer B-Spline}
+approximiert eine Folge von $m + 1$ Kontrollpunkten $P₀, …, Pₘ$, $m ≥ 3$.
+(„B“ steht für Basis.)
+
+Die Kurve besteht aus $m - 2$
+\emph{Kurvensegmenten\index{Kurvensegment (B-Spline)}} $Q₃, …, Qₘ$ (kubische
+Polynome).
+
+Jedes Segment $Qᵢ$ ist definiert auf einem Parameterbereich
+$\ek{tᵢ; tᵢ₊₁}$ ($i = 3, …, m$).
+
+\begin{bemerkung}
+  Spezialfall $m = 3$:
+
+  4 Kontrollpunkte $P₀, …, P₃$, ein Polynom $Q₃$ mit $t₃ ≤ t ≤ t₄$
+\end{bemerkung}
+
+Die Verbindungspunkte $Qᵢ₋₁\fk{tᵢ} = Qᵢ\fk{tᵢ}$ ($i = 4, …, m$) sowie Anfangspunkt $Q₃\fk{t₃}$
+und Endpunkt $Qₘ\fk{tₘ₊₁}$ heißen \emph{Knotenpunkte}\index{Knotenpunkt (B-Spline)},
+die $tᵢ$ \emph{Knotenwerte}\index{Knotenwert (B-Spline)}.
+
+Der B-Spline heißt \emph{uniform}\index{uniformer B-Spline}, falls
+alle Parameterintervalle gleich lang sind – \oBdA $t₃ = 0$, $t₄ = 1$,
+…, $tₘ = m - 3$.
+
+\begin{center}
+  \input{gp_kurveBSpline}
+\end{center}
+
+\emph{Geometrievektor} zu Segment $Qᵢ$:
+
+\[ G_{\mathtxtit{BS}ᵢ} = \rk{Pᵢ₋₃, Pᵢ₋₂, Pᵢ₋₁, Pᵢ} \]
+
+\begin{itemize}
+\item Jedes Segment wird von vier Kontrollpunkten beeinflusst.
+\item Umgekehrt beeinflusst jeder Kontrollpunkt (bis auf die ersten und
+  letzten drei) jeweils vier Segmente.
+\end{itemize}
+
+\pagebreak
+
+Definition der Kurve aus
+
+\[ Qᵢ(t) = G_{\mathtxtit{BS}ᵢ} · M_{\mathtxtit{BS}} · Tᵢ \]
+
+für $tᵢ ≤ t ≤ tᵢ₊₁$ mit
+
+\[ Tᵢ = \pmat{\rk{t - tᵢ}³ \\ \rk{t - tᵢ}² \\ t - tᵢ \\ 1} \]
+
+und der \emph{Basismatrix}
+
+\[ M_{\mathtxtit{BS}} = \frac16
+  · \pmat{-1 & 3 & -3 & 1 \\ 3 & -6 & 0 & 4 \\ -3 & 3 & 3 & 1 \\ 1 & 0 & 0 & 0} \]
+
+\pagebreak
+
+\emph{Basispolynome} für Intervall $[0; 1]$:
+
+\[ \frac16 \ek{(1 - t)³, 3t³ - 6t² + 4, -3t³ + 3t² + 3t + 1, t³} \]
+
+\begin{center}
+  \input{gp_kurveBSplineBasisPolynome}
+\end{center}
+
+Eigenschaften:
+\begin{itemize}
+\item Summe der vier Basispolynome ist $≡ 1$
+\item Polynome sind $≥ 0$
+\item[⇒] Kurve verläuft in konvexer Hülle der Kontrollpunkte
+\end{itemize}
+
+\pagebreak
+
+\vspace*{-17mm}
+\begin{satz}
+  B-Splines sind $C²$-stetig.
+\end{satz}
+
+\begin{beweis}
+  Für $x$-Komponente am Übergang $Qᵢ$/$Qᵢ₊₁$ und $t ∈ [0; 1]$:
+
+  Kurve in Basisdarstellung:
+
+  \[ Qᵢ(t) = G_{\mathtxtit{BS}ᵢ} · M_{\mathtxtit{BS}} · T
+    = \frac{(1 - t)³}{6} Pᵢ₋₃ + \frac{3t³ - 6t² + 4}{6} Pᵢ₋₂ +
+    \frac{-3t³ + 3t² + 3t + 1}{6} Pᵢ₋₁ + \frac{t³}{6} Pᵢ \]
+
+  $C⁰$-Stetigkeit:
+
+  \[ xᵢ(1) = \frac16 \rk{P_{i-2ₓ} + 4 P_{i-1ₓ} + P_{iₓ}} = xᵢ₊₁(0) \]
+    
+  $C¹$-Stetigkeit:
+
+  \[ \frac{d}{dt} Q(t) = \frac{-(1 - t)²}{2} Pᵢ₋₃ + \frac{3t² - 4t}{2} Pᵢ₋₂ +
+    \frac{-3t² + 2t + 1}{2} Pᵢ₋₁ + \frac{t²}{2} Pᵢ \]
+  \[ \frac{d}{dt} xᵢ(1) = \frac12 \rk{-P_{i-2ₓ} + P_{iₓ}} = \frac{d}{dt} xᵢ₊₁(0) \]
+
+  \pagebreak
+
+  $C²$-Stetigkeit:
+
+  \[ \frac{d²}{dt²} Q(t) = (1 - t) Pᵢ₋₃ + (3t - 2) Pᵢ₋₂ + (-3t + 1) Pᵢ₋₁ + t Pᵢ \]
+  \[ \frac{d²}{dt²} xᵢ(1) = P_{i-2ₓ} - 2 P_{i-1ₓ} + P_{iₓ} = \frac{d²}{dt²} xᵢ₊₁(0) \]
+\end{beweis}
+\Reached{WS17/18}{09}{2017/12/07}
+
+\pagebreak
+
+\begin{bemerkung}
+  $C²$-Stetigkeit wird erkauft durch Approximation statt
+  Interpolation.
+
+  Bessere Annäherung ist möglich durch Doppelung von Kontrollpunkten:
+  $Pᵢ₋₂ = Pᵢ₋₁$
+
+  Interpolation durch Dreifach-Verwendung von Punkten:
+  $Pᵢ₋₂ = Pᵢ₋₁ = Pᵢ$
+  \begin{itemize}
+  \item[⇒] $Qᵢ(t) = \frac{(1 - t)³}{6} Pᵢ₋₃ + \frac{t³ - 3t² + 3t + 5}{6} Pᵢ$
+    ist eine Gerade.
+  \item $C²$-stetig mit Ableitungen 0 für $t = 1$
+  \item[\Bad] nicht $G¹$-stetig, Knick!
+  \end{itemize}
+
+  \begin{center}
+    \input{gp_kurveBSplinePunkteMehrfach}
+  \end{center}
+\end{bemerkung}
+
+\minisec{Nicht-uniforme kubische B-Splines}
+
+Defintion eines
+\emph{nicht-uniformen kubischen B-Splines}\index{nicht-uniformer kubischer B-Splines}
+zur Approximation von Kontrollpunkten $P₀, …, Pₘ$:
+
+benötigt: Knotenfolge $t₀, …, tₘ₊₄$ mit $tᵢ ≤ tᵢ₊₁$,
+\zB $(0, 0, 0, 1, 1, 2, 3, 3, 3, 4)$
+
+Definition des Kurvensegments $Qᵢ$ zu Kontrollpunkten $Pᵢ₋₃$, $Pᵢ₋₂$,
+$Pᵢ₋₁$, $Pᵢ$:
+
+\[ Qᵢ(t) = Pᵢ₋₃ · B_{i-3,4} + Pᵢ₋₂ · B_{i-2,4} + Pᵢ₋₁ · B_{i-1,4} + Pᵢ · B_{i,4} \]
+
+mit Gewichtsfunktionen
+
+\begin{align*}
+  B_{i,1}(t) &= \begin{cases} 1 & \text{ für $t ∈ [tᵢ; tᵢ₊₁]$} \\ 0 &
+    \text{ sonst} \end{cases} \\
+  B_{i,k}(t) &= \frac{t - tᵢ}{tᵢ₊ₖ₋₁ - tᵢ} · B_{i,k-1}(t)
+  + \frac{tᵢ₊ₖ - t}{tᵢ₊ₖ - tᵢ₊₁} · B_{i+1,k-1}(t) \qquad
+  \text{für } k > 1
+\end{align*}
+(Wird der Nenner bei mehrfachen Knoten 0, so wird der Bruch als 0 definiert.)
+
+Vorteil im Vergleich zu uniformen Splines:
+\begin{itemize}
+\item[\Good] Interpolation durch Dreifach-Knoten möglich, ohne dass
+  Geradenstücke entstehen
+\item[\Good] gilt auch für Anfangs- und Endpunkt
+\end{itemize}
+
+\minisec{Rationale kubische Kurven}
+
+Eine \emph{rationale kubische Kurve}\index{rationale kubische Kurve}
+hat die Form
+
+\[ Q(t) = \rk{x(t) = \frac{X(t)}{W(t)}, y(t) = \frac{Y(t)}{W(t)}, z(t) = \frac{Z(t)}{W(t)}}ᵀ \]
+
+mit kubischen Polynomen $X(t)$, $Y(t)$, $Z(t)$, $W(t)$.
+
+Darstellung in homogenen Koordinaten:
+
+\[ Q(t) = \rk{X(t), Y(t), Z(t), W(t)}ᵀ \]
+
+Bezeichnung für nicht-uniforme rationale B-Splines: \emph{NURBS}\index{NURBS}
+
+Vorteile rationaler Kurven:
+\begin{itemize}
+\item[\Good] Invarianz unter perspektivischer Projektion
+
+  ⇒ Die Projektion kann nur auf die Kontollpunkte angewandt werden;
+  bei anderen Kurven müssen alle Zwischenpunkte projiziert werden.
+\item[\Good] exakte Darstellung von Kegelschnitten möglich, \zB Kreis 
+\end{itemize}
+
+
+\subsection{Unterteilung von Kurven}
+
+\begin{description}
+\item[Frage:] Wie lässt sich eine Kurve (ein Segment) durch Hinzunahme
+  weiterer Kontrollpunkte in zwei Teile auf"|teilen, ohne dass sich das
+  Bild ändert?
+\item[Hintergrund:] Dies ist sinnvoll
+  \begin{itemize}
+  \item bei der Modellierung, wenn eine Kurve nur in einem Bereich
+    verändert werden soll,
+  \item beim Zeichnen von Kurven, \vgl Abschnitt~\ref{subsec:zeichenKurven}.
+  \end{itemize}
+\end{description}
+
+Bei Bézier-Kurven ist die Unterteilung besonders einfach. Die neuen
+Kontrollpunkte sind Zwischenergebnisse bei der Ausführung des
+\emph{Algorithmus von de Casteljau}\index{Algorithmus von de Casteljau}%
+\index{de Casteljau, Algorithmus}
+zur Bestimmung des Kurvenpunktes für einen Parameterwert $t$.
+
+\personHidden{-30mm}{Paul de Faget de Casteljau}%
+{1930, Besançon, FR}{}%
+{Physiker, Mathematiker (Citroën)}%
+{person_deCasteljau}{}%
+{\urlpers{http://solidmodeling.org/bezier-award/paul-de-faget-de-casteljau/}}%
+{}%Lizenz unklar
+\begin{AlgListInline}
+  Algorithmus von de Casteljau
+  Eingabe     Kontrollpunkte $P₁, …, Pₙ₊₁$, Parameter $t ∈ [0; 1]$
+
+  für $i = 1, …, n + 1$
+  °°°$P⁰ᵢ$ := $Pᵢ$
+  für $r = 1, …, n$
+  °°°für $i = 1, …, n - r + 1$
+  °°°°°°$Pʳᵢ$ := $(1 - t) Pʳ⁻¹ᵢ + t Pʳ⁻¹ᵢ₊₁$
+  $Q(t)$ := $Pⁿ₁$°°°°°// der gesuchte Punkt auf der Kurve
+\end{AlgListInline}
+
+\pagebreak
+
+\vspace*{-19mm}
+\begin{beispiel}
+  $n = 3$, $t = \frac12$
+  
+  \begin{center}
+    \input{gp_kurveBezierUnterteilung}%
+    \index{Unterteilung von Bézier-Kurven}
+  \end{center}
+  
+  Kontrollpunkte für linken (roten) Teil: $Pᴸᵢ = Pⁱ⁻¹₁$;
+  Kontrollpunkte für rechten (blauen) Teil: $Pᴿᵢ = Pⁿ⁺¹⁻ⁱᵢ$
+\end{beispiel}
+
+\pagebreak
+
+\begin{description}
+\item[direkte Berechnung] der neuen Kontrollpunkte im Fall einer
+  kubischen Kurve und Unterteilung bei $t = \frac12$:
+
+  \begin{align*}
+    Gᴸ_B &= \rk{Pᴸ₁, Pᴸ₂, Pᴸ₃, Pᴸ₄} = \rk{P₁, P₂, P₃, P₄} · \frac18 ·
+    \pmat{8 & 4 & 2 & 1 \\ 0 & 4 & 4 & 3 \\ 0 & 0 & 2 & 3 \\ 0 & 0 & 0 & 1} \\
+    Gᴿ_B &= \rk{Pᴿ₁, Pᴿ₂, Pᴿ₃, Pᴿ₄} = \rk{P₁, P₂, P₃, P₄} · \frac18 ·
+    \pmat{1 & 0 & 0 & 0 \\ 3 & 2 & 0 & 0 \\ 3 & 4 & 4 & 0 \\ 1 & 2 & 4 & 8}
+  \end{align*}
+\end{description}
+
+\begin{bemerkung}
+  Bei B-Splines ergeben sich aus
+  $\rk{Pᵢ₋₃, Pᵢ₋₂, Pᵢ₋₁, Pᵢ} · \frac18 ·
+  \rk{\begin{smallmatrix} 4 & 1 & 0 & 0 & 0 \\ 4 & 6 & 4 & 1 & 0 \\
+    0 & 1 & 4 & 6 & 4 \\ 0 & 0 & 0 & 1 & 4 \end{smallmatrix}}$
+  fünf neue Kontrollpunkte, die zwei Segmente definieren, die mit dem
+  ursprünglichen übereinstimmen.
+
+  \begin{description}
+  \item[aber:] Die Nachbarsegmente haben noch die alten Kontrollpunkte.
+  \item[\Bad] Verschiebung einzelner Punkte bei Modellierung führt zu Unstetigkeiten
+  \end{description}
+\end{bemerkung}
+
+
+\subsection{Zeichnen von Kurven}
+\label{subsec:zeichenKurven}
+
+\begin{description}
+\item[Möglichkeit 1:] Zerlegung des Parameterintervalls in kleine
+  Teilintervalle, Annäherung der Kurve durch Geradenstücke auf jedem
+  Teilintervall
+
+  Polynomauswertung durch
+  \begin{itemize}
+  \item Horner-Schema oder
+    \personHidden{0mm}{William George Horner}%
+    {1786, Bristol}{1837, Bath}%
+    {Mathematiker, Lehrer}%
+    {person_Horner}{}%
+    {\urlpers{http://vfxmagazine.com/portfolio/wheel-of-life/}}%
+    {}%Lizenz unklar
+  \item Vorwärtsdifferenzen (dritter Ordnung) (effizienter)
+  \end{itemize}
+
+\item[Möglichkeit 2:] rekursive Unterteilung der Kurve; wenn Kurve
+  flach genug, Approximation durch Linie
+\end{description}
+
+
+\section{Parametrisierte bikubische Flächen}
+
+Erinnerung: Form einer kubischen Kurve (hier mit $s$ statt $t$):
+
+\[ Q(s) = G · M · S \qquad \text{ mit } G = \rk{G₁, G₂, G₃, G₄}
+  \text{ und } S = \pmat{s³ \\ s² \\ s \\ 1} \]
+
+\pagebreak
+
+Verändere nun die $Gᵢ$ selbst entlang einer Kurve:
+
+\[ Gᵢ(t) = \widetilde{G}ᵢ · M · T \qquad \text{ mit } \widetilde{G}ᵢ = \rk{G₁ᵢ, G₂ᵢ, G₃ᵢ, G₄ᵢ} \]
+
+Alle Kurven zusammen ergeben eine Fläche.
+
+Setzt man die transponierte Form $Gᵢ(t)ᵀ = Tᵀ · Mᵀ · \widetilde{G}ᵢᵀ$ in die
+Kurvendarstellung ein, ergibt sich die
+\emph{parametrisierte bikubische Fläche}\index{parametrisierte bikubische Fläche}
+aus
+
+\[ Q(s, t) = Tᵀ · Mᵀ · \widetilde{G} · M · S \qquad \text{ mit }
+  \widetilde{G} = \pmat{G₁₁ & G₁₂ & G₁₃ & G₁₄ \\ G₂₁ & G₂₂ & G₂₃ & G₂₄ \\
+    G₃₁ & G₃₂ & G₃₃ & G₃₄ \\ G₄₁ & G₄₂ & G₄₃ & G₄₄} \,\text, \quad s,t ∈ [0; 1] \]
+
+oder koordinatenweise:
+
+\[ x(s, t) = Tᵀ · Mᵀ · \widetilde{G}ₓ · M · S \,\text, \quad y(s, t) = Tᵀ · Mᵀ · \widetilde{G}_y · M · S \,\text,
+  \quad z(s, t) = Tᵀ · Mᵀ · \widetilde{G}_z · M · S \]
+
+\pagebreak
+
+
+\subsection{Bézier-Flächen}
+
+$G_B$ enhält 4 · 4 = 16 Kontrollpunkte; die vier Eckpunkte des
+Flächenstücks werden interpoliert.
+
+\begin{center}
+  \includegraphics[scale=0.75]{bezierpatch}
+\end{center}
+
+\pagebreak
+
+\vspace*{-20mm}
+\begin{beispiel}
+  \emph{Bézier-Fläche}\index{Bézier-Fläche}, die 7 × 7 gegebene Punkte mit 36 Flächenstücken
+  \emph{(Patches)}\index{Patch (Bézier)} interpoliert. Berechnung der inneren Kontrollpunkte
+  ähnlich zum Algorithmus auf \pageref{page:algBezInterpol}:
+
+  \begin{center}
+    \includegraphics[scale=0.75]{beziernetz}
+  \end{center}
+\end{beispiel}
+
+\pagebreak
+
+
+\section{Rotationskörper}
+
+Lasse eine (\zB kubische parametrisierte) Kurve um eine Achse rotieren.
+
+\begin{center}
+  \includegraphics[scale=0.5]{rotk_kugel}
+  \includegraphics[scale=0.5]{rotk_rand1}
+  \includegraphics[scale=0.5]{rotk_rand2}
+  \index{Rotationskörper}
+\end{center}
+
+\vspace*{-12mm}
+\Reached{WS14/15}{13a}{2015/01/15}
+\Reached{WS14/15}{13b (Bildver 1)}{2015/01/15}
+\Reached{WS14/15}{14 (Bildver 2)}{2015/01/22}
+\Reached{WS14/15}{15 (Bildver 3)}{2015/01/29}
+\Reached{WS14/15}{16 (Bildver 4)}{2015/02/05}
+\Reached{WS15/16}{13}{2016/02/04}
+\Reached{WS16/17}{10}{2016/12/22}
+\Reached{WS18/19}{09}{2018/12/13}
