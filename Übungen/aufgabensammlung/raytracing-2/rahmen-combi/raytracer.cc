@@ -1,1 +1,0 @@
-../../raytracing-1/rahmen/raytracer.cc

@@ -1,1 +1,0 @@
-../../splines-catmull-rom/loesung/curves.cc

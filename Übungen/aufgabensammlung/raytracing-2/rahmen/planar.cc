@@ -1,1 +1,0 @@
-../../__common__/code/raytracer/planar.cc

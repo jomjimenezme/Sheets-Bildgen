@@ -1,1 +1,0 @@
-../rahmen/triangle.cc
