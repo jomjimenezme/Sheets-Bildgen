@@ -1,0 +1,17 @@
+\bivtask{Gefüllte Polygone}{10}\label{aufgabe:polygone}
+%
+Schreiben Sie eine Funktion
+\begin{alltt}
+   void drawFilledPolygon(Drawing& pic, const vector<IPoint2D>& ecken,
+                          int colour = 0)
+\end{alltt}
+die mittels Algorithmus 3.22 der Vorlesung ein ausgefülltes Polygon 
+zeichnet. Durchlaufen Sie die Zeilen $y_{min}$ bis $y_{max}$, die das 
+Polygon enthalten, und datieren Sie in jedem Schritt eine 
+\emph{Tabelle der aktiven Kanten} auf. Dies ist eine Liste, die zu jeder 
+Kante, die die aktuelle $y$-Scan-Line schneidet, deren oberen Endpunkt, 
+den aktuellen $x$-Wert sowie die Steigung enthält. Die Kanten werden 
+nach $x$ und ggf.\ nach Steigung sortiert gespeichert.
+
+Im Verzeichnis \bivfolder{/home/bildgen/Aufgaben/polygone-1} finden Sie ein 
+Rahmenprogramm und einige Eingabedateien.

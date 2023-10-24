@@ -1,0 +1,25 @@
+\bivtask{Silhouetten-Algorithmus}{10}
+%
+Implementieren Sie den Silhouetten-Algorithmus und stellen Sie wie in 
+Aufgabe~\ref{aufgabe:painters} mit dessen Hilfe den Graphen der Funktion
+$f$ dar.
+
+Verwenden Sie die gleiche Parallelprojektion wie in 
+Aufgabe~\ref{aufgabe:painters}.
+
+Das Rahmenprogramm \texttt{silhouetten.cc} im Verzeichnis 
+\bivfolder{/home/bildgen/Aufgaben/silhouetten} dient als 
+Grundlage. Implementieren Sie darin die Funktionen
+\begin{alltt}
+   Matrix4x4 berechneMpar(double umin, double umax, double vmin, double vmax,
+                          double& ratio)
+   void erzeugeKurven(double xmin, double xmax, double zmin, double zmax,
+                      int num, int pieces,
+                      const std::function<double(double,double)>& func,
+                      std::vector<std::vector<Vec3D>>& kurven )
+   void maleSilhouetten(Drawing& pic,
+                        const std::vector<std::vector<Vec3D>>& kurven,
+                        const Matrix4x4& mpar, double ratio)
+\end{alltt}
+bzw.\ die fehlenden Teile der Funktionen. Weitere Informationen zu den 
+Ein- und Ausgabeparametern finden Sie im Rahmenprogramm.

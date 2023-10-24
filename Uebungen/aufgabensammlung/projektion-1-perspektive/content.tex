@@ -1,0 +1,75 @@
+\bivtask{Perspektivische Projektion}{10}\label{aufgabe:proj1}
+%
+Programmieren Sie die perspektivische Projektion, die Überführung in
+normalisierte Koordinaten sowie die Umwandlung in Gerätekoordinaten.
+Ergänzen Sie hierzu im Rahmenprogramm \texttt{proj1.cc} im Verzeichnis
+\bivfolder{/home/bildgen/Aufgaben/projektion-1} die entsprechenden Teile 
+der Funktionen
+\begin{alltt}
+   Matrix4x4 berechneTransformation(const Vec3D& cop, const Vec3D& vrp,
+                                    const Vec3D& vup, int w, int h,
+                                    double& un, double& vn)
+\end{alltt}
+und
+\begin{alltt}
+   void maleLinien(Drawing& pic, const vector<Kante>& kanten,
+                   const Matrix4x4& t, double un, double vn)
+\end{alltt}
+Alle für die Berechnung benötigten Operationen sind bereits vorgegeben, 
+Sie können also z.\,B.\ die Matrix-Multiplikation direkt mittels 
+\texttt{*}-Operator verwenden. Unterstützt werden ausschließlich 
+4×4-Matrizen, geben Sie deshalb bei der Projektion und den nachfolgenden
+Transformationen für die $n$-Koordinate eine Nullzeile in der Matrix an.
+
+Gehen Sie für die Berechnung der Transformation in
+\texttt{berechneTransformation()} in den folgenden Schritten vor und
+erzeugen Sie zunächst jeweils einzelne Matrizen mit dem gewünschten
+Effekt. \texttt{vpn}, \texttt{umin}, \texttt{umax}, \texttt{vmin} und
+\texttt{vmax} sind bereits vorgegeben.
+
+\begin{enumerate}
+  \item Verschiebung des Aufpunktes der Projektionsebene (\texttt{vrp})
+        in den Ursprung.
+  \item Überführung in das $(u, v, n)$-Koordinatensystem.
+  \begin{enumerate}
+    \item Bestimmung des $(u, v, n)$-Koordinatensystems aus der
+          Normalen der Projektionsebene, \texttt{vpn}, und der
+          Aufwärtsrichtung, \texttt{vup}.
+%     \item Rotation $n ↦ z$, $u ↦ x$, $v ↦ y$.
+    \item Rotation $z ↦ n$, $x ↦ u$, $y ↦ v$.
+  \end{enumerate}
+  \item Verschieben der transformierten Augenposition (\texttt{cop}
+        überführt in das $(u, v, n)$-Ko\-or\-di\-na\-ten\-sys\-tem) in
+        den Koordinatenursprung. 
+  \item Standard perspektivische Projektion auf die $(u, v)$-Ebene.
+  \item Normalisierung der Koordinaten.
+  \begin{enumerate}
+    \item Translation der unteren linken Ecke des Projektionsfensters 
+          in den Ursprung.
+    \item Skalierung des Projektionsfensters, so dass es in das 
+          Einheitsquadrat passt.
+    \item Speichern der Ausdehnung des Bildes im Einheitsquadrat,
+          $u_n$ und $v_n$ (der entsprechende Code-Abschnitt ist
+          vorgegeben).
+  \end{enumerate}
+\end{enumerate}
+
+Berechnen Sie nun die Gesamttransformation durch Matrix-Multiplikation 
+in der richtigen Reihenfolge. Die Skalierung auf Gerätekoordinaten ist 
+nicht Teil der Matrix, sie wird im Folgenden separat durchgeführt.
+Praktischer Grund hierfür ist das einfache 3D-Clipping in normalisierten
+Koordinaten.
+
+Zum Zeichnen des Bildes ist dann noch Folgendes in \texttt{maleLinien()}
+zu tun:
+\begin{enumerate}
+  \item Anwenden der Transformationsmatrix auf Anfangs- und Endpunkt der 
+        einzelnen Linien (der entsprechende Code-Abschnitt ist 
+        vorgegeben).
+  \item Umwandlung der homogenen Koordinaten in 2D-Koordinaten.
+  \item Skalierung auf Fenstergröße (Gerätekoordinaten) unter Verwendung 
+        von $u_n$ und $v_n$.
+\end{enumerate}
+
+Testen Sie Ihre Transformation mit den \texttt{*.in}-Dateien,
+z.\,B.\ „\texttt{proj1 < Colosseum.in}“.

@@ -1,0 +1,13 @@
+\bivtask{Hermite-Kurven}{5}\label{aufgabe:hermite}
+%
+Ergänzen Sie im Rahmenprogramm \texttt{hermite.cc}, welches Sie im 
+Verzeichnis \bivfolder{/home/bildgen/Aufgaben/splines-1} finden können,
+die Funktion
+\begin{verbatim}
+   void maleHermiteKurve( Drawing& pic, DPoint2D p1, DPoint2D p4,
+                          DPoint2D r1, DPoint2D r4, int n )
+\end{verbatim}
+die eine Hermite-Kurve zwischen zwei Punkten $p_1, p_4 \in \mathbb{R}^2$ 
+mit Tangentenvektoren $r_1, r_4 \in \mathbb{R}^2$ zeichnet. 
+Approximieren Sie die Kurve durch eine Folge von $n$ Linien, indem Sie 
+$n - 1$ Zwischenpunkte bestimmen.

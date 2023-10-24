@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
+
+<!-- CreationDate: Thu Nov 19 11:05:02 2015 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1.989098in"
+   height="1.9422475in"
+   viewBox="1877 1760 2380.2871 2351.3333"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="clipX1.svg">
+  <metadata
+     id="metadata60">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs58" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2418"
+     inkscape:window-height="1269"
+     id="namedview56"
+     showgrid="false"
+     inkscape:zoom="4.3703702"
+     inkscape:cx="98.311769"
+     inkscape:cy="87.471265"
+     inkscape:window-x="142"
+     inkscape:window-y="60"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:100.88540531px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in;-inkscape-font-specification:'Times, Normal';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;line-height:125%;"
+     id="text24"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="2692.8962"
+     x="2760.3142"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$t₁$</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:100.88540649px;line-height:125%;font-family:Times;-inkscape-font-specification:'Times, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke-width:0.025in"
+     id="text30"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="2639.1575"
+     x="3104.7869"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$t₂$</text>
+  <polyline
+     id="polyline36"
+     style="fill:none;stroke:#000000;stroke-width:19.60284424;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4724,7559 4724,1906 "
+     transform="matrix(0.40810406,0,0,0.40810406,1072.5914,1026.4746)" />
+  <polyline
+     id="polyline38"
+     style="fill:none;stroke:#000000;stroke-width:19.60284424;stroke-miterlimit:8"
+     points="4755 2017 4724 1891 4692 2017 "
+     transform="matrix(0.40810406,0,0,0.40810406,1072.5914,1026.4746)" />
+  <polyline
+     id="polyline40"
+     style="fill:none;stroke:#000000;stroke-width:19.60284424;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1889,4724 7541,4724 "
+     transform="matrix(0.40810406,0,0,0.40810406,1072.5914,1026.4746)" />
+  <polyline
+     id="polyline42"
+     style="fill:none;stroke:#000000;stroke-width:19.60284424;stroke-miterlimit:8"
+     points="7430 4755 7556 4724 7430 4692 "
+     transform="matrix(0.40810406,0,0,0.40810406,1072.5914,1026.4746)" />
+  <polyline
+     id="polyline44"
+     style="fill:none;stroke:#000000;stroke-width:19.60284424;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2362,7086 7086,2362 "
+     transform="matrix(0.40810406,0,0,0.40810406,1072.5914,1026.4746)" />
+  <polyline
+     id="polyline46"
+     style="fill:none;stroke:#000000;stroke-width:19.60284424;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2362,2362 7086,7086 "
+     transform="matrix(0.40810406,0,0,0.40810406,1072.5914,1026.4746)" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:100.88540531px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in;-inkscape-font-specification:'Times, Normal';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;line-height:125%;"
+     id="text48"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="1797.3832"
+     x="3058.4258"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$z$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:100.88540531px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in;-inkscape-font-specification:'Times, Normal';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;line-height:125%;"
+     id="text50"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="2915.5884"
+     x="4176.6309"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$x$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:100.88540531px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in;-inkscape-font-specification:'Times, Normal';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;line-height:125%;"
+     id="text52"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="3937.481"
+     x="4003.1868"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$z = -x$</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:100.88540531px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:0.025in;-inkscape-font-specification:'Times, Normal';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;line-height:125%;"
+     id="text54"
+     font-size="126"
+     font-weight="normal"
+     font-style="normal"
+     y="2009.5973"
+     x="3983.5977"
+     xml:space="preserve"
+     sodipodi:linespacing="125%">$z = x$</text>
+  <path
+     style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:13.45138645;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:26.90277458, 13.45138728000000050, 6.72569365000000019, 13.45138728000000050;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 2126.3922,2779.7535 3858.8811,2643.615"
+     id="path4150"
+     inkscape:connector-curvature="0" />
+</svg>

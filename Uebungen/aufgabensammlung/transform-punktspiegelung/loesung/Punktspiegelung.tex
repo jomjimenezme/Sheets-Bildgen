@@ -1,0 +1,54 @@
+% Punktspiegelung im Raum
+% Autor: Holger Arndt
+% Datum: 10.11.2015
+% Lösung zu Blatt 03, Aufgabe 09
+\documentclass[a4paper,12pt]{scrartcl}
+\usepackage{etex}
+\usepackage{xltxtra}
+\usepackage[babelshorthands]{polyglossia}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setmathfont{XITS Math}
+
+\typearea{18}
+ 
+\pagestyle{empty}
+\definecolor{linkcol}{rgb}{0.00,0.00,0.50}
+\definecolor{urlcol}{rgb}{0.50,0.00,0.00}
+\hypersetup{%
+  pdftitle={Bildgenerierung, WS 2015/2016},
+  pdfauthor={Holger Arndt},
+  pdfpagemode=UseThumbs,
+  colorlinks=true,
+  linkcolor=linkcol,
+  urlcolor=urlcol,
+}
+
+\setmainlanguage{german}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont[Scale=1]{XITS}
+\setsansfont[Scale=0.9]{FreeSans}
+\setmonofont[Scale=0.82]{DejaVu Sans Mono}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+
+\newcommand{\pmat}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+\begin{document}
+ 
+\minisec{Punktspiegelung im Raum}
+
+\begin{description}
+\item[gegeben:] $P = \pmat{pₓ \\ p_y \\ p_z}$
+\item[gesucht:] $Q = \pmat{qₓ \\ q_y \\ q_z} =
+  \text{ Punktspiegelung von $P$ an $S = \pmat{a \\ b \\ c}$}$
+\item[Punktspiegelung heißt:] $P - S = S - Q$
+  \[ ⇒ Q = 2S - P = \pmat{2a - pₓ \\ 2b - p_y \\ 2c - p_z} \]
+  \[ ⇒ T = \pmat{-1 & 0 & 0 & 2a \\ 0 & -1 & 0 & 2b \\ 0 & 0 & -1 & 2c \\ 0 & 0 & 0 & 1} \]
+\end{description}
+
+\end{document}

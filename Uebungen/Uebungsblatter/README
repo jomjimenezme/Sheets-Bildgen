@@ -1,0 +1,6 @@
+
+Zuerst: cd ausgabensammlung
+        make symlinks
+        (siehe ausgabensammlung/README)
+
+make

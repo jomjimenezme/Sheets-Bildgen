@@ -1,0 +1,1 @@
+../../__common__/code/raytracer/scene_exercise.cc

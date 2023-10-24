@@ -1,0 +1,102 @@
+++ Strecken-Clipping nach Cohen und Sutherland
+++ Autor: Holger Arndt, Martin Galgon
+
+Einteilung aus der Vorlesung:
+
+ 0110 | 0100 | 1100
+--------------------
+ 0010 | 0000 | 1000
+--------------------
+ 0011 | 0001 | 1001
+
+Bit 1: Ost     Grenze: ̄u = 8
+Bit 2: Nord    Grenze: ̄v = 5
+Bit 3: West    Grenze: ̠u = 2
+Bit 4: Süd     Grenze: ̠v = 1
+
+         u₁ v₁         u₂ v₂
+a) P₁ = (1, 2), P₂ = (10, 4)
+
+code₁ = 0010, code₂ = 1000
+code₁ and code₂ = 0000  (nicht unsichtbar)
+code₁ or  code₂ = 1010  (nicht vollst. sichtbar)
+                  ^ Ost
+Schnittpunkt mit Ost:  v = v₁ + (v₂-v₁)/(u₂-u₁) · (u - u₁)
+                      mᵥ = (4-2)/(10-1) = ²⁄₉
+                       v = 2 + ²⁄₉ · (8-1) = 3⁵⁄₉
+Ersetze P₂ durch (8, 3⁵⁄₉)
+
+code₂ = 0000
+code₁ and code₂ = 0000  (nicht unsichtbar)
+code₁ or  code₂ = 0010  (nicht vollst. sichtbar)
+                    ^ West
+Schnittpunkt mit West: v = 2 + ²⁄₉ · (2-1) = 2²⁄₉
+Ersetze P₁ durch (2, 2²⁄₉)
+
+code₁ = 0000
+code₁ and code₂ = 0000  (nicht unsichtbar)
+code₁ or  code₂ = 0000  (vollst. sichtbar)
+
+Fertig: geclippte Strecke von (2, 2²⁄₉) bis (8, 3⁵⁄₉)
+
+         u₁ v₁        u₂ v₂
+b) P₁ = (3, 3), P₂ = (6, 0)
+
+code₁ = 0000, code₂ = 0001
+code₁ and code₂ = 0000  (nicht unsichtbar)
+code₁ or  code₂ = 0001  (nicht vollst. sichtbar)
+                     ^ Süd
+Schnittpunkt mit Süd:  u = u₁ + (u₂-u₁)/(v₂-v₁) · (v - v₁)
+                      mᵤ = (6-3)/(0-3) = −1
+                       u = 3 + (−1) · (1−3) = 5
+Ersetze P₂ durch (5, 1)
+
+code₂ = 0000
+code₁ and code₂ = 0000  (nicht unsichtbar)
+code₁ or  code₂ = 0000  (vollst. sichtbar)
+
+Fertig: geclippte Strecke von (3, 3) bis (5, 1)
+
+         u₁ v₁         u₂ v₂
+c) P₁ = (7, 0), P₂ = (10, 2)
+
+code₁ = 0001, code₂ = 1000
+code₁ and code₂ = 0000  (nicht unsichtbar)
+code₁ or  code₂ = 1001  (nicht vollst. sichtbar)
+                  ^ Ost
+Schnittpunkt mit Ost:  v = v₁ + (v₂-v₁)/(u₂-u₁) · (u - u₁)
+                      mᵥ = (2-0)/(10-7) = ⅔
+                       v = 0 + ⅔ · (8-7) = ⅔
+Ersetze P₂ durch (8, ⅔)
+
+code₂ = 0001
+code₁ and code₂ = 0001  (unsichtbar)
+
+Fertig: Strecke unsichtbar
+
+         u₁ v₁         u₂ v₂
+d) P₁ = (5, 6), P₂ = (11, 4)
+
+code₁ = 0100, code₂ = 1000
+code₁ and code₂ = 0000  (nicht unsichtbar)
+code₁ or  code₂ = 1100  (nicht vollst. sichtbar)
+                  ^ Ost
+Schnittpunkt mit Ost:  v = v₁ + (v₂-v₁)/(u₂-u₁) · (u - u₁)
+                      mᵥ = (4-6)/(11-5) = −⅓
+                       v = 6 + (−⅓) · (8-5) = 5
+Ersetze P₂ durch (8, 5)
+
+code₂ = 0000
+code₁ and code₂ = 0000  (nicht unsichtbar)
+code₁ or  code₂ = 0100  (nicht vollst. sichtbar)
+                   ^ Nord
+Schnittpunkt mit Nord:  u = u₁ + (u₂-u₁)/(v₂-v₁) · (v - v₁)
+                       mᵤ = (11-5)/(4-6) = -3
+                        u = 5 + (−3) · (5−6) = 8
+Ersetze P₂ durch (8, 5)
+
+code₁ = 0000
+code₁ and code₂ = 0000  (nicht unsichtbar)
+code₁ or  code₂ = 0000  (vollst. sichtbar)
+
+Fertig: geclippte Strecke von (8, 5) bis (8, 5)

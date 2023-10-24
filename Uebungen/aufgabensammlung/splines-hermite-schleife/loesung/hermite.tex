@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{scrartcl}
+\usepackage{etex}
+\usepackage{xltxtra}
+\usepackage[babelshorthands]{polyglossia}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setmathfont{XITS Math}
+
+\usepackage{moreenum}
+
+\typearea{18}
+ 
+\pagestyle{empty}
+\definecolor{linkcol}{rgb}{0.00,0.00,0.50}
+\definecolor{urlcol}{rgb}{0.50,0.00,0.00}
+\hypersetup{%
+  pdftitle={Bildgenerierung, WS 2015/2016},
+  pdfauthor={Holger Arndt},
+  pdfpagemode=UseThumbs,
+  colorlinks=true,
+  linkcolor=linkcol,
+  urlcolor=urlcol,
+}
+
+\setmainlanguage{german}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont[Scale=1]{XITS}
+\setsansfont[Scale=0.9]{FreeSans}
+\setmonofont[Scale=0.82]{DejaVu Sans Mono}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi)}
+
+\newcommand{\pmat}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+\begin{document}
+ 
+\section*{Lösung zu Hermite-Kurven mit Schleife}
+
+\input{hermiteTypen}
+
+o.\,B.\,d.\,A.\ $a = 0$
+
+\[ Q(t)_{x,y} = \pmat{ 0 & b & ρ & ρ \\ 0 & 0 & ρ & -ρ} ·
+\pmat{2 & -3 & 0 & 1 \\ -2 & 3 & 0 & 0 \\ 1 & -2 & 1 & 0 \\ 1 & -1 & 0 & 0} ·
+\pmat{t³ \\ t² \\ t \\ 1}
+= \pmat{-2b + 2ρ & 3b - 3ρ & ρ & 0 \\ 0 & -ρ & ρ & 0} ·
+\pmat{t³ \\ t² \\ t \\ 1} \]
+
+Spitze (beim Übergang zur Schleife) für $Q'\left(\frac12\right) = 0$:
+
+\begin{align*}
+  x'(t) &= -6bt² + 6ρt² + 6bt - 6ρt + ρ \\
+  y'(t) &= -2ρt + ρ
+\end{align*}
+
+\begin{align*}
+  x'\left(\frac12\right) &= -\frac32 b + \frac32 ρ + 3b - 3ρ + ρ =
+  \frac32 b -\frac12 ρ \\
+  y'\left(\frac12\right) &= 0
+\end{align*}
+
+\[ x'\left(\frac12\right) = 0 ⇔ ρ = 3b \]
+
+\end{document}

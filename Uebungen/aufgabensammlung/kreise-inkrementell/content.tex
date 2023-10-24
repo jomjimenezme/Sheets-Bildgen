@@ -1,0 +1,26 @@
+\bivtask{Scan Conversion für Kreise}{6}
+%
+Schreiben Sie eine Funktion
+\begin{alltt}
+   void drawCircle(Drawing& pic, IPoint2D center, int radius, bool filled,
+                   int colour = 0)
+\end{alltt}
+die einen Kreis um den Punkt \texttt{center} mit Radius
+\texttt{radius} zeichnet. Im Falle \texttt{filled} = \texttt{true}
+soll der Kreis ausgefüllt werden. 
+
+Implementieren Sie hierzu einen
+\emph{inkrementellen, ganzzahligen Scan-Conversion-Algorithmus} zum
+Zeichnen der Kreislinie und verwenden Sie eine Hilfsfunktion
+\begin{alltt}
+   void drawCirclePoints(Drawing& pic, int x, int y, IPoint2D center,
+                         bool filled, int colour = 0)
+\end{alltt}
+welche zu einem Punkt $(\texttt{x}, \texttt{y})$ im zweiten Oktanten
+alle hierdurch aus Symmetriegründen festgelegten Punkte
+zeichnet oder verbindet, vergleiche Skizze.
+\begin{center}
+  \scalebox{0.9}{\input{kreise}}
+\end{center}
+
+Ein Rahmenprogramm finden Sie unter \bivfolder{/home/bildgen/Aufgaben/kreise}.

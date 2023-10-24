@@ -1,0 +1,26 @@
+\bivtask{Funktionenplotter}{4}
+%
+Schreiben Sie ein Programm, das nacheinander folgende Funktionen 
+$f_i: \mathbb{R} \to \mathbb{R}$ mit
+\begin{align*}
+  f_0(x) & := \frac{1}{2}+\frac{1}{2}x & x &\in [-5,5]    \\
+  f_1(x) & := \sin(x)                  & x &\in [-5,5]    \\
+  f_2(x) & := \sqrt{x}                 & x &\in [0,4]     \\
+  f_3(x) & := \frac{1}{x}              & x &\in [0.2,3.0]
+\end{align*}
+auf den entsprechenden Intervallen graphisch darstellt.
+
+In der Datei \texttt{plotter.cc}, welche im Verzeichnis 
+\bivfolder{/home/bildgen/Aufgaben/plotter} 
+erhältlich ist, finden Sie eine Vorlage, in der Sie nur die Funktion 
+\texttt{plotter} ergänzen müssen. Verwenden Sie zum Zeichnen 
+ausschließlich die Funktion \texttt{Drawing::drawPoint()}.
+
+Skalieren Sie die Darstellung so, dass für das Intervall $X=[x_l,x_r]$ 
+die linke Grenze $x_l$ auf den linken Fensterrand und $x_r$ auf den 
+rechten Fensterrand fällt. Weiterhin soll vertikal so skaliert werden, 
+dass $\displaystyle\min_{x\in X}(f_i(x))$ auf den unteren und 
+$\displaystyle\max_{x\in X}(f_i(x))$ auf den oberen Fensterrand fallen.
+
+Zeichnen Sie weiterhin die Achsen $\{(x,y):y=0\}$ bzw.\ $\{(x,y):x=0\}$,
+falls sie im sichtbaren Bereich liegen.

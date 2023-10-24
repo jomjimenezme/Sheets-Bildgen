@@ -1,0 +1,12 @@
+pdftk uebungen.pdf cat 1-2 output uebungen-01.pdf
+pdftk uebungen.pdf cat 3-4 output uebungen-02.pdf
+pdftk uebungen.pdf cat 5-6 output uebungen-03.pdf
+pdftk uebungen.pdf cat 7-8 output uebungen-04.pdf
+pdftk uebungen.pdf cat 9-10 output uebungen-05.pdf
+pdftk uebungen.pdf cat 11-12 output uebungen-06.pdf
+pdftk uebungen.pdf cat 13-15 output uebungen-07.pdf
+pdftk uebungen.pdf cat 16-16 output uebungen-08.pdf
+pdftk uebungen.pdf cat 17-18 output uebungen-09.pdf
+pdftk uebungen.pdf cat 19-21 output uebungen-10.pdf
+pdftk uebungen.pdf cat 22-23 output uebungen-11.pdf
+pdftk uebungen.pdf cat 24-26 output uebungen-12.pdf
