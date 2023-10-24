@@ -1,3 +1,0 @@
-#!/bin/bash
-cat $1 | grep -v "TOPMAKEDIR" | grep -v "@printf \"\[0" | \
-    grep -v "@printf \"\$(CMDCOL)" | sed "s/	@/	/"

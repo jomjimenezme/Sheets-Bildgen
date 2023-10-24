@@ -1,4 +1,0 @@
-#!/bin/bash
-cat /dev/stdin | grep -v BibTeX | grep -v "auxiliary file" | \
-    grep -v "style file" | grep -v "Database file" | grep -v "I found no" | \
-    grep -v "There were" | grep -v "I couldn't open file name" || true
